@@ -1,0 +1,24 @@
+{
+  "name": "lrg.io",
+  "version": "1.0.0",
+  "description": "Contains first pass at the tabloid reader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server",
+    "deploy": "uploadr --host dweb4.pipeten.co.uk --source public/ --dest /"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/leighgarland/lrg.git"
+  },
+  "keywords": [
+    "site"
+  ],
+  "author": "@toychicken",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/leighgarland/lrg#readme",
+  "devDependencies": {
+    "uploadr": "^1.1.3"
+  }
+}
