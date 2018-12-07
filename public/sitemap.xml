@@ -3,26 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://lrg.io/about/</loc>
+    <loc>http://lrg.io/about/</loc>
   </url>
   
   <url>
-    <loc>https://lrg.io/categories/</loc>
+    <loc>http://lrg.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lrg.io/</loc>
+    <loc>http://lrg.io/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lrg.io/tags/</loc>
+    <loc>http://lrg.io/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lrg.io/articles/</loc>
+    <loc>http://lrg.io/articles/</loc>
   </url>
   
 </urlset>

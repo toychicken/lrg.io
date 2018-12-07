@@ -3,7 +3,7 @@
 
 ### Don't include generated files
 
-/public/*
+public/
 
 ### Node template
 # Logs
