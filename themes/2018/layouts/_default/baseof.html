@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" .}}
+<body>
+{{ partial "header.html" .}}
+
+<!-- Code that all your templates share, like a header -->
+{{ block "main" .}}
+<!-- The part of the page that begins to differ between templates -->
+{{ end }}
+
+{{ partial "footer.html" .}}
+<!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+</body>
+</html>

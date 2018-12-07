@@ -1,0 +1,19 @@
+{{ define "main"}}
+<h1>{{ .Title }}</h1>
+<h2>Latest posts</h2>
+
+<ul>
+    {{ with .Site.GetPage "articles" }}
+    {{ range first 2 .Pages }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a> {{ .Description }} - {{ .Lastmod.Format "02 Jan 06 15:04 MST" }}</li>
+
+    {{ end }}
+    {{ end }}
+</ul>
+
+{{ end }}
+
+
+{{ define "summary" }}
+<h3> Some summary content?</h3>
+{{ end }}

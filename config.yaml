@@ -1,10 +1,10 @@
 baseURL: https://lrg.io/
-title: "Studio Zero"
+title: "LRG.io"
 theme: 2018
 enableEmoji: true
 footnoteReturnLinkContents: ↩
 LanguageCode: "en-gb"
 params:
-  AuthorName: "Studio Zero"
-  Description: "A boutique product development studio, specialising in customer-experience driven propositions for retail, finance, banking, travel and food"
+  AuthorName: "Leigh Garland"
+  Description: "A product wrangler's thoughts."
   GitHubUser: toychicken

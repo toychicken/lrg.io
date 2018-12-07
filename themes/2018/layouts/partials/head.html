@@ -1,0 +1,12 @@
+<head>
+    <meta charset="UTF-8">
+    <title>{{if .IsHome }}{{ .Site.Title }} {{ else }}{{.Title}} {{ end }}</title>
+    <meta name="author" content="{{ .Site.Params.AuthorName }}">
+    <meta name="description" content="{{ .Site.Params.Description }}">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{ $style := resources.Get "sass/style.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
+    {{ .Hugo.Generator }}
+</head>
