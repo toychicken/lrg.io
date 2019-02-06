@@ -1,4 +1,16 @@
+{{ define "header" }}
+    {{ partial "header.html" .}}
+{{ end }}
+
 {{ define "main" }}
-    by {{ .Params.Author }}
+    <h1>{{ .Title }}</h1>
+    <h2>Single page</h2>
+    {{ if (.Params.Author) }}
+        by {{ .Params.Author }}
+    {{ end }}
     {{ .Content }}
+{{ end }}
+
+{{ define "footer" }}
+    {{ partial "footer.html" .}}
 {{ end }}

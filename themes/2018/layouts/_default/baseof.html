@@ -2,14 +2,19 @@
 <html>
 {{ partial "head.html" .}}
 <body>
-{{ partial "header.html" .}}
+    <div id="content">
+        <header>
+            {{ block "header" .}} {{ end }}
+        </header>
 
-<!-- Code that all your templates share, like a header -->
-{{ block "main" .}}
-<!-- The part of the page that begins to differ between templates -->
-{{ end }}
+        <!-- Code that all your templates share, like a header -->
+        <main id="main-content" role="main">
+            {{ block "main" .}} {{ end }}
+        </main>
 
-{{ partial "footer.html" .}}
-<!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+        <footer>
+            {{ block "footer" .}} {{ end }}
+        </footer>
+    </div>
 </body>
 </html>

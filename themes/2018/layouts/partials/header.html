@@ -1,2 +1,4 @@
 <!-- BREADCRUMB -->
-{{ partial "breadcrumb.html" .}}
+{{ if (not .IsHome) }}
+    {{ partial "breadcrumb.html" .}}
+{{ end }}

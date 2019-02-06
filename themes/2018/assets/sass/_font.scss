@@ -15,6 +15,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $headline;
   padding-bottom: 0.4em;
   margin : 0;
+  line-height: 0.9em;
 
   a {
     color : $headline;
@@ -41,7 +42,7 @@ h3 {
   font-size : 2rem;
   line-height : 3rem;
 }
-h4 {
+h4, h5, h6 {
   font-size : 1.8rem;
   line-height : 2rem;
 }

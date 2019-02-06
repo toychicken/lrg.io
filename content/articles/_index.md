@@ -1,7 +1,7 @@
 ---
-title: "These are the posts"
+title: "Posts"
 ---
 
-# Your life is on the line
+# A whole _bunch_ of things to read
 
-Some day you'll come to realise, that this stuff is easy compared to actually writing content that people will want to read.
+What you find here are my thoughts and feelings alone, and should not be taken as representing any company I work with or for. Some names may be changed to protect people's anonymity.

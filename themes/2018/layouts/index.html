@@ -4,16 +4,19 @@
 
 <ul>
     {{ with .Site.GetPage "articles" }}
-    {{ range first 2 .Pages }}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a> {{ .Description }} - {{ .Lastmod.Format "02 Jan 06 15:04 MST" }}</li>
+        {{ range first 1 .Pages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a> {{ .Description }} - {{ .Lastmod.Format "2 Jan, 2006" }}</li>
 
-    {{ end }}
+        {{ end }}
     {{ end }}
 </ul>
 
 {{ end }}
 
+{{ define "header" }}
+{{ partial "header.html" .}}
+{{ end }}
 
-{{ define "summary" }}
-<h3> Some summary content?</h3>
+{{ define "footer" }}
+   {{ partial "footer.html" .}}
 {{ end }}
