@@ -1,15 +1,50 @@
 {{ define "main"}}
-<h1>{{ .Title }}</h1>
+<h1 class="logo large">
+    <abbr title="Leigh R Garland">
+        <span>
+            <span class="sticky blue">L</span>
+        </span>
+        <span>
+        <span class="sticky green">R</span>
+
+        </span>
+        <span>
+        <span class="sticky pink">G</span>
+
+        </span>
+    </abbr>
+</h1>
+{{ .Content }}
 <h2>Latest posts</h2>
 
-<ul>
+<ul class="articles">
     {{ with .Site.GetPage "articles" }}
-        {{ range first 1 .Pages }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a> {{ .Description }} - {{ .Lastmod.Format "2 Jan, 2006" }}</li>
+        {{ range first 20 .Pages }}
+        <li>
+            <p><a href="{{ .Permalink }}">{{ .Title }}</a> - {{ .Lastmod.Format "2" | humanize }} {{ .Lastmod.Format "Jan, 2006"}}</p>
+            <p>{{ .Description }}</p>
+        </li>
 
         {{ end }}
     {{ end }}
 </ul>
+
+<div>
+
+        <span class="stickyback">
+            <span class="sticky blue">?</span>
+        </span>
+
+    <span class="stickyback">
+        <span class="sticky green">!</span>
+
+        </span>
+
+    <span class="stickyback" style="transform: rotate(4deg)">
+        <span class="sticky pink">%</span>
+
+        </span>
+</div>
 
 {{ end }}
 

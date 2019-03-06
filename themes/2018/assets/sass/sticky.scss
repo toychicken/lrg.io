@@ -1,0 +1,85 @@
+@function stickyback($color) {
+  @return linear-gradient(135deg, $color 81%,$color 82%,$color 82%,mix(white, $color, 50%) 100%);
+}
+.stickyback {
+  display: inline-block;
+  position: relative;
+  transform: rotate(0deg);
+}
+
+.sticky {
+  line-height: 1;
+  text-align: center;
+  width: 5.4rem;
+  margin: 0;
+  min-height: 5rem;
+  max-height: 5rem;
+  padding-top: 0;
+  padding-right: 0.2rem;
+  position: relative;
+  border: 1px solid mix(black, $logo_bg, 5%);
+  border-top: 1rem solid $logo_bg;
+  font-family: $superHeadingFontFamily;
+  border-bottom-right-radius: 3rem 0.5rem;
+  display: inline-block;
+  background:$logo_bg; /* Old browsers */
+  background: stickyback($logo_bg); /* W3C */
+
+
+  &::after {
+    content: "";
+    position:absolute;
+    z-index: -1;
+    right:0;
+    bottom:1.4rem;
+    width:4rem;
+    height: 2rem;
+    background: red;
+    box-shadow:0.2rem 1.5rem 0.5rem rgba(0, 0, 0, 0.40);
+    transform: matrix(-1, -0.1, 0, 1, 0, 0);
+  }
+
+  &.blue {
+    border: 1px solid mix(black, $lilac, 5%);
+    border-top: 1rem solid $lilac;
+    background:$lilac; /* Old browsers */
+    background: stickyback($lilac); /* W3C */
+  }
+  &.green {
+    border: 1px solid mix(black, $mould, 5%);
+    border-top: 1rem solid $mould;
+    background:$mould; /* Old browsers */
+    background: stickyback($mould); /* W3C */
+  }
+
+  &.pink {
+    border: 1px solid mix(black, $coral, 5%);
+    border-top: 1rem solid $coral;
+    background:$coral; /* Old browsers */
+    background: stickyback($coral); /* W3C */
+  }
+
+  &.pico {
+    line-height: 0.8;
+    width: 1.9rem;
+    min-height: 1.6rem;
+    max-height: 1.6rem;
+    padding-right: 0;
+    border-width:0;
+    border-top-width: 0.3rem;
+    font-family: $superHeadingFontFamily;
+    border-bottom-right-radius: 1rem 0.2rem;
+    display: inline-block;
+
+    &:after {
+      right:0;
+      bottom:0.4rem;
+      width: 1.6rem;
+      height: 0.7rem;
+      background: rgba(0, 0, 0, 0.2);
+      box-shadow:0.1rem 0.4rem 0.1rem rgba(0,0,0,.4);
+      transform: matrix(-1, -0.1, 0, 1, 0, 0);
+    }
+
+  }
+}

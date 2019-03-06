@@ -3,12 +3,29 @@
 {{ end }}
 
 {{ define "main" }}
+
+
+    {{ $alt := .Params.mainImage.alt }}
+{{ with .Params.mainImage.src}}
+    <picture>
+        {{ $header := ($.Site.GetPage "section" "images").Resources.GetMatch (strings.TrimPrefix "/images/" . ) }}
+        {{ $img1x := $header.Fill "390x293"}}
+        {{ $img2x := $header.Fill "780x586"}}
+
+        <!-- Make sure breakpoints here are same as mixins.scss -->
+        <source srcset="{{ $img1x.RelPermalink }}" media="(max-width: 767px)">
+        <!-- Shows inline -->
+        <source srcset="{{ $img2x.RelPermalink }}" media="(min-width: 768px)">
+        <img src="{{ $img2x.RelPermalink }}"  alt="{{ $alt }}"/>
+    </picture>
+{{ end }}
     <h1>{{ .Title }}</h1>
-    <h2>Single page</h2>
-    {{ if (.Params.Author) }}
-        by {{ .Params.Author }}
-    {{ end }}
+    <p>
+        {{ if (.Params.Author) }}
+        by <strong>{{ .Params.Author }}</strong> -
+        {{ end }} <em>a {{ .ReadingTime }} minute read</em></p>
     {{ .Content }}
+    {{ partial "short_about.html" .}}
 {{ end }}
 
 {{ define "footer" }}

@@ -1,22 +1,30 @@
-.breadcrumb {
-  padding:0;
-  display: block;
-  margin:0;
-  li {
-    display: inline-block;
+nav {
+
+  &.stickyback {
+    .sticky {
+      top: 0.3rem;
+    }
   }
-  li+li::before {
+  .breadcrumb {
+    padding:0;
     display: inline-block;
-    margin: 0 .25em;
-    transform: rotate(20deg);
-    border-right: .1em solid $body_text;
-    height: .6em;
-    content: '';
-  }
-  .active {
-    a {
-      text-decoration : none;
-      color: $body_text;
+    margin:0;
+    li {
+      display: inline-block;
+    }
+    li+li::before {
+      display: inline-block;
+      margin: 0 .25em;
+      transform: rotate(20deg);
+      border-right: .1em solid $body_text;
+      height: .6em;
+      content: '';
+    }
+    .active {
+      a {
+        text-decoration : none;
+        color: $body_text;
+      }
     }
   }
 }

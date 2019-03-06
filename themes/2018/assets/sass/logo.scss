@@ -1,0 +1,17 @@
+
+.logo {
+  abbr {
+    text-decoration: none;
+  }
+}
+
+
+.logo > abbr > span {
+  transform: rotate(3deg);
+  display: inline-block;
+  position: relative;
+
+  &:nth-child(2) {
+    transform: rotate(-3deg);
+  }
+}

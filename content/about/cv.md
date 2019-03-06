@@ -2,7 +2,7 @@
 title: "My CV"
 date: 2018-12-25
 description: "A highly experienced senior manager, agile product manager and web development lead..."
-draft: true
+draft: false
 ---
 
 Email: leigh@studiozero.co

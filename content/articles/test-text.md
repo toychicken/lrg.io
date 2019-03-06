@@ -1,7 +1,7 @@
 ---
 title: "Markdown: Syntax"
 date: 2018-12-08T11:24:42Z
-description: ""
+description: "Markdown is great, but only as long as you get the right flavour"
 draft: false
 author: "Leigh Garland"
 ---
