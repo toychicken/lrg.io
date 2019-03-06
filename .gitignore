@@ -4,6 +4,7 @@
 ### Don't include generated files
 
 public/
+resources/
 
 ### Node template
 # Logs
