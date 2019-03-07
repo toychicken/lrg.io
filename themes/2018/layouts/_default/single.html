@@ -7,10 +7,10 @@
 
     {{ $alt := .Params.mainImage.alt }}
 {{ with .Params.mainImage.src}}
-    <picture>
+    <picture class="main-image">
         {{ $header := ($.Site.GetPage "section" "images").Resources.GetMatch (strings.TrimPrefix "/images/" . ) }}
-        {{ $img1x := $header.Fill "390x293"}}
-        {{ $img2x := $header.Fill "780x586"}}
+        {{ $img1x := $header.Resize "630x"}}
+        {{ $img2x := $header.Resize "945x"}}
 
         <!-- Make sure breakpoints here are same as mixins.scss -->
         <source srcset="{{ $img1x.RelPermalink }}" media="(max-width: 767px)">

@@ -17,7 +17,7 @@
   padding-top: 0;
   padding-right: 0.2rem;
   position: relative;
-  border: 1px solid mix(black, $logo_bg, 5%);
+  border: 1px solid #ccc;
   border-top: 1rem solid $logo_bg;
   font-family: $superHeadingFontFamily;
   border-bottom-right-radius: 3rem 0.5rem;
@@ -40,20 +40,17 @@
   }
 
   &.blue {
-    border: 1px solid mix(black, $lilac, 5%);
     border-top: 1rem solid $lilac;
     background:$lilac; /* Old browsers */
     background: stickyback($lilac); /* W3C */
   }
   &.green {
-    border: 1px solid mix(black, $mould, 5%);
     border-top: 1rem solid $mould;
     background:$mould; /* Old browsers */
     background: stickyback($mould); /* W3C */
   }
 
   &.pink {
-    border: 1px solid mix(black, $coral, 5%);
     border-top: 1rem solid $coral;
     background:$coral; /* Old browsers */
     background: stickyback($coral); /* W3C */

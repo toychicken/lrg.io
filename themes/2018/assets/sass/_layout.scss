@@ -32,6 +32,12 @@ body {
   @include respond-to(lg) {
     padding : 1rem 1rem 1rem 10rem;
   }
+  @include respond-to(md) {
+    padding : 1rem 1rem 1rem 10rem;
+  }
+  @include respond-to(sm) {
+    padding : 1rem 1rem 1rem 10rem;
+  }
 }
 
 header {
