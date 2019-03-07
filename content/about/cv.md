@@ -5,7 +5,7 @@ description: "A highly experienced senior manager, agile product manager and web
 draft: false
 ---
 
-Email: leigh@studiozero.co
+:email: leigh@studiozero.co
 
 :phone: <a href="tel:+447890847106">+44 7890 847106</a>
 
@@ -16,6 +16,8 @@ As a developer and product owner, I have an unique ability to manage requirement
 In 2015 I founded Studio Zero, to deliver new digital products, and help companies large and small realise new business models via the web and emerging media.
 
 Every Friday is Hawaiian-shirt Friday.
+
+<center><img src="/images/profile.gif" width=380 /></center>
 
 ## Experience
 
