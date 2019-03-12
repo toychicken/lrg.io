@@ -1,8 +1,8 @@
 ---
-title: "About Leigh Garland"
-description: "A highly experienced senior manager, agile product manager and web development lead. Check out my CV!"
+title: "About LRG"
+description: 'A highly experienced senior manager, agile product manager and web development lead. Check out <a href="/about/cv/">my CV!</a>'
 ---
 
-# About me
+# About
 
-I've been around the block a few times, but now...
+Here's where you can learn a little more about me, the things that I like and a bit about how I make & run this site.
