@@ -8,7 +8,7 @@
         </header>
 
         <!-- Code that all your templates share, like a header -->
-        <main id="main-content" role="main">
+        <main id="main-content" role="main" class="{{ .Params.mainClass }}">
             {{ block "main" .}} {{ end }}
         </main>
 

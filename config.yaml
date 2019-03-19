@@ -1,4 +1,4 @@
-baseURL: http://lrg.io/
+baseURL: https://lrg.io/
 title: "LRG.io"
 theme: 2018
 enableEmoji: true
@@ -6,5 +6,8 @@ footnoteReturnLinkContents: ↩
 LanguageCode: "en-gb"
 params:
   AuthorName: "Leigh Garland"
-  Description: "A product wrangler's thoughts."
+  Description: "Product management, web development, art, architecture and music. All from the mind of LRG - the founder of Studio Zero"
   GitHubUser: toychicken
+  TwitterUser: "@extraLRG"
+  images:
+  - "/assets/profile@600x600.gif"

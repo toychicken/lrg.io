@@ -4,3 +4,11 @@
     width: 100%;
   }
 }
+
+figure {
+  text-align: center;
+  img {
+    border: 1rem solid white;
+    box-shadow:1px 1px 16px -7px $logo_shadow;
+  }
+}

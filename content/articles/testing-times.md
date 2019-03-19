@@ -7,6 +7,8 @@ author: "Leigh Garland"
 mainImage:
   src: "/images/pie1.jpeg"
   title: ""
+images:
+- "/assets/profile@600x600.gif"
 ##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
@@ -87,7 +89,7 @@ Given the reliance of the nation on your pies, there is an outcry at the highest
 
 Ohhhh woe is you. If only you could go back… wait… that’s right…
 
-{{< figure src="/assets/pie67_delorean.jpeg" >}}
+{{< figure src="/assets/pie7_delorean.jpeg" >}}
 
 
 Time rewinds, and you stand once more atop a mountain of pies. This time around however, you choose the right path. You choose the path of righteousness. This time, you do a bit of basic security testing.
