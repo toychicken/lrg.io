@@ -5,7 +5,7 @@ description: ""
 draft: true
 author: "Leigh Garland"
 mainImage:
-  src: "/images/"
+  src: "/images/profile.gif"
   title: "{{ replace .Name "-" " " | title }}"
 images:
 - "/assets/profile@600x600.gif"
