@@ -1,8 +1,21 @@
 body {
   font-family: $bodyFontFamily;
   font-size : 1.6rem;
-  line-height : 2.4rem;
   color : $body_text;
+
+  @include respond-to(xs) {
+    letter-spacing: 0.05rem;
+  }
+  @include respond-to(sm) {
+    letter-spacing: 0.05rem;
+  }
+  @include respond-to(md) {
+    letter-spacing: 0.05rem;
+  }
+  @include respond-to(lg) {
+    letter-spacing: 0;
+    line-height : 2.2rem;
+  }
 }
 
 a {
@@ -18,7 +31,8 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0.9em;
 
   a {
-    color : $headline;
+    text-decoration: none;
+    border-bottom: solid 1px $link;
     &:hover {
       color : $link_other;
     }

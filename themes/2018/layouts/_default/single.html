@@ -5,7 +5,13 @@
 {{ define "main" }}
 
 
+<p>
+<h1>{{ .Title }}</h1>
     {{ $alt := .Params.mainImage.alt }}
+    {{ if (.Params.Author) }}
+    by <strong>{{ .Params.Author }}</strong> -
+    {{ end }} <em>a {{ .ReadingTime }} minute read</em>
+</p>
 {{ with .Params.mainImage.src}}
     <picture class="main-image">
         {{ $header := ($.Site.GetPage "section" "images").Resources.GetMatch (strings.TrimPrefix "/images/" . ) }}
@@ -19,11 +25,9 @@
         <img src="{{ $img2x.RelPermalink }}"  alt="{{ $alt }}"/>
     </picture>
 {{ end }}
-    <h1>{{ .Title }}</h1>
-    <p>
-        {{ if (.Params.Author) }}
-        by <strong>{{ .Params.Author }}</strong> -
-        {{ end }} <em>a {{ .ReadingTime }} minute read</em></p>
+
+
+
     {{ .Content }}
     {{ partial "short_about.html" .}}
 {{ end }}

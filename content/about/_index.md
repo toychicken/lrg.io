@@ -1,5 +1,5 @@
 ---
-title: "About LRG"
+title: "About"
 description: 'A highly experienced senior manager, agile product manager and web development lead. Check out <a href="/about/cv/">my CV!</a>'
 ---
 

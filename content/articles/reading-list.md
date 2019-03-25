@@ -1,7 +1,7 @@
 ---
-title: "Useful resources"
+title: "Useful stuff"
 date: 1973-10-21T13:52:50Z
-description: ""
+description: "Partly for my own sanity, I'm keeping a list of things that I find helpful and/or interesting."
 draft: false
 author: "Leigh Garland"
 mainClass: "listicle"

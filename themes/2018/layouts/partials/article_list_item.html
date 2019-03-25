@@ -1,0 +1,8 @@
+<li>
+    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <a href="{{ .Permalink }}">
+    {{ partial "thumbnail_list_image.html" . }}
+        <!-- - {{ .Lastmod.Format "2" | humanize }} {{ .Lastmod.Format "Jan, 2006"}}-->
+    </a>
+    <p>{{ .Description }}</p>
+</li>

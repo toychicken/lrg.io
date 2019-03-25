@@ -1,0 +1,16 @@
+
+{{ $alt := .Params.mainImage.alt }}
+
+{{ with .Params.mainImage.src}}
+<picture class="thumbnail-image">
+    {{ $header := ($.Site.GetPage "section" "images").Resources.GetMatch (strings.TrimPrefix "/images/" . ) }}
+    {{ $img1x := $header.Resize "400x"}}
+    {{ $img2x := $header.Resize "700x"}}
+
+    <!-- Make sure breakpoints here are same as mixins.scss -->
+    <source srcset="{{ $img1x.RelPermalink }}" media="(max-width: 767px)">
+    <!-- Shows inline -->
+    <source srcset="{{ $img2x.RelPermalink }}" media="(min-width: 768px)">
+    <img src="{{ $img2x.RelPermalink }}"  alt="{{ $alt }}"/>
+</picture>
+{{ end }}

@@ -5,12 +5,10 @@
 {{ define "main" }}
     {{ .Content }}
     <ul class="articles">
-    {{ range .Pages }}
-        <li><p><a href="{{ .Permalink }}">{{ .Title }}</a>
-            <!-- - {{ .Lastmod.Format "2" | humanize }} {{ .Lastmod.Format "Jan 2006" }}</p>-->
-            <p> {{ .Description }}</p>
-        </li>
-    {{ end }}
+        {{ range .Pages }}
+            {{ partial "article_list_item.html" .}}
+
+        {{ end }}
     </ul>
 {{ end }}
 
