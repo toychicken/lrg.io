@@ -18,7 +18,7 @@ However, in the innovation hub it's a slightly different story. Security should 
 
 The flip side to this is that we then have an expectation that the propositions will need to merge into the main business at the point their value has been proven.
 
-With this in mind, working for a big UK retailer, I have recently come up with some "principles for guided evolution" aimed squarely at innovation hubs. The purpose is to help tech folks manage the tension between being lean and agile AND getting ready for transition back into the business. [foot](#footnotes)
+With this in mind, working for a big UK retailer, I have recently come up with some "principles for guided evolution" aimed squarely at innovation hubs. The purpose is to help tech folks manage the tension between being lean and agile AND getting ready for transition back into the business.
 
 ## The laboratory
 

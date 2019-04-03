@@ -7,4 +7,3 @@ author: "Leigh Garland"
 ##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
-Looking at subscriptions and why they do and don't work

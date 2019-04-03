@@ -9,7 +9,7 @@ author: "Leigh Garland"
 
 Today I'd like to illustrate another common state of business transformation. One that I like to call 'Never-never land'. Where your strategies may have successes but, they'll never grow up.
 
-For many large enterprises, setting up an Intrapreneurship department is becoming a way to deal with institutional inertia. The idea is, that if you give some of your brightest people a free rein to make transformational changes, the entire business will benefit.
+For many large enterprises, setting up an Innovation lab is becoming a way to deal with institutional inertia. The idea is, that if you give some of your brightest people a free rein to make transformational changes, the entire business will benefit.
 
 In my illustration, the parent business has done many things that others fail to do. They have an active C-level stakeholder, that's committed to making the department a success. They've found department level leadership that is motivated and talented, and given them a team of people that are determined not to fall into old ways of working. They have a culture of customer-focussed research and a lean startup mentality. Finally, to cap it all, they have launched a number of successful propositions that actually _generate revenue_.
 

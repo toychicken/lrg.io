@@ -11,7 +11,7 @@ In business transformation, it's tempting to drive innovation by 'hacking' what 
 
 ----
 
-I do a lot of work for large organisations that have some kind of 'innovation hub'. They often have dynamic sounding names like 'Ventures', 'Digital Labs', or '[Skunkworks](http://archive.fortune.com/magazines/fortune/fortune_archive/2000/03/06/275258/index.htm)'. They are set up to deliberately go against the grain of the main enterprise, or operate outside of normal constraints. However, the relationship between parent and errant child can be tricky.
+I do a lot of work for large organisations that have some kind of 'innovation lab'. They often have dynamic sounding names like 'Ventures', 'Digital Labs', or '[Skunkworks](http://archive.fortune.com/magazines/fortune/fortune_archive/2000/03/06/275258/index.htm)'. They are set up to deliberately go against the grain of the main enterprise, or operate outside of normal constraints. However, the relationship between parent and errant child can be tricky.
 
 So far, I've identified a number of possible states. Sometimes, the states are transient
 

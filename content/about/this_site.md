@@ -54,7 +54,7 @@ Overall, I'm keen to keep the look of the site quite lightweight. Use of typogra
 
 I want to make sure that it's as accessible as I can make it, and use a few different tools.
 
-I'm currently hosting on good old-fashioned managed box (thanks [PipeTen](http://pipeten.com) but for a few reasons, I'm probably going to move hosting over to
+I was hosting on good old-fashioned managed box (thanks [PipeTen](http://pipeten.com) but for a few reasons (ease of deployment and free https), I've switched over to Firebase.
 
 
 ### Useful stuff
