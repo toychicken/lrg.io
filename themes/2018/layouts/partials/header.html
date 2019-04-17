@@ -1,4 +1,20 @@
 <!-- BREADCRUMB -->
 {{ if (not .IsHome) }}
     {{ partial "breadcrumb.html" .}}
+{{ else }}
+    <h1 class="logo large">
+        <abbr title="Leigh R Garland">
+            <span>
+                <span class="sticky">L</span>
+            </span>
+            <span>
+            <span class="sticky">R</span>
+
+            </span>
+            <span>
+            <span class="sticky">G</span>
+
+            </span>
+        </abbr>
+    </h1>
 {{ end }}

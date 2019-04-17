@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html>
 {{ partial "head.html" .}}
-
-{{ $pageStyle := "business"}}
-{{ if .Params.personalStyle }}
-    {{ $pageStyle := "personal" }}
-{{ end }}
-<body class="{{ $pageStyle }} {{ .Params.personalStyle }}">
+<body class="personal">
     <div id="content">
         <header>
             {{ block "header" .}} {{ end }}
@@ -17,7 +12,6 @@
             {{ block "main" .}} {{ end }}
         </main>
 
-        {{ block "aside" .}} {{ end }}
         <footer>
             {{ block "footer" .}} {{ end }}
         </footer>

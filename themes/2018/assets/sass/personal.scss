@@ -1,0 +1,34 @@
+/*
+  Personal overrides should probably always go as the last item :/
+*/
+
+.personal {
+  #content {
+    background: $personal_bg;
+    color: $personal_txt;
+    h1 {
+      border-color-top: $personal_head;
+      color: $personal_head;
+    }
+
+    nav .breadcrumb li {
+      &::before {
+        border-color: $personal_link;
+      }
+      a {
+        color: $personal_txt;
+      }
+    }
+  }
+
+  footer {
+    background: $personal_footer_bg;
+    color: $personal_footer_txt;
+    h1, h2, h3, h4, h5, h6 {
+      color: $personal_head;
+    }
+    a {
+      color: $personal_footer_link;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 body {
   font-family: $bodyFontFamily;
   font-size : 1.6rem;
+  line-height: 1.5;
   color : $body_text;
 
   @include respond-to(xs) {
@@ -32,7 +33,6 @@ h1, h2, h3, h4, h5, h6 {
 
   a {
     text-decoration: none;
-    border-bottom: solid 1px $link;
     &:hover {
       color : $link_other;
     }
@@ -43,7 +43,6 @@ h1 {
   font-family: $superHeadingFontFamily;
   font-size : 4.4rem;
   padding-top : 3rem;
-  border-top : 2px solid $headline;
 
   @include respond-to(xs) {
     font-size : 3rem;
@@ -61,6 +60,7 @@ h3 {
   font-size : 2rem;
   line-height : 3rem;
 }
+
 h4, h5, h6 {
   font-size : 1.8rem;
   line-height : 2rem;

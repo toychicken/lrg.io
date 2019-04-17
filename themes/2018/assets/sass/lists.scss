@@ -10,4 +10,12 @@
       margin-top: 0;
     }
   }
+  li > h3 {
+    border-top: 0.1rem solid $list_border;
+    padding-top: 2rem;
+    font-family: $superHeadingFontFamily;
+  }
+  li:first-child > h3 {
+    border-top:none;
+  }
 }

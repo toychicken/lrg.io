@@ -1,0 +1,24 @@
+{{ define "header" }}
+    {{ partial "header.html" .}}
+{{ end }}
+
+{{ define "main" }}
+    {{ .Content }}
+    <ul class="articles">
+        {{ range .Pages }}
+        <li>
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <a href="{{ .Permalink }}">
+                {{ partial "thumbnail_list_image.html" . }}
+                <!-- - {{ .Lastmod.Format "2" | humanize }} {{ .Lastmod.Format "Jan, 2006"}}-->
+            </a>
+            <p>{{ .Content }}</p>
+        </li>
+
+        {{ end }}
+    </ul>
+{{ end }}
+
+{{ define "footer" }}
+    {{ partial "footer.html" .}}
+{{ end }}
