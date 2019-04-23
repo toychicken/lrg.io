@@ -5,11 +5,11 @@ description: "Honestly, I don't think I could live without music. Here's some of
 draft: false
 author: "Leigh Garland"
 mainImage:
-  src: "/images/profile.gif"
+  src: "/images/cassettes.jpg"
   title: "Playlists"
 images:
 ##### Add 600x600 OG:image here
-- "/assets/profile@600x600.gif"
+- "/images/cassettes@600x600.jpg"
 ##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
