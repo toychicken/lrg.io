@@ -7,7 +7,7 @@ author: "Leigh Garland"
 mainClass: "listicle"
 ---
 
-Partly for my own sanity, I'm keeping a list of things that I find helpful and/or interesting.
+Partly for my own sanity, I'm keeping a list of things that I find helpful and/or interesting. Note a link here is not an endorsement. Sometimes it's quite the opposite!
 
 ## Organisations
 
