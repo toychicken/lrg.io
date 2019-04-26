@@ -1,5 +1,5 @@
 ---
-title: "Posts"
+title: "Articles"
 ---
 
 # A _plethora_ of things to read
