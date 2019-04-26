@@ -7,7 +7,7 @@ author: "Leigh Garland"
 ##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
-Today I'd like to illustrate another common state of business transformation. One that I like to call 'Never-never land'. Where your strategies may have successes but, they'll never grow up.
+Today I'd like to illustrate another common state of Innovation labs. One that I like to call 'Never-never land'. Where your strategies may have successes but, they'll never grow up.
 
 For many large enterprises, setting up an Innovation lab is becoming a way to deal with institutional inertia. The idea is, that if you give some of your brightest people a free rein to make transformational changes, the entire business will benefit.
 

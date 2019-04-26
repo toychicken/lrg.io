@@ -12,11 +12,6 @@ mainImage:
 
 If I learned anything as a young man, temping my way through art school and university, it's that sometimes you can finish a task manually a lot quicker than you can automate the same job. Not only that, but there's also a good chance you'll learn a lot about your customers, your data, and your business in the process of doing it.
 
-One hot summer I was tasked with setting up a 'emergency cascading fax system' for the NHS, to help streamline the organ donation process. My job was to phone every hospital transplant department in England & Wales, and make sure that we had the right fax number for the administrators. The list I got was _huuuuuuuuge_ or so it seemed. My lazy developer instinct kicked in and tried to think of a 'quick' way to do the work.
-
-My solution? Simple - send a _fax_ to each of the listed fax numbers with a message to either fax or call me
-
-
 ----
 
 Read this nice article about the Minimallly Viable Market - https://medium.com/@pejmanhnia/theres-power-in-being-small-979f18d1aa8e
