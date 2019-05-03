@@ -14,6 +14,11 @@ images:
 ##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
+{{% shape "/images/cassette_kidulthood.png" left %}}
+
+
 This is a real mish-mash of a mixtape. It's a taster of the music that (for better or worse) influenced a young me mostly in the 80s. It'll keep growing as I remember stuff.
 
 My only rule is that I must have _owned_ it on some kind of physical media.
+
+{{% /shape %}}
