@@ -4,27 +4,13 @@
 
 {{ define "main" }}
 
-{{ $alt := .Params.mainImage.alt }}
-
 <h1>{{ .Title }}</h1>
 <p>
     {{ if (.Params.Author) }}
     by <strong>{{ .Params.Author }}</strong> -
     {{ end }} <em>a {{ .ReadingTime }} minute read</em>
 </p>
-{{ with .Params.mainImage.src}}
-    <picture class="main-image">
-        {{ $header := ($.Site.GetPage "section" "images").Resources.GetMatch (strings.TrimPrefix "/images/" . ) }}
-        {{ $img1x := $header.Resize "630x"}}
-        {{ $img2x := $header.Resize "945x"}}
-
-        <!-- Make sure breakpoints here are same as mixins.scss -->
-        <source srcset="{{ $img1x.RelPermalink }}" media="(max-width: 767px)">
-        <!-- Shows inline -->
-        <source srcset="{{ $img2x.RelPermalink }}" media="(min-width: 768px)">
-        <img src="{{ $img2x.RelPermalink }}"  alt="{{ $alt }}"/>
-    </picture>
-{{ end }}
+{{ partial "main_image.html" .}}
 
 
 
