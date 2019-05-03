@@ -18,3 +18,19 @@ figure {
     max-width: 100%;
   }
 }
+
+.shape-left,
+.shape-right {
+  shape-margin: 1rem;
+  margin: 0 1rem 1rem;
+  max-width :20rem;
+  width:auto;
+  height:auto;
+}
+
+.shape-left {
+  float: left;
+}
+.shape-right {
+  float: right;
+}
