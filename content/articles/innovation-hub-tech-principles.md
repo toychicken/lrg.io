@@ -12,9 +12,9 @@ images:
 ##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
-One problem for innovation departments is that of 'mixing' with corporate IT. For _very_ good reasons, most IT departments are risk-averse where it comes to security, stability and spending.
+One problem for innovation labs is that of 'mixing' with corporate IT. For _very_ good reasons, most IT departments are risk-averse where it comes to security, stability and spending.
 
-However, in the innovation hub it's a slightly different story. Security should still be paramount, but in the world of early-stage propositions, there are advantages in spending (you can do a lot with 'Free' tier software) and stability (set expectations with customers early).
+However, in the innovation lab it's a slightly different story. Security should still be paramount, but in the world of early-stage propositions, there are advantages in spending (you can do a lot with 'Free' tier software) and stability (set expectations with customers early).
 
 The flip side to this is that we then have an expectation that the propositions will need to merge into the main business at the point their value has been proven.
 
@@ -28,20 +28,19 @@ It's important that we remember what the function of most innovation hubs is. Ty
 
 With this in mind, our principles must balance the needs of the lab, with the needs of the business.
 
-Ideally, the main business wants the lab to use existing contracted products. Salesforce, Oracle, Omniture and many more. In practice, many of those services are limited to specific domains, require teams of people with specialist product skills, have inter-dependent needs and most of all, cost a _lot_ of money.
+Ideally, the main business wants the lab to use existing contracted products. In practice, many of those services are limited to specific domains, require teams of people with specialist product skills, have inter-dependent needs and most of all, cost a _lot_ of money.
 
 A start-up however, can achieve a lot with a free-tier Cloud server, Mailchimp and Google analytics.
 
 So how do we reconcile the cautious parent with fast-moving child?
 
-## Principle 1 : "Think big, do small"
+> "In the Innovation labe, we need to move quickly, learn as much as possible, and hope to create propositions that are valuable to customers and to the business. These are our technology principles:
 
-I use what I call the big-brother approach. When we add a new service to a proposition, I imagine what it's 'big-brother' analog would be in the main business. A good example is Mailchimp.
+> 	* Good today, not perfect tomorrow
+> 	* Love it or trash it
+> 	* Secure from the start
+> 	* Improve everything we touch
+> 	* Tested is trusted
+>   * Choosing a good death
 
-For our innovation hub, Mailchimp is a godsend. It's powerful enough to be a very competent Marketing CRM for our propositions. However, for the main business, it's probably a little unmanageable, and may lack some of the 'enterprise' functionality it requires. So the main business uses Salesforce.[*](#mailchimp)
-
-In implementing Mailchimp for a proposition, I ask our teams to make an integration layer, preferably something that can be reused, to abstract the commands to the Mailchimp API.
-
-### Footnotes
-
-<a name="mailchimp" /> - Obviously, I know that Salesforce and Mailchimp are _not_ necessarily a direct comparison, and that many large businesses use Mailchimp with great success.
+Generally speaking, innovation labs should not care
