@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html>
 {{ partial "head.html" .}}
-
-{{ $pageStyle := "business"}}
-{{ if .Params.personalStyle }}
-    {{ $pageStyle := "personal" }}
-{{ end }}
-<body class="{{ $pageStyle }} {{ .Params.personalStyle }}">
-    <div id="content">
+<body>
         <header>
             {{ block "header" .}} {{ end }}
         </header>
-
-        <!-- Code that all your templates share, like a header -->
-        <main id="main-content" role="main" class="{{ .Params.mainClass }}">
-            {{ block "main" .}} {{ end }}
-        </main>
-
-        {{ block "aside" .}} {{ end }}
+<div id="content">
+    <main id="main-content" role="main" class="{{ .Params.mainClass }}">
+        {{ block "main" .}} {{ end }}
+    </main>
+    <aside>
+        {{ block "aside" .}}
+        {{ end }}
+    </aside>
+</div>
         <footer>
             {{ block "footer" .}} {{ end }}
         </footer>
-    </div>
 </body>
 </html>

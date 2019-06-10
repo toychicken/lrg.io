@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 {{ partial "head.html" .}}
-<body class="personal">
-    <div id="content">
-        <header>
-            {{ block "header" .}} {{ end }}
-        </header>
-
-        <!-- Code that all your templates share, like a header -->
-        <main id="main-content" role="main" class="{{ .Params.mainClass }}">
-            {{ block "main" .}} {{ end }}
-        </main>
-
-        <footer>
-            {{ block "footer" .}} {{ end }}
-        </footer>
-    </div>
+<body class="">
+<header>
+    {{ block "header" .}} {{ end }}
+</header>
+<div id="content">
+    <main id="main-content" role="main" class="{{ .Params.mainClass }}">
+        {{ block "main" .}} {{ end }}
+    </main>
+    <aside>
+        {{ block "aside" .}}
+        {{ end }}
+    </aside>
+</div>
+<footer>
+    {{ block "footer" .}} {{ end }}
+</footer>
 </body>
 </html>
