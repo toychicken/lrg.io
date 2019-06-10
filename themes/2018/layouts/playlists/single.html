@@ -6,13 +6,16 @@
 
 {{ $alt := .Params.mainImage.alt }}
 
-<h1>{{ .Title }}</h1>
+<article class="h-entry">
+<h1 class="post-title p-name" itemprop="name headline"><a class="u-url" href="{{ .Permalink }}">{{ .Title }}</a></h1>
+    <div class="post-content clearfix e-content" itemprop="articleBody">
     {{ .Content }}
-
+    </div>
+    <time class="dt-published" datetime="{{ .Date }}" />
     <div class="spotify-player">
         <iframe src="https://open.spotify.com/embed/{{ .Params.spotifyLink}}" width="100%" height="1000" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
-
+</article>
 {{ end }}
 
 {{ define "footer" }}

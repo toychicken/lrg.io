@@ -1,11 +1,14 @@
 baseURL: https://lrg.io/
 title: "LRG.io"
 theme: 2018
+Author:
+  name: "Leigh Garland"
+  nick: "ToyChicken"
+  email: "leigh@studiozero.co"
 enableEmoji: true
 footnoteReturnLinkContents: ↩
 LanguageCode: "en-gb"
 params:
-  AuthorName: "Leigh Garland"
   Description: "Product management, business transformation, customer experience, web development, art, architecture and music. All from the mind of LRG - the founder of Studio Zero"
   GitHubUser: toychicken
   TwitterUser: "@extraLRG"

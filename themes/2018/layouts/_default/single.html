@@ -4,17 +4,27 @@
 
 {{ define "main" }}
 
-<h1>{{ .Title }}</h1>
-<p>
-    {{ if (.Params.Author) }}
-    by <strong>{{ .Params.Author }}</strong> -
-    {{ end }} <em>a {{ .ReadingTime }} minute read</em>
-</p>
-{{ partial "main_image.html" .}}
 
 
+    <article class="h-entry">
 
-    {{ .Content }}
+        <h1 class="post-title p-name" itemprop="name headline"><a class="u-url" href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        <p>
+            <span>
+                <time class="dt-published" datetime="{{ .Date }}">{{ .Date.Format "2" | humanize }} {{ .Date.Format "Jan, 2006"}}</time>
+            </span>
+            by <strong class="p-author">{{ .Params.author | default .Site.Author.name }}</strong> -
+            <em>a {{ .ReadingTime }} minute read</em>
+        </p>
+        <div class="post-content clearfix e-content" itemprop="articleBody">
+
+            {{ partial "main_image.html" .}}
+
+            {{ .Content }}
+
+        </div>
+
+    </article>
 {{ end }}
 
 {{ define "aside"}}

@@ -1,10 +1,10 @@
-<li>
-    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+<li class="h-entry">
+    <h3 class="p-title"><a class="u-url" href="{{ .Permalink }}">{{ .Title }}</a></h3>
     {{ if .Params.mainImage }}
     <a href="{{ .Permalink }}">
     {{ partial "thumbnail_list_image.html" . }}
         <!-- - {{ .Lastmod.Format "2" | humanize }} {{ .Lastmod.Format "Jan, 2006"}}-->
     </a>
     {{ end }}
-    <p>{{ .Description }}</p>
+    <p class="p-summary">{{ .Description }}</p>
 </li>

@@ -1,14 +1,17 @@
-<section>
+<section class="h-card">
+
+    <img class="u-photo p-name bio-image shape-right" src="/images/profile.png" alt="Leigh Garland" />
     <ul>
         <li>Find out more <a href="/about">about me</a></li>
-        <li>Follow me on <a href="https://twitter.com/extraLRG">Twitter</a></li>
+        <li>Follow me on Twitter <a class="u-url" href="https://twitter.com/{{ .Site.Params.TwitterUser}}" rel="me">{{ .Site.Params.TwitterUser}}</a></li>
         <li>Read other articles on <a href="https://medium.com/studio-zero">Medium</a></li>
-        <li>It's all business on <a href="https://www.linkedin.com/in/toychicken/">Linked In</a></li>
-        <li>Things I'm <a href="/playlists">listening to</a></li>
+        <li>It's all business on <a href="https://www.linkedin.com/in/toychicken/" rel="me">Linked In</a></li>
+        <li>Oh - I made you some <a href="/playlists">playlists</a></li>
     </ul>
+
+    <p>&copy; Copyright <a href={{ .Site.BaseURL }} class="u-url" rel="self">
+        {{ .Site.Author.name }}
+    </a> {{ now.Year }}, aka <a class="p-nickname u-email email metatag" rel="me" href="mailto:{{ .Site.Author.email }}">
+        {{ .Site.Author.nick }}
+    </a></p>
 </section>
-<section>
-    <p>All content is &copy;Copyright Leigh Garland {{ now.Year }}</p>
-</section>
-<div>
-</div>

@@ -1,16 +1,16 @@
 ---
-title: "Hard backstop"
-date: "2019-03-29T23:00:00"
-description: "A softer playlist for a shambolic Brexit"
-draft: false
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+description: ""
+draft: true
 author: "Leigh Garland"
-spotifyLink: "playlist/1hqdex9NFlzi7JWUJS7Taa"
+spotifyLink: "playlist/aaaaa11111"
 mainImage:
   src: "/images/hard-backstop.png"
   title: "Hard backstop"
 images:
 ##### Add 600x600 OG:image here
-- "/images/hard-backstop@600x600.jpg"
+- "/images/cassettes@600x600.jpg"
 ##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 

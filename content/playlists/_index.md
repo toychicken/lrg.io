@@ -17,4 +17,4 @@ What can I tell you about these playlists? Generally I try to have a broad theme
 
 <iframe src="https://open.spotify.com/follow/1/?uri=spotify:user:toychicken&size=detail&theme=light" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
 
-:point_up: You should follow me on Spotify for more.
+:point_up: You should <a href="https://open.spotify.com/user/toychicken?si=iSzFrqqZS5eunXFn-6pfZA" rel="me" >follow me on Spotify</a> for more.

@@ -9,6 +9,9 @@
     h1 {
       border-color-top: $personal_head;
       color: $personal_head;
+      a {
+        color: $personal_head;
+      }
     }
 
     nav .breadcrumb li {

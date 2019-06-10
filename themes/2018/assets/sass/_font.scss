@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $headline;
   padding-bottom: 0.4em;
   margin : 0;
-  line-height: 0.9em;
+  line-height: 1em;
 
   a {
     text-decoration: none;
@@ -43,6 +43,9 @@ h1 {
   font-family: $superHeadingFontFamily;
   font-size : 4.4rem;
   padding-top : 3rem;
+  a {
+    color: $headline;
+  }
 
   @include respond-to(xs) {
     font-size : 3rem;

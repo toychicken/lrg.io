@@ -4,7 +4,7 @@
 
 {{ define "main" }}
     {{ .Content }}
-    <ul class="articles">
+    <ul class="articles ">
         {{ range .Pages }}
             {{ partial "article_list_item.html" .}}
 
