@@ -12,5 +12,6 @@ params:
   Description: "Product management, business transformation, customer experience, web development, art, architecture and music. All from the mind of LRG - the founder of Studio Zero"
   GitHubUser: toychicken
   TwitterUser: "@extraLRG"
+  profileImg: "/images/profile.png"
   images:
   - "/assets/profile@600x600.gif"
