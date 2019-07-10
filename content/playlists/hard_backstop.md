@@ -3,10 +3,14 @@ title: "Hard backstop"
 date: "2019-03-29T23:00:00"
 description: "A softer playlist for a shambolic Brexit"
 draft: false
-author: "Leigh Garland"
+customAuthor:
+  name: "Leigh"
+  TwitterUser: "@toychicken"
+  profileImg: "/images/profile_spotify.png"
+  description: "ToyChicken sounds"
 spotifyLink: "playlist/1hqdex9NFlzi7JWUJS7Taa"
 mainImage:
-  src: "/images/hard-backstop.png"
+  src: "/images/hard-backstop.jpg"
   title: "Hard backstop"
 images:
 ##### Add 600x600 OG:image here

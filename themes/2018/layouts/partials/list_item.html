@@ -1,0 +1,13 @@
+
+{{ if eq (.Type) "articles"}}
+    {{ partial "list_item_article.html" .}}
+{{end}}
+{{ if eq (.Type) "about"}}
+    {{ partial "list_item_article.html" .}}
+{{end}}
+{{ if eq (.Type) "playlists"}}
+    {{ partial "list_item_playlist.html" .}}
+{{end}}
+{{ if eq (.Type) "posts"}}
+    {{ partial "list_item_post.html" .}}
+{{end}}

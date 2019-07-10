@@ -3,7 +3,11 @@ title: "Embiggening the nest"
 date: "2019-01-04T23:00:00"
 description: "Dramatic opener, that drops into some smooth vibe stuff."
 draft: false
-author: "Leigh Garland"
+customAuthor:
+  name: "Leigh"
+  TwitterUser: "@toychicken"
+  profileImg: "/images/profile_spotify.png"
+  description: "ToyChicken sounds"
 spotifyLink: "playlist/5nhKItOhFwnPO6fefs0aRh"
 mainImage:
   src: "/images/embiggening_the_nest.jpg"

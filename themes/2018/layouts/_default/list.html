@@ -3,11 +3,9 @@
 {{ end }}
 
 {{ define "main" }}
-    {{ .Content }}
     <ul class="articles ">
         {{ range .Pages }}
-            {{ partial "article_list_item.html" .}}
-
+            {{ partial "list_item.html" .}}
         {{ end }}
     </ul>
 {{ end }}
@@ -15,16 +13,9 @@
 
 {{ define "aside"}}
 
-<h2>Strange side bar</h2>
-<ul>
-    <li>SOme item</li>
-    <li>SOme item</li>
-    <li>SOme item</li>
-    <li>SOme item</li>
-    <li>SOme item</li>
-    <li>SOme item</li>
+    {{ .Content }}
+    {{ partial "sidebar_profile.html" .}}
 
-</ul>
 {{ end }}
 
 {{ define "footer" }}

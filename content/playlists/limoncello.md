@@ -3,11 +3,15 @@ title: "Limoncello"
 date: 2019-05-16T07:51:13+01:00
 description: "Original soundtrack to a bittersweet semi-fictional biopic of June Swalk. A road-movie exploration of stardom and madness."
 draft: false
-author: "Leigh Garland"
 spotifyLink: "playlist/0roCXIZOHPrfuBpPUYSj8l"
 mainImage:
   src: "/images/limoncello@600x600.jpg"
   title: "Limoncello"
+customAuthor:
+  name: "Leigh"
+  TwitterUser: "@toychicken"
+  profileImg: "/images/profile_spotify.png"
+  description: "ToyChicken sounds"
 images:
 ##### Add 600x600 OG:image here
 - "/images/limoncello@600x600.jpg"

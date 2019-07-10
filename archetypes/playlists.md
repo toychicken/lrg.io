@@ -3,11 +3,15 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 description: ""
 draft: true
-author: "Leigh Garland"
+customAuthor:
+  name: "Leigh"
+  TwitterUser: "@toychicken"
+  profileImg: "/images/profile_spotify.png"
+  description: "ToyChicken sounds"
 spotifyLink: "playlist/aaaaa11111"
 mainImage:
-  src: "/images/hard-backstop.png"
-  title: "Hard backstop"
+  src: "/images/cassettes@600x600.jpg"
+  title: "Playlist"
 images:
 ##### Add 600x600 OG:image here
 - "/images/cassettes@600x600.jpg"
@@ -16,7 +20,7 @@ images:
 
 {{% shape "/images/cassette_mini@75deg.png" right %}}
 
-** TYPE FIRST PARAGRAPH/s HERE **
+** TYPE ONE PARAGRAPH/s HERE **
 
 {{% /shape %}}
 

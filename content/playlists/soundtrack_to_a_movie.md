@@ -3,7 +3,11 @@ title: "Soundtrack to a movie"
 date: "2019-01-04T23:00:00"
 description: "Not playing anytime soon in your local multiplex."
 draft: false
-author: "Leigh Garland"
+customAuthor:
+  name: "Leigh"
+  TwitterUser: "@toychicken"
+  profileImg: "/images/profile_spotify.png"
+  description: "ToyChicken sounds"
 spotifyLink: "playlist/6q9FhaIKBbCKDdIx8wA0rU"
 mainImage:
   src: "/images/singapore_by_night@600x600.jpg"

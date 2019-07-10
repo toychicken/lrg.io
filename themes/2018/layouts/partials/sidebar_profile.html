@@ -1,0 +1,13 @@
+<section class="h-card">
+
+    {{ $userAuthorName := .Params.customerAuthor.Name | default .Site.Author.name}}
+    {{ $twitterUser :=  .Params.customAuthor.TwitterUser | default .Site.Params.TwitterUser }}
+    {{ $userProfileImage := .Params.customAuthor.ProfileImg | default .Site.Params.ProfileImg}}
+    <img class="u-photo p-name bio-image" src="{{ $userProfileImage }}" alt="{{ $userAuthorName }}" />
+    <ul class="related-links">
+        <li>Find out more <a href="/about">about me</a></li>
+        <li>Follow me on Twitter <a class="u-url" href="https://twitter.com/{{ $twitterUser }}" rel="me">{{ $twitterUser }}</a></li>
+        <li>Read other articles on <a href="https://medium.com/studio-zero">Medium</a></li>
+        <li>It's all business on <a href="https://www.linkedin.com/in/toychicken/" rel="me">Linked In</a></li>
+    </ul>
+</section>

@@ -1,7 +1,7 @@
 body {
   font-family: $bodyFontFamily;
-  font-size : 1.6rem;
-  line-height: 1.5;
+  font-size : 1.4rem;
+  line-height: 1.5em;
   color : $body_text;
 
   @include respond-to(xs) {
@@ -15,7 +15,6 @@ body {
   }
   @include respond-to(lg) {
     letter-spacing: 0;
-    line-height : 2.2rem;
   }
 }
 
@@ -55,8 +54,6 @@ h1 {
 h2 {
   font-size : 2.8rem;
   line-height: 3rem;
-  padding-top : 2rem;
-  border-top : 1px solid $headline;
 }
 
 h3 {
@@ -67,4 +64,8 @@ h3 {
 h4, h5, h6 {
   font-size : 1.8rem;
   line-height : 2rem;
+}
+
+p {
+  margin-top:0;
 }

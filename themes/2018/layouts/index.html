@@ -1,10 +1,10 @@
 {{ define "main"}}
-{{ .Content }}
 
 <ul class="articles">
-    {{ with .Site.GetPage "articles" }}
-        {{ range first 20 .Pages }}
-            {{ partial "article_list_item.html" .}}
+    {{ with .Site.GetPage  }}
+        <!--  range first 20 (where .Pages "Section" "!=" "playlists") }}-->
+        {{ range first 50 .Pages }}
+            {{ partial "list_item.html" .}}
 
         {{ end }}
     {{ end }}
@@ -13,8 +13,14 @@
 {{ end }}
 
 {{ define "header" }}
-{{ partial "header.html" .}}
+    {{ partial "header.html" .}}
 {{ end }}
+
+{{ define "aside"}}
+    {{ .Content }}
+    {{ partial "sidebar_profile.html" .}}
+
+{{ end}}
 
 {{ define "footer" }}
    {{ partial "footer.html" .}}

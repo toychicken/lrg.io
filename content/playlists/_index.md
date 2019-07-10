@@ -16,7 +16,3 @@ images:
 # Playlists
 
 What can I tell you about these playlists? Generally I try to have a broad theme in mind, although some are just plain ol' nostalgia trips. I try to imagine that they're still going on a C60 or C90, with my finger hovering over a well-worn :red_circle:`REC` button...
-
-<iframe src="https://open.spotify.com/follow/1/?uri=spotify:user:toychicken&size=detail&theme=light" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
-
-:point_up: You should <a href="https://open.spotify.com/user/toychicken?si=iSzFrqqZS5eunXFn-6pfZA" rel="me" >follow me on Spotify</a> for more.

@@ -1,9 +1,9 @@
 {{ $alt := .Params.mainImage.alt }}
 {{ with .Params.mainImage.src}}
 <picture class="main-image">
-    {{ $header := ($.Site.GetPage "section" "images").Resources.GetMatch (strings.TrimPrefix "/images/" . ) }}
-    {{ $img1x := $header.Resize "630x"}}
-    {{ $img2x := $header.Resize "945x"}}
+    {{ $main := ($.Site.GetPage "section" "images").Resources.GetMatch (strings.TrimPrefix "/images/" . ) }}
+    {{ $img1x := $main.Resize "630x"}}
+    {{ $img2x := $main.Resize "945x"}}
 
     <!-- Make sure breakpoints here are same as mixins.scss -->
     <source srcset="{{ $img1x.RelPermalink }}" media="(max-width: 767px)">

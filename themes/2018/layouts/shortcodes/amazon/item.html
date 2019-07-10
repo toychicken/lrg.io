@@ -1,0 +1,14 @@
+<div class="affiliate-amazon linked-content summary">
+    <div class="thumbnail">
+        <a href="{{ index .Params 0 }}">
+            <picture class="thumbnail-image">
+                <img src="{{ index .Params 2 }}"  alt="{{ index .Params 0 }}"/>
+            </picture>
+        </a>
+    </div>
+    <div class="description">
+        <h2 class="link-title"><a href="{{ index .Params 0 }}">{{ index .Params 0 }}</a></h2>
+        <p>{{ .Inner }}</p>
+    </div>
+
+</div>

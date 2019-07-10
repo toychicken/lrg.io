@@ -1,0 +1,53 @@
+/*
+  Personal overrides should probably always go as the last item :/
+*/
+
+.playlists {
+
+  aside {
+    background: transparent url(/images/record_pile.png) no-repeat left 1.5rem;
+    background-size: 15rem;
+    position: relative;
+
+
+    @include respond-to(xs) {
+      & > section {
+        max-width:50%;
+        float:left;
+        clear:none;
+      }
+    }
+
+    .main-image {
+      position: relative;
+      img {
+        transform: matrix(0.7, 0, 0.1, 0.7, 0, -7.2) rotate(-10.1deg);
+        border-left:1px #343a35 solid;
+        border-bottom:3px #343a3580 solid;
+        height:18rem;
+        width:18rem;
+        background:#fff;
+
+      }
+
+
+
+
+
+
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 2.5rem;
+      top: 5.6rem;
+      width: 10rem;
+      height: 10rem;
+      background: lime;
+      box-shadow: 2rem 3rem 0.5rem rgba(52,58,53,.5);
+      transform: matrix(0.7,0,0.1,0.7,0,-7.2) rotateZ(63deg);
+    }
+
+  }
+}

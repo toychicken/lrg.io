@@ -4,9 +4,9 @@
 
 {{ define "main" }}
 {{ .Content }}
-<ul class="articles ">
+<ul class="articles">
     {{ range .Pages }}
-    {{ partial "article_list_item.html" .}}
+        {{ partial "list_item.html" .}}
 
     {{ end }}
 </ul>
@@ -14,10 +14,8 @@
 
 
 {{ define "aside"}}
-
-{{ partial "main_image.html" .}}
+    {{ partial "sidebar_spotify.html" .}}
 {{ end }}
-
 {{ define "footer" }}
 {{ partial "footer.html" .}}
 {{ end }}

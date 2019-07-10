@@ -3,7 +3,11 @@ title: "Kidulthood memories"
 date: "2019-01-04T23:00:00"
 description: "What was rolling on my reel-to-reel in the 80s."
 draft: false
-author: "Leigh Garland"
+customAuthor:
+  name: "Leigh"
+  TwitterUser: "@toychicken"
+  profileImg: "/images/profile_spotify.png"
+  description: "ToyChicken sounds"
 spotifyLink: "playlist/62Mr3KkSsuaH8cb2tYIoOq"
 mainImage:
   src: "/images/wrestlemania.jpg"

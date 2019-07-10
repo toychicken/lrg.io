@@ -4,8 +4,11 @@
   margin:0;
 
   li {
-    display: block;
+    display: flex;
     clear:both;
+    margin-top:2rem;
+    padding-top:1rem;
+    border-top:1px solid $list_divider;
   }
 
   li p:first-child,
@@ -23,4 +26,30 @@
   li:first-child > h3 {
     border-top:none;
   }
+
+  .author-image {
+    padding-right:1rem;
+  }
+  .bio-image {
+    width: 4.8rem;
+  }
+
+  li > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .stream-info {
+    padding-top:0;
+    margin-top:0;
+    font-family: $headingFontFamily;
+    font-size:1.1rem;
+  }
+
+
+
+
+  .post {}
+  .playlist {}
 }
