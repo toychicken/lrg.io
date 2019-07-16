@@ -14,16 +14,9 @@
             {{ if not .p1.IsHome}}
                 {{ .p1.Title }}
             {{ else }}
-
-                <span class="stickyback" style="transform: rotate(-3deg);">
-                        <span class="sticky pico">L</span>
-                    </span>
-                <span class="stickyback" style="transform: rotate(3deg);">
-                        <span class="sticky pico">R</span>
-                    </span>
-                <span class="stickyback" style="transform: rotate(-3deg);">
-                        <span class="sticky pico">G</span>
-                    </span>
+                <div class="logo large">
+                    {{ partial "logo.html" .}}
+                </div>
             {{ end }}
         </a>
     </li>

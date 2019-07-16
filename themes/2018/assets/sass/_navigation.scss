@@ -1,4 +1,10 @@
 nav {
+  //background: linear-gradient(0deg, $body_bg 80%, transparent 90%, transparent 100%);
+
+  @include respond-to(xs) {
+    //background: linear-gradient(0deg, $body_bg 90%, transparent 95%, transparent 100%);
+
+  }
 
   &.stickyback {
     .sticky {
@@ -12,7 +18,6 @@ nav {
     margin:0;
     a {
       text-decoration: none;
-      font-style: italic;
     }
     li {
       display: inline-block;

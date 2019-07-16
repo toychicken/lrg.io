@@ -9,6 +9,11 @@
     margin-top:2rem;
     padding-top:1rem;
     border-top:1px solid $list_divider;
+
+    &:first-child {
+      border-top:none;
+      margin-top:0;
+    }
   }
 
   li p:first-child,

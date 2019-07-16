@@ -1,10 +1,15 @@
 @function stickyback($color) {
   @return linear-gradient(135deg, $color 81%,$color 82%,$color 82%,mix(white, $color, 50%) 100%);
 }
+@function ground($color) {
+  @return linear-gradient(0deg, $color 81%, $color 82%,$color 82%, white, 100%);
+}
 .stickyback {
   display: inline-block;
   position: relative;
   transform: rotate(0deg);
+  background: linear-gradient(0deg, #ffffff00 50%, $logo_bg 51% ,$logo_bg 100%);
+
 }
 
 .sticky {
