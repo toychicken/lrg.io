@@ -6,9 +6,10 @@
 }
 .stickyback {
   display: inline-block;
-  position: relative;
+  //position: relative;
   transform: rotate(0deg);
   background: linear-gradient(0deg, #ffffff00 50%, $logo_bg 51% ,$logo_bg 100%);
+
 
 }
 

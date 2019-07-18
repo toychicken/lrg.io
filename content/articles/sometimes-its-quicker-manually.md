@@ -4,9 +4,6 @@ date: 2019-03-04T11:22:24Z
 description: "If I learned anything from temping as a teenager, it's that sometimes you can complete a task quicker manually, than you can automate it. "
 draft: true
 author: "Leigh Garland"
-mainImage:
-  src: ""
-  title: ""
 ##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
