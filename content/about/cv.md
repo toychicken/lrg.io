@@ -1,7 +1,7 @@
 ---
 title: "My CV"
-date: 2018-12-25
-description: "A highly experienced senior manager, agile product manager and web development lead..."
+date: 2019-08-02
+description: "A highly-skilled and commercially astute director with expertise in technology and product development and over 25 years’ experience covering digital, retail, travel and ecommerce."
 draft: false
 ---
 
@@ -9,25 +9,30 @@ draft: false
 
 :phone: <a href="tel:+447890847106">+44 7890 847106</a>
 
-I have been making things with computers for about 35 years. The last 20 have almost exclusively been on the web, and the last 12 have been delivering web products and applications for some of the worlds biggest banks, retailers, airlines, newspapers, and government departments.
+A highly-skilled and commercial astute director with expertise in technology and product development and over 25 years’ experience covering digital, retail, travel and ecommerce. A track record of supporting large businesses through times of transformation and change and setting the foundations for scalable growth within start-ups.
 
-As a developer and product owner, I have an unique ability to manage requirements, teams and stakeholders to deliver world-class products.
-
-In 2015 I founded Studio Zero, to deliver new digital products, and help companies large and small realise new business models via the web and emerging media.
-
-Every Friday is Hawaiian-shirt Friday.
+A consensus-building and collaborative leader, skilled in facilitating diverse perspectives in discussion and establishing effective paths forward. Brings unique insight and a fresh and creative perspective to challenges.
 
 <center><img src="/images/profile.gif" width=380 /></center>
 
 ## Experience
 
 ### Studio Zero Ltd
+
+Established to provide product management and technical development services to large enterprises.
+
 Work as Studio Zero includes
 
 *   **John Lewis Ventures**
 
-    Working for one of John Lewis Ventures' earliest (and most successful) propositions - Cook Well. My role is to help it transform from it's early MVP state into a stable, scalable product that would work well with the parent (Waitrose) brand. It's a small cross-functional team, and I work closely with the UX team and product owner to define requirements, respond to user research. I also manage the offshore development team.
+    Supporting the development of a range of products. Working with the UX team, stakeholders and product owners to define requirements in response to user research. Also manage the offshore development team and provide ad-hoc technical and product support.
 
+    * Transformed the Cook Well brand from its early MVP state into a stable and scalable product in alignment with its parent brand, Waitrose.
+    Increased delivery from 200 to 1000 boxes per week in 4 months with minimal disruption and low costs by creating and building requirements based on customer needs and managing transition to an offshore team.
+
+    * Currently developing a womenswear styling proposition utilising conversational commerce and an AI stylist.
+
+    * Supporting Rapid, a 2-hour delivery proposition for waitrose.com
 *   **XR R&D**
 
     In January 2017 I undertook a self-funded 9 month research and development project. Exploring future possibilities for Web-based AR and VR. I built a custom Web VR editing tool, and worked with a number of high-profile organisations to research their futures in immersive technology.
@@ -40,22 +45,25 @@ Work as Studio Zero includes
 
 *   **Tesco**
 
-    I was working on a number of projects, in a consultative role, and as a developer. Their prototype team had already established a pattern of working with MeteorJS, but I introduced them to using React on the front-end, as a way to help them recruit and retain new prototype staff (as Meteor was not a common skillset) - plus it fitted with the company’s overall strategy of using React across the business.
+    Provided development support to a number of projects.
 
-    I built out the digital design platform tool, which enabled shared React components to be reused by all the different departments across Tesco, collaborating closely with stakeholders in technical and non-tech domains
+    * Contributed to the Tesco DDL, which consolidated working methods through creation of a single design language and the development of customer-oriented design and service principles.
+    Overcame resistance and complexity to establish new design language in the many teams in the UK and India. Achieved by working with senior technical stakeholders to develop a tiered, reusable UI Component library. This enabled the reuse of design components leading to more consistently branded products and quicker time to market.
+
+    * Updated prototype working patterns, improving recruitment and retaining new prototype staff.
+
+    * Built design platform tool, enabling shared React components to be reused by all departments, collaborating with stakeholders.
 
 *   **RBS / Natwest**
 
-    In 2015, I worked for RBS / Natwest building a new, in-branch account opening system, built using the bank’s custom component system, Zambezi, but then had to do a rebuild, using React / Redux, when the platform failed to meet some core performance requirements for the system.
-
-    We focussed very heavily on an agile TDD / BDD approach for developing the product, working closely with the product ownership team. Given the legacy of RBS (an incredibly slow-moving organisation) in the course of a year, I helped move them onto rapid (2 week) deployment cycles, and a very strong agile process. Prior to this, release cycles were in the order of 6 months.
+    Built a new in-branch account-opening system, using the bank’s custom component system. Addressed unsatisfactory time to market for new products and services, reducing from 3-4 months to 1-2 days.
 
 ### Director of Web Technology - Nice Agency
 _July 2013 – February 2015_
 
-As Director of Web Technology I was responsible for building out a web team, bringing web application capabilities to complement Nice's existing mobile tech skills. I was responsible for the delivery of all the UK based web projects, as well as being involved in hands-on delivery for a number of significant projects.
+Established the Web Technology department of this mobile focussed digital agency, including developing the web team, web application capabilities and delivery of all the UK-based web projects.
 
-In 2014, I lead the team that delivered the award-winning <a href="http://i100.co.uk" target="_blank">i100.co.uk</a> for the Independent. An entirely new viral news property, which has exceeded all expectations at launch, and has garnered fantastic praise from across the industry. We built it entirely from scratch, with Node.js, creating a bespoke, highly-optimised CMS for viral news writers; and a responsive mobile-optimised front-end.
+Led team to deliver the award-winning <a href="http://i100.co.uk" target="_blank">i100.co.uk</a> for The Independent. This was an innovative viral news provider and exceeded all targets at launch. Delivered the project in 14 weeks within tight budgetary constraints.
 
 ### Freelance Senior front-end developer & agile team lead
 _October 2012 – July 2013_
@@ -65,7 +73,9 @@ I specialised in agile front-end development for large-scale, high-traffic, e-co
 ### Senior UX Designer & Developer - Featurespace
 _February 2012 – October 2012_
 
-I was responsible for the UX design and development at Featurespace. A company that uses real-time and predictive analytics to solve business problems like fraud, customer attrition and much more.
+Led UX design and development for this analytics company with a focus on business issues such as fraud and customer attrition.
+
+As an early adopter of machine learning and AI it was essential to communicate these offerings to a lay audience. Worked to establish a more customer-friendly approach, including branding the ARIC engine, a centrepiece of the work. Created a number of opportunities leading to successful funding rounds.
 
 ### EU Interactive Development Lead - SapientNitro (Now part of Publicis Groupe)
 _June 2007 – February 2012_
