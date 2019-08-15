@@ -50,6 +50,9 @@ header {
   background-size:cover;
   & > h1, nav {
     background: linear-gradient(0deg, $body_bg 65%, transparent 75%, transparent 100%);
+    @include respond-to(xs) {
+      background: linear-gradient(0deg, $body_bg 85%, transparent 95%, transparent 100%);
+    }
     margin-top:10rem;
   }
   position: relative;
@@ -101,6 +104,7 @@ footer {
     color: $footer_text;
   }
   flex:0 1 auto;
+  padding:1rem;
 }
 
 pre {

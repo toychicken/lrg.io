@@ -12,9 +12,18 @@ figure {
 .shape-left,
 .shape-right {
   shape-margin: 1rem;
-  max-width :20rem;
+  max-width :10rem;
   width:auto;
   height:auto;
+  @include respond-to(sm) {
+    max-width :12rem;
+  }
+  @include respond-to(md) {
+    max-width :15rem;
+  }
+  @include respond-to(lg) {
+    max-width :20rem;
+  }
 }
 
 .shape-left {

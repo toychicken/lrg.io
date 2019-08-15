@@ -1,9 +1,7 @@
 <li class="h-entry post">
 
-    {{ partial "list_author_image.html" .}}
-    <div>
-        {{ partial "list_item_stream_info.html" .}}
-    <p class="p-summary">{{ .Description }}</p>
-        {{ .Content }}
+    {{ partial "list_item_stream_info.html" .}}
+    <div class="p-summary">
+    {{ .Content }}
     </div>
 </li>

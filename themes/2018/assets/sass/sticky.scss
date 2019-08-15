@@ -14,20 +14,19 @@
 }
 
 .sticky {
-  line-height: 1;
   text-align: center;
-  width: 5.4rem;
+  width: 1.2em;
+  height: 1.2em;
+  line-height:1.1em;
   margin: 0;
-  min-height: 5rem;
-  max-height: 5rem;
   padding-top: 0;
-  padding-right: 0.2rem;
+  padding-right: 0.02em;
   position: relative;
   border: 1px solid #ccc;
-  border-top: 1rem solid $logo_bg;
+  border-top: 0.1em solid $logo_bg;
   font-family: $superHeadingFontFamily;
-  font-size: 4.2rem;
-  border-bottom-right-radius: 3rem 0.5rem;
+  font-size: 5em;
+  border-bottom-right-radius: 0.3em 0.05em;
   display: inline-block;
   background:$logo_bg; /* Old browsers */
   background: stickyback($logo_bg); /* W3C */
@@ -38,55 +37,31 @@
     position:absolute;
     z-index: -1;
     right:0;
-    bottom:1.4rem;
-    width:4rem;
-    height: 2rem;
+    bottom:0.14em;
+    width:0.4em;
+    height: 0.2em;
     background: red;
-    box-shadow:0.2rem 1.5rem 0.5rem rgba(0, 0, 0, 0.40);
+    box-shadow:0.02em 0.15em 0.05em rgba(0, 0, 0, 0.40);
     transform: matrix(-1, -0.1, 0, 1, 0, 0);
   }
 
   &.blue {
-    border-top: 1rem solid $lilac;
+    border-top: 0.1em solid $lilac;
     background:$lilac; /* Old browsers */
     background: stickyback($lilac); /* W3C */
   }
   &.green {
-    border-top: 1rem solid $mould;
+    border-top: 0.1em solid $mould;
     background:$mould; /* Old browsers */
     background: stickyback($mould); /* W3C */
   }
 
   &.pink {
-    border-top: 1rem solid $coral;
+    border-top: 0.1em solid $coral;
     background:$coral; /* Old browsers */
     background: stickyback($coral); /* W3C */
   }
 
-  &.pico {
-    line-height: 0.8;
-    width: 1.9rem;
-    min-height: 1.6rem;
-    max-height: 1.6rem;
-    padding-right: 0;
-    border-width:0;
-    border-top-width: 0.3rem;
-    font-family: $superHeadingFontFamily;
-    font-size: 1.6rem;
-    border-bottom-right-radius: 1rem 0.2rem;
-    display: inline-block;
-
-    &:after {
-      right:0;
-      bottom:0.4rem;
-      width: 1.6rem;
-      height: 0.7rem;
-      background: rgba(0, 0, 0, 0.2);
-      box-shadow:0.1rem 0.4rem 0.1rem rgba(0,0,0,.4);
-      transform: matrix(-1, -0.1, 0, 1, 0, 0);
-    }
-
-  }
 }
 
 a .sticky {

@@ -5,8 +5,8 @@
   border-radius: 0.5rem;
   margin-bottom:1rem;
   p {
-    font-family: $headingFontFamily;
-    font-size: 1.1rem;
+    font-family: $smallBodyFontFamily;
+    font-size: 1.4rem;
     line-height: 1.3;
   }
 
@@ -17,10 +17,8 @@
       display: flex;
       flex-direction: column;
       flex: 1;
-      justify-content: space-around;
       min-width: 5rem;
       min-height: 5rem;
-      background: linear-gradient(45deg, #cdcdcd 25%, #fefefe 75%, #fff 100%);
       vertical-align: middle;
     }
   }
@@ -29,9 +27,6 @@
     a {
       text-decoration: none;
     }
-    font-size:1.4rem;
-    line-height:2rem;
-    font-family: $headingFontFamily;
   }
 
   &.summary {
@@ -73,10 +68,6 @@
     }
     figcaption {
       padding:0 0.5rem 1rem 1rem;
-      font-size: 1.4rem;
-      line-height: 2rem;
-      font-family: $headingFontFamily;
-      font-weight: bold;
     }
   }
 }

@@ -1,7 +1,5 @@
 <li class="h-entry article">
 
-    {{ partial "list_author_image.html" .}}
-    <div>
         {{ partial "list_item_stream_info.html" .}}
 
         {{ if .Params.mainImage }}
@@ -10,5 +8,5 @@
         {{ else }}
             {{ partial "linked_summary.html" .}}
         {{ end }}
-    </div>
+
 </li>

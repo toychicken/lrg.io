@@ -1,6 +1,10 @@
+<div class="stream-info">
 
-{{ $userAuthorName := .Params.customAuthor.Name | default .Site.Author.name}}
-<p class="stream-info">
-    <strong>{{ $userAuthorName }}</strong>
-    <time class="dt-published" datetime="{{ .Date }}">{{ .Date.Format "2" | humanize }} {{ .Date.Format "Jan, 2006"}}</time>
-</p>
+    {{ partial "list_author_image.html" .}}
+
+    {{ $userAuthorName := .Params.customAuthor.Name | default .Site.Author.name}}
+    <p>
+        <strong class="p-author">{{ $userAuthorName }}</strong>
+        <time class="dt-published" datetime="{{ .Date }}">{{ .Date.Format "2" | humanize }} {{ .Date.Format "Jan, 2006"}}</time>
+    </p>
+</div>

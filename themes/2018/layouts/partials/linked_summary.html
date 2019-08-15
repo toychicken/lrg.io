@@ -1,12 +1,23 @@
 
-
+{{ $alt := "📄" }}
 <article class="linked-content summary">
+
+    {{ if .Params.mainImage }}
     <div class="thumbnail">
         {{ partial "thumbnail_list_image.html" .}}
     </div>
+    {{ end }}
+
+
     <div class="description">
-    <h2 class="link-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <p>{{ .Description }}</p>
+    <div class="link-title p-title h4">
+
+
+        <a class="u-url" href="{{ .Permalink }}">{{ if not (.Params.mainImage) }}{{ $alt }}{{ end }}
+            {{ .Title }}
+        </a>
+    </div>
+    <p class="p-summary">{{ .Description }}</p>
     </div>
 
 </article>
