@@ -1,0 +1,22 @@
+{{ define "header" }}
+{{ partial "header.html" .}}
+{{ end }}
+
+{{ define "main" }}
+<ul class="articles ">
+    {{ range .Pages }}
+        {{ partial "list_item_article.html" .}}
+    {{ end }}
+</ul>
+{{ end }}
+
+
+{{ define "aside"}}
+{{ .Content }}
+{{ partial "sidebar_profile.html" .}}
+
+{{ end }}
+
+{{ define "footer" }}
+{{ partial "footer.html" .}}
+{{ end }}

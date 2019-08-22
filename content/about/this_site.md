@@ -9,7 +9,7 @@ author: "Leigh Garland"
 
 ## Why?
 
-I have started many personal blogs over the years, and almost none of them have materialised into anything very useful. Or even beyond the first excitable 'Hello world' post.
+I have started many personal blogs over the years, and almost none of them have materialised into anything very useful. Or even beyond the first excitable 'Hello world' the-power-of-habit.md.
 
 However, in the past few years, I've written a few short Medium posts and they've got a little traction. I'm also having a bit of a mid-career pivot from a 'pure' web-developer / manager caterpillar into a product management / business transformation butterfly, and thought it might be useful (if only to me) to capture some of this process.
 
