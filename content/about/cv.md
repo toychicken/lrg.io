@@ -1,7 +1,7 @@
 ---
 title: "My CV"
 date: 2019-08-02
-description: "A highly-skilled and commercially astute director with expertise in technology and product development and over 25 years’ experience covering digital, retail, travel and ecommerce."
+description: "A highly-skilled and commercially astute director with expertise in technology and product development and over 25 years’ experience covering digital, retail, travel, media, retail banking and ecommerce."
 draft: false
 ---
 
@@ -13,50 +13,53 @@ A highly-skilled and commercial astute director with expertise in technology and
 
 A consensus-building and collaborative leader, skilled in facilitating diverse perspectives in discussion and establishing effective paths forward. Brings unique insight and a fresh and creative perspective to challenges.
 
-<center><img src="/images/profile.gif" width=380 /></center>
-
 ## Experience
 
 ### Studio Zero Ltd
 
 Established to provide product management and technical development services to large enterprises.
 
-Work as Studio Zero includes
+Work as Studio Zero includes:
 
-*   **John Lewis Ventures**
+**John Lewis Ventures**
 
-    Supporting the development of a range of products. Working with the UX team, stakeholders and product owners to define requirements in response to user research. Also manage the offshore development team and provide ad-hoc technical and product support.
+Supporting the development of a range of products. Working with the UX team, stakeholders and product owners to define requirements in response to user research. Also manage the offshore development team and provide ad-hoc technical and product support.
 
-    * Transformed the Cook Well brand from its early MVP state into a stable and scalable product in alignment with its parent brand, Waitrose.
-    Increased delivery from 200 to 1000 boxes per week in 4 months with minimal disruption and low costs by creating and building requirements based on customer needs and managing transition to an offshore team.
+> Transformed the Cook Well brand from its early MVP state into a stable and scalable product in alignment with its parent brand, Waitrose.
+    **Increased delivery from 200 to 1000 boxes per week in 4 months** with minimal disruption and low costs by creating and building requirements based on customer needs and managing transition to an offshore team.
 
-    * Currently developing a womenswear styling proposition utilising conversational commerce and an AI stylist.
+* Currently developing a womenswear styling proposition utilising conversational commerce and an AI stylist.
 
-    * Supporting Rapid, a 2-hour delivery proposition for waitrose.com
-*   **XR R&D**
+* Supporting Rapid, a 2-hour delivery proposition for waitrose.com
 
-    In January 2017 I undertook a self-funded 9 month research and development project. Exploring future possibilities for Web-based AR and VR. I built a custom Web VR editing tool, and worked with a number of high-profile organisations to research their futures in immersive technology.
+**XR R&D**
 
-*   **Blend Media**
+In January 2017 I undertook a self-funded 9 month research and development project. Exploring future possibilities for Web-based AR and VR. I built a custom Web VR editing tool, and worked with a number of high-profile organisations to research their futures in immersive technology.
 
-    I built a WebVR editor tool for Blend.Media, using React & Redux on the front end. The initial prototype (built in around 3 weeks) was using AWS S3 as the store, which was then handed over to Blend’s backend team, where they built a Phoenix / Firebase / S3 system to our API spec.
+**Blend Media**
 
-    The front-end continued with React & Redux - using Mozilla’s Aframe.io for the VR elements (and Aframe-react). Aframe was at an early stage of development and I had to make some contributions to Aframe just to get our project working! We used Karma / Mocha for testing. In the initial stages, I managed the product delivery, then helped their product owner plan & execute a user-testing & MVP strategy.
+Developed a web virtual reality editor tool, providing the initial protype in 3 weeks. Led research and development and
+    managed early-stage product delivery and supported product owner to plan and execute a user-testing &amp; MVP strategy.
 
-*   **Tesco**
+* As a 360° video stock provider, Blend were struggling with a lack of an audience for sales. Created a web-based
+    editor and VR player for their content, establishing a channel through which any user with a browser could view
+    their content in VR. This contributed to attracting a **significant investment from Facebook.**
 
-    Provided development support to a number of projects.
+**Tesco**
 
-    * Contributed to the Tesco DDL, which consolidated working methods through creation of a single design language and the development of customer-oriented design and service principles.
-    Overcame resistance and complexity to establish new design language in the many teams in the UK and India. Achieved by working with senior technical stakeholders to develop a tiered, reusable UI Component library. This enabled the reuse of design components leading to more consistently branded products and quicker time to market.
+Provided development support to a number of projects.
 
-    * Updated prototype working patterns, improving recruitment and retaining new prototype staff.
+Contributed to the Tesco DDL, which consolidated working methods through creation of a single design language and the development of customer-oriented design and service principles.
 
-    * Built design platform tool, enabling shared React components to be reused by all departments, collaborating with stakeholders.
+Overcame resistance and complexity to establish new design language in the many teams in the UK and India. Achieved by working with senior technical stakeholders to develop a tiered, reusable UI Component library. This enabled the reuse of design components leading to more consistently branded products and quicker time to market.
 
-*   **RBS / Natwest**
+* Updated prototype working patterns, improving recruitment and retaining new prototype staff.
 
-    Built a new in-branch account-opening system, using the bank’s custom component system. Addressed unsatisfactory time to market for new products and services, reducing from 3-4 months to 1-2 days.
+* Built design platform tool, enabling shared React components to be reused by all departments, collaborating with stakeholders.
+
+**RBS / Natwest**
+
+Built a new in-branch account-opening system, using the bank’s custom component system. Addressed unsatisfactory time to market for new products and services, reducing from 3-4 months to 1-2 days.
 
 ### Director of Web Technology - Nice Agency
 _July 2013 – February 2015_
@@ -75,7 +78,7 @@ _February 2012 – October 2012_
 
 Led UX design and development for this analytics company with a focus on business issues such as fraud and customer attrition.
 
-As an early adopter of machine learning and AI it was essential to communicate these offerings to a lay audience. Worked to establish a more customer-friendly approach, including branding the ARIC engine, a centrepiece of the work. Created a number of opportunities leading to successful funding rounds.
+* As an early adopter of machine learning and AI it was essential to communicate these offerings to a lay audience. Worked to establish a more customer-friendly approach, including branding the ARIC engine, a centrepiece of the work. **Created a number of opportunities leading to successful funding rounds.**
 
 ### EU Interactive Development Lead - SapientNitro (Now part of Publicis Groupe)
 _June 2007 – February 2012_
@@ -107,24 +110,17 @@ As a project lead, I helped manage multidisciplinary teams to maintain a high st
 ### Web developer - Mortons Media Group
 _November 2005 – June 2007_
 
-Working with a very small in-house team to manage multiple magazine sites. My main achievement was the complete design and build of a PHP / MySQL based competition management system that fed directly into the company's CRM systems.
-
-I was also responsible for the new build of two sites for new acquisitions; forum manager and community builder; updating content, building micro-sites, and general operational duties.
 
 ### Interactive Media Production
 _September 2002 – November 2005_
 
-Working with micro-businesses, museums and public sector organisations producing interactives, touch-screen information points, education CD-ROMs and websites.
 
 ### Office Manager - Film & Video Workshop
 _October 2001 – August 2002_
 
-Co-ordinated team, ran payroll, liaised with schools.
-
 ### New Media Projects Manager - TS2k
 _November 1998 – April 2001_
 
-Co-ordinating IT, new media and video production facilities and design for a large London Millennium charity. Also responsible for the organisations first website, built with HTML and shockwave. Learned my first important lessons about how to manage large IT projects, and what usability really means.
 
 ## Skills
 ### Product
