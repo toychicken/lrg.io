@@ -1,5 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 
+*.asc
+
 
 ### Don't include generated files
 
