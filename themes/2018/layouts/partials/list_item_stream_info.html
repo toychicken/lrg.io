@@ -6,5 +6,6 @@
     <p>
         <strong class="p-author">{{ $userAuthorName }}</strong>
         <time class="dt-published" datetime="{{ .Date }}">{{ .Date.Format "2" | humanize }} {{ .Date.Format "Jan, 2006"}}</time>
+        {{ if .Draft}}<span class="draft">DRAFT</span>{{ end }}
     </p>
 </div>

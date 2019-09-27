@@ -55,11 +55,29 @@
     font-size:1.1rem;
     display:flex;
     flex-direction: row;
+
+    p {
+      line-height:4rem;
+      margin-bottom: 0;
+      font-size:1.2rem;
+    }
   }
 
 
 
 
-  .post {}
+  .post {
+    .post-title {
+      display: none;
+    }
+  }
   .playlist {}
+}
+
+.draft {
+  color: red;
+  font-size: 1.8rem;
+  transform: rotate(15deg);
+  position: absolute;
+  display: inline-block;
 }
