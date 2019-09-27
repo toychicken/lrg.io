@@ -13,6 +13,5 @@ params:
   GitHubUser: toychicken
   TwitterUser: "@extraLRG"
   profileImg: "/images/profile.png"
-  logoSmall: "/images/lrg_logo@60h.png"
   images:
   - "/assets/profile@600x600.gif"

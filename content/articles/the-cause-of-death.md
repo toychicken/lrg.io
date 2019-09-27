@@ -2,7 +2,7 @@
 title: "The Cause of Death is..."
 date: 2019-08-16T12:07:48+01:00
 description: "How using a pre-mortem can help you avoid killing your product."
-draft: false
+draft: true
 author: "Leigh Garland"
 mainImage:
   src: "/images/pre-mortem_main.jpg"
@@ -25,4 +25,4 @@ In the pre-mortem, both of these risks were raised. Eyes were rolled - we've hea
 
 The purpose of running a pre-mortem is to act. As well as this significant risk, we found three more high-risk potential causes of death. Now that we understand the implications, we'll prioritise solving these problems.
 
-Pre-mortems are a powerful tool - I'll follow up this article with more about how I run them.
+Pre-mortems are a powerful tool - I'll follow up this article with more about how I run them soon.

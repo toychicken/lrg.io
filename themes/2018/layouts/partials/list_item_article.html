@@ -1,12 +1,12 @@
-<li class="article">
+<li class="h-entry article">
 
         {{ partial "list_item_stream_info.html" .}}
-        <div class="h-entry">
+
         {{ if .Params.mainImage }}
             <p class="p-summary">{{ .Description }}</p>
             {{ partial "linked_summary_large.html" .}}
         {{ else }}
             {{ partial "linked_summary.html" .}}
         {{ end }}
-        </div>
+
 </li>

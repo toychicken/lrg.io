@@ -1,10 +1,7 @@
 ---
+title: "Post"
 date: 2019-08-15T18:48:53+01:00
-description: ""
-draft: false
-author: "Leigh Garland"
-title: "The Power of Habit"
-## Keep it short!
+draft: true
 ---
 I've really found a lot in this book - including some of the kind of dark patterns that companies use to get you to buy / use stuff even when it's not especially in your best interests.
 
