@@ -21,11 +21,3 @@ Copy the key out to the key.pub file
 Make a copy of the private key, for signing. Don't put it in the git repo!
 
 `gpg --export-secret-keys ID_OF_KEY_JUST_GENERATED > my-private-key.asc`
-
-
-
-ID = 77FCA78126C6AF92
-
-
-
-echo 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZSI6Imh0dHBzOi8vbHJnLmlvLyIsInByb2ZpbGUiOiJodHRwczovL2xyZy5pby9hc3NldHMva2V5LnB1YiIsInJlZGlyZWN0X3VyaSI6Imh0dHBzOi8vaW5kaWVsb2dpbi5jb20vcmVkaXJlY3QvaW5kaWVhdXRoIiwic3RhdGUiOiI2OThiNDI2ODE5Y2M2MTEyMzFhNjI1MzkiLCJzY29wZSI6IiIsIm5vbmNlIjozMTI4MjQsImNyZWF0ZWRfYXQiOjE1Njg4NzY2NzJ9.IRI-rCvcgfIDCs-ang5qKypYscAPV50IWPYwTTpew0g' | gpg --sign --armor -r leigh@toychicken.co.uk
