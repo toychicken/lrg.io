@@ -1,7 +1,10 @@
-<li class="h-entry post">
-
+<li class="post">
+    {{ $link := anchorize .Title }}
     {{ partial "list_item_stream_info.html" .}}
-    <div class="p-summary">
-    {{ .Content }}
+    <div class="h-entry">
+        <a name="post_{{ $link }}" class="p-title post-title">{{ .Title }}</a>
+        <div class="p-summary">
+        {{ .Content }}
+        </div>
     </div>
 </li>

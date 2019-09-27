@@ -1,6 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{{if .IsHome }}{{ .Site.Title }} {{ else }}{{.Title}} - {{ .Site.Title }}{{ end }}</title>
+    <link rel="pgpkey" href="/assets/key.pub">
     <meta name="author" content="{{ .Site.Params.AuthorName }}">
     <meta name="description" content="{{ .Site.Params.Description }}">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
