@@ -1,13 +1,20 @@
 {{ define "main"}}
 
 <ul class="articles">
-    {{ with .Site.GetPage  }}
-        <!--  range first 20 (where .Pages "Section" "!=" "playlists") }}-->
-        {{ range first 50 .Pages }}
-            {{ partial "list_item.html" .}}
-
-        {{ end }}
+    {{ range first 10 .Site.RegularPages }}
+        {{ partial "list_item.html" .}}
     {{ end }}
+
+
+
+
+<!--    {{ with .Site.GetPage  }}-->
+<!--        &lt;!&ndash;  range first 20 (where .Pages "Section" "!=" "playlists") }}&ndash;&gt;-->
+<!--        {{ range first 50 .Pages }}-->
+<!--            {{ partial "list_item.html" .}}-->
+
+<!--        {{ end }}-->
+<!--    {{ end }}-->
 </ul>
 
 {{ end }}

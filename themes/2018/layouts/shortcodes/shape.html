@@ -1,5 +1,5 @@
 <div><img class="shape-{{ .Get 1 }}" src="{{ .Get 0 }}" style="shape-outside: url('{{ .Get 0 }}')" />
 
-{{ .Inner }}
+    {{ .Inner | emojify | markdownify }}
 
 </div>

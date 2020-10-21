@@ -21,3 +21,13 @@ Copy the key out to the key.pub file
 Make a copy of the private key, for signing. Don't put it in the git repo!
 
 `gpg --export-secret-keys ID_OF_KEY_JUST_GENERATED > my-private-key.asc`
+
+
+## Deploying
+
+You're running this in Firebase, so you'll need the firebase cli
+
+`npm install -g firebase-tools`
+
+and login with the LRG.io account.
+

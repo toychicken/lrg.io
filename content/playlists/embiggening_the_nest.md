@@ -18,8 +18,8 @@ images:
 ##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
-{{% shape "/images/cassette_mini.png" right %}}
+{{< shape "/images/cassette_mini.png" right >}}
 
 In short, this is some of the music that got me through 6 long months of building work. Amongst the dust, the noise and general upheaval these tunes kept me sane.
 
-{{% /shape %}}
+{{< /shape >}}

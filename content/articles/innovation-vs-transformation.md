@@ -25,7 +25,7 @@ In contrast, businesses love the idea of an ‘innovation lab’. It sounds _coo
 * "Exploring new ways of working"
 * "Creating valuable new businesses"
 
-If a business needs to “cut through bureaucracy” or “explore new ways of working” an innovation lab is unlikely to help. If it _does_ help, then that lab is going to be more concerned with ways of working than “creating valuable businesses”.
+If a business needs to "cut through bureaucracy" or "explore new ways of working" an innovation lab is unlikely to help. If it _does_ help, then that lab is going to be more concerned with ways of working than "creating valuable businesses".
 
 I've seen enterprises pour _millions_ into innovation labs without success. Mainly because they're failing to address their fundamental issues. Or, they create labs that operate _so far_ outside the realms of the business, they may as well be separate entities anyway.
 

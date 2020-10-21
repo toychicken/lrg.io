@@ -5,7 +5,7 @@ description: "A highly-skilled and commercially astute director with expertise i
 draft: false
 ---
 
-:email: leigh@studiozero.co
+:email: leigh@doublygood.co.uk
 
 :phone: <a href="tel:+447890847106">+44 7890 847106</a>
 
@@ -15,6 +15,14 @@ A consensus-building and collaborative leader, skilled in facilitating diverse p
 
 ## Experience
 
+### Doubly Good
+
+Working in partnership with Lee McNeil, as Doubly Good, our purpose is to provide expert product and tech leadership to startups and innovation teams.
+
+**Elephant Healthcare**
+
+Elephant is startup bringing digital healthcare to low-and-middle income countries, such as Kenya and Ghana. We were initially brought on to build out their services, but as COVID-19 swept across the world, we were uniquely positioned to help Kenya get frontline services prepared. We created a demo using USSD (a widespread but old-fashioned mobile tech) which grew into a critical service to connect primary care services to county officials.
+****
 ### Studio Zero Ltd
 
 Established to provide product management and technical development services to large enterprises.

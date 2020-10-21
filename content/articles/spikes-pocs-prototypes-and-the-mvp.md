@@ -1,7 +1,7 @@
 ---
 title: "Spikes, POCs, Prototypes and the MVP"
 date: 2014-09-30T14:24:13Z
-description: "Here I attempt to provide some clarity around what I consider the differences between Spikes, POCs, Prototypes and the MVP. Mainly so I never have to hear the phrase “Let’s just knock up a quick MVP to see if the client likes it” again…"
+description: "Here I attempt to provide some clarity around what I consider the differences between Spikes, POCs, Prototypes and the MVP. Mainly so I never have to hear the phrase 'Let’s just knock up a quick MVP to see if the client likes it again…'"
 draft: false
 author: "Leigh Garland"
 mainImage:
@@ -10,7 +10,7 @@ mainImage:
 ##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
-Here I attempt to provide some clarity around what I consider the differences between Spikes, POCs, Prototypes and the MVP. Mainly so I never have to hear the phrase “Let’s just knock up a quick MVP to see if the client likes it” again…
+Here I attempt to provide some clarity around what I consider the differences between Spikes, POCs, Prototypes and the MVP. Mainly so I never have to hear the phrase "Let’s just knock up a quick MVP to see if the client likes it" again…
 
 ## Spikes
 
@@ -20,8 +20,8 @@ A spike is a reconnaissance mission. The objective is to take something that you
 
 A spike must:
 
-* Have a clearly defined objective e.g. “Investigate complexity of integrating our system with X library”
-* Be timeboxed e.g. “Two days”
+* Have a clearly defined objective e.g. "Investigate complexity of integrating our system with X library"
+* Be timeboxed e.g. "Two days"
 * Be focussed on establishing complexity of a future task, not actually doing the work
 
 It’s often tempting to go for ‘big’ spikes and actually do some of the work. However, the result is usually that part of the puzzle may get ‘done’ but that others are left uninvestigated.
@@ -47,9 +47,9 @@ A Proof-of-concept (POC) is another activity to gain greater understanding, prio
 
 A POC should :
 
-* Have key objective about what it’s trying to prove e.g. “This will give the user more space for key functions without breaking the navigation”
+* Have key objective about what it’s trying to prove e.g. "This will give the user more space for key functions without breaking the navigation"
 * Be timeboxed. It’s easy to just keep going and going and going…
-* Be small — what’s the least amount of work required to get the job done?
+* Be small — what’s the least amount of work required to get the job done?
 
 There’s a hint in the name here. The objective is to prove that your concept can work. Don’t undersell your POC though. If it needs high-fidelity production to prove it’s worth, go for it!
 
@@ -65,7 +65,7 @@ Don’t fall into the trap of building your product by iterating on a single pro
 
 ## Minimum Viable Product (MVP)
 
-I was slightly horrified recently, to overhear someone saying “We’ll just knock out a quick MVP to see what the client thinks” — talking as if an MVP is a POC. Fundamentally, Spikes, POCs and Prototypes are all about overcoming technical and design challenges, but (in the words of Eric Ries)
+I was slightly horrified recently, to overhear someone saying "We’ll just knock out a quick MVP to see what the client thinks" — talking as if an MVP is a POC. Fundamentally, Spikes, POCs and Prototypes are all about overcoming technical and design challenges, but (in the words of Eric Ries)
 
 > Unlike a prototype or concept test, an MVP is designed not just to answer product design or technical questions. Its goal is to test fundamental business hypotheses.
 

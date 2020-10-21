@@ -18,9 +18,9 @@ images:
 ##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
-{{% shape "/images/cassette_mini@75deg.png" right %}}
+{{< shape "/images/cassette_mini@75deg.png" right >}}
 
 ** TYPE ONE PARAGRAPH/s HERE **
 
-{{% /shape %}}
+{{< /shape >}}
 
