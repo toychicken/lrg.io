@@ -120,3 +120,7 @@ crashlytics-build.properties
 fabric.properties
 
 .DS_Store
+
+
+## Hugo stuff
+.hugo_build.lock
