@@ -31,3 +31,29 @@ You're running this in Firebase, so you'll need the firebase cli
 
 and login with the LRG.io account.
 
+
+
+
+
+
+### About Tetris theme
+
+It's made up of squares that can be filled with 'articles'
+
+If has touch, the layout can scroll either way (side-to-side to up-and-down)
+If no touch, should default to up-and-down
+
+The intent is:
+
+Use 'newspaper' visual style to highlight priority / index. This means
+
+* Important story (latest / breaking / important) will actually take up more space than trivial stories.
+* Although the articles flow seamlessly from start to finish. There's always a 'format' - e.g. News at the start, sport at the end. Entertainment in the middle?
+* Some elements can 'bleed over' others slightly (breakout boxes, competition pings, star stories etc.)
+* Stories are colour coded (to an extent) by category
+
+There are key views:
+
+* PAN: Birds-eye view of the whole content. You can see big headlines and important pictures. The rest is blanked-out text
+* SCAN: Mid-level view. You can see everything from PAN, plus small article text (though not always complete article)
+* FOCUS: 
