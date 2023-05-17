@@ -1,0 +1,14 @@
+
+    <h1>{{ .Title }}</h1>
+    <h5>{{ .Params.Subtitle }}</h5>
+
+
+{{ if .Content }}
+
+    {{ partial "content-meta.html" .}}
+
+    {{ .Content }}
+
+
+{{ end }}
+

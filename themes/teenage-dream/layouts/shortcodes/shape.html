@@ -1,0 +1,4 @@
+<img class="shape-{{ .Get 1 }}" src="{{ .Get 0 }}" style="shape-outside: url('{{ .Get 0 }}')" alt="{{ .Get 2 }}" />
+
+{{ .Inner | emojify | markdownify }}
+

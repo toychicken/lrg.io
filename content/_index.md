@@ -1,6 +1,7 @@
 ---
-title: LRG.io
-date: 2019-01-08T11:24:42Z
+title: "What even is this shit?"
+description: "It's nothing I'd want to share in front of my mother"
+date: 2023-05-18
 ---
 
-Hey there! I'm _really_ pleased you found this. I write about product management, business transformation, design and technology. There's stuff about managing teams, customer experience, theatre, architecture and music.
+Hey there world. It's me, Leigh

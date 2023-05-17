@@ -1,0 +1,22 @@
+{{ define "main" }}
+    {{ if .Title }}
+        {{ partial "list/index-content.html" . }}
+
+    {{ end }}
+{{ end }}
+
+{{ define "aside" }}
+
+        <ul role="list" class="related">
+            {{ range .Data.Pages.ByDate.Reverse }}
+                {{ partial "list/list-item.html" .}}
+            {{ end }}
+        </ul>
+
+{{ end }}
+
+
+{{ define "title" }}
+    {{ .Params.title }} - {{ .Site.Title}}
+{{ end }}
+
