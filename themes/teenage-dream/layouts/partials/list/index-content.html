@@ -1,0 +1,12 @@
+
+
+<h1 class="title section-title">{{ .Title }}</h1>
+<h5>{{ .Params.Subtitle }}</h5>
+
+    {{ partial "content-meta.html" .}}
+
+    {{ partial "single/main-image.html" .}}
+    {{ .Content }}
+
+
+

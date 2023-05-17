@@ -1,0 +1,28 @@
+{{ $mainImage := .Params.mainImage }}
+{{ $pathArr := split $mainImage.src "." }}
+{{ $pathLen := len $pathArr }}
+{{ $ext := index $pathArr (sub $pathLen 1) }}
+{{ $src := $mainImage.src }}
+{{ with $mainImage }}
+<figure>
+    <picture class="main-image">
+{{ if eq $ext "svg" }}
+
+
+        <img src="{{ .src }}"  alt="{{ .alt }}"/>
+{{ else }}
+
+{{ $main := resources.GetMatch .src }}
+{{ $img1x := $main.Resize "630x"}}
+{{ $img2x := $main.Resize "945x"}}
+
+        <!-- Make sure breakpoints here are same as mixins.scss -->
+        <source srcset="{{ $img1x.RelPermalink }}" media="(max-width: 767px)">
+        <!-- Shows inline -->
+        <source srcset="{{ $img2x.RelPermalink }}" media="(min-width: 768px)">
+        <img src="{{ $img2x.RelPermalink }}"  alt="{{ .alt }}"/>
+{{ end }}
+    </picture>
+    <figcaption>{{ .title | markdownify }}</figcaption>
+</figure>
+{{ end }}

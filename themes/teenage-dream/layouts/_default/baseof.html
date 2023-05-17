@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ partial "meta.html" . }}
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ partial "css.html" . }}
+  </head>
+  <body>
+      <header>
+        <div class="heading"><h1>Data Directory</h1></div>
+
+        <div class="subheading">
+          <p>The Data Directory is intended to help Domino R&D users find, use and manage data effectively.</p>
+        </div>
+        
+      </header>
+      
+      {{ partial "breadcrumb.html" . }}
+      
+    <div id="content">
+      <main>
+
+        {{ block "main" . }}
+        dd
+        {{ end }}
+      </main>
+      <aside>
+
+        {{ block "aside" . }}
+
+        {{ end }}
+      </aside>
+      </div>
+
+
+        {{ partial "footer.html" . }}
+
+        </div>
+
+  </body>
+</html>
