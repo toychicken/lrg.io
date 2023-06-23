@@ -7,21 +7,20 @@
   </head>
   <body>
       <header>
-        <div class="heading"><h1>Data Directory</h1></div>
+        <div class="heading"><h1>{{ .Site.Title }}</h1></div>
 
         <div class="subheading">
-          <p>The Data Directory is intended to help Domino R&D users find, use and manage data effectively.</p>
+          <p>Some kind of subheading</p>
         </div>
         
       </header>
       
-      {{ partial "breadcrumb.html" . }}
+
       
     <div id="content">
       <main>
 
         {{ block "main" . }}
-        dd
         {{ end }}
       </main>
       <aside>

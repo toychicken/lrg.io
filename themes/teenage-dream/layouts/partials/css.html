@@ -1,5 +1,5 @@
 {{- $inServerMode := .Site.IsServer }}
-{{- $sass         := "styles.css" }}
+{{- $sass         := "styles.scss" }}
 {{- $cssTarget    := "css/styles.css" }}
 {{- $cssOpts      := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
 <link rel="icon" type="image/png" href="{{ "favicon/favicon.ico" | relURL }}" />
@@ -12,6 +12,9 @@
 <meta name="msapplication-TileColor" content="#f25b24">
 <meta name="theme-color" content="#3df267">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
 {{- if $inServerMode }}
 {{- $css := resources.Get $sass | toCSS $cssOpts }}
 <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
