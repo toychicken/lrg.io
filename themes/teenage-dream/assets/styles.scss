@@ -192,7 +192,8 @@ header .subheading {
     padding: 0 var(--edge-margin);
 }
 h1, h2, h3, h4, h5, h6 {
-    line-height: 2;
+    line-height: 1.2em;
+    padding:0.4em 0;
     font-family: var(--font-title);
 }
 header .heading {
