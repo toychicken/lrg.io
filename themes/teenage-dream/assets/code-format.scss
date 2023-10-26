@@ -8,15 +8,9 @@ pre code {
     max-width: 100%;
     min-width: 100px;
     padding: 0;
-  }
-
-
-code, pre {
     padding: 0 0.3em;
     font-size: 0.8em;
-    display: inline-block;
     outline: 1px solid var(--code-outline);
-    line-height: 1.8;
-    vertical-align: bottom;
-    max-width: var(--readable-line-width);
-}
+    line-height: 1.6;
+
+  }

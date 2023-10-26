@@ -40,13 +40,6 @@ body {
 body {
     color: var(--lrg-text-black);
 }
-header .heading, header .heading a {
-    color: var(--lrg-text-white);
-    text-decoration: none;
-}
-header .subheading {
-    /* Doing nothing here */
-}
 footer {
     background: #222;
     color: var(--lrg-text-white);
@@ -97,7 +90,6 @@ aside blockquote {
     padding: 1em;
     font-style: italic;
     font-size:110%;
-    max-width: var(--readable-line-width);
 }
 
 [role='list'] {
