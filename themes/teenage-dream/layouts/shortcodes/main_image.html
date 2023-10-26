@@ -12,15 +12,20 @@
 
 
             {{ $images := $.Site.GetPage "section" "images" }}
+
+
+
             {{ $img := $images.Resources.GetMatch (strings.TrimPrefix "/images/" $src) }}
             {{ with $img }}
-            {{ $img1x := .Resize "630x"}}
-            {{ $img2x := .Resize "945x"}}
-            <source srcset="{{ $img1x.RelPermalink }}" media="(max-width: 767px)">
-            <source srcset="{{ $img2x.RelPermalink }}" media="(min-width: 768px)">
-            <a href="{{ $src }}" target="_blank"><img src="{{ $img2x.RelPermalink }}"  alt="{{ $alt }}"/></a>
-            {{ end }}
-        {{ end }}
+                {{ $img1x := .Resize "630x"}}
+                {{ $img2x := .Resize "945x"}}
 
-    <figcaption>{{ $caption | markdownify }}</figcaption>
+                <source srcset="{{ $img1x.RelPermalink }}" media="(max-width: 767px)">
+                <source srcset="{{ $img2x.RelPermalink }}" media="(min-width: 768px)">
+                <a href="{{ $src }}" target="_blank"><img src="{{ $src }}"  alt="{{ $alt }}"/></a>
+            {{ end }}
+    </picture>
+
+    {{ end }}
+    <figcaption>"{{ $caption | markdownify }}"</figcaption>
 </figure>
