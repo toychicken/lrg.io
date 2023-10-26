@@ -289,8 +289,9 @@ aside picture.thumbnail-image {
 
 main blockquote,
 aside blockquote {
-    padding: 1em 2em;
-    background: var(--code-light);
+    padding: 1em;
+    font-style: italic;
+    font-size:110%;
     max-width: var(--readable-line-width);
 }
 
