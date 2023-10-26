@@ -1,6 +1,7 @@
 ---
 subheading: "It's a wonderful strife"
 title: "Hello world*"
+date: 2023-10-21
 subtitle: "Spinning around"
 description: "It's nothing I'd want to share in front of my mother"
 images: ["/images/aggresive_lookin_cows.jpg"]

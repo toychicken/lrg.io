@@ -1,9 +1,9 @@
 ---
 title: "Better Than Usable"
+subtitle: "How to make things tasty, rather than edible"
 date: 2015-01-08T14:31:11+01:00
 description: "To me, saying an app is 'usable' is on a par with saying a meal was 'edible'... "
 subheading: "Monkey nuts"
-subtitle: "How to make things tasty, rather than edible"
 draft: false
 author: "Leigh Garland"
 mainImage:
@@ -34,10 +34,14 @@ Our accolades for UI's are often limited to things that describe certain aspects
 The problem for me, is that whilst these are nice words, they're also a limiting factor. Striving for interfaces that are logical, intuitive, smooth and simple reduces every UI to a fitness shake. You get everything you need to survive, and absolutely nothing more.
 
 ```
-// This is inline code presentation in this article. It's great. I no longer care about things like line breaks. They are for sorry losers
+// This is inline code presentation in this article. 
+It's great. I no longer care about things 
+like line breaks. They are for sorry losers
 
 10 PRINT "LEIGH IS THE BEST"
 20 GOTO 10
+
+////////1 ////////2 ////////3 ////////4 ////////5 ////////6 ////////7 ////////8
 ```
 
 When I was a child, I hated sprouts. My parents persisted in feeding me sprouts, despite every trick a child could come up with to avoid sprouts. I learned to eat sprouts and now I love them! Now, every time I have sprouts in a meal, I reflect on what a foolish child I was, and how great sprouts taste now. Sometimes I have them with bacon, or chestnuts, or sesame seeds, or lightly buttered. They taste amazing. I am thankful for have been given this gift of eating sprouts.
