@@ -2,13 +2,14 @@
 
 :root {
     --lrg-text-black: hsl(0 0% 10%); /* 90% tint as per lrg guidelines */
-    --lrg-text-white: #f9f9f9;
-    --lrg-primary-100: hsl(0, 6%, 80%);
+    --lrg-text-white: hsl(0, 10%, 97%);
+    --lrg-primary-100: hsl(47, 30%, 77%, 1);
     --lrg-primary-50: hsl(0, 6%, 40%);
+    --img-filter: saturate(0) sepia(30%) brightness(70%) opacity(90%) contrast(150%);
 
 
-    --code-dark: #444;
-    --code-light:#fefef9;
+    --code-text: hsl(55, 28%, 54%);
+    --code-back:rgb(16, 16, 13);
     --code-outline:#e6e6e6;
 
     --underscore-dark: #bbb;

@@ -65,6 +65,13 @@ h1, h2, h3, h4, h5, h6 {
     padding:0.4em 0;
     font-family: var(--font-title);
 }
+ hr {
+    border:none;
+    border-top:1px solid var(--lrg-text-black);
+    margin-block-start: 2rem;
+    margin-block-end: 2rem;
+ }
+
 main {
     margin-bottom:  2rem;
     max-width: var(--readable-line-width);
@@ -84,6 +91,19 @@ header .subheading, footer {
 main p, main li {
     margin-bottom: 1rem;
 }
+
+body {
+    p, li, em, strong,
+    h1, h2, h3, h4, h5, h6,
+    figcaption, time, a {
+
+        &::selection {
+            background:var(--lrg-text-black);
+            color:var(--lrg-primary-100);
+        }
+    }
+}
+
 
 main blockquote,
 aside blockquote {

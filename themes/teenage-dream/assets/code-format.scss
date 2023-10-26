@@ -1,16 +1,19 @@
 pre code {
-    color: var(--code-dark);
-    background-color: var(--code-light);
+    color: var(--code-text);
+    background-color: var(--code-back);
     display: block;
     white-space: pre;
     -webkit-overflow-scrolling: touch;
-    overflow-x: scroll;
+    overflow-x: auto;
     max-width: 100%;
     min-width: 100px;
     padding: 0;
     padding: 0 0.3em;
-    font-size: 0.8em;
-    outline: 1px solid var(--code-outline);
+    font-size: 0.62em;
+    outline: 1rem solid var(--code-back);
     line-height: 1.6;
-
+    &::selection {
+      background: var(--code-text);
+      color: var(--code-back);
+    }
   }
