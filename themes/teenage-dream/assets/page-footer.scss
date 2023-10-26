@@ -1,0 +1,25 @@
+
+footer > * {
+    padding:1rem 0;
+}
+.link-lists {
+    display: flex;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: var(--link-list-gutter);
+}
+
+.link-lists > * {
+    flex-grow: 1;
+    flex-basis: calc(( var(--readable-line-width) - 100%) * 999);
+}
+
+.link-lists > :nth-last-child(n+ 5),
+.link-lists > :nth-last-child(n+ 5) ~ * {
+    flex-basis: 100%;
+}
+
+.link-lists a {
+    text-decoration:none;
+    border-bottom: 1px solid var(--lrg-text-white);
+}

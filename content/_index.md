@@ -1,12 +1,14 @@
 ---
-title: "What even is this shit?"
+subheading: "It's a wonderful strife"
+title: "Hello world*"
+date: 2023-10-21
+subtitle: "Spinning around"
 description: "It's nothing I'd want to share in front of my mother"
+images: ["/images/aggresive_lookin_cows.jpg"]
 ---
 
-Hey there world. It's me, Leigh
+It's me, Leigh :wave:
 
-I like to start with words, because... they're really easy to put into a computer.  I'm just using a pretty standard keyboard RIGHT NOW to enter them.
+This is easily about the ~~7th~~ ~~8th~~ ~~9th~~ 10th personal website I've built. I'm pretty good at starting them, but awful at maintaining them. I think the trick this time is not to commit to crazy schedules like "Posting more than once a decade"...
 
-It's amazing. 
-
-Where to start... I've introduced myself, this is easily my tenth personal site, and I am not sure I've learned anything by re-doing them over and over... I suppose it's fun?
+Let's see how this goes.

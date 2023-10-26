@@ -1,14 +1,13 @@
 {{ define "main" }}
     {{ if .Title }}
-        {{ partial "list/index-content.html" . }}
+        {{ partial "single/content.html" . }}
 
     {{ end }}
 {{ end }}
 
 {{ define "aside" }}
-
         <ul role="list" class="related">
-            {{ range .Data.Pages.ByDate.Reverse }}
+            {{ range .Pages }}
                 {{ partial "list/list-item.html" .}}
             {{ end }}
         </ul>

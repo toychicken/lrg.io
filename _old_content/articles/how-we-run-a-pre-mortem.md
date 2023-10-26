@@ -1,17 +1,16 @@
 ---
 title: "How We Run a Pre Mortem"
+subtitle: "...or, the subtle art of predicting your death"
 date: 2019-09-04T08:05:51+01:00
 description: ""
 draft: true
 author: "Leigh Garland"
-mainImage:
-  src: "/images/profile.gif"
-  title: "How We Run a Pre Morthem"
 images:
 ##### Add 600x600 OG:image here
 - "/assets/profile@600x600.gif"
 ##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
+{{< main_image "/images/pre-mortem_main.jpg" >}}
 ## First, why?
 
 A pre-mortem is time-travel. Time travel can be a useful device to get people to think differently about work that _should_ be done today, but feels inconvenient or unnecessary. Check out my article about the [importance of testing!](/articles/testing-times)

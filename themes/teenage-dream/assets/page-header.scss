@@ -1,0 +1,15 @@
+header .heading, header .heading a {
+    color: var(--lrg-text-white);
+    text-decoration: none;
+}
+header .subheading {
+    /* Doing nothing here */
+}
+
+header .heading {
+    border-bottom: 1px solid var(--lrg-text-black)
+}
+
+header .subheading {
+    border-bottom: 3px solid var(--lrg-text-black);
+}

@@ -1,7 +1,7 @@
 # Important settings, don't mess!
 baseURL: https://lrg.io
 languageCode: en-gb
-title: This is LRG
+title: LRG
 theme: teenage-dream
 publishDir: docs
 markup:

@@ -1,0 +1,118 @@
+/* Page layout */
+html {
+    font-size: 14px; /* declares a base font-size, can use this for sizing relatively, by using rem for everything... */
+}
+body {
+    /* kill those default margins & padding */
+    padding:0;
+    margin:0;
+    font-family: var(--font-body);
+    font-size: 1.8rem;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--lrg-primary-100);
+}
+
+
+/* This is cribbed from https://every-layout.dev/layouts/sidebar/ - no need for media queries! */
+#content {
+    flex:auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--main-center-gutter);
+    max-width: calc(2.4 * var(--readable-line-width));
+    align-items: baseline;
+}
+
+#content > :last-child {
+    flex-basis: var(--readable-line-width);
+    flex-grow: 1;
+}
+
+#content > :first-child {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: 50%;
+}
+
+/* Colours */
+body {
+    color: var(--lrg-text-black);
+}
+footer {
+    background: #222;
+    color: var(--lrg-text-white);
+    margin-top:2em;
+}
+
+footer a {
+    color: var(--lrg-text-white);
+}
+
+
+/* Margins & paddings */
+
+footer,
+#content,
+nav,
+header .heading,
+header .subheading {
+    padding: 0 var(--edge-margin);
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2em;
+    padding:0.4em 0;
+    font-family: var(--font-title);
+}
+ hr {
+    border:none;
+    border-top:1px solid var(--lrg-text-black);
+    margin-block-start: 2rem;
+    margin-block-end: 2rem;
+ }
+
+main {
+    margin-bottom:  2rem;
+    max-width: var(--readable-line-width);
+}
+aside {
+    margin-top:2rem;
+    margin-bottom:  2rem;
+}
+
+header .subheading, footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+
+main p, main li {
+    margin-bottom: 1rem;
+}
+
+body {
+    p, li, em, strong,
+    h1, h2, h3, h4, h5, h6,
+    figcaption, time, a {
+
+        &::selection {
+            background:var(--lrg-text-black);
+            color:var(--lrg-primary-100);
+        }
+    }
+}
+
+
+main blockquote,
+aside blockquote {
+    padding: 1em;
+    font-style: italic;
+    font-size:110%;
+}
+
+[role='list'] {
+    padding:0;
+    margin:0;
+}

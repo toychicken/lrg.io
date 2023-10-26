@@ -1,0 +1,16 @@
+
+.related li {
+    padding-bottom:1em;
+    border-bottom: solid 1px var(--underscore-dark);
+    margin-bottom:1em;
+    max-width: var(--readable-line-width);
+}
+.related h2 {
+    width: 100%;
+}
+.related h2 a {
+    text-decoration: none;
+    color: var(--lrg-text-black);
+    border-bottom:2px double var(--lrg-text-black)
+
+}

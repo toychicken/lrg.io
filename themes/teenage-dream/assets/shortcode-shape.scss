@@ -1,0 +1,26 @@
+
+.shape-left,
+.shape-right {
+  shape-margin: 1rem;
+  max-width :calc(var(--readable-line-width)/2);
+  width:auto;
+  height:auto;
+}
+
+.shape-left {
+  float: left;
+  margin: 0 1rem 1rem 0;
+}
+.shape-right {
+  float: right;
+  margin: 0 0 1rem 1rem;
+}
+
+@media (max-width: 30em) {
+    .shape-left, 
+    .shape-right {
+        max-width: none;
+        float:none;
+        margin:1em auto;
+    }
+}
