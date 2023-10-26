@@ -9,9 +9,11 @@
       <header>
         
         <div class="heading"><h1><a href="/">{{ .Site.Title }}</a></h1></div>
+        {{ if (.Params.Subheading) }}
         <div class="subheading">
-          <p>Some kind of subheading</p>
+          <p>{{ .Params.Subheading }}</p>
         </div>
+        {{ end }}
         
       </header>
       
