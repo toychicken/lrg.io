@@ -7,8 +7,8 @@
   </head>
   <body>
       <header>
-        <div class="heading"><h1>{{ .Site.Title }}</h1></div>
-
+        
+        <div class="heading"><h1><a href="/">{{ .Site.Title }}</a></h1></div>
         <div class="subheading">
           <p>Some kind of subheading</p>
         </div>
@@ -24,9 +24,7 @@
         {{ end }}
       </main>
       <aside>
-
         {{ block "aside" . }}
-
         {{ end }}
       </aside>
       </div>

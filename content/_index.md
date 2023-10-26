@@ -11,16 +11,11 @@ You could say that I'm interested in the way that things work - usually looking 
 
 I'm no psychologist, but I am fascinated by the way people interact with their environments, be it physical, organisational or virtual. I feel strongly that the best of these environments account for and adapt to the needs of the people within. I spend a lot of my time trying to create (and help others create) environments like that. 
 
-I love games, but would probably not consider myself a gamer, as I tend to associate that epithet with lovers of first-person shooters. I'm much more likely to wile away my hours in Untitled Goose game, Katamari Damacy, Zelda or Cities Skylines.
-
 Music is _very_ important to me. Spotify tells me I'm eclectic. My friends tell me I'm deliberately obtuse. I genuinely love many _many_ genres, eras and styles. Musically I grew up in the 80s and 90s hip-hop, grunge, indie, dance, ambient and electronica - but my influences start from modernist composers of the early 20th century, all the way to grime, hyperpop and 21st century maximalists. Occasionally I write some of my own. Someday I may share some of it.
-
-I have a family, but I'm probably not going to write about them much here. It's personal, and I like to keep it that way.
 
 I've been programming since 1981, mostly with graphics and music as the output. Moved through image manipulation, digital video and art installations and eventually ended up (via CD-ROMs) making websites in the late 90s.
 
 Fundamentally I have an artist's mentality. The kind that likes to see beauty in the organising thought as much as the finished artefact. Process and and praxis are just as important as product. I'm trying to learn not to define myself by being productive, but that's hard.
-
 
 ---
 

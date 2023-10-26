@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+
+            textarea {
+                width: 40rem;
+                height:20rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Quick fox reducer</h1>
+        <form>
+            <output>Letters required</output>
+            <br/>
+            <textarea>The quick grown fox, jumps over the lazy doe</textarea>
+        </form>
+        <script>
+
+            const source = "abcdefghijklmnopqrstuvwxyz";
+
+            const outp = document.querySelector('output');
+            const inp = document.querySelector('textarea');
+
+            let reduce = (str) => {
+                let required = source.split('');
+                let remaining = [];
+
+                // loop over chars
+                // if char is in input, remove it
+                remaining = required.map((v,i) =>{
+                    console.log('is', v);
+                    // lower case it!
+                    let phrase = str.toLowerCase();
+                    if(phrase.indexOf(v) < 0 ) {
+                        return v;
+                    }
+                })
+                outp.innerHTML = remaining.join(' ');
+            }
+
+            inp.addEventListener("keyup", (e) => {
+                reduce(e.target.value);
+            });
+            
+            reduce(inp.value);
+        </script>
+    </body>
+</html>

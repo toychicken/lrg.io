@@ -6,9 +6,9 @@
 {{ end }}
 
 {{ define "aside" }}
-
+        <h2>Related</h2>
         <ul role="list" class="related">
-            {{ range .Data.Pages.ByDate.Reverse }}
+            {{ range .Pages }}
                 {{ partial "list/list-item.html" .}}
             {{ end }}
         </ul>
