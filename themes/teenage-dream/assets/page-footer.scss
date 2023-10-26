@@ -18,3 +18,8 @@ footer > * {
 .link-lists > :nth-last-child(n+ 5) ~ * {
     flex-basis: 100%;
 }
+
+.link-lists a {
+    text-decoration:none;
+    border-bottom: 1px solid var(--lrg-text-white);
+}
