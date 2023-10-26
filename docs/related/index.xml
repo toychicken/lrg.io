@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>All the related items on LRG</title>
+    <link>https://lrg.io/related/</link>
+    <description>Recent content in All the related items on LRG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 30 Oct 2019 08:30:06 +0000</lastBuildDate><atom:link href="https://lrg.io/related/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build a Scaffold...</title>
+      <link>https://lrg.io/related/related_article/</link>
+      <pubDate>Wed, 30 Oct 2019 08:30:06 +0000</pubDate>
+      
+      <guid>https://lrg.io/related/related_article/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porttitor neque sit amet ante iaculis maximus. Fusce nec feugiat risus. Nulla felis mi, commodo ac risus eu, placerat semper tortor. Suspendisse malesuada mauris sed lobortis scelerisque. Duis tristique nulla ac massa efficitur porttitor. Ut blandit metus mi, pellentesque egestas ipsum sollicitudin iaculis. Cras maximus mollis arcu sit amet euismod. Donec pellentesque pellentesque lorem, quis malesuada orci. Aenean porttitor venenatis nisl, in interdum nibh mattis eget.</description>
+    </item>
+    
+    <item>
+      <title>Better Than Usable</title>
+      <link>https://lrg.io/related/better-than-usable/</link>
+      <pubDate>Thu, 08 Jan 2015 14:31:11 +0100</pubDate>
+      
+      <guid>https://lrg.io/related/better-than-usable/</guid>
+      <description>Yet again, I find myself coming up against using the word &amp;lsquo;usable&amp;rsquo; to describe an application.
+To me, saying an app is &amp;lsquo;usable&amp;rsquo; is on a par with saying a meal was &amp;rsquo;edible&amp;rsquo; — hardly a ringing endorsement, and simply saying an app is &amp;lsquo;really usable&amp;rsquo; doesn&amp;rsquo;t really sound much better, does it? Try it, in this scenario.
+Some cassettes Your mum has just cooked you your favourite dinner. After wolfing it down, you lean back in your chair, wipe your grinning face with a napkin and say to your mother (who has slaved all day to produce this meal).</description>
+    </item>
+    
+  </channel>
+</rss>

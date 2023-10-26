@@ -2,11 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://lrg.io/</loc>
+    <lastmod>2023-10-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://lrg.io/something/</loc>
     <lastmod>2023-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://lrg.io/</loc>
-    <lastmod>2023-05-12T00:00:00+00:00</lastmod>
+    <loc>https://lrg.io/related/</loc>
+    <lastmod>2019-10-30T08:30:06+00:00</lastmod>
+  </url><url>
+    <loc>https://lrg.io/related/related_article/</loc>
+    <lastmod>2019-10-30T08:30:06+00:00</lastmod>
+  </url><url>
+    <loc>https://lrg.io/related/better-than-usable/</loc>
+    <lastmod>2015-01-08T14:31:11+01:00</lastmod>
   </url><url>
     <loc>https://lrg.io/categories/</loc>
   </url><url>
