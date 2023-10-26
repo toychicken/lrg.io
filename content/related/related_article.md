@@ -4,12 +4,12 @@ date: 2019-10-30T08:30:06Z
 description: "This is my advice for innovative people, trying to drive innovation in business from the bottom up, or inside out."
 draft: false
 author: "Leigh Garland"
-mainImage:
-  src: "/images/scaffold@900x600.jpg"
-  title: "Build a Scaffold..."
-images:
-##### Add 600x600 OG:image here
-- "/images/scaffold@900x600.jpg"
+# mainImage:
+#   src: "/images/scaffold@900x600.jpg"
+#   title: "Build a Scaffold..."
+# images:
+# ##### Add 600x600 OG:image here
+# - "/images/scaffold@900x600.jpg"
 ##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
