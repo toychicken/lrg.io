@@ -3,7 +3,7 @@
 :root {
     --lrg-text-black: hsl(0 0% 10%); /* 90% tint as per lrg guidelines */
     --lrg-text-white: #f9f9f9;
-    --lrg-primary-100: hsl(0, 6%, 75%);
+    --lrg-primary-100: hsl(0, 6%, 80%);
     --lrg-primary-50: hsl(0, 6%, 40%);
 
 
@@ -156,8 +156,9 @@ body {
 body {
     color: var(--lrg-text-black);
 }
-header .heading {
+header .heading, header .heading a {
     color: var(--lrg-text-white);
+    text-decoration: none;
 }
 header .subheading {
     background: var(--lrg-secondary-blue-50);
@@ -199,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 header .heading {
     border-bottom: 3px solid var(--lrg-text-black);
-    border-image: repeating-linear-gradient( 45deg, black, grey 4%) 10;
+
 }
 
 header .subheading {
