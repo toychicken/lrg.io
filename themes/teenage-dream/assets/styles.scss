@@ -3,7 +3,8 @@
 :root {
     --lrg-text-black: hsl(0 0% 10%); /* 90% tint as per lrg guidelines */
     --lrg-text-white: #f9f9f9;
-    --lrg-primary-100: hsl(0, 6%, 69%);
+    --lrg-primary-100: hsl(0, 6%, 75%);
+    --lrg-primary-50: hsl(0, 6%, 40%);
 
 
     --code-dark: #444;
@@ -316,3 +317,5 @@ footer > * {
 .link-lists > :nth-last-child(n+ 5) ~ * {
     flex-basis: 100%;
 }
+
+@import "./content-meta.scss";
