@@ -1,0 +1,22 @@
+pre code {
+    color: var(--code-dark);
+    background-color: var(--code-light);
+    display: block;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    max-width: 100%;
+    min-width: 100px;
+    padding: 0;
+  }
+
+
+code, pre {
+    padding: 0 0.3em;
+    font-size: 0.8em;
+    display: inline-block;
+    outline: 1px solid var(--code-outline);
+    line-height: 1.8;
+    vertical-align: bottom;
+    max-width: var(--readable-line-width);
+}

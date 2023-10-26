@@ -1,0 +1,14 @@
+
+main figure, aside figure {
+    margin: 0.5em 0;
+}
+main figure figcaption ,
+aside figure figcaption {
+    font-size:90%;
+    font-style: italic;
+    text-align: center;
+}
+
+aside picture.thumbnail-image {
+    max-width: 50%;
+}

@@ -1,4 +1,8 @@
-.content-meta {
+
+main .content-meta {
+    color: var(--lrg-primary-100);
+    text-align: right;
+    margin-bottom:2rem;
     time {
         color: var(--lrg-primary-50);
     }
