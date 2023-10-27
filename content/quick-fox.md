@@ -6,10 +6,10 @@ date: 2023-10-20
 images: 
     - "/images/quickfox.png"
 tags:
- - app
- - wordplay
- - language
- - heuristics
+ - App
+ - Wordplay
+ - Language
+ - Heuristics
 ---
 Ever wondered "What is the shortest sentence in english that uses all the letters of the alphabet"? Perhaps. 
 

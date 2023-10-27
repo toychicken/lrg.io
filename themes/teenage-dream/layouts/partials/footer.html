@@ -6,7 +6,16 @@
           <li><a href="https://google.com">ABC</a></li>
       </ul>
       <ul role="list">
-          <li>More links</li>
+          <li>Tags!</li>
+
+          {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+          {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+              <li><a href={{ .RelPermalink }} title="All pages with tag <em>{{$name}}</em>">{{$name}}
+                <sup>{{$cnt}}</sup></a>
+              </li>
+          {{end}}
+        {{end}}
+
       </ul>
       <ul role="list">
           <li>So many links!</li>
