@@ -49,6 +49,8 @@ pre code {
   input, textarea, label, select, output {
     &:focus {
       outline:white 0.4rem solid;
+      background:white;
+      color:black;
     }
     margin:0.4rem;
   }
@@ -62,10 +64,16 @@ pre code {
     }
   }
   output {
-    background: white;
-    color:black;
-    min-height:1.2em;
-    font-weight:bold;
+    &.main-output {
+
+      color:white;
+      min-height:1.2em;
+      font-weight:bold;
+      padding:0 0.5rem
+    }
+    &.labelish {
+      text-align: right;
+    }
     &.success {
       outline:lime 0.4rem solid;
     }

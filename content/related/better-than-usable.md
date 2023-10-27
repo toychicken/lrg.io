@@ -6,9 +6,6 @@ description: "To me, saying an app is 'usable' is on a par with saying a meal wa
 subheading: "Monkey nuts"
 draft: false
 author: "Leigh Garland"
-mainImage:
-  src: "/images/hard-backstop.png"
-  title: "Better Than Usable"
 images:
 ##### Add 600x600 OG:image here
 - "/images/hard-backstop.png"
