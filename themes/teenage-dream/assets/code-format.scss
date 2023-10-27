@@ -17,3 +17,60 @@ pre code {
       color: var(--code-back);
     }
   }
+
+.inline-app {
+  font-size: 0.9em;
+  display:flex;
+  flex-direction: column;
+
+  input, textarea, label, select, output {
+    max-width: var(--readable-line-width);
+  }
+  textarea {
+    resize:none;
+  }
+  
+}
+
+.c64 {
+  background:blue;
+  color:cyan;
+  filter: glow(10%);
+  outline:1rem solid blue;
+  margin:2rem 0;
+  font-family: 'Courier New', Courier, monospace;
+  &::before {
+    content: "(CC) LRG Microsystems ";
+    color: white;
+    font-weight: bold;
+  }
+
+
+  input, textarea, label, select, output {
+    &:focus {
+      outline:white 0.4rem solid;
+    }
+    margin:0.4rem;
+  }
+  input, textarea {
+    background:cyan;
+    color: blue;
+    border:none;
+    &::selection {
+      background:yellow;
+      color:black;
+    }
+  }
+  output {
+    background: white;
+    color:black;
+    min-height:1.2em;
+    font-weight:bold;
+    &.success {
+      outline:lime 0.4rem solid;
+    }
+    &.failure {
+      outline:red 0.4rem solid;
+    }
+  }
+}
