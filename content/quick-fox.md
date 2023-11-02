@@ -98,4 +98,4 @@ countChars();
 
 Originally bashed together because of an [odd thread on Mastodon](https://mathstodon.xyz/@TeaKayB/111264213075996921). Now, however, presented in the form of a page on this very site.
 
-This one is [completely free for you to use](https://creativecommons.org/publicdomain/zero/1.0/) - any way you like. It is certainly improvable :smile:
+The Quick Fox is [completely free for you to use](https://creativecommons.org/publicdomain/zero/1.0/) - any way you like. It is certainly improvable :smile:
