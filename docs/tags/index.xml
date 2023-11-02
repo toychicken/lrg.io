@@ -8,7 +8,7 @@
     <language>en-gb</language>
     <lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lrg.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>App</title>
+      <title>app</title>
       <link>https://lrg.io/tags/app/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
       
@@ -40,6 +40,33 @@
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://lrg.io/tags/wordplay/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>calculator</title>
+      <link>https://lrg.io/tags/calculator/</link>
+      <pubDate>Wed, 22 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://lrg.io/tags/calculator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>time</title>
+      <link>https://lrg.io/tags/time/</link>
+      <pubDate>Wed, 22 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://lrg.io/tags/time/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>work</title>
+      <link>https://lrg.io/tags/work/</link>
+      <pubDate>Wed, 22 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://lrg.io/tags/work/</guid>
       <description></description>
     </item>
     

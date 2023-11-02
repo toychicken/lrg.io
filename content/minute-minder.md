@@ -2,7 +2,6 @@
 title: The Minute Minder
 description: "Ever wondered how much it costs your business for you to wait for your crappy laptop to load, or have you attend that pointless meeting? Well, now you can work it out!"
 date: 2012-08-22
-draft: true
 tags:
  - app
  - calculator
