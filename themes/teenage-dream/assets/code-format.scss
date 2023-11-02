@@ -29,6 +29,9 @@ pre code {
   textarea {
     resize:none;
   }
+  input[type='number'] {
+    width:6rem;
+  }
   
 }
 
@@ -54,7 +57,7 @@ pre code {
     }
     margin:0.4rem;
   }
-  input, textarea {
+  input, textarea, select {
     background:cyan;
     color: blue;
     border:none;
@@ -62,6 +65,9 @@ pre code {
       background:yellow;
       color:black;
     }
+  }
+  select {
+    outline:cyan 0.4rem solid;
   }
   output {
     &.main-output {
@@ -81,4 +87,64 @@ pre code {
       outline:red 0.4rem solid;
     }
   }
+}
+
+
+
+.formica {
+  background: white;
+  padding:1rem;
+  & > span {
+    padding:1rem 0;
+  }
+
+  input, textarea, label, select, output {
+    margin:0.4rem;
+  }
+  font-family: 'Courier New', Courier, monospace;
+  label, output {
+    font-family: Arial, Helvetica, sans-serif; 
+  }
+
+  input, textarea, select {
+    border:none;
+    border-left:2px solid white;
+    padding-left:0.4rem;
+    &:focus {
+      outline:rgba(255, 191, 191, 0.5) 0.4rem solid;
+      border-left-color: red;
+
+    }
+    border-bottom: 2px dashed black;
+    &::selection {
+      background:yellow;
+      color:black;
+    }
+  }
+  select {
+    height:3rem;
+  }
+
+}
+
+
+@media (max-width: 30em) {
+    .formica {
+      padding: 1rem 0.4rem;
+
+      & > span.loosey-goosey
+      {
+        padding:0.6rem 0;
+        display:flex;
+        flex-direction: column;
+
+        input, textarea, label, select, output {
+          max-width: var(--readable-line-width);
+        }
+      }
+      blockquote, blockquote output {
+        padding:1rem 0.4rem;
+      }
+    }
+
 }
