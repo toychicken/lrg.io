@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Blood Pressure Monitor / BPM</h1>
+        <p>Although data is not transferred to any remote location, it <em>is</em> stored in this browser, and is not protected from other users that may use this machine</p>
+        <form id="menu">
+            <label for="sys">Sys:</label><input name="sys" id="sys" type="number" />
+            <label for="dia">Dia:</label><input name="dia" id="dia" type="number" />
+            <label for="bpm">BPM:</label><input name="bpm" id="bpm" type="number" />
+            <button onclick="submit">Submit</button>
+        </form>
+        <ul id="log"></ul>
+
+
+        <script src="manage-log.js"></script>
+        <script src="display-log.js"></script>
+        <script src="add-log.js"></script>
+    </body>
+</html>
