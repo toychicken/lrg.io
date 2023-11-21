@@ -1,0 +1,156 @@
+
+html {
+
+    --line-length: 40rem;
+    --dark-low-back:#222;
+    --dark-high-back:#444;
+    --lcd-back-low:#99a59f;
+    --lcd-text:hsl(140, 3%, 17%);
+    font-size: 10px;
+}
+
+
+
+#bpm {
+    max-width: var(--line-length);
+    margin:0 auto;
+}
+#menu {
+    position: fixed;
+    bottom:0;
+}
+#log {
+    list-style: none;
+    padding: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    
+    .reading {
+        font-family: 'DotGothic16', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom:0.4em;
+        box-shadow: 0 3px 5px grey;
+        padding:0.2em;
+        .bp {
+            font-weight:700;
+            background: red;
+            color:white;
+            display:flex;
+            flex-direction: column;
+            padding:0.3em;
+            border-radius:50%;
+            min-width: 3em;
+            min-height: 3em;
+            align-items: center;
+            justify-content: center;
+            
+            
+            .sys {
+                border-bottom:1px solid white;
+            }
+        }
+    }
+}
+
+#menu {
+    display:flex;
+    flex-direction: row;
+    .gloss {
+        display: flex;
+        flex-direction: column;
+    }
+    .sys-wrap, .bpm-wrap {
+        border-radius: 50% 0 0 0 ;
+        padding: 1rem 0 1rem 1.3rem;
+    }
+    .dia-wrap, .but-wrap {
+        border-radius: 0 0 50% 0;
+        padding: 1rem 1.3rem;
+    }
+
+    .lcd {
+        background: var(--lcd-back-low);
+        position:relative;
+        display:inline-block;
+        box-shadow: 1px 1px 3px 0 var(--lcd-text) inset;
+        transform: skewY(-11deg);
+        & ::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            transform: skewy(var(--angle));
+            transform-origin: 50% 0;
+            outline: 1px solid transparent;
+            backface-visibility: hidden;
+          }
+        & input[type=number] {
+            transform: skewY(11deg);
+            display:inline-block;
+            font-size:2rem;
+            text-shadow: 1px 1px 2px var(--lcd-text);
+            border:none;
+            width: 5rem;
+            font-family: 'DotGothic16', sans-serif;
+            color: var(--lcd-text);
+            background: var(--lcd-back-low);
+        }
+        & input[type=number]::-webkit-inner-spin-button {
+            background-color: var(--lcd-back-low);
+        }
+        & label {
+            transform: skewY(11deg);
+        }
+    }
+    .but-wrap {
+        position:relative;
+        display:inline-block;
+        transform: skewY(-11deg);
+        & button {
+            transform: skewY(11deg);
+            display:inline-block;
+            font-size:2rem;
+            border:none;
+            width: 5rem;
+        }
+
+    }
+}
+
+
+
+
+.icon {
+	display: block;
+	margin: auto;
+	width: 1.5em;
+	height: 1.5em;
+}
+.icon circle,
+.icon path {
+	fill: currentColor;
+	transition: fill 0.15s linear;
+}
+.icon ellipse,
+.icon polygon {
+	stroke: currentColor;
+	transition: stroke 0.15s linear;
+}
+.icon .no-fill {
+	fill: none;
+	stroke: currentColor;
+}
+.icon--red path {
+	fill: hsl(3,90%,55%);
+}
+.icon--pulse {
+	animation:
+		bpm 1s linear,
+		pulse 0.75s 1s linear infinite;
+}
