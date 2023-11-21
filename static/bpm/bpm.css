@@ -6,7 +6,7 @@ html {
     --dark-high-back:#444;
     --lcd-back-low:#99a59f;
     --lcd-text:hsl(140, 3%, 17%);
-    font-size: 10px;
+    font-size: 20px;
 }
 
 
@@ -17,7 +17,7 @@ html {
 }
 #menu {
     position: fixed;
-    bottom:0;
+    bottom:1.5rem;
 }
 #log {
     list-style: none;
@@ -59,9 +59,15 @@ html {
 #menu {
     display:flex;
     flex-direction: row;
+        min-width: 50%;
+        gap:1rem;
+        max-width: calc(var(--line-length) /2);
+        justify-content: space-between;
     .gloss {
         display: flex;
         flex-direction: column;
+        gap:0.3rem;
+        min-width: 10rem;
     }
     .sys-wrap, .bpm-wrap {
         border-radius: 50% 0 0 0 ;
@@ -85,7 +91,6 @@ html {
             top: 0;
             right: 0;
             bottom: 0;
-            transform: skewy(var(--angle));
             transform-origin: 50% 0;
             outline: 1px solid transparent;
             backface-visibility: hidden;
@@ -100,18 +105,36 @@ html {
             font-family: 'DotGothic16', sans-serif;
             color: var(--lcd-text);
             background: var(--lcd-back-low);
+            margin-left:1.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0);
         }
         & input[type=number]::-webkit-inner-spin-button {
             background-color: var(--lcd-back-low);
         }
+        & input[type=number]:focus-visible {
+            outline:none;
+            border-bottom: 1px solid var(--lcd-text);
+        }
         & label {
+            position: absolute;
+            top:1.9rem;
+            left:0.7rem;
             transform: skewY(11deg);
+        }
+
+        & svg {
+            position: absolute;
+            transform: skewY(11deg);
+            top:1.9rem;
+            right:0.7rem;
         }
     }
     .but-wrap {
         position:relative;
         display:inline-block;
         transform: skewY(-11deg);
+        background:yellow;
+        cursor: pointer;
         & button {
             transform: skewY(11deg);
             display:inline-block;
@@ -119,7 +142,6 @@ html {
             border:none;
             width: 5rem;
         }
-
     }
 }
 
@@ -147,10 +169,38 @@ html {
 	stroke: currentColor;
 }
 .icon--red path {
-	fill: hsl(3,90%,55%);
+	fill: var(--lcd-text);
 }
 .icon--pulse {
 	animation:
 		bpm 1s linear,
 		pulse 0.75s 1s linear infinite;
+}
+
+
+@keyframes bpm {
+	from {
+		transform: scale(0);
+	}
+	37.5% {
+		transform: scale(1.2);
+	}
+	75%,
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes pulse {
+	from,
+	75%,
+	to {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(0.9);
+	}
+	50% {
+		transform: scale(1.2);
+	}
 }
