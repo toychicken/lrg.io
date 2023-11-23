@@ -70,6 +70,7 @@ html {
         min-width: 10rem;
     }
     .sys-wrap, .bpm-wrap {
+
         border-radius: 50% 0 0 0 ;
         padding: 1rem 0 1rem 1.3rem;
     }
@@ -79,6 +80,8 @@ html {
     }
 
     .lcd {
+
+        border:rgb(219, 219, 219) 4px groove;
         background: var(--lcd-back-low);
         position:relative;
         display:inline-block;
@@ -135,7 +138,7 @@ html {
         transform: skewY(-11deg);
         background:yellow;
         cursor: pointer;
-        & button {
+        & > * {
             transform: skewY(11deg);
             display:inline-block;
             font-size:2rem;

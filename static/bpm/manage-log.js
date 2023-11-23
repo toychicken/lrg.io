@@ -17,10 +17,11 @@ const appendLog = (entry) => {
     writeLog(nLog);
 }
 const deleteEntry = (ind) => {
-    let nLog = [...readLog()].filter((v, i) => ind !== i);
-    if(confirm("Delete this record?")) {
+
+    // if(confirm("Delete this record?")) {
+        let nLog = [...readLog()].filter((v, i) => ind !== i);
         writeLog(nLog);
-    }
+    // }
 }
 
 // display a record
