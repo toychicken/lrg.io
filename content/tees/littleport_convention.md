@@ -5,9 +5,7 @@ description: "A lovely shirt"
 draft: false
 author: "Leigh Garland"
 color: "black"
-mainImage:
-  src: "/images/tees/littleport_convention-on_model.jpeg"
-  title: "ELY ROCKS! Littleport Convention"
+images: ["/images/tees/littleport_convention-on_model.jpeg"]
 ---
 
 

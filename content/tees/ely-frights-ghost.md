@@ -6,7 +6,5 @@ draft: false
 author: "Leigh Garland"
 color: "#444"
 link: "https://lrg.teemill.com/product/ely-frights-ghost/"
-mainImage:
-  src: "/images/tees/spook_ely@600.png"
-  title: "SPOOKELY t-shirt"
+images: ["/images/tees/spook_ely@600.png"]
 ---
