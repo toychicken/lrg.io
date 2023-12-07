@@ -25,13 +25,14 @@ const deleteEntry = (ind) => {
 }
 
 // display a record
-const logRecord = (quad, i) => {
+const displayRecord = (quad, i) => {
     
     let datetime = new Date(quad[0]);
     let sys = quad[1];
     let dia = quad[2];
     let bpm = quad[3];
-    console.log(datetime, sys, dia, bpm);
+    let weight = quad[4];
+    console.log(datetime, sys, dia, bpm, weight);
     let li = document.createElement('li');
     li.classList = 'reading';
     li.innerHTML = `
@@ -40,7 +41,10 @@ const logRecord = (quad, i) => {
                     <span class="sys">${sys}</span>
                     <span class="dia">${dia}</span>
                 </span>
-                <strong>Pulse</strong>: ${bpm}BPM
+                <span class="pulse">
+                <strong>Pulse</strong>: ${bpm}BPM</span>
+                <span class="weight">
+                <strong>Weight</strong>: ${weight}Kg</span>
             `.trim();
     let del = document.createElement('button');
     del.innerHTML =' 🚮 delete';
@@ -60,7 +64,7 @@ const updateLog = (e) => {
     console.log('Update Log');
     log.innerHTML = '';
     let data = readLog();
-    data.forEach((quad, i) => logRecord(quad, i));
+    data.forEach((quad, i) => displayRecord(quad, i));
 }
 
 body.addEventListener('logChanged', updateLog);
@@ -73,11 +77,11 @@ const menu = document.querySelector('#menu');
 
 const addLog = () => {
     let formData = new FormData(menu);
-    console.log(formData.get('sys'))
     let ent = [Date.now(), 
         formData.get('sys'), 
         formData.get('dia'),
-        formData.get('bpm')
+        formData.get('bpm'),
+        formData.get('weight')
     ];
     appendLog(ent);
     menu.dispatchEvent(logChangedEvent);
