@@ -1,69 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            #bpm {
-                max-width: 40em;
-                margin:0 auto;
-            }
-            #menu {
-                position: fixed;
-                bottom:0;
-            }
-            #log {
-                list-style: none;
-                padding: 0;
-                display:flex;
-                flex-direction: column-reverse;
-                
-                .reading {
 
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    margin-bottom:0.4em;
-                    box-shadow: 0 3px 5px grey;
-                    padding:0.2em;
-                    .bp {
-                        font-family: 'Courier New', Courier, monospace;
-                        font-weight:700;
-                        background: red;
-                        color:white;
-                        display:flex;
-                        flex-direction: column;
-                        padding:0.3em;
-                        border-radius:50%;
-                        min-width: 3em;
-                        min-height: 3em;
-                        align-items: center;
-                        justify-content: center;
-                        
-                        
-                        .sys {
-                            border-bottom:1px solid white;
-                        }
-                    }
-                }
-            }
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link href="bpm.css" rel="stylesheet">
+</head>
 
+<body>
+    <div id="bpm">
 
+        <form id="menu">
+            <span class="gloss">
 
-        </style>
-    </head>
-    <body>
-        <h1>Blood Pressure Monitor / BPM</h1>
-        <p>Although data is not transferred to any remote location, it <em>is</em> stored in this browser, and is not protected from other users that may use this machine</p>
-        <div id="bpm">
-            
-            <form id="menu">
-                <label for="sys">Sys:</label><input name="sys" id="sys" type="number" />
-                <label for="dia">Dia:</label><input name="dia" id="dia" type="number" />
-                <label for="bpm">BPM:</label><input name="bpm" id="bpm" type="number" />
-                <button onclick="submit">Submit</button>
-            </form>
-            <ul id="log"></ul>
-            
-        </div>
+                <span class="sys-wrap lcd">
+                    <label for="sys">Sys:</label>
+                    <input name="sys" id="sys" type="number" value="120" min="0" max="400" />
+                </span>
+                <span class="dia-wrap lcd">
+                    <label for="dia">Dia:</label>
+                    <input name="dia" id="dia" type="number" value="80" min="0" max="400" />
+                </span>
 
-        <script src="manage-log.js"></script>
+            </span>
+
+            <span class="gloss">
+                <span class="bpm-wrap lcd">
+                    <label for="bpm">Bpm:</label>
+                    <input name="bpm" id="bpm" type="number" min="0" max="400" value="68" />
+                    
+                </span>
+                <button onclick="submit" class="but-wrap">
+                    
+                    <span>
+                    Add
+                </span>
+            </button>
+
+            </span>
+        </form>
+        <ul id="log"></ul>
+
+    </div>
+
+    <script src="manage-log.js"></script>
+
 </html>

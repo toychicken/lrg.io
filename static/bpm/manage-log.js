@@ -17,10 +17,11 @@ const appendLog = (entry) => {
     writeLog(nLog);
 }
 const deleteEntry = (ind) => {
-    let nLog = [...readLog()].filter((v, i) => ind !== i);
-    if(confirm("Delete this record?")) {
+
+    // if(confirm("Delete this record?")) {
+        let nLog = [...readLog()].filter((v, i) => ind !== i);
         writeLog(nLog);
-    }
+    // }
 }
 
 // display a record
@@ -34,14 +35,14 @@ const logRecord = (quad, i) => {
     let li = document.createElement('li');
     li.classList = 'reading';
     li.innerHTML = `
-                <strong>Date</strong>: ${datetime.toLocaleString()}
-                <strong>Pulse</strong>: ${bpm}BPM
+                ${datetime.toLocaleString()}
                 <span class="bp">
                     <span class="sys">${sys}</span>
                     <span class="dia">${dia}</span>
                 </span>
+                <strong>Pulse</strong>: ${bpm}BPM
             `.trim();
-    let del = document.createElement('em');
+    let del = document.createElement('button');
     del.innerHTML =' 🚮 delete';
     
     del.addEventListener('click', e => {
