@@ -1,5 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 
+## Obsidian stuff - hope they don't change it!
+*.obsidian
+content/*.canvas
+
 *.asc
 
 
