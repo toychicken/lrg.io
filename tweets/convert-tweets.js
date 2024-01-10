@@ -48,17 +48,24 @@ for (t of leighs.tweets) {
 
     //remove any links
     let fileText = t.tweet.full_text.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '')
+    let descriptionText = t.tweet.full_text.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '')
     //replace @mentions with linked mentioned
     for (mention of allMentions) {
       fileText = fileText.replace(new RegExp(mention, "gi"), `[${mention}](https://twitter.com/${mention})`)
     }
 
-    const description = {description: `"${fileText}"`};
+    fileText = fileText + `
+      {{< tweet ${t.tweet.favorite_count} ${t.tweet.retweet_count} >}}
+    `
+    const description = {description: `"${descriptionText}"`};
+
+    const parsedDate = moment(t.tweet.created_at, 'ddd MMM DD HH:mm:ss zz YYYY').format('YYYY-MM-DDTHH:MM:ssZ')
+    console.log(parsedDate, description);
 
     let fileContent = matter.stringify(fileText, {
       title: "Tweet",
       ...description,
-      date: moment(t.tweet.created_at).format('YYYY-MM-DDTHH:MM:ssZ'),
+      date: parsedDate,
       ...photos,
       ...links,
       ...mentions,
