@@ -1,12 +1,11 @@
 {{ if .Date }}
 
 <p class="content-meta">
-
+    {{ .Params.application | safeHTML }}
     <a href="{{ .Permalink }}">
-    <time class="dt-published" datetime="{{ .Date }}">
-        {{ .Date.Format "2" | humanize }} {{ .Date.Format "January, 2006"}}</time>
-
-        
+        <time class="dt-published" datetime="{{ .Date }}">
+        {{ .Date.Format "2" | humanize }} {{ .Date.Format "January, 2006"}}
+        </time>
     </a>
 </p>
 {{ end }}

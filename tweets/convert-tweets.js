@@ -3,8 +3,11 @@ const moment = require('moment')
 const matter = require('gray-matter')
 const fs = require('fs')
 
-for (t of leighs.tweets) {
+for (tX of leighs.tweets) {
   
+  let t = {...tX};
+
+
   //ignore any replies or old-style RT
   if(t.tweet.in_reply_to_user_id_str === undefined && !t.tweet.full_text.startsWith('RT @')) {
 
@@ -63,14 +66,15 @@ for (t of leighs.tweets) {
     const parsedDate = moment(t.tweet.created_at, 'ddd MMM DD HH:mm:ss zz YYYY').format('YYYY-MM-DDTHH:MM:ssZ')
 
     let fileContent = matter.stringify(fileText, {
-      title: "Tweet",
+      title: `Tweet - ${t.tweet.id}`,
       ...description,
       date: parsedDate,
       ...photos,
       ...links,
       ...mentions,
       ...tags,
-      source: `${JSON.stringify(t)}`
+      application : t.tweet.source,
+      source: `${JSON.stringify(t.tweet, '', 2)}`
       
     })
     fs.writeFileSync(`../content/posts/${moment(t.tweet.created_at).format('YYYY-MM-DD')}-${t.tweet.id}.md`, fileContent)
