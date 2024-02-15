@@ -2,6 +2,7 @@ ul.posts {
     li.post {
         border-bottom:1px solid #000;
         .content-meta {
+            font-size: 70%;
             a {
                 text-decoration: none;
                 border-bottom:1px solid  var(--lrg-primary-50);
@@ -17,12 +18,23 @@ main {
 }
 
 .post {
-    ul {
+    .post-links {
         list-style: none;
         padding: 0;
+        li {
+            list-style: none;
+            max-width: var(--readable-line-width);
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
-    li {
-        list-style: none;
+    .content-meta {
+        font-size:80%;
+    }
+}
+.post + summary {
+
+    details {
 
     }
 }
@@ -30,7 +42,8 @@ main {
 .pagination {
     padding:0;
     display:flex;
-    gap: 1em;
+    justify-content: center;
+    gap:0.5rem;
     .page-item {
         list-style:none;
         min-width: 2rem;
