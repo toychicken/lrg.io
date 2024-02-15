@@ -4,6 +4,7 @@ languageCode: en-gb
 title: LRG
 theme: teenage-dream
 publishDir: docs
+paginate: 30
 markup:
   goldmark:
     renderer:
