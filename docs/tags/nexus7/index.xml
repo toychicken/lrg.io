@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nexus7 on LRG</title>
+    <link>https://lrg.io/tags/nexus7/</link>
+    <description>Recent content in nexus7 on LRG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 16 Aug 2012 18:08:15 +0100</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/nexus7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tweet</title>
+      <link>https://lrg.io/posts/2012-08-16-236165492778352640/</link>
+      <pubDate>Thu, 16 Aug 2012 18:08:15 +0100</pubDate>
+      <guid>https://lrg.io/posts/2012-08-16-236165492778352640/</guid>
+      <description>I hope the inner box has a dimension of 1:4:9 #nexus7&#xA;❤️ 0 | 🔃 0</description>
+    </item>
+    <item>
+      <title>Tweet</title>
+      <link>https://lrg.io/posts/2012-08-16-236163720286449664/</link>
+      <pubDate>Thu, 16 Aug 2012 18:08:13 +0100</pubDate>
+      <guid>https://lrg.io/posts/2012-08-16-236163720286449664/</guid>
+      <description>Hell yeah! #nexus7&#xA;❤️ 0 | 🔃 0</description>
+    </item>
+  </channel>
+</rss>

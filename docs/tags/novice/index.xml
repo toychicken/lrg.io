@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>novice on LRG</title>
+    <link>https://lrg.io/tags/novice/</link>
+    <description>Recent content in novice on LRG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 11 May 2012 16:05:49 +0100</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/novice/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tweet</title>
+      <link>https://lrg.io/posts/2012-05-11-200979282602885120/</link>
+      <pubDate>Fri, 11 May 2012 16:05:49 +0100</pubDate>
+      <guid>https://lrg.io/posts/2012-05-11-200979282602885120/</guid>
+      <description>OK @github #novice question, if I want to include a repo, say Modernizr, in my project, also in a repo - what&amp;rsquo;s the best way to do that? :S&#xA;❤️ 0 | 🔃 0</description>
+    </item>
+  </channel>
+</rss>

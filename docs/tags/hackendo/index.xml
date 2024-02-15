@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hackendo on LRG</title>
+    <link>https://lrg.io/tags/hackendo/</link>
+    <description>Recent content in hackendo on LRG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 28 Apr 2014 06:04:18 +0100</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/hackendo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tweet</title>
+      <link>https://lrg.io/posts/2014-04-28-460669818866511872/</link>
+      <pubDate>Mon, 28 Apr 2014 06:04:18 +0100</pubDate>
+      <guid>https://lrg.io/posts/2014-04-28-460669818866511872/</guid>
+      <description>Can&amp;rsquo;t wait! &amp;ldquo;@techendo : This team is integrating @oculus + @LeapMotion for an immersive gaming experience. #hackendo&#xA;❤️ 0 | 🔃 0</description>
+    </item>
+  </channel>
+</rss>

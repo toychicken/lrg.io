@@ -6,18 +6,14 @@
     <description>Recent content in Heuristics on LRG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lrg.io/tags/heuristics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/heuristics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Quick Fox</title>
       <link>https://lrg.io/quick-fox/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://lrg.io/quick-fox/</guid>
-      <description>Ever wondered &amp;ldquo;What is the shortest sentence in english that uses all the letters of the alphabet&amp;rdquo;? Perhaps.
-Did you know that &amp;ldquo;A Quick brown fox jumps over the lazy dog &amp;rdquo;, although often cited, is not the shortest ?
-Could you train an AI to find a shorter sentence? Would anyone care? Pangram adventurers, start here!
-I wrote a quick way to check what characters you&amp;rsquo;ve used in a sentence or other kind of string.</description>
+      <description>Ever wondered &amp;ldquo;What is the shortest sentence in english that uses all the letters of the alphabet&amp;rdquo;? Perhaps.&#xA;Did you know that &amp;ldquo;A Quick brown fox jumps over the lazy dog &amp;rdquo;, although often cited, is not the shortest ?&#xA;Could you train an AI to find a shorter sentence? Would anyone care? Pangram adventurers, start here!&#xA;I wrote a quick way to check what characters you&amp;rsquo;ve used in a sentence or other kind of string.</description>
     </item>
-    
   </channel>
 </rss>

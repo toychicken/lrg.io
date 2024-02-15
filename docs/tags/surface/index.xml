@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>surface on LRG</title>
+    <link>https://lrg.io/tags/surface/</link>
+    <description>Recent content in surface on LRG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 19 Jun 2012 14:06:59 +0100</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/surface/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tweet</title>
+      <link>https://lrg.io/posts/2012-06-19-215084770227519488/</link>
+      <pubDate>Tue, 19 Jun 2012 14:06:59 +0100</pubDate>
+      <guid>https://lrg.io/posts/2012-06-19-215084770227519488/</guid>
+      <description>Feeling warm and fuzzy towards Microsoft today. Not just because #surface looks promising, but Node.js+Azure also.&#xA;❤️ 0 | 🔃 0</description>
+    </item>
+  </channel>
+</rss>

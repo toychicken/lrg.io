@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>inceptionCoding on LRG</title>
+    <link>https://lrg.io/tags/inceptioncoding/</link>
+    <description>Recent content in inceptionCoding on LRG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 06 Jul 2012 10:07:25 +0100</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/inceptioncoding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tweet</title>
+      <link>https://lrg.io/posts/2012-07-06-221190104155303936/</link>
+      <pubDate>Fri, 06 Jul 2012 10:07:25 +0100</pubDate>
+      <guid>https://lrg.io/posts/2012-07-06-221190104155303936/</guid>
+      <description>Sweet WTF? Using Google Vis API inserts SVG in an iframe in an iframe (or table). #inceptionCoding&amp;hellip;&#xA;❤️ 0 | 🔃 0</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on LRG</title>
+    <link>https://lrg.io/tags/golang/</link>
+    <description>Recent content in golang on LRG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 04 Jul 2014 07:07:37 +0100</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tweet</title>
+      <link>https://lrg.io/posts/2014-07-04-484968759145558016/</link>
+      <pubDate>Fri, 04 Jul 2014 07:07:37 +0100</pubDate>
+      <guid>https://lrg.io/posts/2014-07-04-484968759145558016/</guid>
+      <description>&amp;ldquo;@tjholowaychuk : My farewell to #nodejs (for now at least) #golang&amp;rdquo; WHAT? Who&amp;rsquo;s going to do all my work now? ;)&#xA;❤️ 1 | 🔃 0</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nhs on LRG</title>
+    <link>https://lrg.io/tags/nhs/</link>
+    <description>Recent content in nhs on LRG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 18 May 2011 06:05:31 +0100</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/nhs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tweet</title>
+      <link>https://lrg.io/posts/2011-05-18-70731721989038080/</link>
+      <pubDate>Wed, 18 May 2011 06:05:31 +0100</pubDate>
+      <guid>https://lrg.io/posts/2011-05-18-70731721989038080/</guid>
+      <description>Given that #nhs spine is now considered a failure, how about releasing the spec to the open source community? Perhaps they&amp;rsquo;d do better&amp;hellip;&#xA;❤️ 0 | 🔃 1</description>
+    </item>
+  </channel>
+</rss>

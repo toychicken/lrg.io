@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>help on LRG</title>
+    <link>https://lrg.io/tags/help/</link>
+    <description>Recent content in help on LRG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 13 Mar 2013 08:03:12 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/help/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tweet</title>
+      <link>https://lrg.io/posts/2013-03-13-311756064376897537/</link>
+      <pubDate>Wed, 13 Mar 2013 08:03:12 +0000</pubDate>
+      <guid>https://lrg.io/posts/2013-03-13-311756064376897537/</guid>
+      <description>Ugh! Just realised, in order to complete an important internal project for @ExtraLRG I have to get about 1000 times better at regex. #help!&#xA;❤️ 0 | 🔃 0</description>
+    </item>
+  </channel>
+</rss>

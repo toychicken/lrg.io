@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Discourse on LRG</title>
+    <link>https://lrg.io/tags/discourse/</link>
+    <description>Recent content in Discourse on LRG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 21 Jan 2014 10:01:01 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/discourse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tweet</title>
+      <link>https://lrg.io/posts/2014-01-21-425568707579219968/</link>
+      <pubDate>Tue, 21 Jan 2014 10:01:01 +0000</pubDate>
+      <guid>https://lrg.io/posts/2014-01-21-425568707579219968/</guid>
+      <description>Nice - @codinghorror &amp;rsquo;s #Discourse project is using @Docker - I&amp;rsquo;m interested to see how this works out!&#xA;❤️ 0 | 🔃 0</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cpuBurn on LRG</title>
+    <link>https://lrg.io/tags/cpuburn/</link>
+    <description>Recent content in cpuBurn on LRG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 16 Nov 2011 09:11:33 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/cpuburn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tweet</title>
+      <link>https://lrg.io/posts/2011-11-16-136733633410121728/</link>
+      <pubDate>Wed, 16 Nov 2011 09:11:33 +0000</pubDate>
+      <guid>https://lrg.io/posts/2011-11-16-136733633410121728/</guid>
+      <description>Blimey, just closed FireFox and it doubled my remaining battery time. Was working with Css transforms and transitions. Ouch! #cpuBurn&#xA;❤️ 0 | 🔃 0</description>
+    </item>
+  </channel>
+</rss>

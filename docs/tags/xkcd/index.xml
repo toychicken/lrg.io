@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XKCD on LRG</title>
+    <link>https://lrg.io/tags/xkcd/</link>
+    <description>Recent content in XKCD on LRG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 18 Oct 2010 09:10:39 +0100</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/xkcd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tweet</title>
+      <link>https://lrg.io/posts/2010-10-18-27719275765/</link>
+      <pubDate>Mon, 18 Oct 2010 09:10:39 +0100</pubDate>
+      <guid>https://lrg.io/posts/2010-10-18-27719275765/</guid>
+      <description>IT support? No, I mean actual support, not &amp;lsquo;please restart&amp;rsquo;? #XKCD says it best&#xA;❤️ 0 | 🔃 0</description>
+    </item>
+  </channel>
+</rss>
