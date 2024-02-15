@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://lrg.io/posts/</loc>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://lrg.io/</loc>
     <lastmod>2023-10-21T00:00:00+00:00</lastmod>
   </url><url>
@@ -22,9 +25,6 @@
   </url><url>
     <loc>https://lrg.io/tags/wordplay/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lrg.io/posts/</loc>
-    <lastmod>2023-03-07T00:03:32+00:00</lastmod>
   </url><url>
     <loc>https://lrg.io/posts/2023-03-07-1632897735476011010/</loc>
     <lastmod>2023-03-07T00:03:32+00:00</lastmod>
