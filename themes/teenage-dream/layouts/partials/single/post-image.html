@@ -1,0 +1,35 @@
+
+{{ range $src:= .Params.images }}
+
+
+
+
+    {{ $pathArr := split $src "." }}
+    {{ $pathLen := len $pathArr }}
+    {{ $ext := index $pathArr (sub $pathLen 1) }}
+    <figure>
+        <picture class="main-image">
+            {{ if eq $ext "svg" }}
+                <img src="{{ $src }}" />
+            {{ else }}
+
+
+                {{ $images := $.Site.GetPage "section" "images" }}
+
+
+
+                {{ $img := $images.Resources.GetMatch (strings.TrimPrefix "/images/" $src) }}
+                {{ with $img }}
+                    {{ $img1x := .Resize "630x"}}
+                    {{ $img2x := .Resize "945x"}}
+
+                    <source srcset="{{ $img1x.RelPermalink }}" media="(max-width: 767px)">
+                    <source srcset="{{ $img2x.RelPermalink }}" media="(min-width: 768px)">
+                    <a href="{{ $src }}" target="_blank"><img src="{{ $src }}"/></a>
+                {{ end }}
+        </picture>
+
+        {{ end }}
+
+    </figure>
+{{ end }}

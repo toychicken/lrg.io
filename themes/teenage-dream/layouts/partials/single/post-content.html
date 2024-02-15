@@ -1,0 +1,27 @@
+{{ if .Content }}
+<div class="post">
+    
+    {{ partial "post-content-meta.html" . }}
+
+    {{ if .Params.images }}
+        {{ partial "single/post-image.html" . }}
+    {{ end }}
+    
+    {{ if .Params.Links }}
+    <ul>
+        
+        {{ range $link:= .Params.Links }}
+        <li>
+            <a href="{{ $link }}" target="_blank">{{ $link }}</a>
+        </li>
+        {{ end }}
+        
+    </ul>
+    {{ end }}
+    
+    {{ .Content }}
+    
+    
+</div>
+{{ end }}
+

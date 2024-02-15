@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+{{ template "_internal/pagination.html" . }}
+<ul role="list" class="posts">
+    {{ range (.Paginate .RegularPagesRecursive).Pages }}
+        <li class="post">
+            {{ partial "partials/single/post-content.html" . }}
+        </li>
+    {{ end }}
+    <!-- Hugo's default pagination template. -->
+    
+</ul>
+{{ template "_internal/pagination.html" . }}
+
+{{ end }}
+
+
+{{ define "title" }}
+    {{ .Params.title }} - {{ .Site.Title}}
+{{ end }}
+

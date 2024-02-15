@@ -13,7 +13,7 @@ for (t of leighs.tweets) {
     if(t.tweet.entities.media) {
       for (media of t.tweet.entities.media) {
         let file = media.media_url.substring(media.media_url.lastIndexOf('/') + 1)
-        allMedia.push({ url: t.tweet.id + '-' + file })
+        allMedia.push(`/images/tweets_media/${t.tweet.id}-${file}`)
       }
     }
 
@@ -41,7 +41,7 @@ for (t of leighs.tweets) {
       }
     }
 
-    const photos = allMedia.length === 0 ? {} : { photo: allMedia }
+    const photos = allMedia.length === 0 ? {} : { images: allMedia }
     const links = allLinks.length === 0 ? {} : { links: allLinks }
     const mentions = allMentions.length === 0 ? {} : { mentions: allMentions }
     const tags = allHashTags.length === 0 ? {} : { tags: allHashTags }
@@ -55,12 +55,12 @@ for (t of leighs.tweets) {
     }
 
     fileText = fileText + `
-      {{< tweet ${t.tweet.favorite_count} ${t.tweet.retweet_count} >}}
+    
+{{< tweet ${t.tweet.favorite_count} ${t.tweet.retweet_count} >}}
     `
     const description = {description: `"${descriptionText}"`};
 
     const parsedDate = moment(t.tweet.created_at, 'ddd MMM DD HH:mm:ss zz YYYY').format('YYYY-MM-DDTHH:MM:ssZ')
-    console.log(parsedDate, description);
 
     let fileContent = matter.stringify(fileText, {
       title: "Tweet",
@@ -70,6 +70,7 @@ for (t of leighs.tweets) {
       ...links,
       ...mentions,
       ...tags,
+      source: `${JSON.stringify(t)}`
       
     })
     fs.writeFileSync(`../content/posts/${moment(t.tweet.created_at).format('YYYY-MM-DD')}-${t.tweet.id}.md`, fileContent)

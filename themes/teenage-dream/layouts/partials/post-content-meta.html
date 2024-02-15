@@ -1,0 +1,12 @@
+{{ if .Date }}
+
+<p class="content-meta">
+
+    <a href="{{ .Permalink }}">
+    <time class="dt-published" datetime="{{ .Date }}">
+        {{ .Date.Format "2" | humanize }} {{ .Date.Format "January, 2006"}}</time>
+
+        
+    </a>
+</p>
+{{ end }}
