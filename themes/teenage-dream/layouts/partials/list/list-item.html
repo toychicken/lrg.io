@@ -1,11 +1,17 @@
 
-<li>
-<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+<li class="list-item item-{{ .Kind }}">
 
 
-        <p>{{ .Description }}</p>
 
-        {{ partial "list/thumbnail-list-image.html" .}}
+
+
+
+<h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+{{ if (.Params.Subtitle) }}<h3 class="subtitle">{{ .Params.Subtitle }}</h3>{{ end }}
+{{ if (.Params.Subheading) }}<h3 class="subheading">{{ .Params.Subheading }}</h3>{{ end }}
+
+        {{ partial "list/cover-image.html" .}}
 
 
     </li>

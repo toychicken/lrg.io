@@ -1,16 +1,108 @@
 
-.related li {
-    padding-bottom:1em;
-    border-bottom: solid 1px var(--underscore-dark);
-    margin-bottom:1em;
-    max-width: var(--readable-line-width);
-}
-.related h2 {
-    width: 100%;
-}
-.related h2 a {
-    text-decoration: none;
-    color: var(--lrg-text-black);
-    border-bottom:2px double var(--lrg-text-black)
+// .related li {
+//     padding-bottom:1em;
+//     border-bottom: solid 1px var(--underscore-dark);
+//     margin-bottom:1em;
+//     max-width: var(--readable-line-width);
+// }
+// .related h2 {
+//     width: 100%;
+// }
+// .related h2 a {
+//     text-decoration: none;
+//     color: var(--lrg-text-black);
+//     border-bottom:2px double var(--lrg-text-black)
 
+// }
+
+
+.related {
+
+    // Make some sort of grid here... Flex or grid? 
+    // I think below a certain width the 'covers' simply expand to the width (e.g. a small mobile, otherwise, they're 50%, or max of say N pixels
+
+    // all the list items are the same ratio - around 129:198 apparently - https://www.penguin.co.uk/company/work-with-us/cover-design-award/template-jargon-buster#:~:text=For%20both%20the%20Penguin%20and,270mm%20wide%20by%20198mm%20tall.
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+
+    // basic version of this looks like a default orange penguin cover
+    li {
+        --cover-w: 21.5rem;
+        --cover-h: 33rem;
+
+        &.list-item {
+            background: rgb(255, 170, 52);
+            width:var(--cover-w);
+            height:var(--cover-h);
+
+            display:grid;
+            // define grid shape
+            grid-template-columns: [left] 3.5rem [pic-small-left] 3.5rem [middle-start] 3.75rem [middle] 3.75rem [middle-end] 3.5rem [pic-small-right] 3.5rem [right];
+            grid-template-rows: [top] 2rem [bar-1] 4.5rem [bar-2] 3rem [pic-large-start] 3.5rem [pic-small-start] 7.25rem [pic-center] 7.25rem [pic-small-end] 3.5rem [pic-large-end] 2rem [bottom];
+
+            .title {
+                color:black;
+
+                grid-column-start: middle-start;
+                grid-column-end: span right;
+                grid-row-start: bar-1;
+                grid-row-end: span bar-2;
+                font-size:1.8rem;
+                a {
+                    text-decoration: none;
+                    color:inherit
+                }
+            }
+            .subheading {
+                color:black;
+                grid-column-start: pic-small-left;
+                grid-column-end: span pic-small-right;
+                grid-row-start: pic-large-end;
+                grid-row-end: span bottom;
+                font-size:1rem;
+                text-align: center;
+            }
+            .subtitle {
+                color:black;
+                grid-column-start: middle-start;
+                grid-column-end: span right;
+                grid-row-start: bar-2;
+                grid-row-end: span pic-large-start;
+                font-size:1rem;
+            }
+            .cover-image {
+                background:rgb(237, 236, 234);
+                grid-column-start: left;
+                grid-column-end: span right;
+                grid-row-start: pic-large-start;
+                grid-row-end: span pic-large-end;
+                display:flex;
+                padding:1rem;
+                picture {
+                    align-self: center;
+                    justify-self: center;                }
+            }
+            .author {
+                color:black;
+            }
+
+
+            &.item-section {
+                // background:green;                   
+            }
+            &.item-page {
+                // background:blue;
+                
+            }
+
+        }
+
+
+
+
+    }
 }

@@ -1,4 +1,4 @@
-<a href="{{ .Permalink }}" class="list-item-image">
+<a href="{{ .Permalink }}" class="cover-image">
 
     {{ $src:= 0 }}
 
@@ -16,7 +16,7 @@
 
     {{ if ne $src 0 }}
 
-    <picture class="thumbnail-image">
+    <picture>
         {{ if eq $ext "svg" }}
             <img src="{{ $src }}" />
         {{ else }}
@@ -37,6 +37,7 @@
     </picture>
     {{ else }}
     <!-- No thumbnail? -->
+     <div class="background">NO IMAGE</div>
     {{ end }}
 
 </a>
