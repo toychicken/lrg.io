@@ -3,8 +3,11 @@ const moment = require('moment')
 const matter = require('gray-matter')
 const fs = require('fs')
 
-for (t of leighs.tweets) {
+for (tX of leighs.tweets) {
   
+  let t = {...tX};
+
+
   //ignore any replies or old-style RT
   if(t.tweet.in_reply_to_user_id_str === undefined && !t.tweet.full_text.startsWith('RT @')) {
 
@@ -13,7 +16,7 @@ for (t of leighs.tweets) {
     if(t.tweet.entities.media) {
       for (media of t.tweet.entities.media) {
         let file = media.media_url.substring(media.media_url.lastIndexOf('/') + 1)
-        allMedia.push({ url: t.tweet.id + '-' + file })
+        allMedia.push(`/images/tweets_media/${t.tweet.id}-${file}`)
       }
     }
 
@@ -41,28 +44,37 @@ for (t of leighs.tweets) {
       }
     }
 
-    const photos = allMedia.length === 0 ? {} : { photo: allMedia }
+    const photos = allMedia.length === 0 ? {} : { images: allMedia }
     const links = allLinks.length === 0 ? {} : { links: allLinks }
     const mentions = allMentions.length === 0 ? {} : { mentions: allMentions }
     const tags = allHashTags.length === 0 ? {} : { tags: allHashTags }
 
     //remove any links
     let fileText = t.tweet.full_text.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '')
+    let descriptionText = t.tweet.full_text.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '')
     //replace @mentions with linked mentioned
     for (mention of allMentions) {
       fileText = fileText.replace(new RegExp(mention, "gi"), `[${mention}](https://twitter.com/${mention})`)
     }
 
-    const description = {description: `"${fileText}"`};
+    fileText = fileText + `
+    
+{{< tweet ${t.tweet.favorite_count} ${t.tweet.retweet_count} >}}
+    `
+    const description = {description: `"${descriptionText}"`};
+
+    const parsedDate = moment(t.tweet.created_at, 'ddd MMM DD HH:mm:ss zz YYYY').format('YYYY-MM-DDTHH:MM:ssZ')
 
     let fileContent = matter.stringify(fileText, {
-      title: "Tweet",
+      title: `Tweet - ${t.tweet.id}`,
       ...description,
-      date: moment(t.tweet.created_at).format('YYYY-MM-DDTHH:MM:ssZ'),
+      date: parsedDate,
       ...photos,
       ...links,
       ...mentions,
       ...tags,
+      application : t.tweet.source,
+      source: `${JSON.stringify(t.tweet, '', 2)}`
       
     })
     fs.writeFileSync(`../content/posts/${moment(t.tweet.created_at).format('YYYY-MM-DD')}-${t.tweet.id}.md`, fileContent)

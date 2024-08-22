@@ -1,0 +1,20 @@
+{{ define "title" }}
+    {{ .Params.title }} - {{ .Site.Title}}
+{{ end }}
+
+{{ define "main" }}
+    {{ partial "single/post-content.html" . }}
+
+    <summary>
+        <details>
+
+                <pre>
+                    <code>
+{{ .Params.source }}
+                    </code>
+                </pre>
+                
+
+        </details>
+    </summary>
+{{ end }}

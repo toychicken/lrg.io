@@ -3,7 +3,15 @@ main .content-meta {
     color: var(--lrg-primary-100);
     text-align: right;
     margin-bottom:2rem;
+
+    display:flex;
+    justify-content: space-between;    
     time {
         color: var(--lrg-primary-50);
     }
+    a {
+            text-decoration: none;
+            border-bottom:1px solid  var(--lrg-primary-50);
+        }
+    
 }
