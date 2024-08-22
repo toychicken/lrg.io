@@ -3,7 +3,7 @@ baseURL: https://lrg.io
 languageCode: en-gb
 title: LRG
 theme: teenage-dream
-publishDir: docs
+publishDir: public
 paginate: 30
 markup:
   goldmark:

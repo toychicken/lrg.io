@@ -1,5 +1,6 @@
 import { execa } from 'execa';
 const folderName = 'docs';
+const buildFolder = 'public' // should be same as publishDir in /config.yaml 
 const pagesBranch =  'gh-pages';
 
 (async () => {
@@ -8,7 +9,7 @@ const pagesBranch =  'gh-pages';
     console.log("Building...");
     // build into the dist folder (folderName)
     await execa("hugo");
-    // await execa("cp", [`${folderName}/index.html`, `${folderName}/404.html`]);
+    await execa("mv", [`${buildFolder}`, `${folderName}`]);
     await execa("git", ["--work-tree", folderName, "add", "--all"]);
     await execa("git", ["--work-tree", folderName, "commit", "-m", pagesBranch]);
     // push, and wait for the magic
