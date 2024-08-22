@@ -11,6 +11,7 @@ content/*.canvas
 
 public/
 resources/
+docs/
 
 ### Node template
 # Logs
