@@ -3,6 +3,8 @@ const folderName = 'docs';
 const buildFolder = 'public' // should be same as publishDir in /config.yaml 
 const pagesBranch =  'gh-pages';
 
+// note! This puts the generated folder at the root of the directory in this working copy of the repo
+
 (async () => {
   try {
     await execa("git", ["checkout", "--orphan", pagesBranch]);
@@ -10,11 +12,13 @@ const pagesBranch =  'gh-pages';
     // build into the dist folder (folderName)
     await execa("hugo");
     await execa("mv", [`${buildFolder}`, `${folderName}`]);
+    console.log("Built and moved to 'docs'");
     await execa("git", ["--work-tree", folderName, "add", "--all"]);
     await execa("git", ["--work-tree", folderName, "commit", "-m", pagesBranch]);
     // push, and wait for the magic
     console.log(`Pushing to ${pagesBranch}...`);
     await execa("git", ["push", "origin", `HEAD:${pagesBranch}`, "--force"]);
+    console.log(`Removing that ${folderName} folder`);
     await execa("rm", ["-r", folderName]);
     await execa("git", ["checkout", "-f", "main"]);
     await execa("git", ["branch", "-D", pagesBranch]);
