@@ -1,0 +1,17 @@
+{
+  "name": "tweets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tweets.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "gray-matter": "^4.0.3",
+    "moment": "^2.30.1"
+  }
+}
