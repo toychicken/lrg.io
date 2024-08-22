@@ -1,4 +1,4 @@
-{{- $inServerMode := .Site.IsServer }}
+{{- $inServerMode := hugo.IsServer }}
 {{- $sass         := "styles.scss" }}
 {{- $cssTarget    := "css/styles.css" }}
 {{- $cssOpts      := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
