@@ -1,0 +1,194 @@
+{
+  "main": {
+    "id": "c8e674736e6f2736",
+    "type": "split",
+    "children": [
+      {
+        "id": "20f3c654831180a4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "651a21214e1abdc6",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Test graph.canvas",
+                "viewState": {
+                  "x": -100,
+                  "y": -155.1650217931411,
+                  "zoom": -0.9080216776271676
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bad3dc2c76de9aa1",
+    "type": "split",
+    "children": [
+      {
+        "id": "f310e14c78e7ad3c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "918c1399ff8c6e66",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4b1ce560c225839e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b8142787793930af",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "729898d0831fc8b5",
+    "type": "split",
+    "children": [
+      {
+        "id": "a1fa903b2267a0c9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "57f7d985a6842aed",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Test graph.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a2364fac78aa3f2a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Test graph.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "34e8b5ff2c832f83",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "86738b36c1aebc26",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Test graph.canvas"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "4b1ce560c225839e",
+  "lastOpenFiles": [
+    "posts/_index.md",
+    "posts/2023-03-07-1632897735476011010.md",
+    "posts/2022-12-16-1603552212445265920.md",
+    "posts/2022-12-10-1601388762831138816.md",
+    "posts/2022-11-29-1597653061434232832.md",
+    "posts/2022-11-29-1597651141839708160.md",
+    "posts/2022-11-28-1597160055056437249.md",
+    "posts/2022-11-25-1596283185163165698.md",
+    "posts/2022-11-24-1595894707812532224.md",
+    "posts/2022-11-24-1595675487619190785.md",
+    "posts/2022-11-21-1594834574193860608.md",
+    "posts/2022-11-21-1594760999743143939.md",
+    "posts/2022-11-18-1593576112226856961.md",
+    "posts/2022-11-15-1592650836454567936.md",
+    "posts/2022-11-14-1592076436659400704.md",
+    "posts/2022-11-13-1591852861633314817.md",
+    "posts/2022-11-12-1591352402627600384.md",
+    "posts/2022-11-11-1590858853100720128.md",
+    "posts/2022-11-10-1590673896172589056.md",
+    "posts/2022-11-10-1590635560749895681.md",
+    "posts/2022-11-08-1590127240070635520.md",
+    "posts/2022-11-08-1590113508888236032.md",
+    "posts/2022-11-07-1589766401677721600.md",
+    "posts/2022-11-07-1589529517659672578.md",
+    "posts/2022-11-06-1589400726622523392.md",
+    "posts/2022-11-06-1589280369550901248.md",
+    "posts",
+    "Test graph.canvas",
+    "images/usable_sprout.png",
+    "images/usable_banana.png",
+    "images/record_pile.png",
+    "images/scaffold@900x600.jpg",
+    "images/2019-06-03 16.19.52-1@96x96.gif",
+    "images/2019-06-03 16.19.52-1@480x480.gif",
+    "images/aggresive_lookin_cows.jpg",
+    "images/aggresive_lookin_cows@600x600.jpg",
+    "images/balinese_mask.jpg",
+    "images/balinese_mask@600x600.jpg"
+  ]
+}
