@@ -1,21 +1,3 @@
-
-// .related li {
-//     padding-bottom:1em;
-//     border-bottom: solid 1px var(--underscore-dark);
-//     margin-bottom:1em;
-//     max-width: var(--readable-line-width);
-// }
-// .related h2 {
-//     width: 100%;
-// }
-// .related h2 a {
-//     text-decoration: none;
-//     color: var(--lrg-text-black);
-//     border-bottom:2px double var(--lrg-text-black)
-
-// }
-
-
 .related {
 
     // Make some sort of grid here... Flex or grid? 
@@ -34,10 +16,21 @@
         --cover-w: 21.5rem;
         --cover-h: 33rem;
 
+        --color-bone: #f5f3f0;
+        --color-char: #222c;
+        --color-literature: hsl(22, 71%, 49%);
+        --bg-literature: radial-gradient(circle farthest-corner at center center, #d66524 0%, #d27d4b 90%);
+        // transform:matrix(1.00,0.01,-0.02,1.00,0,0);
+        &:nth-child(even) {
+            transform:matrix(1.00,-0.01,0.01,1.00,0,0);
+        }
         &.list-item {
-            background: rgb(255, 170, 52);
+            background: var(--bg-literature);
             width:var(--cover-w);
             height:var(--cover-h);
+
+            border-radius: 0.4rem;
+            box-shadow: 3px 4px 9px 0px #222C;
 
             display:grid;
             // define grid shape
@@ -45,50 +38,101 @@
             grid-template-rows: [top] 2rem [bar-1] 4.5rem [bar-2] 3rem [pic-large-start] 3.5rem [pic-small-start] 7.25rem [pic-center] 7.25rem [pic-small-end] 3.5rem [pic-large-end] 2rem [bottom];
 
             .title {
-                color:black;
+                color:var(--color-char);
 
                 grid-column-start: middle-start;
                 grid-column-end: span right;
                 grid-row-start: bar-1;
                 grid-row-end: span bar-2;
                 font-size:1.8rem;
+                align-self: end;
+
+                padding:0;
                 a {
                     text-decoration: none;
                     color:inherit
                 }
             }
+            .subtitle {
+                color:var(--color-char);
+                grid-column-start: middle-start;
+                grid-column-end: span right;
+                grid-row-start: bar-2;
+                grid-row-end: span pic-large-start;
+                padding:0;
+
+                font-size:1rem;
+            }
             .subheading {
-                color:black;
+                color:var(--color-char);
                 grid-column-start: pic-small-left;
                 grid-column-end: span pic-small-right;
                 grid-row-start: pic-large-end;
                 grid-row-end: span bottom;
                 font-size:1rem;
                 text-align: center;
-            }
-            .subtitle {
-                color:black;
-                grid-column-start: middle-start;
-                grid-column-end: span right;
-                grid-row-start: bar-2;
-                grid-row-end: span pic-large-start;
-                font-size:1rem;
+                
             }
             .cover-image {
-                background:rgb(237, 236, 234);
-                grid-column-start: left;
-                grid-column-end: span right;
-                grid-row-start: pic-large-start;
-                grid-row-end: span pic-large-end;
+                background:var(--color-bone);
+                grid-column: left / span right;
+                grid-row: pic-large-start / span pic-large-end;
                 display:flex;
-                padding:1rem;
+                padding:0rem;
+                overflow: hidden;
                 picture {
                     align-self: center;
-                    justify-self: center;                }
+                    justify-self: center;
+                    padding:0;
+                    img {
+                        width: auto;
+                        height:auto;
+                        margin:0;
+                        min-height:100%;
+                        width:100%;
+                    }                
+                }
             }
             .author {
-                color:black;
+                color:var(--color-char);
             }
+
+            &.classic {
+                .title {
+                    grid-column: left / span right;
+                    grid-row: pic-large-start / span pic-center;
+                    width:100%;
+                    background:var(--color-bone);
+                    height:100%;
+                    line-height:2rem;
+                    display:flex;
+                    justify-content: center;
+                    a {
+                        align-self: flex-end;
+                        padding:1rem;
+                        border-bottom: 3px solid var(--color-literature);
+                    }
+
+                }
+                .subtitle {}
+                .author {
+                    grid-column: left / span right;
+                    grid-row: pic-center / span pic-small-end;
+                    display:flex;
+                    justify-content: center;
+                    background: var(--color-bone);
+                    span {
+                        align-self:flex-start;
+                        padding:1rem;
+                    }
+                }
+                .subheading {}
+                .cover-image {
+                    display:none;
+                }        
+
+            }
+        
 
 
             &.item-section {

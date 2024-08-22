@@ -1,17 +1,28 @@
+{{ $style := .Params.style }}
 
-<li class="list-item item-{{ .Kind }}">
+<li class="list-item item-{{ .Kind }} {{ $style}}">
+
+    <h2 class="title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h2>
+
+    {{ partial "list/cover-image.html" .}}
+    <div class="subtitle">
+        {{ if (.Params.Subtitle) }}
+        <span>{{ .Params.Subtitle }}</span>
+        {{ end }}
+    </div>
+    <div class="subheading">
+        {{ if (.Params.Subheading) }}
+        <span>{{ .Params.Subheading }}</span>
+        {{ end }}
+    </div>
+    <div class="author">
+        {{ if (.Params.Author) }}
+        <span>{{ .Params.Author }}</span>
+        {{ end }}
+    </div>
 
 
 
-
-
-
-<h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-
-{{ if (.Params.Subtitle) }}<h3 class="subtitle">{{ .Params.Subtitle }}</h3>{{ end }}
-{{ if (.Params.Subheading) }}<h3 class="subheading">{{ .Params.Subheading }}</h3>{{ end }}
-
-        {{ partial "list/cover-image.html" .}}
-
-
-    </li>
+</li>
