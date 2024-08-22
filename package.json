@@ -1,0 +1,15 @@
+{
+  "name": "lrg-hugo",
+  "private": true,
+  "version": "8.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "hugo serve -D",
+    "deploy": "node scripts/gh-pages-deploy.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "execa": "^9.3.0"
+  }
+}
