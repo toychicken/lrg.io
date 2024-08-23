@@ -19,18 +19,20 @@
         --color-bone: #f5f3f0;
         --color-char: #222c;
         --color-literature: hsl(22, 71%, 49%);
-        --bg-literature: radial-gradient(circle farthest-corner at center center, #d66524 0%, #d27d4b 90%);
+        --bg-literature: radial-gradient(circle farthest-corner at center center, #d66524fe 0%, #d27d4bcc 90%);
         // transform:matrix(1.00,0.01,-0.02,1.00,0,0);
         &:nth-child(even) {
             transform:matrix(1.00,-0.01,0.01,1.00,0,0);
         }
         &.list-item {
-            background: var(--bg-literature);
+            background: var(--bg-literature),
+                    url("data:image/svg+xml,%3Csvg viewBox='0 0 215 215' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.53' numOctaves='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+
             width:var(--cover-w);
             height:var(--cover-h);
 
             border-radius: 0.4rem;
-            box-shadow: 3px 4px 9px 0px #222C;
+            box-shadow:4px 1px 2px 0px #e9ddc9, 3px 4px 9px 0px #222C, inset 0px 0px 4px 0px #2226;
 
             display:grid;
             // define grid shape
@@ -83,13 +85,14 @@
                 picture {
                     align-self: center;
                     justify-self: center;
-                    padding:0;
+                    padding:0.7rem;
                     img {
                         width: auto;
                         height:auto;
                         margin:0;
                         min-height:100%;
                         width:100%;
+                        filter: var(--img-cover-print-filter);
                     }                
                 }
             }
@@ -136,11 +139,12 @@
 
 
             &.item-section {
+                // what HUGO calls a list / index
                 // background:green;                   
             }
             &.item-page {
-                // background:blue;
-                
+                // what HuGO calls a page
+                // background:blue
             }
 
         }
