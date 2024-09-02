@@ -1,7 +1,12 @@
 ---
 title: The Minute Minder
+subheading: An LRG experimental tool
+subtitle: Time keeps on ticking
 description: "Ever wondered how much it costs your business for you to wait for your crappy laptop to load, or have you attend that pointless meeting? Well, now you can work it out!"
+
 date: 2012-08-22
+style: experiments
+images: ["/images/minute-minder.jpg"]
 tags:
  - app
  - calculator
