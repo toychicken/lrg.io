@@ -1,6 +1,7 @@
 ---
 title: Quick Fox
 subtitle: The lazy dog catcheth the early worm or something.
+subheading: An LRG experimental tool
 description: "For when you just absotively posolutely need to check what letters you've used in a sentence"
 date: 2023-10-20
 images: 
@@ -10,6 +11,7 @@ tags:
  - Wordplay
  - Language
  - Heuristics
+style: experiments
 ---
 Ever wondered "What is the shortest sentence in english that uses all the letters of the alphabet"? Perhaps. 
 
