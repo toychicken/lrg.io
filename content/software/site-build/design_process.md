@@ -10,8 +10,9 @@ tags:
   - personal
 application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
 draft: false
-images: []
-category:
+images: 
+category: 
+style: experiments
 ---
 
 ## Best wwwebsite ever!

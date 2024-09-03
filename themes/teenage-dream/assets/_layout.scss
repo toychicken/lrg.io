@@ -22,7 +22,7 @@ body {
     flex-wrap: wrap;
     gap: var(--main-center-gutter);
     max-width: calc(2.4 * var(--readable-line-width));
-    align-items: baseline;
+
 }
 
 #content > :last-child {
