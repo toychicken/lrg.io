@@ -1,6 +1,7 @@
 ---
 title: Posts
 subtitle: A Tweet archive
+subheading: An LRG X-escape series
 author: "@ToyChicken"
 date: 2024-02-15
 description: "Short posts, toots, tweets and other hashtagged brevity"
