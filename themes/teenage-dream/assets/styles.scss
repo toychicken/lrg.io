@@ -24,6 +24,21 @@
 
     --font-title: 'Lexend', sans-serif;
     --font-body: 'EB Garamond', serif;
+
+
+
+    /* COVER STYLES */
+    --cover-w: 21.5rem;
+    --cover-h: 33rem;
+
+    --color-bone: #f5f3f0;
+    --color-char: #222c;
+    --color-literature: hsl(22, 71%, 49%);
+    --bg-literature: radial-gradient(circle farthest-corner at center center, #d66b2d 0%, #dc8d5f 90%);
+    --color-experiments: hsl(293, 34%, 70%);
+    --bg-experiments: radial-gradient(circle farthest-corner at center center, hsl(293, 43%, 50%) 0%, hsl(293, 44%, 75%) 90%);
+    --panel-inset-edge-gradient: linear-gradient(90deg, #2226 0%, transparent 1%, transparent 99%, #2226 100%);
+
 }
 
 
@@ -38,5 +53,8 @@
 @import "./pictures.scss";
 @import "./code-format.scss";
 @import "./posts.scss";
-@import "./related-list.scss";
+@import "./cover-colour.scss";
+@import "./cover-colour-experiments.scss";
+@import "./cover-layout.scss";
+@import "./cover-layout-classic.scss";
 @import "./shortcode-shape.scss";

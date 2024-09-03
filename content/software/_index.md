@@ -1,9 +1,9 @@
 ---
 subheading: An LRG copypasta series
 title: Software
-author: Leigh Garland
+author: "@ classic literature"
 subtitle: Testament to an old god
-style: ""
+style: "classic literature"
 description: Leigh writes about his adventures in software, from his early days sweating over a Vic20, through hacking Midi files on his Atari, making CD-roms for iMacs through to the present day.
 images: ["/images/vic_20-display.jpg"]
 ---

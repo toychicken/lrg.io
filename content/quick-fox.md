@@ -11,7 +11,7 @@ tags:
  - Wordplay
  - Language
  - Heuristics
-style: experiments
+style: "experiments"
 ---
 Ever wondered "What is the shortest sentence in english that uses all the letters of the alphabet"? Perhaps. 
 

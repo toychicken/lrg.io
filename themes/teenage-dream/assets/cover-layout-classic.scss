@@ -1,0 +1,84 @@
+.related {
+    li.list-item.classic {
+        .title {
+            grid-column: middle-start / span right;
+            grid-row: bar-1 / span bar-2;
+            font-size: 1.8rem;
+            align-self: end;
+            background: none;
+            display:flex;
+            justify-content: start;
+
+            padding: 0;
+            
+            a {
+                border:none;
+                padding:0;
+                margin:0;
+                text-align: left;
+            }
+        }
+
+        .subtitle {
+            color: var(--color-char);
+            grid-column: middle-start / span right;
+            grid-row: bar-2 / span pic-large-start;
+            padding: 0;
+            justify-content: left;
+            background:none;
+            span {
+                font-size: 1.2rem;
+                padding:0 0.6rem 0 0;
+                line-height: 1.2rem;
+            }
+        }
+        .author {
+            display:none;
+        }
+
+        .subheading {
+            grid-column:pic-small-left / span pic-small-right;
+            grid-row: pic-large-end / span bottom;
+            font-size: 1rem;
+            text-align: center;
+
+            span {
+                line-height: 2rem;
+            }
+        }
+
+        .cover-image {
+            background: var(--panel-inset-edge-gradient), var(--color-bone);
+            grid-column: left / span right;
+            grid-row: pic-large-start / span pic-large-end;
+            display: flex;
+            padding: 0rem;
+            overflow: hidden;
+
+            picture {
+                align-self: center;
+                padding: 0 ;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                align-content: center;
+
+                // display:flex;
+                img {
+                    filter: var(--img-desaturate-image);
+                    height: auto;
+                    margin: 0;
+
+                    width: 100%;
+                }
+
+                img[src$='.svg'] {
+                    width: auto;
+                    max-height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+}
