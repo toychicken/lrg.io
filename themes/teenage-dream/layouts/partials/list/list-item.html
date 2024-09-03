@@ -17,11 +17,7 @@
         <span>{{ .Params.Subheading }}</span>
         {{ end }}
     </div>
-    <div class="author">
-        {{ if (.Params.Author) }}
-        <span>{{ .Params.Author }}</span>
-        {{ end }}
-    </div>
+    <div class="author">{{ if (.Params.Author) }}<span>{{ .Params.Author }}</span>{{ end }}</div>
 
 
 

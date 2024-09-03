@@ -87,7 +87,7 @@
                 align-self: flex-end;
                 padding: 1rem 0;
                 margin:0 1rem;
-                border-bottom: 3px solid var(--color-literature);
+                border-bottom: 0.20rem solid var(--color-literature);
                 text-align: center;
             }
 
@@ -104,6 +104,7 @@
                 padding: 1rem;
                 font-size: 1.4rem;
                 text-align: center;
+                border-top: 0.20rem solid transparent;
             }
         }
         .author {
@@ -112,7 +113,9 @@
             display: flex;
             justify-content: center;
         }
-
+        .author:empty {
+            background:url("/assets/chicken_logo_original.svg") no-repeat center center;
+        }
 
         .subheading {
             grid-column:pic-small-left / span pic-small-right;
@@ -132,4 +135,5 @@
 
 
     }
+
 }
