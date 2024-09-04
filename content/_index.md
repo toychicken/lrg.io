@@ -1,5 +1,5 @@
 ---
-subheading: "It's a wonderful strife"
+subheading: "Reticulating splines..."
 title: "Hello world*"
 date: 2023-10-21
 subtitle: "Spinning around"

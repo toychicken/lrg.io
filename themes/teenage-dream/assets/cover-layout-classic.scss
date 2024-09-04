@@ -20,16 +20,18 @@
         }
 
         .subtitle {
-            color: var(--color-char);
             grid-column: middle-start / span right;
             grid-row: bar-2 / span pic-large-start;
             padding: 0;
             justify-content: left;
             background:none;
             span {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 padding:0 0.6rem 0 0;
-                line-height: 1.2rem;
+                margin:0;
+                line-height: 1.3rem;
+                text-align: left;
+                text-wrap:balance;
             }
         }
         .author {
