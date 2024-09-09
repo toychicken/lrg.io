@@ -9,7 +9,6 @@ tags:
   - links
   - transforms
 application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
-draft: true
 images: []
 category:
 ---
