@@ -15,7 +15,7 @@ category:
 style: experiments
 ---
 
-## Best wwwebsite ever!
+## Best wwwebsite ever! ✊
  
  ![](penguin_covers.png)
 It' going to look like the coolest fucking shelf of penguin books you've ever seen. 
