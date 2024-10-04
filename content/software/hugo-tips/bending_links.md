@@ -2,7 +2,7 @@
 title: Bend links to your will
 subtitle: Using render hooks to make links more flexible
 subheading: Wiggle it, just a little bit
-description: This is where the description goes
+description: Using Hugo's Render hooks to make links appear how you want them to.
 date: 2024-10-04T12:28:00
 tags:
   - hugo
@@ -428,6 +428,6 @@ Obviously, this is a little over-engineered, but it gives you a lot of flexibili
 
 Enjoy!
 
-If you found this useful, or have feedback please drop me a line [@toychicken](https://mastodon.social/@toychicken)
+If you found this useful, or have feedback please drop me a line [@toychicken](https://mastodon.social/@toychicken/113249975233953921)
 
 Finally, if you too love cats, make a donation to the [Cats protection league](https://www.cats.org.uk/donate) today. 🐈‍⬛
