@@ -8,7 +8,7 @@ tags:
   - hugo
   - coding
 application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
-draft: true
+draft: false
 images:
   - /images/bender-as-pimp.jpg
 category: hugo
