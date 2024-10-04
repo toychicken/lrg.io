@@ -3,7 +3,7 @@ title: Skeumorphic, Moi?
 subtitle: Things that look like other things
 subheading: 
 description: Honestly, I got a bit tired of the standard, stripped-back personal blog style. Why not have fun? There's little enough fun on the web as it happens.
-date: 2024-09-02T16:22
+date: 2024-09-02T16:22:00
 tags:
   - lrg
   - design

@@ -3,7 +3,7 @@ title: Useful links
 subtitle: Things what were handy
 subheading: LRG Miscellany
 description: Links  that I found useful during this rebuild
-date: 2024-09-02T15:48
+date: 2024-09-02T15:48:00
 tags:
   - lrg
   - links
