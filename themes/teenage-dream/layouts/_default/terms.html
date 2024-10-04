@@ -1,0 +1,20 @@
+{{ define "main" }}
+    {{ if .Title }}
+        {{ partial "single/content.html" . }}
+
+    {{ end }}
+{{ end }}
+
+{{ define "aside" }}  
+        <ul role="list" class="related spines">
+            {{ range .Pages }}
+                {{ partial "list/list-item.html" .}}
+            {{ end }}
+        </ul>
+
+{{ end }}
+
+{{ define "title" }}
+    {{ .Params.title }} - {{ .Site.Title}}
+{{ end }}
+

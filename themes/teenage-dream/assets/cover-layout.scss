@@ -10,8 +10,6 @@
     flex-wrap: wrap;
     gap: 2rem;
 
-
-
     /* we have class types for the cover, defined in the yaml - they are: 
         layout types: 
             `classic` - words only
@@ -22,16 +20,20 @@
 
     li.list-item {
 
-        width: var(--cover-w);
-        height: var(--cover-h);
+        &.item-section,
+        &.item-page {
 
-        border-radius: 0.4rem;
-        box-shadow: 4px 1px 2px 0px #e9ddc9, 3px 4px 9px 0px #222C, inset 0px 0px 4px 0px #2226;
+            width: var(--cover-w);
+            height: var(--cover-h);
 
-        display: grid;
-        // define grid shape
-        grid-template-columns: [left] 3.5rem [pic-small-left] 3.5rem [middle-start] 3.75rem [middle] 3.75rem [middle-end] 3.5rem [pic-small-right] 3.5rem [right];
-        grid-template-rows: [top] 2rem [bar-1] 4.5rem [bar-2] 3rem [pic-large-start] 3.5rem [pic-small-start] 7.25rem [pic-center] 7.25rem [pic-small-end] 3.5rem [pic-large-end] 2rem [bottom];
+            border-radius: 0.4rem;
+            box-shadow: 4px 1px 2px 0px #e9ddc9, 3px 4px 9px 0px #222C, inset 0px 0px 4px 0px #2226;
+
+            display: grid;
+            // define grid shape
+            grid-template-columns: [left] 3.5rem [pic-small-left] 3.5rem [middle-start] 3.75rem [middle] 3.75rem [middle-end] 3.5rem [pic-small-right] 3.5rem [right];
+            grid-template-rows: [top] 2rem [bar-1] 4.5rem [bar-2] 3rem [pic-large-start] 3.5rem [pic-small-start] 7.25rem [pic-center] 7.25rem [pic-small-end] 3.5rem [pic-large-end] 2rem [bottom];
+        }
 
         &.item-section {
             &::before {
@@ -69,6 +71,14 @@
         }
 
         .title {
+            a {
+                text-decoration: none;
+            }
+        }
+
+        &.item-section,
+        &.item-page {
+        .title {
             grid-column: left / span right;
             grid-row: pic-small-start / span pic-center;
             width: 100%;
@@ -81,56 +91,68 @@
             padding: 0;
 
             a {
-                text-decoration: none;
                 align-self: flex-end;
                 padding: 1rem 0;
-                margin:0 1rem;
+                margin: 0 1rem;
                 border-bottom: 0.20rem solid #2226;
                 text-align: center;
             }
 
         }
 
-        .subtitle {
-            grid-column: left / span right;
-            grid-row: pic-center / span pic-small-end;
-            display: flex;
-            justify-content: center;
+            .subtitle {
+                grid-column: left / span right;
+                grid-row: pic-center / span pic-small-end;
+                display: flex;
+                justify-content: center;
 
-            span {
-                align-self: flex-start;
-                padding: 1rem;
-                font-size: 1.4rem;
+                span {
+                    align-self: flex-start;
+                    padding: 1rem;
+                    font-size: 1.4rem;
+                    text-align: center;
+                }
+            }
+
+            .author {
+                grid-column: left / span right;
+                grid-row: bar-2 / span pic-large-start;
+                display: flex;
+                justify-content: center;
+            }
+
+            .author:empty {
+                background: url("/assets/chicken_logo_original.svg") no-repeat center center;
+            }
+
+            .subheading {
+                grid-column: pic-small-left / span pic-small-right;
+                grid-row: pic-small-end / span pic-large-end;
+                font-size: 1rem;
                 text-align: center;
+
+                span {
+                    line-height: 4rem;
+                }
             }
-        }
-        .author {
-            grid-column: left / span right;
-            grid-row: bar-2 / span pic-large-start;
-            display: flex;
-            justify-content: center;
-        }
-        .author:empty {
-            background:url("/assets/chicken_logo_original.svg") no-repeat center center;
-        }
 
-        .subheading {
-            grid-column:pic-small-left / span pic-small-right;
-            grid-row: pic-small-end / span pic-large-end;
-            font-size: 1rem;
-            text-align: center;
-
-            span {
-                line-height: 4rem;
+            .cover-image {
+                display: none;
             }
+
+
         }
-
-        .cover-image {
-            display: none;
-        }
-
-
-
     }
 
+    &.spines {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 0;
+
+
+
+        li.list-item.item-term {
+            background: blue;
+        }
+    }
 }

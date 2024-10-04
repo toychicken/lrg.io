@@ -5,9 +5,7 @@
     {{ end }}
 {{ end }}
 
-{{ define "aside" }}
-
-    
+{{ define "aside" }}    
         <ul role="list" class="related">
             {{ range .Pages }}
                 {{ partial "list/list-item.html" .}}
@@ -15,7 +13,6 @@
         </ul>
 
 {{ end }}
-
 
 {{ define "title" }}
     {{ .Params.title }} - {{ .Site.Title}}

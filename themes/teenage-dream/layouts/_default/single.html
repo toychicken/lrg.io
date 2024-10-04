@@ -11,3 +11,16 @@
     </script>
   {{ end }}
 {{ end }}
+
+{{ define "aside" }}
+  {{ with .Site.RegularPages.Related . | first 5 }}
+    <ul role="list" class="related">
+      {{ range . }}
+        {{ partial "list/list-item.html" .}}
+      {{ end }}
+    </ul>
+
+
+      
+  {{ end }}
+{{ end }}

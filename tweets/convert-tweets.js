@@ -63,7 +63,7 @@ for (tX of leighs.tweets) {
     `
     const description = {description: `"${descriptionText}"`};
 
-    const parsedDate = moment(t.tweet.created_at, 'ddd MMM DD HH:mm:ss zz YYYY').format('YYYY-MM-DDTHH:MM:ssZ')
+    const parsedDate = moment(new Date(t.tweet.created_at)).format('YYYY-MM-DDTHH:MM:ssZ')
 
     let fileContent = matter.stringify(fileText, {
       title: `Tweet - ${t.tweet.id}`,
@@ -73,10 +73,12 @@ for (tX of leighs.tweets) {
       ...links,
       ...mentions,
       ...tags,
+      style: "tweet",
       application : t.tweet.source,
       source: `${JSON.stringify(t.tweet, '', 2)}`
       
     })
+    //console.log(`Date: ${moment(t.tweet.created_at).format('YYYY-MM-DD')}`)
     fs.writeFileSync(`../content/posts/${moment(t.tweet.created_at).format('YYYY-MM-DD')}-${t.tweet.id}.md`, fileContent)
   }
 

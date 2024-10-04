@@ -1,25 +1,32 @@
 .related {
     li.list-item {
         color: var(--color-char);
+
         &.item-section {
 
             background: var(--bg-main-panel), var(--bg-literature),
                 url("data:image/svg+xml,%3Csvg viewBox='0 0 215 215' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.53' numOctaves='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+
             &::before {
                 background: var(--bg-main-panel),
                     var(--bg-literature);
             }
         }
 
-        .title {
-            background: var(--panel-inset-edge-gradient), var(--color-bone);
-            a {
-                color:inherit;
-                border-bottom-color: var(--color-literature);
+        &.item-section,
+        &.item-page {
+            .title {
+                background: var(--panel-inset-edge-gradient), var(--color-bone);
+
+                a {
+                    color: inherit;
+                    border-bottom-color: var(--color-literature);
+                }
             }
-        }
-        .subtitle {
-            background: var(--panel-inset-edge-gradient), var(--color-bone);
+
+            .subtitle {
+                background: var(--panel-inset-edge-gradient), var(--color-bone);
+            }
         }
     }
 }
