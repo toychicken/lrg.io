@@ -1,0 +1,19 @@
+
+a.internal,
+a.relative {
+  .hostname-text {
+    display: none;
+  }
+}
+
+a.external:not(.implied) {
+  .hostname-text { display:none }
+}
+
+a.external.implied {
+  .link-text { display: none; }
+}
+
+a[title]::after {
+  content: '(' attr(title) ')';
+}

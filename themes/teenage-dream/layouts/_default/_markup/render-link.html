@@ -1,1 +1,22 @@
-<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if or (strings.HasPrefix .Destination "http") (strings.HasPrefix .Destination "https") }} target="_blank"{{ end }} >{{ .Text | safeHTML }}</a>
+{{ $u := urls.Parse .Destination }}
+{{ $yourDomain := "localhost" }}
+{{ $class := "internal" }}
+{{ $target := "" }}
+
+{{ if not (strings.ContainsNonSpace $u.Hostname)}}
+	{{ $class = "relative" }}
+{{ else }}
+	{{ if not (compare.Eq $u.Hostname $yourDomain) }}
+		{{ $class = "external" }}
+		{{ $target = "_blank" }}
+		{{ if (compare.Eq $u.String .Text) }}
+		    {{ $class = "external implied"}}
+		{{ end }}
+	{{ end }}
+{{ end }}
+
+<a href="{{ .Destination | safeURL }}" 
+{{ with .Title}}title="{{ . }}"{{ end }} 
+target="{{ $target }}"
+class="{{ $class }}" 
+data-domain="{{ $u.Hostname }}"><span class="link-text">{{ .Text | safeHTML }}</span><span class="hostname-text">{{ $u.Hostname }}</span></a>

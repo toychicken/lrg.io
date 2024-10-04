@@ -18,7 +18,7 @@ This all began with a post on my socials...
 
 ![https://mastodon.neilzone.co.uk/@neil/113244632967157645](neil-brown-css-nerd-callout.png)
 
-https://mastodon.neilzone.co.uk/@neil/113244632967157645
+[https://mastodon.neilzone.co.uk/@neil/113244632967157645](https://mastodon.neilzone.co.uk/@neil/113244632967157645 "Original post")
 
 The consensus certainly seemed to be that it's not possible to do this solely with CSS (which is a shame), but Neil did mention that they were investigating using Hugo to solve this.
 
@@ -396,11 +396,10 @@ Last of all, I want my external links to always open in a new tab, so we can add
 {{ with .Title}}title="{{ . }}"{{ end }} 
 target="{{ $target }}"
 class="{{ $class }}" 
-data-domain="{{ $u.Hostname }}">
-	<span class="link-text">{{ .Text | safeHTML }}</span>
-	<span class="hostname-text">{{ $u.Hostname }}</span>
-</a>
+data-domain="{{ $u.Hostname }}"><span class="link-text">{{ .Text | safeHTML }}</span> <span class="hostname-text">{{ $u.Hostname }}</span></a>
 ```
+
+And the final CSS...
 
 ```css
 
