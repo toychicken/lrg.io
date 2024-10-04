@@ -18,6 +18,12 @@ pre code {
     }
   }
 
+code {
+  background:rgba(0,0,0,0.2);
+  font-size: 1.2rem;
+  line-height: 1em;
+}
+
 .inline-app {
   font-size: 0.9em;
   display:flex;
