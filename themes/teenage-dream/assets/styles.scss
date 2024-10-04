@@ -24,6 +24,7 @@
 
     --font-title: 'Lexend', sans-serif;
     --font-body: 'EB Garamond', serif;
+    --font-script: 'Caveat', handwriting;
 
 
 
@@ -33,12 +34,14 @@
 
     --color-bone: #f5f3f0;
     --color-char: #222c;
-    --color-literature: hsl(22, 71%, 49%);
     /* small fix to stop gradient bleeding through white area on default  (and is used for the pseudo covers on sections */
     --bg-main-panel: linear-gradient(0deg, transparent 0%, transparent 18%, var(--color-bone) 18%, var(--color-bone) 60%, transparent 60%, transparent 100%);
+
     --bg-literature:  radial-gradient(circle farthest-corner at center center, #d66b2d 0%, #dc8d5f 90%);
-    --color-experiments: hsl(293, 34%, 70%);
+    --color-literature: hsl(22, 71%, 49%);
+    /* Expirments */
     --bg-experiments: radial-gradient(circle farthest-corner at center center, hsl(294, 36%, 58%) 0%, hsl(293, 44%, 75%) 90%);
+    --color-experiments: hsl(293, 34%, 70%);
     --panel-inset-edge-gradient: linear-gradient(90deg, #2223 0%, transparent 1%, transparent 99%, #2223 100%);
 
 }
@@ -60,4 +63,6 @@
 @import "./cover-colour.scss";
 @import "./cover-layout-classic.scss";
 @import "./cover-colour-experiments.scss";
+@import "./spines.scss";
+@import "./postcards.scss";
 @import "./shortcode-shape.scss";

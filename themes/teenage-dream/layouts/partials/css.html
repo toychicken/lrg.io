@@ -12,7 +12,8 @@
 <meta name="msapplication-TileColor" content="#f25b24">
 <meta name="theme-color" content="#3df267">
 
-<link href="https://fonts.bunny.net/css2?family=EB+Garamond:ital@0;1&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=caveat:400|eb-garamond:400,500i,700|lexend:400,700" rel="stylesheet" />
 {{- if $inServerMode }}
 {{- $css := resources.Get $sass | toCSS $cssOpts }}
 <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">

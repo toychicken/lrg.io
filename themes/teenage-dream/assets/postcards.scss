@@ -1,0 +1,15 @@
+
+
+.postcard {
+    background: pink;
+
+    // the front, if there is one
+    .main-image {
+
+    }
+    // the back 
+    .the-contents {
+        background:var(--color-bone);
+        font-family: var(--font-script);
+    }
+}

@@ -8,7 +8,12 @@
 {{ define "aside" }}    
         <ul role="list" class="related">
             {{ range .Pages }}
+            
+            {{ if (compare.Eq .Params.style "tweet")}}
+                {{ partial "list/tweet-item.html" .}}
+            {{ else }}            
                 {{ partial "list/list-item.html" .}}
+            {{ end }}
             {{ end }}
         </ul>
 

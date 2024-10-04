@@ -1,0 +1,35 @@
+{{ $style := .Params.style }}
+
+<li class="item-{{ .Kind }} postcard">
+
+    {{ if .Params.images }}
+        <div class="main-image">HAS FRONT
+            {{ partial "list/tweet-image.html" .}}
+        </div>
+    {{ end }}
+    <div class="the-contents">
+
+    {{ if (.Params.description) }}
+        <p>{{ .Params.description }}</p>
+    {{ end }}
+
+    <h2 class="title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h2>
+
+    
+    <div class="subtitle">
+        {{ if (.Params.Subtitle) }}
+        <span>{{ .Params.Subtitle }}</span>
+        {{ end }}
+    </div>
+    <div class="subheading">
+        {{ if (.Params.Subheading) }}
+        <span>{{ .Params.Subheading }}</span>
+        {{ end }}
+    </div>
+    <div class="author">{{ if (.Params.Author) }}<span>{{ .Params.Author }}</span>{{ end }}</div>
+
+</div>
+
+</li>

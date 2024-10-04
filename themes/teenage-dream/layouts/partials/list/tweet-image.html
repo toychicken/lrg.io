@@ -1,0 +1,44 @@
+<div class="cover-image">
+
+    {{ $src:= 0 }}
+
+    {{ if .Params.images }}
+        {{ $src = (index .Params.images 0) }}
+    {{ end }}
+
+    {{ if .Params.thumb }}
+        {{ $src =  .Params.thumb }}
+    {{ end }}
+
+    {{ $pathArr := split $src "." }}
+    {{ $pathLen := len $pathArr }}
+    {{ $ext := index $pathArr (sub $pathLen 1) }}
+
+    {{ if ne $src 0 }}
+
+    <picture>
+        {{ if eq $ext "svg" }}
+            <img src="{{ $src }}" />
+        {{ else }}
+
+        {{ $images := $.Site.GetPage "section" "images" }}
+        {{ $img := $images.Resources.GetMatch (strings.TrimPrefix "/images/" $src) }}
+            {{ with $img }}
+                {{ $img1x := .Resize "600x"}}
+                {{ $img2x := .Resize "432x"}}
+
+                <!-- Make sure breakpoints here are same as mixins.scss -->
+                <source srcset="{{ $img1x.RelPermalink }}" media="(max-width: 767px)">
+                <!-- Shows inline -->
+                <source srcset="{{ $img2x.RelPermalink }}" media="(min-width: 768px)">
+                <img src="{{ $img2x.RelPermalink }}"  />
+            {{ end }}
+            {{ end }}
+    </picture>
+    {{ else }}
+    <!-- No thumbnail? -->
+     <div class="background"></div>
+    {{ end }}
+
+</div>
+

@@ -8,7 +8,7 @@
 {{ define "aside" }}  
         <ul role="list" class="related spines">
             {{ range .Pages }}
-                {{ partial "list/list-item.html" .}}
+                {{ partial "list/term-item.html" .}}
             {{ end }}
         </ul>
 
@@ -17,4 +17,3 @@
 {{ define "title" }}
     {{ .Params.title }} - {{ .Site.Title}}
 {{ end }}
-

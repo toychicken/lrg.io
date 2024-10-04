@@ -144,15 +144,4 @@
         }
     }
 
-    &.spines {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        gap: 0;
-
-
-
-        li.list-item.item-term {
-            background: blue;
-        }
-    }
 }
