@@ -14,7 +14,11 @@
     {{ end }}
 
     <div class="postmark">
-        POSTMARK
+        {{ if (.Params.date) }}
+        <time class="dt-published" datetime="{{ .Date }}">
+            {{ .Date.Format "2" | humanize }} {{ .Date.Format "January, 2006"}}
+            </time>
+        {{ end }}
     </div>
     
     <div class="subtitle">

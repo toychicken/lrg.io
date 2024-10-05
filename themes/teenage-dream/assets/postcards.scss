@@ -5,6 +5,7 @@
 
     // the front, if there is one
     .main-image {
+        aspect-ratio: 15 / 10;
 
         .tweet-image {
             background: var(--panel-inset-edge-gradient), var(--color-bone);
@@ -13,7 +14,6 @@
             display: flex;
             padding: 0rem;
             overflow: hidden;
-            border:1em solid white;
 
             picture {
                 align-self: center;
@@ -45,7 +45,7 @@
     .the-contents {
         display: grid;
         max-width: var(--readable-line-width);
-        max-height:calc(var(--readable-line-width) * 0.66);
+        aspect-ratio: 15 / 10;
             
         grid-template-columns: repeat(3, 1fr) 0.1fr repeat(3, 1fr);
         grid-template-rows: repeat(5, 1fr);
@@ -54,13 +54,15 @@
         
         background:var(--color-bone);
         .postmark {
-            grid-area: 1 / 7 / 2 / 8;
+            grid-area: 1 / 6 / 2 / 8;
             text-align: center;
         }
         .description {
+            display: flex;
             grid-area: 1 / 1 / 6 / 6;
-            padding-top:1em;
-            padding-left:1em;
+            padding:1em;
+            align-items: center;
+
             font-family: var(--font-script);
         }
     }
