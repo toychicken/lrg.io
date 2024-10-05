@@ -64,6 +64,9 @@
             align-items: center;
 
             font-family: var(--font-script);
+            font-size:calc(1vw + 1vh);
+            // use a container query to constrain the above font-size 
+            //https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries
         }
     }
 }
