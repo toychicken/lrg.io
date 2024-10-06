@@ -2,6 +2,7 @@
 
 .postcard {
     background: pink;
+    font-size: calc(3.6vw);
 
     // the front, if there is one
     .main-image {
@@ -64,12 +65,15 @@
             align-items: center;
 
             font-family: var(--font-script);
-            font-size:calc(1vw + 1vh);
+            // font-size:calc(1vw + 1vh);
             // use a container query to constrain the above font-size 
             //https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries
         }
     }
 }
 
-.parent {
+@media (min-width: 762px) {
+    .postcard {
+        font-size: 2rem;
     }
+}
