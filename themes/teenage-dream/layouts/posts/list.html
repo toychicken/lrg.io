@@ -4,7 +4,7 @@
 <ul role="list" class="posts">
     {{ range (.Paginate .RegularPagesRecursive).Pages }}
         <li class="post">
-            {{ partial "partials/single/post-content.html" . }}
+            {{ partial "partials/list/tweet-item.html" . }}
         </li>
     {{ end }}
     <!-- Hugo's default pagination template. -->
