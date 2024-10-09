@@ -4,15 +4,21 @@
 
 
 
-    background: pink;
+
     font-size: calc(3.6vw);
 
     // the front, if there is one
     .main-image {
         aspect-ratio: 15 / 10;
-
+        display: flex;
         .tweet-image {
-            background: yellow;
+
+                display: block;
+                height:100%;
+                width:100%;
+                display:block;
+                background-repeat:none;
+                background-size:cover;
         }
 
         // .tweet-image {
