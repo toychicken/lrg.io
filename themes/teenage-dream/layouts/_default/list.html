@@ -1,6 +1,26 @@
 {{ define "main" }}
+
     {{ if .Title }}
-        {{ partial "single/content.html" . }}
+        {{ partial "single/index-content.html" . }}
+
+    {{ end }}
+
+    {{ if .Page.IsHome }}
+
+
+        {{ range first 1 .Site.RegularPages }}
+            <h2>{{ .LinkTitle }}</h2>
+            {{ .Summary }}<a href="{{ .RelPermalink }}">&hellip;Read more</a>
+        {{ end }}
+
+    {{ end }}
+    {{ if .Page.IsSection }}
+
+        {{ range first 1 .Pages }}
+            <h2>{{ .LinkTitle }}</h2>
+            {{ .Summary }}<a href="{{ .RelPermalink }}">&hellip;Read more</a>
+        {{ end }}
+
 
     {{ end }}
 {{ end }}

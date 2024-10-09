@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-  <head>
-    {{ partial "meta.html" . }}
-    {{ with .OutputFormats.Get "rss" -}}
-  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
-{{ end }}
-    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-    {{ partial "css.html" . }}
-  </head>
-  <body>
-      <header>
-        
-        <div class="heading"><h1><a href="/">{{ .Site.Title }}</a></h1></div>
-        {{ if (.Params.Subheading) }}
-        <div class="subheading">
-          <p>{{ .Params.Subheading }}</p>
-        </div>
-        {{ end }}
-        
-      </header>
-      
-      {{ partial "breadcrumb.html" . }}
-      
-    <div id="content">
-      <main>
 
-        {{ block "main" . }}
-        {{ end }}
-      </main>
-      <aside>
-        {{ block "aside" . }}
-        {{ end }}
-      </aside>
-      </div>
+<head>
+  {{ partial "meta.html" . }}
+  {{ with .OutputFormats.Get "rss" -}}
+  {{ printf `
+  <link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+  {{ end }}
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  {{ partial "css.html" . }}
+</head>
+
+<body>
+  <header>
+
+    <div class="heading">
+      <h1><a href="/">{{ .Site.Title }}</a></h1>
+    </div>
+    {{ if (.Params.Subheading) }}
+    <div class="subheading">
+      <p>{{ .Params.Subheading }}</p>
+    </div>
+    {{ end }}
+
+  </header>
+
+  {{ if not ( .Page.IsHome )}}
+  {{ partial "breadcrumb.html" . }}
+  {{ end }}
 
 
-        {{ partial "footer.html" . }}
 
-        </div>
 
-  </body>
+  <div id="content">
+    <main>
+
+      {{ block "main" . }}
+      {{ end }}
+
+
+    </main>
+    <aside>
+      {{ block "aside" . }}
+      {{ end }}
+    </aside>
+  </div>
+
+
+  {{ partial "footer.html" . }}
+
+  </div>
+
+</body>
+
 </html>
