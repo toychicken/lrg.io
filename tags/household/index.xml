@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Household on LRG</title>
+    <link>http://localhost:1313/tags/household/</link>
+    <description>Recent content in Household on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 13 Sep 2024 09:26:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/household/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Household</title>
+      <link>http://localhost:1313/software/household/</link>
+      <pubDate>Fri, 13 Sep 2024 09:26:00 +0000</pubDate>
+      <guid>http://localhost:1313/software/household/</guid>
+      <description>&lt;h2 id=&#34;design-for-the-domestic&#34;&gt;Design for the domestic&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve always wanted a &lt;em&gt;proper&lt;/em&gt; household management app (or suite), I&amp;rsquo;ve tried a few, and I&amp;rsquo;ve even thought about building my own. But (because capitalism) I need to spend my computer hours building stuff for other people, so can&amp;rsquo;t afford to do a good job by myself.&lt;/p&gt;&#xA;&lt;p&gt;Increasingly though, I wonder if there&amp;rsquo;s genuinely a market for a really good &amp;lsquo;household&amp;rsquo; app suite that handles finances, scheduling, homework, housework, days out, insurance renewals, pension advice whatever, but critically jobs that needs to be done within the context of a &lt;em&gt;household&lt;/em&gt; which is very different from similar tools you might use to run a business.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

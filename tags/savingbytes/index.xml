@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SavingBytes on LRG</title>
+    <link>https://lrg.io/tags/savingbytes/</link>
+    <description>Recent content in SavingBytes on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 24 Jul 2013 08:07:55 +0100</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/savingbytes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tweet - 359939987581583361</title>
+      <link>https://lrg.io/posts/2013-07-24-359939987581583361/</link>
+      <pubDate>Wed, 24 Jul 2013 08:07:55 +0100</pubDate>
+      <guid>https://lrg.io/posts/2013-07-24-359939987581583361/</guid>
+      <description>&lt;p&gt;Can anyone tell me why underscorejs initializes like (function(){}).call(this) and not (function(){})() ? #savingBytes&lt;/p&gt;&#xA;&#xA;&#xA;&lt;div&gt;&#xA;    &lt;p&gt;❤️ 0 | 🔃 0&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>
