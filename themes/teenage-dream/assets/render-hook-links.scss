@@ -15,5 +15,7 @@ a.external.implied {
 }
 
 a[title]::after {
-  content: '(' attr(title) ')';
+  content: ' - ' attr(title);
+  font-size: 0.8em;
+  font-style: italic;
 }
