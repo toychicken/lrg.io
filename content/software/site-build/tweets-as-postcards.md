@@ -10,10 +10,11 @@ tags:
   - html
   - css
 application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
-draft: true
+draft: false
 images:
-  - /images/tweet-as-postcard.png
-category:
+  - /images/tweet-as-postcard-stamp.png
+category: 
+style: classic experiments
 ---
 I did an experiment trying to make my old Tweet archive look like  postcards. It's a nice aesthetic if you're on a PC, but less easily readable on mobile. This really needs to be backed out. It will, eventually.
 

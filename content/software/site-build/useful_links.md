@@ -9,9 +9,9 @@ tags:
   - links
   - transforms
 application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
-images: []
-draft: true
-style: "experiments"
+images: 
+draft: false
+style: experiments
 ---
 ### Matrix transforms
 
@@ -26,3 +26,9 @@ I was trying to add a little grain to my gradients on the book covers. The aweso
 https://css-tricks.com/grainy-gradients/ 
 
 It came with it's [own tool](https://grainy-gradients.vercel.app/) for generating them. ![](grainy-gradient-playground.png)
+
+### CSS Grid Generator
+
+I really wish I'd found this earlier, https://cssgrid-generator.netlify.app/ 
+
+![](css-grid-generator-screengrab.png)
