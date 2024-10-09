@@ -16,13 +16,15 @@ style: classic experiments
 ---
 This all began with a post on my socials... 
 
-![CSS nerds, I need your help, please. I can style a link to an external site with the full URL path in text after it using a[href]=:not([href^=l'https://neilzone.co.uk'i]):affter{content:'('attr(href)')';} I don't think that there is a CSS-only (i.e. no Javascript, no extra element/attribute in the html) way of limiting this to just the domain of the external link, rather than the full href link. Am I wrong?](neil-brown-css-nerd-callout.png)
+![CSS nerds, I need your help, please. I can style a link to an external site with the full URL path in text after it using a[href]=:not([href^=l'https://neilzone.co.uk'i]):after{content:'('attr(href)')';} I don't think that there is a CSS-only (i.e. no Javascript, no extra element/attribute in the html) way of limiting this to just the domain of the external link, rather than the full href link. Am I wrong?](neil-brown-css-nerd-callout.png)
 
 [https://mastodon.neilzone.co.uk/@neil/113244632967157645](https://mastodon.neilzone.co.uk/@neil/113244632967157645 "Original post")
 
 The consensus certainly seemed to be that it's not possible to do this solely with CSS (which is a shame), but Neil did mention that they were investigating using Hugo to solve this.
 
 My advice was to use Render Hooks, but I couldn't stop thinking about how  _I_ might do this, as it seemed like a neat way to present those long external links...
+
+<!--more-->
 
 ## This is where I started 
 
