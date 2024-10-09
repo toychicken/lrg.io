@@ -86,6 +86,22 @@ header .subheading, footer {
     padding-bottom: 1rem;
 }
 
+header.drafty {
+    &::after {
+        position: absolute;
+        content: "DRAFT!";
+        left: -1em;
+        top:5rem;
+        font-size:5em;
+        color:#99000099;
+        background:#99000033;
+        display:inline-block;
+        width:140vw;
+        z-index: -1;
+        transform: rotate(20deg);
+        text-align: center;
+    }
+}
 
 
 main p {

@@ -11,8 +11,17 @@
   {{ partial "css.html" . }}
 </head>
 
+
+
+
+
+
 <body>
-  <header>
+{{ $draftClass :="" }}
+{{ if .Draft }}
+  {{ $draftClass ="drafty" }}
+{{ end }}
+  <header class="{{ $draftClass }}">
 
     <div class="heading">
       <h1><a href="/">{{ .Site.Title }}</a></h1>
