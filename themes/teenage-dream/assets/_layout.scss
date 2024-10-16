@@ -11,7 +11,7 @@ body {
     display:flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--lrg-primary-100);
+    background-color: var(--bg-primary);
 }
 
 
@@ -115,7 +115,7 @@ body {
 
         &::selection {
             background:var(--lrg-text-black);
-            color:var(--lrg-primary-100);
+            color:var(--bg-primary);
         }
     }
 }

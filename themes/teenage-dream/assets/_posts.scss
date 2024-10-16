@@ -5,7 +5,7 @@ ul.posts {
             font-size: 70%;
             a {
                 text-decoration: none;
-                border-bottom:1px solid  var(--lrg-primary-50);
+                border-bottom:1px solid  var(--fg-primary);
             }
         }
     }
@@ -50,7 +50,7 @@ main {
         text-align:center;
         &.active {
             background:var(--lrg-text-black);
-            color:var(--lrg-primary-100);
+            color:var(--bg-primary);
         }
     }
 

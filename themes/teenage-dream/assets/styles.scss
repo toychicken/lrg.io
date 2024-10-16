@@ -1,19 +1,45 @@
 /* Variables */
 
 :root {
-    --lrg-text-black: hsl(0 0% 10%); /* 90% tint as per lrg guidelines */
-    --lrg-text-white: hsl(0, 10%, 97%);
-    --lrg-primary-100: hsl(47, 30%, 77%, 1);
-    --lrg-primary-50: hsl(0, 6%, 40%);
+
+
+    /* palette */
+    --color-black: hsl(0 0% 10%); /* 90% tint as per lrg guidelines */
+    --color-char: #222c;
+    --color-white: hsl(0, 10%, 97%);
+    --color-bone: #f5f3f0;
+    
+    --color-buff:  hsl(47, 30%, 77%, 1);
+    --color-manilla:  hsl(55, 28%, 54%);
+    --color-greige-dark: hsl(0, 6%, 40%);
+
+
+    --color-book-orange-100: #d66b2d;
+    --color-book-orange-80: #dc8d5f;
+
+    --color-book-lilac-100:hsl(294, 36%, 58%) ;
+    --color-book-lilac-80:hsl(293, 44%, 75%);
+
+    --color-grey-lite: #bbb;
+
+
+    // effects
     --img-filter: saturate(0) sepia(30%) brightness(70%) opacity(90%) contrast(150%);
     --img-desaturate-image: saturate(30%) sepia(0) brightness(90%) opacity(90%) contrast(90%);
 
+}
+:root{
 
-    --code-text: hsl(55, 28%, 54%);
-    --code-back:rgb(16, 16, 13);
-    --code-outline:#e6e6e6;
+    --bg-primary: var(--color-buff);
+    --fg-primary: var(--color-greige-dark);
 
-    --underscore-dark: #bbb;
+    --lrg-text-black: var(--color-black);
+    --lrg-text-white: var(--color-white);
+    --code-text: var(--color-manilla);
+    --code-back: var(--color-char);
+    --code-outline:var(--color-white);
+
+    --underscore-dark: var(--color-grey-lite);
 
     --edge-margin:3vw;
     --main-center-gutter: 4rem;
@@ -32,20 +58,33 @@
     --cover-w: 21.5rem;
     --cover-h: 33rem;
 
-    --color-bone: #f5f3f0;
-    --color-char: #222c;
     /* small fix to stop gradient bleeding through white area on default  (and is used for the pseudo covers on sections */
     --bg-main-panel: linear-gradient(0deg, transparent 0%, transparent 18%, var(--color-bone) 18%, var(--color-bone) 60%, transparent 60%, transparent 100%);
 
-    --bg-literature:  radial-gradient(circle farthest-corner at center center, #d66b2d 0%, #dc8d5f 90%);
-    --color-literature: hsl(22, 71%, 49%);
+    --bg-literature:  radial-gradient(circle farthest-corner at center center, var(--color-book-orange-100) 0%, var(--color-book-orange-80) 90%);
+    --fg-literature: var(--color-book-orange-100);
     /* Expirments */
-    --bg-experiments: radial-gradient(circle farthest-corner at center center, hsl(294, 36%, 58%) 0%, hsl(293, 44%, 75%) 90%);
-    --color-experiments: hsl(293, 34%, 70%);
+    --bg-experiments: radial-gradient(circle farthest-corner at center center, var(--color-book-lilac-100) 0%, var(--color-book-lilac-80) 90%);
+    --fg-experiments: var(--color-book-lilac-80);
     --panel-inset-edge-gradient: linear-gradient(90deg, #2223 0%, transparent 1%, transparent 99%, #2223 100%);
 
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+      /* Set dark mode colours here */
+      --c-text:var(--v-secondary-do-more-blue-60);
+      --c-background:var(--v-functional-charcoal);
+      
+      --c-header-bg:var(--v-primary-domino-blue);
+      --c-header-text:var(--v-functional-dark-grey);
+      
+      --c-highlight-bg:var(--v-primary-domino-green-60);
+      --c-highlight-text:var(--v-functional-charcoal);
+      
+      --c-border:var(--v-functional-dark-grey);
+    }
+  }
 
 
 @import "./_normalize.scss";

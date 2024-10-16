@@ -4,7 +4,7 @@
   "version": "8.0.1",
   "type": "module",
   "scripts": {
-    "dev": "hugo serve -D",
+    "local": "hugo serve -D -E -F --disableFastRender",
     "deploy": "node scripts/gh-pages-deploy.js"
   },
   "dependencies": {
