@@ -19,11 +19,12 @@ nav.breadcrumb li::before {
 }
 nav.breadcrumb li a {
     text-decoration: none;
+    &:hover { text-decoration: underline; } 
 }
 nav.breadcrumb li:first-child::before {
     content: "🏠"
 }
 nav.breadcrumb li.active a {
     font-weight: 700;
-    color: var(--lrg-text-black);
+    color: var(--fg-primary);
 }

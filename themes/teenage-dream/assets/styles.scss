@@ -1,26 +1,28 @@
 /* Variables */
 
 :root {
-
-
     /* palette */
-    --color-black: hsl(0 0% 10%); /* 90% tint as per lrg guidelines */
+    --color-black: hsl(0 0% 10%);
+    /* 90% tint as per lrg guidelines */
     --color-char: #222c;
     --color-white: hsl(0, 10%, 97%);
     --color-bone: #f5f3f0;
-    
-    --color-buff:  hsl(47, 30%, 77%, 1);
-    --color-manilla:  hsl(55, 28%, 54%);
-    --color-greige-dark: hsl(0, 6%, 40%);
+    --color-ivory: hsl(16, 37%, 92%);
+
+    --color-buff: hsl(47, 30%, 77%, 1);
+    --color-manilla: hsl(55, 28%, 54%);
+    --color-greige-dark: hsl(0, 8%, 30%);
 
 
     --color-book-orange-100: #d66b2d;
     --color-book-orange-80: #dc8d5f;
 
-    --color-book-lilac-100:hsl(294, 36%, 58%) ;
-    --color-book-lilac-80:hsl(293, 44%, 75%);
+    --color-book-lilac-100: hsl(294, 36%, 58%);
+    --color-book-lilac-80: hsl(293, 44%, 75%);
 
     --color-grey-lite: #bbb;
+
+    --color-shadow-33: #2223;
 
 
     // effects
@@ -28,25 +30,25 @@
     --img-desaturate-image: saturate(30%) sepia(0) brightness(90%) opacity(90%) contrast(90%);
 
 }
-:root{
 
+:root {
+
+    // default is light
     --bg-primary: var(--color-buff);
     --fg-primary: var(--color-greige-dark);
 
-    --lrg-text-black: var(--color-black);
-    --lrg-text-white: var(--color-white);
     --code-text: var(--color-manilla);
     --code-back: var(--color-char);
-    --code-outline:var(--color-white);
+    --code-outline: var(--color-white);
 
     --underscore-dark: var(--color-grey-lite);
 
-    --edge-margin:3vw;
-    --main-center-gutter: 4rem;
-    --readable-line-width: 50rem;
-    --shortish-line-width: 30rem;
+    --link-highlight: pink;
+    --link-active: red;
+    --link-hover: magenta;
 
-    --link-list-gutter: 4rem;
+    --border-bold: var(--fg-primary);
+    --border-subtle: var(--fg-primary);
 
     --font-title: 'Lexend', sans-serif;
     --font-body: 'EB Garamond', serif;
@@ -61,31 +63,57 @@
     /* small fix to stop gradient bleeding through white area on default  (and is used for the pseudo covers on sections */
     --bg-main-panel: linear-gradient(0deg, transparent 0%, transparent 18%, var(--color-bone) 18%, var(--color-bone) 60%, transparent 60%, transparent 100%);
 
-    --bg-literature:  radial-gradient(circle farthest-corner at center center, var(--color-book-orange-100) 0%, var(--color-book-orange-80) 90%);
+    --bg-literature: radial-gradient(circle farthest-corner at center center, var(--color-book-orange-100) 0%, var(--color-book-orange-80) 90%);
     --fg-literature: var(--color-book-orange-100);
     /* Expirments */
     --bg-experiments: radial-gradient(circle farthest-corner at center center, var(--color-book-lilac-100) 0%, var(--color-book-lilac-80) 90%);
     --fg-experiments: var(--color-book-lilac-80);
-    --panel-inset-edge-gradient: linear-gradient(90deg, #2223 0%, transparent 1%, transparent 99%, #2223 100%);
+    --panel-inset-edge-gradient: linear-gradient(90deg, var(--color-shadow-33) 0%, transparent 1%, transparent 99%, var(--color-shadow-33) 100%);
 
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-      /* Set dark mode colours here */
-      --c-text:var(--v-secondary-do-more-blue-60);
-      --c-background:var(--v-functional-charcoal);
-      
-      --c-header-bg:var(--v-primary-domino-blue);
-      --c-header-text:var(--v-functional-dark-grey);
-      
-      --c-highlight-bg:var(--v-primary-domino-green-60);
-      --c-highlight-text:var(--v-functional-charcoal);
-      
-      --c-border:var(--v-functional-dark-grey);
-    }
-  }
 
+        // default is light
+        --bg-primary: var(--color-greige-dark);
+        --fg-primary: var(--color-ivory);
+
+
+        --code-text: var(--color-manilla);
+        --code-back: var(--color-char);
+        --code-outline: var(--color-white);
+
+        --underscore-dark: var(--color-grey-lite);
+
+        --link-highlight: pink;
+        --link-active: red;
+        --link-hover: magenta;
+        --link-visited: rgb(214, 191, 195);
+
+
+    }
+}
+
+@media print {
+    :root {
+        // default is light
+        --bg-primary: white;
+        --fg-primary: black;
+
+
+        --code-text: black;
+        --code-back: white;
+        --code-outline: black;
+
+        --underscore-dark: black;
+
+        --link-highlight: pink;
+        --link-active: red;
+        --link-hover: magenta;
+        --link-visited: rgb(214, 191, 195);
+    }
+}
 
 @import "./_normalize.scss";
 @import "./_layout.scss";
