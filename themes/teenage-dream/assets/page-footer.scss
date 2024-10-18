@@ -2,6 +2,17 @@
 footer > * {
     padding:1rem 0;
 }
+
+footer {
+    background: var(--footer-bg);
+    color: var(--footer-fg);
+    margin-top:2em;
+}
+
+footer a {
+    color: var(--footer-fg);
+}
+
 .link-lists {
     display: flex;
     margin-top: 1rem;
@@ -21,5 +32,5 @@ footer > * {
 
 .link-lists a {
     text-decoration:none;
-    border-bottom: 1px solid var(--fg-primary);
+    border-bottom: 1px solid var(--footer-fg);
 }
