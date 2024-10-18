@@ -1,32 +1,38 @@
 .related {
-    li.list-item {
-        color: var(--color-char);
+    // default areas for layouts (and their colours)
 
-        &.item-section {
+    // no layout, no theme
 
-            background: var(--bg-main-panel), var(--bg-literature),
-                url("data:image/svg+xml,%3Csvg viewBox='0 0 215 215' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.53' numOctaves='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    // default theme colour is literature
+    --theme-main-prime: var(--color-book-orange-100);
+    --theme-main-fade: var(--color-book-orange-80);
+    --theme-empty-bg: var(--color-bone);
+    --theme-default-text: var(--color-biro-black);
+    --theme-spot-highlight: var(--color-book-orange-100);
+    --theme-spot-contrast: var(--color-book-orange-200);
+    --theme-logo-src: url("/assets/chicken_logo_original.svg");
 
-            &::before {
-                background: var(--bg-main-panel),
-                    var(--bg-literature);
-            }
-        }
-
-        &.item-section,
-        &.item-page {
-            .title {
-                background: var(--panel-inset-edge-gradient), var(--color-bone);
-
-                a {
-                    color: inherit;
-                    border-bottom-color: var(--fg-literature);
-                }
-            }
-
-            .subtitle {
-                background: var(--panel-inset-edge-gradient), var(--color-bone);
-            }
-        }
+    
+    li.list-item.travel {
+        --theme-main-prime: var(--color-book-lemon-100);
+        --theme-main-fade: var(--color-book-lemon-80);
+        // --theme-empty-bg: var(--color-bone);
+        // --theme-default-text: var(--color-biro-black);
+        --theme-spot-highlight: var(--color-book-lemon-100);
+        --theme-spot-contrast: var(--color-book-lemon-200);
     }
+
+
+    li.list-item.experiments {
+        --theme-main-prime: var(--color-book-lilac-100);
+        --theme-main-fade: var(--color-book-lilac-80);
+        // --theme-empty-bg: var(--color-bone);
+        // --theme-default-text: var(--color-biro-black);
+        --theme-spot-highlight: var(--color-book-lilac-100);
+        --theme-spot-contrast: var(--color-book-lilac-200);
+    }
+
+    /* small fix to stop gradient bleeding through white area on default  (and is used for the pseudo covers on sections */
+    --bg-main-panel: linear-gradient(0deg, transparent 0%, transparent 18%, var(--color-bone) 18%, var(--color-bone) 60%, transparent 60%, transparent 100%);
+    --panel-inset-edge-gradient: linear-gradient(90deg, var(--color-shadow-33) 0%, transparent 1%, transparent 99%, var(--color-shadow-33) 100%);
 }

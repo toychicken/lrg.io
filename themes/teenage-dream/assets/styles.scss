@@ -28,11 +28,18 @@
     --color-rgb-yellow: #ff0;
 
 
+    --color-book-orange-200: #8d4114;
     --color-book-orange-100: #d66b2d;
     --color-book-orange-80: #dc8d5f;
 
+    --color-book-lilac-200: hsl(294, 28%, 37%);
     --color-book-lilac-100: hsl(294, 36%, 58%);
     --color-book-lilac-80: hsl(293, 44%, 75%);
+
+    --color-book-lemon-200: hsl(48, 63%, 42%);
+    --color-book-lemon-100: hsl(48, 83%, 60%);
+    --color-book-lemon-80: hsl(48, 79%, 70%);
+
 
     --color-grey-lite: #bbb;
 
@@ -42,7 +49,7 @@
     // Inks for handwriting and print
     --color-blood-ink: #69333333; // slightly translucent for that aged ink effect
     --color-biro-blue: #203e98aa;
-    --color-biro-black: #333344cc;
+    --color-biro-black: #1f1f240;
 
     // effects
     --img-filter: saturate(0) sepia(30%) brightness(70%) opacity(90%) contrast(150%);
@@ -91,16 +98,21 @@
     --cover-w: 21.5rem;
     --cover-h: 33rem;
 
-    /* small fix to stop gradient bleeding through white area on default  (and is used for the pseudo covers on sections */
-    --bg-main-panel: linear-gradient(0deg, transparent 0%, transparent 18%, var(--color-bone) 18%, var(--color-bone) 60%, transparent 60%, transparent 100%);
 
     --bg-literature: radial-gradient(circle farthest-corner at center center, var(--color-book-orange-100) 0%, var(--color-book-orange-80) 90%);
     --fg-literature: var(--color-book-orange-100);
     /* Expirments */
     --bg-experiments: radial-gradient(circle farthest-corner at center center, var(--color-book-lilac-100) 0%, var(--color-book-lilac-80) 90%);
     --fg-experiments: var(--color-book-lilac-80);
+    /* Travel */
+    --bg-travel: radial-gradient(circle farthest-corner at center center, var(--color-book-lemon-100) 0%, var(--color-book-lemon-80) 90%);
+    --fg-travel: var(--color-book-lemon-100);
+
+    /* small fix to stop gradient bleeding through white area on default  (and is used for the pseudo covers on sections */
+    --bg-main-panel: linear-gradient(0deg, transparent 0%, transparent 18%, var(--color-bone) 18%, var(--color-bone) 60%, transparent 60%, transparent 100%);
     --panel-inset-edge-gradient: linear-gradient(90deg, var(--color-shadow-33) 0%, transparent 1%, transparent 99%, var(--color-shadow-33) 100%);
 
+    --shitty-test:red;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -158,10 +170,10 @@
 @import "./pictures.scss";
 @import "./code-format.scss";
 @import "./posts.scss";
-@import "./cover-layout.scss";
 @import "./cover-colour.scss";
+@import "./cover-layout.scss";
 @import "./cover-layout-classic.scss";
-@import "./cover-colour-experiments.scss";
+@import "./cover-layout-vintage.scss";
 @import "./spines.scss";
 @import "./postcards.scss";
 @import "./shortcode-shape.scss";

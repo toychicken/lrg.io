@@ -1,5 +1,26 @@
 .related {
-    li.list-item.classic {
+
+    // inherits cover-layout
+    li.list-item.layout-classic {
+
+        --official-background: linear-gradient(0deg, transparent 0%, transparent 18%, var(--theme-empty-bg) 18%, var(--theme-empty-bg) 60%, transparent 60%, transparent 100%),
+        radial-gradient(circle farthest-corner at center center, var(--theme-main-prime) 0%, var(--theme-main-fade) 90%);
+
+        &.item-section {
+            background: var(--official-background),
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 215 215' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.53' numOctaves='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+
+            &::before {
+                background: var(--official-background);
+            }
+        }
+
+        &.item-page {
+            background: var(--official-background),
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 215 215' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.53' numOctaves='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        color: var(--theme-default-text);
+
         .title {
             grid-column: middle-start / span right;
             grid-row: bar-1 / span bar-2;
@@ -16,6 +37,8 @@
                 padding:0;
                 margin:0;
                 text-align: left;
+                color: inherit;
+                border-bottom-color: var(--theme-spot-highlight);
             }
         }
 
@@ -50,7 +73,7 @@
         }
 
         .cover-image {
-            background: var(--panel-inset-edge-gradient), var(--color-bone);
+            background: var(--panel-inset-edge-gradient), var(--theme-empty-bg);
             grid-column: left / span right;
             grid-row: pic-large-start / span pic-large-end;
             display: flex;
