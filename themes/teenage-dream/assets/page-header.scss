@@ -1,5 +1,5 @@
 header .heading, header .heading a {
-    color: var(--fg-primary);
+    color: var(--logotype-fg);
     text-decoration: none;
 }
 header .subheading {
@@ -7,9 +7,9 @@ header .subheading {
 }
 
 header .heading {
-    border-bottom: 1px solid var(--fg-primary)
+    border-bottom: 1px solid var(--border-subtle)
 }
 
 header .subheading {
-    border-bottom: 3px solid var(--fg-primary);
+    border-bottom: 3px solid var(--border-bold);
 }

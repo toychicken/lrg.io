@@ -3,15 +3,29 @@
 :root {
     /* palette */
     --color-black: hsl(0 0% 10%);
-    /* 90% tint as per lrg guidelines */
-    --color-char: #222c;
-    --color-white: hsl(0, 10%, 97%);
+    --color-char: #222;
+    --color-white: hsl(0, 0%, 100%);
     --color-bone: #f5f3f0;
     --color-ivory: hsl(16, 37%, 92%);
 
-    --color-buff: hsl(47, 30%, 77%, 1);
-    --color-manilla: hsl(55, 28%, 54%);
-    --color-greige-dark: hsl(0, 8%, 30%);
+    --color-buff: hsl(47, 28%, 83%);
+    --color-manilla: hsl(56, 33%, 66%);
+    --color-greige-lite: hsl(12, 16%, 60%);
+    --color-greige-dark: hsl(14, 16%, 26%);
+
+    --color-lipstick-100: hsl(344, 75%, 40%);
+    --color-lipstick-80:hsl(344, 70%, 50%);
+    --color-lipstick-60:hsl(344, 65%, 60%);
+    --color-lipstick-40:hsl(344, 60%, 70%);
+    --color-lipstick-20:hsl(344, 55%, 80%);
+    --color-lipstick-10:hsl(344, 50%, 95%);
+
+    --color-rgb-red: #FF0000;
+    --color-rgb-blue: #0000FF;
+    --color-rgb-green: #0F0;
+    --color-rgb-cyan: #0ff;
+    --color-rgb-magenta: #f0f;
+    --color-rgb-yellow: #ff0;
 
 
     --color-book-orange-100: #d66b2d;
@@ -23,7 +37,12 @@
     --color-grey-lite: #bbb;
 
     --color-shadow-33: #2223;
+    --color-shadow-99: #2229;
 
+    // Inks for handwriting and print
+    --color-blood-ink: #69333333; // slightly translucent for that aged ink effect
+    --color-biro-blue: #203e98aa;
+    --color-biro-black: #333344cc;
 
     // effects
     --img-filter: saturate(0) sepia(30%) brightness(70%) opacity(90%) contrast(150%);
@@ -43,16 +62,28 @@
 
     --underscore-dark: var(--color-grey-lite);
 
-    --link-highlight: pink;
-    --link-active: red;
-    --link-hover: magenta;
+    --link-highlight: var(--color-lipstick-100);
+    --link-active: var(--color-lipstick-80);
+    --link-hover: var(--color-lipstick-60);
 
-    --border-bold: var(--fg-primary);
-    --border-subtle: var(--fg-primary);
+    --border-bold: var(--color-char);
+    --border-subtle: var(--color-biro-black);
+
+
+    --postmark-ink: var(--color-blood-ink);
+    --cheap-ink: var(--color-biro-blue);
 
     --font-title: 'Lexend', sans-serif;
     --font-body: 'EB Garamond', serif;
     --font-script: 'Caveat', handwriting;
+
+    --logotype-fg: var(--color-white);
+
+
+
+    --footer-bg: var(--color-char);
+    --footer-fg: var(--color-bone);
+
 
 
 
@@ -84,11 +115,12 @@
         --code-back: var(--color-char);
         --code-outline: var(--color-white);
 
-        --underscore-dark: var(--color-grey-lite);
+        --border-bold: var(--color-greige-lite);
+        --border-subtle: var(--color-greige-lite);
 
-        --link-highlight: pink;
-        --link-active: red;
-        --link-hover: magenta;
+        --link-highlight: var(--color-lipstick-40);
+        --link-active: var(--color-lipstick-20);
+        --link-hover: var(--color-lipstick-10);
         --link-visited: rgb(214, 191, 195);
 
 

@@ -1,7 +1,7 @@
 .postcard {
 
-    --postmark-ink: #69333333;
-
+    
+    margin-bottom:2em;
 
 
 
@@ -67,6 +67,7 @@
         grid-column-gap: 0px;
         grid-row-gap: 0px;
 
+        color: var(--cheap-ink);
         background: var(--color-bone);
 
         .postmark {
