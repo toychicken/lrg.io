@@ -6,14 +6,9 @@
         {{ end }}
 
 <li class="list-item item-{{ .Kind }} {{ $style}} {{ $draftClass }}">
-
     <h2 class="title">
         <a href="{{ .Permalink }}">{{ .Title }}</a>
     </h2>
-
-
-
-
     {{ partial "list/cover-image.html" .}}
     <div class="subtitle">
         {{ if (.Params.Subtitle) }}
@@ -26,7 +21,4 @@
         {{ end }}
     </div>
     <div class="author">{{ if (.Params.Author) }}<span>{{ .Params.Author }}</span>{{ end }}</div>
-
-
-
 </li>
