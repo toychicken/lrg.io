@@ -57,9 +57,6 @@ I've got a containing `<div>` (not shown above) which has two children, the `.st
 #### The CSS
 
 ```css
-  
-
-
 .postmark {
 	--postmark-ink: #69333333;  /* use a partly-opaque colour */
 	grid-area: 1 / 4 / 2 / 8;
@@ -80,7 +77,6 @@ I've got a containing `<div>` (not shown above) which has two children, the `.st
 		/* make the text look 'smudged' */
 		text-shadow: 2px 0 2px var(--postmark-ink);
 	}
-
 }
 
 .stamp {
@@ -118,7 +114,6 @@ I've got a containing `<div>` (not shown above) which has two children, the `.st
 
 			.bird {
 				fill: rgba(255, 255, 255, 0.954);
-
 			}
 		}
 	}

@@ -58,7 +58,7 @@ I think it's those pesky auto-generated deeplinks that Neil wants to make a litt
 
 The rendered link looks like:
 
-```html
+```go-html-template
 <a href="https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats">
 	https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats
 	</a>
@@ -85,7 +85,7 @@ layouts/
 
 This now overrides the default markdown rendering for links. I started with:
 
-```html
+```go-html-template
 {{ $u := urls.Parse .Destination }}
 
 <a href="{{ .Destination | safeURL }}" 
@@ -95,7 +95,7 @@ data-domain="{{ $u.Hostname }}">{{ .Text | safeHTML }}
 
 It uses Hugo's [urls.Parse](https://gohugo.io/functions/urls/parse/) function to take the destination and convert to an object of the various parts of a url. In our case, we just need the `Hostname` . I added it to the `data-domain` attribute, and our deep link now looks like
 
-```html
+```go-html-template
 <a href="https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats" data-domain="www.cats.org.uk">https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats</a>
 ```
 
@@ -113,7 +113,7 @@ But, this was a bit messy, as the `data-domain` was missing for relative links, 
 
 Given I had the `urls.Parse` method, I now realised I could do something a little more fancy-schmancy, and build up some additional elements, easily styled by CSS. Something like this:
 
-```html
+```go-html-template
 {{ $u := urls.Parse .Destination }}
 <a href="{{ .Destination | safeURL }}"
 data-domain="{{ $u.Hostname }}">
@@ -143,7 +143,7 @@ I needed to provide a few more class names for the CSS to be able to hook into.
 
 First up - is this a relative link? For this I need to check if the hostname is empty.
 
-```html
+```go-html-template
 {{ if not (strings.ContainsNonSpace $u.Hostname )}}
 ```
 
@@ -151,7 +151,7 @@ Basically this checks if the hostname is empty using the [strings.ContainsNonSpa
 
 So I added a `$class` variable to store some output, and our template looks like this:
 
-```html
+```go-html-template
 {{ $u := urls.Parse .Destination }}
 {{ $class := "" }}
 
@@ -187,7 +187,7 @@ I needed to make sure I could also explicitly detect an external link AND / OR o
 
 For this, I needed some more template magic.
 
-```html
+```go-html-template
 {{ $u := urls.Parse .Destination }}
 {{ $yourDomain := "localhost" }}
 {{ $class := "" }}
@@ -213,19 +213,19 @@ data-domain="{{ $u.Hostname }}">
 
 Now we have a way, by comparing the `$u.Hostname` to a `$yourDomain` variable, to see if it explicitly external
 
-```
+```go-html-template
 {{ if not (compare.Eq $u.Hostname $yourDomain) }}
 ```
 
 AND we subsequently check to see if the url is the same as the `.Text`
 
-```html
+```go-html-template
 {{ if (compare.Eq $u.String .Text) }}
 ```
 
 And change the class appropriately. Now we're getting closer! Our rendered deeplink looks like this:
 
-```html
+```go-html-template
 <a href="https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats" 
    class="external implied" 
    data-domain="www.cats.org.uk">
@@ -260,7 +260,7 @@ And this renders like this. Pretty much nails it...
 
 Grr, then I noticed the absolute link is not accounted for. A simple default on the `$class` variable, and an additional definition in the CSS, and it's fixed.
 
-```html
+```go-html-template
 {{ $u := urls.Parse .Destination }}
 {{ $yourDomain := "localhost" }}
 {{ $class := "internal" }}
@@ -321,7 +321,7 @@ Don't forget, Hugo allows us to pass in a 'title' into our markdown, like this:
 
 But that title attribute is _not_ currently rendered by our customer render hook. Let's fix that:
 
-```html
+```go-html-template
 {{ $u := urls.Parse .Destination }}
 {{ $yourDomain := "localhost" }}
 {{ $class := "internal" }}
@@ -348,7 +348,7 @@ data-domain="{{ $u.Hostname }}">
 
 We've simply tested to see if the `.Title` variable exists, and if it does, add the title attribute. Our link now renders like:
 
-```html
+```go-html-template
 <a href="https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats" 
    title="Lost &amp; found cats" 
    class="external" 
@@ -376,7 +376,7 @@ Last of all, I want my external links to always open in a new tab, so we can add
 ## Solution
 
 `/layouts/_default/_markup/render-link.html`
-```html
+```go-html-template
 {{ $u := urls.Parse .Destination }}
 {{ $yourDomain := "localhost" }}
 {{ $class := "internal" }}

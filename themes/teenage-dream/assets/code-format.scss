@@ -1,6 +1,6 @@
 pre code {
-    color: var(--code-text);
-    background-color: var(--code-back);
+    color: inherit;
+//     background-color: var(--code-back);
     display: block;
     white-space: pre;
     -webkit-overflow-scrolling: touch;
@@ -12,16 +12,19 @@ pre code {
     font-size: 0.62em;
     outline: 1rem solid var(--code-back);
     line-height: 1.6;
-    &::selection {
-      background: var(--code-text);
-      color: var(--code-back);
-    }
+//     &::selection {
+//       background: var(--code-text);
+//       color: var(--code-back);
+//     }
+    scrollbar-color: var(--color-grey-lite) var(--code-back) ;
   }
 
-code {
-  background:rgba(0,0,0,0.2);
+p > code {
+  background:var(--code-back);
+  color: var(--code-text);
   font-size: 1.2rem;
   line-height: 1em;
+  padding:0 0.2em;
 }
 
 .inline-app {
@@ -42,43 +45,49 @@ code {
 }
 
 .c64 {
-  background:blue;
-  color:cyan;
+
+
+
+
+
+
+  background:var(--color-rgb-blue);
+  color:var(--color-rgb-cyan);
   filter: glow(10%);
-  outline:1rem solid blue;
+  outline:1rem solid var(--color-rgb-blue);
   margin:2rem 0;
   font-family: 'Courier New', Courier, monospace;
   &::before {
     content: "(CC) LRG Microsystems ";
-    color: white;
+    color: var(--color-white);
     font-weight: bold;
   }
 
 
   input, textarea, label, select, output {
     &:focus {
-      outline:white 0.4rem solid;
-      background:white;
+      outline:var(--color-white) 0.4rem solid;
+      background:var(--color-white);
       color:black;
     }
     margin:0.4rem;
   }
   input, textarea, select {
-    background:cyan;
-    color: blue;
+    background:var(--color-rgb-cyan);
+    color: var(--color-rgb-blue);
     border:none;
     &::selection {
-      background:yellow;
-      color:black;
+      background:var(--color-rgb-yellow);
+      color:var(--color-black);
     }
   }
   select {
-    outline:cyan 0.4rem solid;
+    outline:var(--color-rgb-cyan) 0.4rem solid;
   }
   output {
     &.main-output {
 
-      color:white;
+      color:var(--color-white);
       min-height:1.2em;
       font-weight:bold;
       padding:0 0.5rem
@@ -87,10 +96,10 @@ code {
       text-align: right;
     }
     &.success {
-      outline:lime 0.4rem solid;
+      outline:var(--color-rgb-green) 0.4rem solid;
     }
     &.failure {
-      outline:red 0.4rem solid;
+      outline:var(--color-rgb-red) 0.4rem solid;
     }
   }
 }
@@ -98,7 +107,8 @@ code {
 
 
 .formica {
-  background: white;
+  background: var(--color-white);
+  color: var(--cheap-ink);
   padding:1rem;
   & > span {
     padding:1rem 0;
@@ -114,17 +124,17 @@ code {
 
   input, textarea, select {
     border:none;
-    border-left:2px solid white;
+    border-left:2px solid var(--color-white);
     padding-left:0.4rem;
     &:focus {
       outline:rgba(255, 191, 191, 0.5) 0.4rem solid;
-      border-left-color: red;
+      border-left-color: var(--color-rgb-red);
 
     }
-    border-bottom: 2px dashed black;
+    border-bottom: 2px dashed var(--color-black);
     &::selection {
-      background:yellow;
-      color:black;
+      background:var(--color-rgb-yellow);
+      color:var(--color-black);
     }
   }
   select {
@@ -132,7 +142,6 @@ code {
   }
 
 }
-
 
 @media (max-width: 30em) {
     .formica {
