@@ -12,10 +12,6 @@ pre code {
     font-size: 0.62em;
     outline: 1rem solid var(--code-back);
     line-height: 1.6;
-//     &::selection {
-//       background: var(--code-text);
-//       color: var(--code-back);
-//     }
     scrollbar-color: var(--color-grey-lite) var(--code-back) ;
   }
 
