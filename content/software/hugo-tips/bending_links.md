@@ -12,7 +12,7 @@ draft: false
 images:
   - /images/bender-as-pimp.jpg
 category: hugo
-style: classic experiments
+style: layout-classic experiments
 ---
 This all began with a post on my socials... 
 

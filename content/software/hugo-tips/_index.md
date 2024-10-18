@@ -7,7 +7,7 @@ date: 2024-10-04T12:15:00
 draft: false
 images:
   - /images/hugo-gopher-hero.svg
-style: classic
+style: layout-classic
 ---
 [Hugo](https://gohugo.io/) is a great way to build complex static sites. There is a bit of a learning curve, but once embraced, it's incredibly powerful. 
 

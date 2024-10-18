@@ -3,7 +3,7 @@ subheading: An LRG copypasta series
 title: Software
 author: "@ classic literature"
 subtitle: "Tricking people into thinking rocks are alive"
-style: "classic literature"
+style: "layout-classic literature"
 description: Leigh writes about his adventures in software, from his early days sweating over a Vic20, through hacking Midi files on his Atari, making CD-roms for iMacs through to the present day.
 images: ["/images/vic_20-display.jpg"]
 ---
