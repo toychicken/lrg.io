@@ -36,9 +36,15 @@
     --color-book-lilac-100: hsl(294, 36%, 58%);
     --color-book-lilac-80: hsl(293, 44%, 75%);
 
+    // misc
     --color-book-lemon-200: hsl(48, 63%, 42%);
     --color-book-lemon-100: hsl(48, 83%, 60%);
     --color-book-lemon-80: hsl(48, 79%, 70%);
+
+    // travel
+    --color-book-cerise-200: hsl(338, 58%, 30%);
+    --color-book-cerise-100: hsl(338, 58%, 45%);
+    --color-book-cerise-80: hsl(338, 58%, 60%);
 
 
     --color-grey-lite: #bbb;
@@ -49,7 +55,7 @@
     // Inks for handwriting and print
     --color-blood-ink: #69333333; // slightly translucent for that aged ink effect
     --color-biro-blue: #203e98aa;
-    --color-biro-black: #1f1f240;
+    --color-biro-black: #1f1f23aa;
 
     // effects
     --img-filter: saturate(0) sepia(30%) brightness(70%) opacity(90%) contrast(150%);

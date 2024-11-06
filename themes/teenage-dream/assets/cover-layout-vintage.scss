@@ -118,7 +118,8 @@
                     width: 100%;
                 }
 
-                img[src$='.svg'] {
+                img[src$='.svg'],
+                img[src$='.png'] {
                     width: auto;
                     max-height: 100%;
                     width: 100%;

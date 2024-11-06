@@ -14,12 +14,12 @@
 
     
     li.list-item.travel {
-        --theme-main-prime: var(--color-book-lemon-100);
-        --theme-main-fade: var(--color-book-lemon-80);
+        --theme-main-prime: var(--color-book-cerise-100);
+        --theme-main-fade: var(--color-book-cerise-80);
         // --theme-empty-bg: var(--color-bone);
         // --theme-default-text: var(--color-biro-black);
-        --theme-spot-highlight: var(--color-book-lemon-100);
-        --theme-spot-contrast: var(--color-book-lemon-200);
+        --theme-spot-highlight: var(--color-book-cerise-100);
+        --theme-spot-contrast: var(--color-book-cerise-200);
     }
 
 
@@ -30,6 +30,16 @@
         // --theme-default-text: var(--color-biro-black);
         --theme-spot-highlight: var(--color-book-lilac-100);
         --theme-spot-contrast: var(--color-book-lilac-200);
+    }
+
+
+    li.list-item.misc {
+        --theme-main-prime: var(--color-book-lemon-100);
+        --theme-main-fade: var(--color-book-lemon-80);
+        // --theme-empty-bg: var(--color-bone);
+        // --theme-default-text: var(--color-biro-black);
+        --theme-spot-highlight: var(--color-book-lemon-100);
+        --theme-spot-contrast: var(--color-book-lemon-200);
     }
 
     /* small fix to stop gradient bleeding through white area on default  (and is used for the pseudo covers on sections */
