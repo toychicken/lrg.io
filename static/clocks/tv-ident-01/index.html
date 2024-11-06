@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <style>
+
+    </style>
+    <style>
+        body {
+            background: #000;
+            color: hsl(0, 100%, 77%);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        main {
+            margin: auto;
+            /* width: 100vw; */
+            height: 99vw;
+            max-height: 99vh;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            /* outline:2px red solid; */
+
+            display: grid;
+            grid-template-columns: repeat(2, 2em) repeat(2, 1fr) repeat(2, 2em);
+            grid-template-rows: repeat(2, 2em) repeat(2, 1fr) repeat(2, 2em);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+
+/* .div1 { grid-area: 1 / 1 / 7 / 7; } OUTER
+.div2 { grid-area: 2 / 2 / 6 / 6; } MIDDLE
+.div3 { grid-area: 3 / 3 / 5 / 5; } INNER */
+
+
+        .hand {
+            border-radius: 50%;
+
+        }
+
+        #hour {
+            grid-area: 3 / 3 / 5 / 5;
+        }
+        #minute {
+            grid-area: 2 / 2 / 6 / 6;
+        }
+        #second {
+            grid-area: 1 / 1 / 7 / 7;
+        }
+    </style>
+    <script type="text/javascript" src="/js/clock-toys.js"></script>
+</head>
+
+<body>
+    <main>
+        <div id="hour" class="hand"></div>
+        <div id="minute" class="hand"></div>
+        <div id="second" class="hand"></div>
+    </main>
+    <script>
+
+        // const elTime = document.querySelector('time');
+        const elmain = document.querySelector('main');
+        const elhour = document.querySelector('#hour')
+        const elminute = document.querySelector('#minute')
+        const elsecond = document.querySelector('#second');
+
+        let timer;
+        let running = true;
+
+
+        const tick = (ts) => {
+            const time = new Date();
+            const out = timeToOtherThings(time);
+            const clockTime = getClockTime();
+            const hourQuotient = sweepTime(360, clockTime, 'ms', 'd');
+            const minuteQuotient = sweepTime(360, clockTime, 'ms', 'h');
+            const secondQuotient = sweepTime(360, clockTime, 'ms', 'm');
+            const pulse = sweepTime(80, clockTime, 'ms', 'm');
+            const twitch = sweepTime(60, clockTime, 'ms', 's');
+
+            const clockface = `background: radial-gradient(circle, #00000000 ${pulse - 10}%, #2220 ${pulse - 8}%, #fffffff0 ${pulse}%, #00000000 ${pulse + 1}%),
+            radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 58%),
+            repeating-conic-gradient(white 0deg 1deg, transparent 2deg 28deg, white 29deg 30deg);`;
+            const hourhand = `background: conic-gradient(from ${hourQuotient}deg at 50% 50%, #00000000 99%, #0000ffff 100%)`;
+            const minutehand = `background: conic-gradient(from ${minuteQuotient}deg at 50% 50%, #00000000 97%, #00ff00ff 100%)`;
+            const secondhand = `background: radial-gradient(circle, #000 0% 5%, transparent 6% 100%), conic-gradient(from ${secondQuotient}deg at 50% 50%, #00000000 95%, rgb(${255 - twitch}, 0, 0) 100%)`;
+            elmain.setAttribute('style', clockface);
+            elhour.setAttribute('style', hourhand);
+            elminute.setAttribute('style', minutehand);
+            elsecond.setAttribute('style', secondhand);
+            // elTime.innerText = `${out.time.h}:${out.time.m}:${out.time.s}`
+            timer = requestAnimationFrame(tick);
+        }
+        // tick();
+        timer = requestAnimationFrame(tick);
+        elmain.addEventListener("dblclick", () => {
+            if(running) {
+                cancelAnimationFrame(timer);
+                running = false;
+            } else {
+                 timer = requestAnimationFrame(tick);
+                 running = true;
+            }
+        });
+    </script>
+</body>
+
+</html>
