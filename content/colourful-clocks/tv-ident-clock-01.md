@@ -2,7 +2,7 @@
 title: TV Ident Clock 1
 subtitle: A Sweeping 'Radar' clock
 subheading: An LRG waste timing project
-description: This is where the description goes
+description: Inspired by interstitial TV clocks of the 70s and 80s
 date: 2024-11-05T16:38:00
 tags:
   - clocks
