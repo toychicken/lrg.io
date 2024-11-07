@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=climate-crisis:400" rel="stylesheet" />
+    <style>
+        body {
+            /* font-family: 'Climate Crisis', display; */
+            background: #000;
+            color: hsl(0, 100%, 77%);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size:10vw;
+
+        }
+
+
+        main {
+            width: 100vw;
+            height:100vh;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: repeat(2, 1fr) 2em 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+}
+
+.counter { grid-area: 2 / 2 / 3 / 3; 
+    .time {}
+    .hex {}
+}
+.buttons { grid-area: 3 / 2 / 4 / 3; }
+
+    </style>
+    <script type="text/javascript" src="/js/clock-toys.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="counter">
+            <span class="hex">
+                FFCC00
+            </span>
+            <span class="time">
+                12:40:00
+            </span>
+        </div>
+        <div class="buttons"><button>A</button><button>B</button></div>
+    </main>
+    <script>
+
+        // const elTime = document.querySelector('time');
+        const elmain = document.querySelector('main');
+        const elhex = document.querySelector('.hex');
+        console.log('elhex', elhex);
+
+        let timer;
+        let running = true;
+        let colors = {
+                a : {H : '', S : '', L : ''},
+                b : {H : '', S : '', L : ''}
+            }
+
+        const setA = ['a', 'b', 'a', 'b'];
+        const setB = ['b', 'a', 'b', 'a'];
+        const offsets = [
+            -50, 0, 50, 100
+        ]
+
+        const popUnshift = () => {
+            console.log(stops);
+            stops.unshift(stops.pop());
+            console.log(stops);
+        }
+
+        const tick = (ts) => {
+            const time = crudeDate(0);
+            const out = timeToOtherThings(time);
+            const clockTime = getClockTime();
+
+            colors.a.H = sweepTime(360, clockTime, 'ms', 'm');
+            colors.a.S = sweepTime(100, clockTime, 'ms', 'h');
+            // colors.a.S = 100;
+            colors.a.L = sweepTime(100, clockTime, 'ms', 'd');
+            // colors.a.L = 100;
+
+            colors.b.H = (colors.a.H+(360/2))%360;
+            colors.b.S = (colors.a.S+(100/2))%100;
+            colors.b.L = (colors.a.L+(100/2))%100;
+
+            const pulse = sweepTime(100, clockTime, 'ms', 'm');
+
+            let rings = [];
+            let ss = [];
+
+            let stops = pulse >= 50 ? setB : setA;
+
+            stops.forEach((v,i) => {
+                let stop = (pulse%50)+offsets[i];
+                rings.push(`hsl(${colors[v].H}, ${colors[v].S}%, ${colors[v].L}%) ${stop}%`);
+                ss.push(parseInt(stop));
+            })
+            elhex.innerHTML = ss.join(`<br />`);
+            
+
+            const clockface = `background: radial-gradient(circle, ${rings.join(', ')});`;
+            elmain.setAttribute('style', clockface);
+            // elTime.innerText = `${out.time.h}:${out.time.m}:${out.time.s}`
+            timer = requestAnimationFrame(tick);
+        }
+        tick();
+        timer = requestAnimationFrame(tick);
+        elmain.addEventListener("dblclick", () => {
+            if(running) {
+                cancelAnimationFrame(timer);
+                running = false;
+            } else {
+                 timer = requestAnimationFrame(tick);
+                 running = true;
+            }
+        });
+    </script>
+</body>
+
+</html>
