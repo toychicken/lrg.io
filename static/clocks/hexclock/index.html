@@ -75,6 +75,7 @@
             grid-area: 4 / 2 / 5 / 3;
         }
     </style>
+    <link rel="stylesheet" href="/css/clock-toys.css" />
     <script type="text/javascript" src="/js/clock-toys.js"></script>
 </head>
 
@@ -133,25 +134,27 @@
          * 
          * Also - create functionality for timers, long clocks (millenium hand anyone?), alarms, sounds, generative noise etc
          * 
+         * Also - the timeKeys and timeVals arrays should _really_ just be an object... don't know why I'm being weird about it... or maybe an object _And_ and array... :thinking:
+         * 
+         * Also - I'm nuts -- WHY don't I just convert to ms immediately, do all the changes, then convert back (if nesc) to clockTime?
          */
 
 
         const tick = (ts) => {
-            const time = crudeDate(0);
-            const out = timeToOtherThings(time);
+            // const time = crudeDate(0);
+
             const clockTime = getClockTime();
 
-            colors.a.H = sweepTime(360, clockTime, 'ms', 'm');
-            colors.a.S = sweepTime(100, clockTime, 'ms', 'h');
-            // colors.a.S = 100;
-            colors.a.L = sweepTime(100, clockTime, 'ms', 'd');
-            // colors.a.L = 100;
+            colors.a.H = sweepTime({dividend: 360, time: clockTime, p: 'ms', m: 'm'});
+            colors.a.S = sweepTime({dividend: 100, time: clockTime, p: 'ms', m: 'h'});
+            colors.a.L = sweepTime({dividend: 100, time: clockTime, p: 'ms', m: 'd'});
+
 
             colors.b.H = (colors.a.H + (360 / 2)) % 360;
             colors.b.S = (colors.a.S + (100 / 2)) % 100;
             colors.b.L = (colors.a.L + (100 / 2)) % 100;
 
-            const pulse = sweepTime(100, clockTime, 'ms', 'm');
+            const pulse = sweepTime({dividend: 100, time : clockTime, p: 'ms', m: 'm'});
 
             let rings = [];
             let ss = [];
@@ -182,16 +185,31 @@
         }
 
         timer = requestAnimationFrame(tick);
+
+
+
+
+        /// This is not ideal - should encapsulate :)
+        cpInit({
+            is24hour : true
+        });
+
         elmain.addEventListener("dblclick", () => {
-            console.log('running', running);
-            if (running) {
-                cancelAnimationFrame(timer);
-                running = false;
+            console.log('running', !controlPanel.isOpen());
+            if (!controlPanel.isOpen()) {
+
+
+                // probably don't (now) want to cancel the animation frame, just the time function.
+                // cancelAnimationFrame(timer);
+                toggleControlPanel(true);
             } else {
-                timer = requestAnimationFrame(tick);
-                running = true;
+                // timer = requestAnimationFrame(tick);
+                toggleControlPanel(false);
             }
         });
+
+
+        
     </script>
 </body>
 

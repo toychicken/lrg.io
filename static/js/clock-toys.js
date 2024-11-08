@@ -1,31 +1,50 @@
+let timeKeys = ['ms', 's', 'm', 'h', 'd']; // ascending order of size
+let timeVals = [];
 
-const sweepTime = (dividend, time, p, m, is24hour = false) => {
+
+let tt = {
+    ms :    {ms: 1,                s: 1000,       m : 60*1000,   h : 60*60*1000,    d : 24*60*60*1000 },
+    s :     {ms: 1/1000,           s: 1,          m : 60,        h : 60*60,         d : 24*60*60 },
+    m :     {ms: 1/60/1000,        s: 1/60,       m : 1,         h : 60,            d : 24*60 },
+    h :     {ms: 1/60/60/1000,     s: 1/60/60,    m : 1/60,      h : 1,             d : 24 },
+    d :     {ms: 1/24/60/60/1000,  s: 1/24/60/60, m : 1/24/60,   h : 1/24,          d : 1 },
+}
+
+
+
+const sweepTime = (params) => {
+
+    const {
+        dividend,
+        time, 
+        p,
+        m,
+        easing,
+        bounce,
+    } = {...{
+        easing : 'linear',
+        bounce : false,
+    }, ...params};
 
     // to calc ms in h, we do ms*s*m
-    const keys = ['ms', 's', 'm', 'h', 'd']; // ascending order of size
-    const vals = [1000,  60,  60,  (is24hour ? 24 : 12),  1];
-    const s = keys.indexOf(p);
-    const f = keys.indexOf(m);
-    
-    const vArr = vals.slice(s,f);
-    const kArr = keys.slice(s,f);
-    const pInM = vArr.reduce((c,n) => { return c * n }); // our total p in m
+    const s = timeKeys.indexOf(p);
+    const f = timeKeys.indexOf(m);
+
+    const vArr = timeVals.slice(s, f);
+    const kArr = timeKeys.slice(s, f);
+    const pInM = vArr.reduce((c, n) => { return c * n }); // our total p in m
 
     // get deg would be 360 / time
 
     let currentP = 0;
     kArr.forEach((k, ind) => {
         // if the key is the same as p, we don't need to multiply it, it's already correct.
-
-
-
         let timek = 0;
-
-        if(k === p) {
+        if (k === p) {
             // just add this to currentP
             timek = time[k];
         } else {
-            const sArr = vArr.slice(0,ind);
+            const sArr = vArr.slice(0, ind);
             const sss = sArr.reduce((c, n) => {
                 return c * n
             })
@@ -35,7 +54,7 @@ const sweepTime = (dividend, time, p, m, is24hour = false) => {
         // console.log(`k = ${k}, p = ${p}, timek = ${timek} | currentP = ${currentP}`)
     });
 
-    const out = (dividend / pInM) * currentP;
+    const out = easingFunctions[easing]((dividend / pInM) * currentP);
 
     // console.log(`(dividend / pInM) = (${dividend} / ${pInM}) * ${currentP} = ${out}`, JSON.stringify(kArr), JSON.stringify(vArr), s, f, JSON.stringify(time))
 
@@ -43,64 +62,151 @@ const sweepTime = (dividend, time, p, m, is24hour = false) => {
 
 }
 
-const getClockTime = (t = new Date(), is24hour = false) => {
+let cpState = {};
 
-    // time is a Date object
-    const time = {
-        ms : t.getMilliseconds(),
-        s : t.getSeconds(),
-        m : t.getMinutes(),
-        h : is24hour ? t.getHours() : t.getHours()%12,
+const dateTimeToTimeObj = (t) => {
+
+    const tob = {
+        ms: t.getMilliseconds(),
+        s: t.getSeconds(),
+        m: t.getMinutes(),
+        h: cpState.is24hour ? t.getHours() : t.getHours() % 12,
     }
-    return time;
+    const milliseconds = (tt.ms.ms * tob.ms) + (tt.ms.s * tob.s) + (tt.ms.m * tob.m) + (tt.ms.h * tob.h);
+    const zeroHour = t.getTime() - milliseconds;
+    return {
+        ...tob,
+        milliseconds,
+        zeroHour
+    }
 }
 
+const timeObjToMilliseconds = (tob) => {
+    return (tt.ms.ms * tob.ms) + (tt.ms.s * tob.s) + (tt.ms.m * tob.m) + (tt.ms.h * tob.h);
+}
 
-const timeToOtherThings = (t, is24hour = false) => {
+const timeObjToDate = (tob) => {
+    return new Date((tob.zeroHour + tob.milliseconds));
+}
+
+const getClockTime = (params) => {
+
+    let {t} = {...{ t: new Date() }, ...params}
+    if(controlPanel.isOpen()) {
+        return controlPanel.getClockTime();
+    }
     // time is a Date object
-    const time = {
-        ms : t.getMilliseconds(),
-        s : t.getSeconds(),
-        m : t.getMinutes(),
-        h : t.getHours(),
-    }
+    return dateTimeToTimeObj(t);
+}
 
-    return {
-        time,
-        deg: {
-            ms : (360/1000) * time.ms, // milliseconds in the current second
-            s : (360/60) * time.s, // seconds in the current minute
-            msm : (360/60000) * ((time.s * 1000) + time.ms), // milliseconds in the current minute (for sweeping hands)
-            m : (360/60) * time.m, // minutes in the current hour
-            sh: (360/3600) * ((time.m * 60) + time.s), // seconds in the current hour (for sweeping hands)
-            h : is24hour ? (360/24) * time.h : (360/12) * (time.h%12), // hours in the current day
-            md: (360/720) * ((time.h%12 * 12) + time.m)
-        },
-        perc: {
-            ms : (100/1000) * time.ms,
-            s : (100/60) * time.s,
-            msm : (100/60000) * ((time.s * 1000) + time.ms), // milliseconds in the current minute
-            m : (100/60) * time.m,
-            sh: (100/3600) * ((time.m * 60) + time.s), // seconds in the current hour (for sweeping hands)
-            h : is24hour ? (100/24) * time.h : (100/12) * (time.h%12)
-        }
+const drawCp = () => {
+
+    const template = `
+    <h2>Controls</h2>
+
+
+    <div><button onclick="controlPanel.decTime(this)" data-timekey="h">-</button><input type="number" value="${cpState.clockTime.h}" data-timekey="h" onchange="controlPanel.updateTime(this)" min=0 max=23 /><button onclick="controlPanel.incTime(this)" data-timekey="h">+</></div>
+    <div><button onclick="controlPanel.decTime(this)" data-timekey="m">-</button><input type="number" value="${cpState.clockTime.m}" data-timekey="m" onchange="controlPanel.updateTime(this)" min=0 max=59 /><button onclick="controlPanel.incTime(this)" data-timekey="m">+</></div>
+    <div><button onclick="controlPanel.decTime(this)" data-timekey="s">-</button><input type="number" value="${cpState.clockTime.s}" data-timekey="s" onchange="controlPanel.updateTime(this)" min=0 max=59 /><button onclick="controlPanel.incTime(this)" data-timekey="s">+</></div>
+    <div><button onclick="controlPanel.decTime(this)" data-timekey="ms">-</button><input type="number" value="${cpState.clockTime.ms}" data-timekey="ms" onchange="controlPanel.updateTime(this)" min=0 max=999 step=100 /><button onclick="controlPanel.incTime(this)" data-timekey="ms">+</></div>
+`
+    cpState.panel.innerHTML = template;
+}
+
+const cpCreate = () => {
+    if(cpState.panel) {
+        console.warn('cPanel already exists', cpState.panel);
     }
+    const cp = document.createElement('aside');
+    cp.classList.add('control-panel');
+    const body = document.querySelector('body').append(cp);
+    cpState.panel = cp;
+    drawCp();
+}
+
+const toggleControlPanel = (open) => {
+
+    controlPanel.toggleOpen(open);
+    console.log(controlPanel.isOpen());
+    if(cpState.open) {
+        cpState.panel.classList.add('open');
+    } else {
+        cpState.panel.classList.remove('open');
+    }
+}
+
+const cpInit = (overrides) => {
+    // need sanitation check on overrides?
+
+    const defaults = {
+        open : false,
+        time : null,
+        panel : null,
+    }
+    cpState = {...defaults, ...overrides};
+    controlPanel.initClockTime();
+
+
+    timeVals = [1000, 60, 60, (cpState.is24hour ? 24 : 12), 1]
+
+
+
+    cpCreate();
+}
+
+const nextTime = (params) => {
+    const { el, inc, abs } = params;
+    let k = el.dataset.timekey;
+    let now = {...controlPanel.getClockTime()};
+    let next = {...controlPanel.getClockTime()};
+    let nms;
+    if(inc) {
+        nms = now.milliseconds + (tt.ms[k] * inc);
+    } else {
+        next[k] = abs;
+        nms = timeObjToMilliseconds(next);
+    }
+    next.milliseconds = nms;
+    let nt = timeObjToDate(next);
+    controlPanel.setClockTime(nt);     
+}
+
+const controlPanel = {
+    isOpen : () => cpState.open,
+    toggleOpen : (open) => { cpState.open = (open) ? open : !cpState.open; return cpState.open; },
+    setTime: (params) => { cpState.time = (params) ? params : getClockTime() },
+    getClockTime: () => cpState.clockTime,
+    initClockTime: () => { cpState.clockTime = getClockTime(); return cpState.clockTime; },
+    setClockTime: (t) => { cpState.clockTime = dateTimeToTimeObj(t); drawCp();},
+    updateTime: (el) => {
+        nextTime({el, abs: el.value})
+    },
+    incTime: (el) => {
+        nextTime({el, inc: 1});
+    },
+    decTime: (el) => {
+        nextTime({el, inc: -1});
+    },
 }
 
 const hslToHex = (h, s, l) => {
     l /= 100;
     const a = s * Math.min(l, 1 - l) / 100;
     const f = n => {
-      const k = (n + h / 30) % 12;
-      const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
-      return Math.round(255 * color).toString(16).padStart(2, '0');   // convert to Hex and prefix "0" if needed
+        const k = (n + h / 30) % 12;
+        const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+        return Math.round(255 * color).toString(16).padStart(2, '0');   // convert to Hex and prefix "0" if needed
     };
     return `#${f(0)}${f(8)}${f(4)}`;
-  }
+}
 
 
-  const crudeDate = (offset) => {
+const crudeDate = (offset) => {
     let x = new Date();
     x.setTime(x.getTime() + (offset * 60 * 60 * 1000));
     return x;
-  }
+}
+
+const easingFunctions = {
+    'linear' : x => x,
+}
