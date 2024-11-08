@@ -2,10 +2,12 @@
 
 <head>
     <link rel="preconnect" href="https://fonts.bunny.net">
-<link href="https://fonts.bunny.net/css?family=climate-crisis:400" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=chivo-mono:700" rel="stylesheet" />
     <style>
         body {
-            /* font-family: 'Climate Crisis', display; */
+            font-family: 'Chivo Mono', monospace;
             background: #000;
             color: hsl(0, 100%, 77%);
             margin: 0;
@@ -14,56 +16,96 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            font-size:10vw;
+
 
         }
 
 
         main {
             width: 100vw;
-            height:100vh;
+            height: 100vh;
+
             display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
-            grid-template-rows: repeat(2, 1fr) 2em 1fr;
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-rows: 1fr 2em 2fr 2em 1fr;
             grid-column-gap: 0px;
             grid-row-gap: 0px;
-}
+        }
 
-.counter { grid-area: 2 / 2 / 3 / 3; 
-    .time {}
-    .hex {}
-}
-.buttons { grid-area: 3 / 2 / 4 / 3; }
+        .time-container {
 
+            grid-area: 3 / 2 / 4 / 3;
+            container-name: time-container;
+            container-type: size;
+            text-align: center;
+        }
+
+        @container time-container (orientation: landscape) {
+
+            .time {
+
+                font-size:41cqw;
+                line-height: 100cqh;
+
+            }
+        }
+        
+        @container time-container (orientation: portrait) {
+            .time {
+                font-size:48cqh;
+                line-height: 1em;
+
+                span {
+                    display:block;
+                }
+            }
+        }
+
+        .hex {
+            font-size: 2em;
+            line-height: 1;
+            display: inline-block;
+        }
+
+        .a {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        .b {
+            grid-area: 4 / 2 / 5 / 3;
+        }
     </style>
     <script type="text/javascript" src="/js/clock-toys.js"></script>
 </head>
 
 <body>
     <main>
-        <div class="counter">
-            <span class="hex">
-                FFCC00
-            </span>
+
+        <span class="hex a"></span>
+        <div class="time-container">
             <span class="time">
-                12:40:00
+                <span class="hours">12</span><span class="minutes">40</span>
             </span>
         </div>
-        <div class="buttons"><button>A</button><button>B</button></div>
+        <span class="hex b"></span>
+
     </main>
     <script>
 
         // const elTime = document.querySelector('time');
         const elmain = document.querySelector('main');
-        const elhex = document.querySelector('.hex');
-        console.log('elhex', elhex);
-
+        const elhexa = document.querySelector('.hex.a');
+        const elhexb = document.querySelector('.hex.b');
+        const eltime = document.querySelector('.time');
+        const elhours = document.querySelector('.hours');
+        const elminutes = document.querySelector('.minutes');
         let timer;
         let running = true;
+
         let colors = {
-                a : {H : '', S : '', L : ''},
-                b : {H : '', S : '', L : ''}
-            }
+            a: { H: '', S: '', L: '' },
+            b: { H: '', S: '', L: '' }
+        }
 
         const setA = ['a', 'b', 'a', 'b'];
         const setB = ['b', 'a', 'b', 'a'];
@@ -77,6 +119,23 @@
             console.log(stops);
         }
 
+
+        /**
+         * 
+         * I'm an idiot - this is excessively complex - I don't need to move the stops, I should fix them, and cycle the colors with an offset
+         * 
+         * Also - when the sat & lum values flip, it's quite jarring :( can we do a timing / easing function?
+         * NB - It's on the hour  that you see the big jump (at least I saw it at 0959 - 1000)
+         * 
+         * Also - build a clock controller panel to test out different times etc.
+         * 
+         * Also - change sweepTime to an object for the params, so it can be extended without breaking old clocks
+         * 
+         * Also - create functionality for timers, long clocks (millenium hand anyone?), alarms, sounds, generative noise etc
+         * 
+         */
+
+
         const tick = (ts) => {
             const time = crudeDate(0);
             const out = timeToOtherThings(time);
@@ -88,9 +147,9 @@
             colors.a.L = sweepTime(100, clockTime, 'ms', 'd');
             // colors.a.L = 100;
 
-            colors.b.H = (colors.a.H+(360/2))%360;
-            colors.b.S = (colors.a.S+(100/2))%100;
-            colors.b.L = (colors.a.L+(100/2))%100;
+            colors.b.H = (colors.a.H + (360 / 2)) % 360;
+            colors.b.S = (colors.a.S + (100 / 2)) % 100;
+            colors.b.L = (colors.a.L + (100 / 2)) % 100;
 
             const pulse = sweepTime(100, clockTime, 'ms', 'm');
 
@@ -99,28 +158,38 @@
 
             let stops = pulse >= 50 ? setB : setA;
 
-            stops.forEach((v,i) => {
-                let stop = (pulse%50)+offsets[i];
+            stops.forEach((v, i) => {
+                let stop = (pulse % 50) + offsets[i];
                 rings.push(`hsl(${colors[v].H}, ${colors[v].S}%, ${colors[v].L}%) ${stop}%`);
                 ss.push(parseInt(stop));
             })
-            elhex.innerHTML = ss.join(`<br />`);
-            
+
+            const aHex = hslToHex(colors.a.H, colors.a.S, colors.a.L).toUpperCase();
+            const bHex = hslToHex(colors.b.H, colors.b.S, colors.b.L).toUpperCase();
+            elhexa.setAttribute('style', `color: ${aHex}`); //text-shadow: 0 0 0.2em ${bHex};`)
+            elhexa.innerHTML = aHex;
+            elhexb.setAttribute('style', `color: ${bHex}`); //text-shadow: 0 0 0.2em ${aHex};`)
+            elhexb.innerHTML = bHex;
+
 
             const clockface = `background: radial-gradient(circle, ${rings.join(', ')});`;
             elmain.setAttribute('style', clockface);
-            // elTime.innerText = `${out.time.h}:${out.time.m}:${out.time.s}`
+            
+            eltime.setAttribute('style', `color: ${aHex}; text-shadow: 0em 0.1em 0.025em ${bHex};`);
+            elhours.innerText = String(clockTime.h).padStart(2, '0');
+            elminutes.innerText = String(clockTime.m).padStart(2, '0');
             timer = requestAnimationFrame(tick);
         }
-        tick();
+
         timer = requestAnimationFrame(tick);
         elmain.addEventListener("dblclick", () => {
-            if(running) {
+            console.log('running', running);
+            if (running) {
                 cancelAnimationFrame(timer);
                 running = false;
             } else {
-                 timer = requestAnimationFrame(tick);
-                 running = true;
+                timer = requestAnimationFrame(tick);
+                running = true;
             }
         });
     </script>
