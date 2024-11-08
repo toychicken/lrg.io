@@ -78,11 +78,11 @@
             const time = new Date();
 
             const clockTime = getClockTime();
-            const hourQuotient = sweepTime({ dividend: 360, time: clockTime, p: 'ms', m: 'd'});
-            const minuteQuotient = sweepTime({ dividend: 360, time: clockTime, p: 'ms', m: 'h'});
-            const secondQuotient = sweepTime({ dividend: 360, time: clockTime, p: 'ms', m: 'm'});
-            const pulse = sweepTime({ dividend: 80, time: clockTime, p: 'ms', m: 'm'});
-            const twitch = sweepTime({ dividend: 60, time: clockTime, p: 'ms', m: 's'});
+            const hourQuotient = sweepTime({ dividend: 360, timeObj: clockTime, p: 'ms', m: 'd'});
+            const minuteQuotient = sweepTime({ dividend: 360, timeObj: clockTime, p: 'ms', m: 'h'});
+            const secondQuotient = sweepTime({ dividend: 360, timeObj: clockTime, p: 'ms', m: 'm'});
+            const pulse = sweepTime({ dividend: 80, timeObj: clockTime, p: 'ms', m: 'm'});
+            const twitch = sweepTime({ dividend: 60, timeObj: clockTime, p: 'ms', m: 's'});
 
             const clockface = `background: radial-gradient(circle, #00000000 ${pulse - 10}%, #2220 ${pulse - 8}%, #fffffff0 ${pulse}%, #00000000 ${pulse + 1}%),
             radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 58%),

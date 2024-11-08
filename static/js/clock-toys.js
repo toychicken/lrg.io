@@ -1,7 +1,7 @@
 let timeKeys = ['ms', 's', 'm', 'h', 'd']; // ascending order of size
 let timeVals = [];
 
-
+// help with conversion :)
 let tt = {
     ms :    {ms: 1,                s: 1000,       m : 60*1000,   h : 60*60*1000,    d : 24*60*60*1000 },
     s :     {ms: 1/1000,           s: 1,          m : 60,        h : 60*60,         d : 24*60*60 },
@@ -16,7 +16,7 @@ const sweepTime = (params) => {
 
     const {
         dividend,
-        time, 
+        timeObj, 
         p,
         m,
         easing,
@@ -42,25 +42,30 @@ const sweepTime = (params) => {
         let timek = 0;
         if (k === p) {
             // just add this to currentP
-            timek = time[k];
+            timek = timeObj[k];
         } else {
             const sArr = vArr.slice(0, ind);
             const sss = sArr.reduce((c, n) => {
                 return c * n
             })
-            timek = sss * time[k];
+            timek = sss * timeObj[k];
         }
         currentP = currentP + timek;
         // console.log(`k = ${k}, p = ${p}, timek = ${timek} | currentP = ${currentP}`)
     });
-
-    const out = easingFunctions[easing]((dividend / pInM) * currentP);
+    let out;
+    if(bounce) {
+        out = Math.abs(easingFunctions[easing]((dividend / pInM) * currentP) - 50) * 2;
+    } else {
+        out = easingFunctions[easing]((dividend / pInM) * currentP);
+    }
 
     // console.log(`(dividend / pInM) = (${dividend} / ${pInM}) * ${currentP} = ${out}`, JSON.stringify(kArr), JSON.stringify(vArr), s, f, JSON.stringify(time))
 
     return out;
 
 }
+
 
 let cpState = {};
 
