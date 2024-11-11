@@ -62,7 +62,7 @@
         }
 
         .hex {
-            font-size: 2em;
+            font-size: 3cqh;
             line-height: 1;
             display: inline-block;
         }
@@ -173,9 +173,14 @@
             const aHex = hslToHex(colors.a.H, colors.a.S, colors.a.L).toUpperCase();
             const bHex = hslToHex(colors.b.H, colors.b.S, colors.b.L).toUpperCase();
             elhexa.setAttribute('style', `color: ${aHex}`); //text-shadow: 0 0 0.2em ${bHex};`)
-            elhexa.innerHTML = aHex;
+            let {H:ah, S:as, L:al} = {...colors.a}
+            elhexa.innerHTML = `A: hsl(${parseInt(ah)}, ${parseInt(as)}, ${parseInt(al)})`;
+            // elhexa.innerHTML = aHex;
             elhexb.setAttribute('style', `color: ${bHex}`); //text-shadow: 0 0 0.2em ${aHex};`)
-            elhexb.innerHTML = bHex;
+            let {H:bh, S:bs, L:bl} = {...colors.b}
+
+            elhexb.innerHTML = `B: hsl(${parseInt(bh)}, ${parseInt(bs)}, ${parseInt(bl)})`;;
+            // elhexb.innerHTML = bHex;
 
             // elrange.value=range;
 
