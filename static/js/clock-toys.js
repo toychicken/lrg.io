@@ -55,7 +55,7 @@ const sweepTime = (params) => {
     });
     let out;
     if(bounce) {
-        out = Math.abs(easingFunctions[easing]((dividend / pInM) * currentP) - 50) * 2;
+        out = Math.abs(easingFunctions[easing]((dividend / pInM) * currentP) - (dividend /2)) * 2;
     } else {
         out = easingFunctions[easing]((dividend / pInM) * currentP);
     }

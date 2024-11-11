@@ -26,10 +26,10 @@
             height: 100vh;
 
             display: grid;
-            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-columns: 1fr 8fr 1fr;
             grid-template-rows: 1fr 2em 2fr 2em 1fr;
             grid-column-gap: 0px;
-            grid-row-gap: 0px;
+            grid-row-gap: 1vh;
         }
 
         .time-container {
@@ -62,7 +62,7 @@
         }
 
         .hex {
-            font-size: 3cqh;
+            font-size: 2em;
             line-height: 1;
             display: inline-block;
         }
@@ -148,14 +148,17 @@
 
             colors.a.H = sweepTime({dividend: 360, timeObj: clockTime, p: 'ms', m: 'm'});
             colors.a.S = sweepTime({dividend: 100, timeObj: clockTime, p: 'ms', m: 'h', bounce: true});
+            // colors.a.S = 50;
             colors.a.L = sweepTime({dividend: 100, timeObj: clockTime, p: 'ms', m: 'd', bounce: true});
+            // colors.a.L = 50;
 
             // range = sweepTime({dividend: 100, timeObj: clockTime, p: 'ms', m: 's', bounce: true});
 
 
-            colors.b.H = (colors.a.H + (360 / 2)) % 360;
-            colors.b.S = (colors.a.S + (100 / 2)) % 100;
-            colors.b.L = (colors.a.L + (100 / 2)) % 100;
+            // colors.b.H = (colors.a.H + (360 / 2)) % 360;
+            colors.b.H = Math.abs(colors.a.H - 360);
+            colors.b.S = Math.abs(colors.a.S - 100);
+            colors.b.L = Math.abs(colors.a.L - 100);
 
             const pulse = sweepTime({dividend: 100, timeObj : clockTime, p: 'ms', m: 'm'});
 
@@ -174,20 +177,20 @@
             const bHex = hslToHex(colors.b.H, colors.b.S, colors.b.L).toUpperCase();
             elhexa.setAttribute('style', `color: ${aHex}`); //text-shadow: 0 0 0.2em ${bHex};`)
             let {H:ah, S:as, L:al} = {...colors.a}
-            elhexa.innerHTML = `A: hsl(${parseInt(ah)}, ${parseInt(as)}, ${parseInt(al)})`;
-            // elhexa.innerHTML = aHex;
+            // elhexa.innerHTML = `A: hsl(${parseInt(ah)}, ${parseInt(as)}, ${parseInt(al)})`;
+            elhexa.innerHTML = aHex;
             elhexb.setAttribute('style', `color: ${bHex}`); //text-shadow: 0 0 0.2em ${aHex};`)
             let {H:bh, S:bs, L:bl} = {...colors.b}
 
-            elhexb.innerHTML = `B: hsl(${parseInt(bh)}, ${parseInt(bs)}, ${parseInt(bl)})`;;
-            // elhexb.innerHTML = bHex;
+            // elhexb.innerHTML = `B: hsl(${parseInt(bh)}, ${parseInt(bs)}, ${parseInt(bl)})`;;
+            elhexb.innerHTML = bHex;
 
             // elrange.value=range;
 
             const clockface = `background: radial-gradient(circle, ${rings.join(', ')});`;
             elmain.setAttribute('style', clockface);
             
-            eltime.setAttribute('style', `color: ${aHex}; text-shadow: 0em 0.1em 0.025em ${bHex};`);
+            eltime.setAttribute('style', `color: ${aHex}; text-shadow: 0 2vw 1vh ${bHex};`);
             elhours.innerText = String(clockTime.h).padStart(2, '0');
             elminutes.innerText = String(clockTime.m).padStart(2, '0');
             timer = requestAnimationFrame(tick);
