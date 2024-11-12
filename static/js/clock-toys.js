@@ -11,6 +11,44 @@ let tt = {
 }
 
 
+/**
+ * 
+ * Why I'm an idiot
+ * 
+ * Basically the output for sweep time is alway 1 / time - i.e.
+ * 
+ * If I'm mapping 360º around a clock, say for a minute hand, the value I need back is a linear 
+ * conversion of 60 / 360 = seconds per minute / degrees in circle
+ * 
+ * So, for any given degree on that circle I need a value between 0 - 1 , to multiply by 360 to 
+ * get the posittion of tthe second hand
+ * 
+ * e.g. at 00m05 seconds, my hand has travelled 5/60ths of it's journey -  0.08333 = l
+ * 
+ * Multiply  360 * l = 30º (well 29.9998888 in JS, sigh)
+ * 
+ * This now makes it easy to convert with a bounce and easing functions, because the value of l is
+ * always 0-1
+ * 
+ * 
+ * 
+ * So, when I'm doing a sweeptime calculation, I don't really _care_ what the dividend is, just the 
+ * 
+ *      timeObj (because I want to be able to arbitrarily define the time)
+ *      parva   - the granularity of the calculation, from the 
+ *      magna   - the _scope_ of the calculation
+ *      easing  - the easing function (see easings.net)
+ *      bounce  - whether or not it's a 'clock' function with a tickover from 1, to 0, or a reverse...
+ * 
+ * NOW, if I'm using the same params, I only have to do the function once...
+ * 
+ */
+
+
+
+
+
+
 
 const sweepTime = (params) => {
 
