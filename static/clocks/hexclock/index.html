@@ -16,6 +16,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            font-size:10px;
 
 
         }
@@ -27,7 +28,7 @@
 
             display: grid;
             grid-template-columns: 1fr 8fr 1fr;
-            grid-template-rows: 1fr 2em 2fr 2em 1fr;
+            grid-template-rows: 1fr 5rem 2fr 5rem 1fr;
             grid-column-gap: 0px;
             grid-row-gap: 1vh;
         }
@@ -44,7 +45,7 @@
 
             .time {
 
-                font-size:41cqw;
+                font-size:clamp(1rem, 41cqw, 80cqh);
                 line-height: 100cqh;
 
             }
@@ -52,8 +53,8 @@
         
         @container time-container (orientation: portrait) {
             .time {
-                font-size:48cqh;
-                line-height: 1em;
+                font-size:clamp(8rem, 48cqh, 70cqw);
+                line-height: 50cqh;
 
                 span {
                     display:block;
@@ -62,7 +63,7 @@
         }
 
         .hex {
-            font-size: 2em;
+            font-size: 3rem;
             line-height: 1;
             display: inline-block;
         }
@@ -190,7 +191,7 @@
             const clockface = `background: radial-gradient(circle, ${rings.join(', ')});`;
             elmain.setAttribute('style', clockface);
             
-            eltime.setAttribute('style', `color: ${aHex}; text-shadow: 0 2vw 1vh ${bHex};`);
+            eltime.setAttribute('style', `color: ${aHex}; text-shadow: 0 1rem 1vh ${bHex};`);
             elhours.innerText = String(clockTime.h).padStart(2, '0');
             elminutes.innerText = String(clockTime.m).padStart(2, '0');
             timer = requestAnimationFrame(tick);
