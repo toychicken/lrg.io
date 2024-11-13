@@ -49,6 +49,7 @@ const nTime = (params) => {
     const {
         p,
         m,
+        r,
         easing,
         bounce,
     } = {
@@ -59,32 +60,22 @@ const nTime = (params) => {
     };
 
     const timeObj = getClockTime();
+    
+    let rng = (r) ? r : tt[p][m]
+    let t = timeObj.milliseconds%rng;
 
-    /**
-     * ct = 20:56:48.718
-     * cms = 75409718
-     * 
-     * t = cms%range = somewhere from 0 to range
-     * r = range = 60000 ms
-     * 
-     * t/r = 15000/60000 = 0.25
-     * 
-     * 
-     * ****** How do we choose the 'bounce' timing - is it a pendulum that goes 1 way for 1 second, _then_ flips 
-     * - or is it simply offsetting and Math.abs the range by 1/2, and doubling the distance? (so could appear like it's double time
-     * 
-     */
+    let n = t/rng;
+    // before the output
 
+    // half bounce
+    let bn = Math.abs((n)-0.5)*2; // offset and Abs to create a bounce
 
-
-
-    let t = timeObj.milliseconds%tt[p][m];
-    let r = tt[p][m];
-    let n = t/r;
+    let bouncy = easingFunctions[easing](bn);
     let out = easingFunctions[easing](n);
-    console.log('t', t, 'r', r,  'p', p, 'm', m, 'tO', timeObj.milliseconds, 'n', n, 'out', out);
-
-    return out;
+    return {
+        out, 
+        bouncy,
+    };
 }
 
 

@@ -97,7 +97,11 @@
             </span>
         </div>
         <span class="hex b"></span>
-        <input class="range" type="range" step="0.0001" />
+        <p>
+            <input class="range" type="range" step="0.0001" min="" /><br/>
+            <input class="range" type="range" step="0.0001" min="" /><br/>
+            <input class="range" type="range" step="0.0001" min="" />
+        </p>
 
     </main>
     <script>
@@ -109,7 +113,11 @@
         const eltime = document.querySelector('.time');
         const elhours = document.querySelector('.hours');
         const elminutes = document.querySelector('.minutes');
-        const elrange = document.querySelector('input[type=range]');
+        const elrange0 = document.querySelectorAll('input[type=range]')[0];
+        const elrange1 = document.querySelectorAll('input[type=range]')[1];
+        const elrange2 = document.querySelectorAll('input[type=range]')[2];
+
+        console.log('0', elrange0, '1', elrange1);
         let timer;
         let running = true;
 
@@ -157,7 +165,6 @@
             colors.a.S = sweepTime({dividend: 100, timeObj: clockTime, p: 'ms', m: 'h', bounce: true});
             colors.a.L = sweepTime({dividend: 100, timeObj: clockTime, p: 'ms', m: 'd', bounce: true});
 
-            let range = 100 * nTime({p: 'ms', m: 'm', easing: 'easeInOutBounce'});
 
 
             // colors.b.H = (colors.a.H + (360 / 2)) % 360;
@@ -190,7 +197,17 @@
             // elhexb.innerHTML = `B: hsl(${parseInt(bh)}, ${parseInt(bs)}, ${parseInt(bl)})`;;
             elhexb.innerHTML = bHex;
 
-            elrange.value=range;
+
+
+
+
+            
+            let range = nTime({p: 'ms', m: 's', easing: 'easeInQuart'});
+            let longRange = nTime({p: 'ms', r: 2000, easing: 'easeInQuart'});
+            elrange0.value=range.out * 100;
+            elrange1.value=range.bouncy * 100;
+            elrange2.value=longRange.bouncy * 100;
+        
 
             const clockface = `background: radial-gradient(circle, ${rings.join(', ')});`;
             elmain.setAttribute('style', clockface);
