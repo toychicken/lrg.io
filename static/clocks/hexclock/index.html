@@ -6,6 +6,11 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=chivo-mono:700" rel="stylesheet" />
     <style>
+        :root {
+
+            font-size:10px;
+            --hex-font-size:5rem;
+        }
         body {
             font-family: 'Chivo Mono', monospace;
             background: #000;
@@ -16,7 +21,6 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            font-size:10px;
 
 
         }
@@ -27,8 +31,8 @@
             height: 100vh;
 
             display: grid;
-            grid-template-columns: 1fr 8fr 1fr;
-            grid-template-rows: 1fr 5rem 2fr 5rem 1fr;
+            grid-template-columns: 1rem 8fr 1rem;
+            grid-template-rows: var(--hex-font-size) var(--hex-font-size) 1fr var(--hex-font-size) var(--hex-font-size);
             grid-column-gap: 0px;
             grid-row-gap: 1vh;
         }
@@ -63,7 +67,7 @@
         }
 
         .hex {
-            font-size: 3rem;
+            font-size: var(--hex-font-size);
             line-height: 1;
             display: inline-block;
         }
@@ -74,6 +78,9 @@
 
         .b {
             grid-area: 4 / 2 / 5 / 3;
+        }
+        .range {
+            width:60vw;
         }
     </style>
     <link rel="stylesheet" href="/css/clock-toys.css" />
@@ -90,7 +97,7 @@
             </span>
         </div>
         <span class="hex b"></span>
-        <!-- <input type="range" value="0" /> -->
+        <input class="range" type="range" step="0.0001" />
 
     </main>
     <script>
@@ -102,7 +109,7 @@
         const eltime = document.querySelector('.time');
         const elhours = document.querySelector('.hours');
         const elminutes = document.querySelector('.minutes');
-        // const elrange = document.querySelector('input[type=range]');
+        const elrange = document.querySelector('input[type=range]');
         let timer;
         let running = true;
 
@@ -143,17 +150,14 @@
 
 
         const tick = (ts) => {
-            // const time = crudeDate(0);
 
             const clockTime = getClockTime();
 
             colors.a.H = sweepTime({dividend: 360, timeObj: clockTime, p: 'ms', m: 'm'});
             colors.a.S = sweepTime({dividend: 100, timeObj: clockTime, p: 'ms', m: 'h', bounce: true});
-            // colors.a.S = 50;
             colors.a.L = sweepTime({dividend: 100, timeObj: clockTime, p: 'ms', m: 'd', bounce: true});
-            // colors.a.L = 50;
 
-            // range = sweepTime({dividend: 100, timeObj: clockTime, p: 'ms', m: 's', bounce: true});
+            let range = 100 * nTime({p: 'ms', m: 'm', easing: 'easeInOutBounce'});
 
 
             // colors.b.H = (colors.a.H + (360 / 2)) % 360;
@@ -186,7 +190,7 @@
             // elhexb.innerHTML = `B: hsl(${parseInt(bh)}, ${parseInt(bs)}, ${parseInt(bl)})`;;
             elhexb.innerHTML = bHex;
 
-            // elrange.value=range;
+            elrange.value=range;
 
             const clockface = `background: radial-gradient(circle, ${rings.join(', ')});`;
             elmain.setAttribute('style', clockface);
