@@ -3,11 +3,11 @@ let timeVals = [];
 
 // help with conversion :)
 let tt = {
-    ms :    {ms: 1,                s: 1000,       m : 60*1000,   h : 60*60*1000,    d : 24*60*60*1000 },
-    s :     {ms: 1/1000,           s: 1,          m : 60,        h : 60*60,         d : 24*60*60 },
-    m :     {ms: 1/60/1000,        s: 1/60,       m : 1,         h : 60,            d : 24*60 },
-    h :     {ms: 1/60/60/1000,     s: 1/60/60,    m : 1/60,      h : 1,             d : 24 },
-    d :     {ms: 1/24/60/60/1000,  s: 1/24/60/60, m : 1/24/60,   h : 1/24,          d : 1 },
+    ms: { ms: 1, s: 1000, m: 60 * 1000, h: 60 * 60 * 1000, d: 24 * 60 * 60 * 1000 },
+    s: { ms: 1 / 1000, s: 1, m: 60, h: 60 * 60, d: 24 * 60 * 60 },
+    m: { ms: 1 / 60 / 1000, s: 1 / 60, m: 1, h: 60, d: 24 * 60 },
+    h: { ms: 1 / 60 / 60 / 1000, s: 1 / 60 / 60, m: 1 / 60, h: 1, d: 24 },
+    d: { ms: 1 / 24 / 60 / 60 / 1000, s: 1 / 24 / 60 / 60, m: 1 / 24 / 60, h: 1 / 24, d: 1 },
 }
 
 
@@ -44,7 +44,48 @@ let tt = {
  * 
  */
 
+const nTime = (params) => {
 
+    const {
+        p,
+        m,
+        easing,
+        bounce,
+    } = {
+        ...{
+            easing: 'linear',
+            bounce: false,
+        }, ...params
+    };
+
+    const timeObj = getClockTime();
+
+    /**
+     * ct = 20:56:48.718
+     * cms = 75409718
+     * 
+     * t = cms%range = somewhere from 0 to range
+     * r = range = 60000 ms
+     * 
+     * t/r = 15000/60000 = 0.25
+     * 
+     * 
+     * ****** How do we choose the 'bounce' timing - is it a pendulum that goes 1 way for 1 second, _then_ flips 
+     * - or is it simply offsetting and Math.abs the range by 1/2, and doubling the distance? (so could appear like it's double time
+     * 
+     */
+
+
+
+
+    let t = timeObj.milliseconds%tt[p][m];
+    let r = tt[p][m];
+    let n = t/r;
+    let out = easingFunctions[easing](n);
+    console.log('t', t, 'r', r,  'p', p, 'm', m, 'tO', timeObj.milliseconds, 'n', n, 'out', out);
+
+    return out;
+}
 
 
 
@@ -54,15 +95,17 @@ const sweepTime = (params) => {
 
     const {
         dividend,
-        timeObj, 
+        timeObj,
         p,
         m,
         easing,
         bounce,
-    } = {...{
-        easing : 'linear',
-        bounce : false,
-    }, ...params};
+    } = {
+        ...{
+            easing: 'linear',
+            bounce: false,
+        }, ...params
+    };
 
     // to calc ms in h, we do ms*s*m
     const s = timeKeys.indexOf(p);
@@ -92,8 +135,8 @@ const sweepTime = (params) => {
         // console.log(`k = ${k}, p = ${p}, timek = ${timek} | currentP = ${currentP}`)
     });
     let out;
-    if(bounce) {
-        out = Math.abs(easingFunctions[easing]((dividend / pInM) * currentP) - (dividend /2)) * 2;
+    if (bounce) {
+        out = Math.abs(easingFunctions[easing]((dividend / pInM) * currentP) - (dividend / 2)) * 2;
     } else {
         out = easingFunctions[easing]((dividend / pInM) * currentP);
     }
@@ -134,8 +177,8 @@ const timeObjToDate = (tob) => {
 
 const getClockTime = (params) => {
 
-    let {t} = {...{ t: new Date() }, ...params}
-    if(controlPanel.isOpen()) {
+    let { t } = { ...{ t: new Date() }, ...params }
+    if (controlPanel.isOpen()) {
         return controlPanel.getClockTime();
     }
     // time is a Date object
@@ -157,7 +200,7 @@ const drawCp = () => {
 }
 
 const cpCreate = () => {
-    if(cpState.panel) {
+    if (cpState.panel) {
         console.warn('cPanel already exists', cpState.panel);
     }
     const cp = document.createElement('aside');
@@ -171,7 +214,7 @@ const toggleControlPanel = (open) => {
 
     controlPanel.toggleOpen(open);
     console.log(controlPanel.isOpen());
-    if(cpState.open) {
+    if (cpState.open) {
         cpState.panel.classList.add('open');
     } else {
         cpState.panel.classList.remove('open');
@@ -182,11 +225,11 @@ const cpInit = (overrides) => {
     // need sanitation check on overrides?
 
     const defaults = {
-        open : false,
-        time : null,
-        panel : null,
+        open: false,
+        time: null,
+        panel: null,
     }
-    cpState = {...defaults, ...overrides};
+    cpState = { ...defaults, ...overrides };
     controlPanel.initClockTime();
 
 
@@ -200,10 +243,10 @@ const cpInit = (overrides) => {
 const nextTime = (params) => {
     const { el, inc, abs } = params;
     let k = el.dataset.timekey;
-    let now = {...controlPanel.getClockTime()};
-    let next = {...controlPanel.getClockTime()};
+    let now = { ...controlPanel.getClockTime() };
+    let next = { ...controlPanel.getClockTime() };
     let nms;
-    if(inc) {
+    if (inc) {
         nms = now.milliseconds + (tt.ms[k] * inc);
     } else {
         next[k] = abs;
@@ -211,24 +254,24 @@ const nextTime = (params) => {
     }
     next.milliseconds = nms;
     let nt = timeObjToDate(next);
-    controlPanel.setClockTime(nt);     
+    controlPanel.setClockTime(nt);
 }
 
 const controlPanel = {
-    isOpen : () => cpState.open,
-    toggleOpen : (open) => { cpState.open = (open) ? open : !cpState.open; return cpState.open; },
+    isOpen: () => cpState.open,
+    toggleOpen: (open) => { cpState.open = (open) ? open : !cpState.open; return cpState.open; },
     setTime: (params) => { cpState.time = (params) ? params : getClockTime() },
     getClockTime: () => cpState.clockTime,
     initClockTime: () => { cpState.clockTime = getClockTime(); return cpState.clockTime; },
-    setClockTime: (t) => { cpState.clockTime = dateTimeToTimeObj(t); drawCp();},
+    setClockTime: (t) => { cpState.clockTime = dateTimeToTimeObj(t); drawCp(); },
     updateTime: (el) => {
-        nextTime({el, abs: el.value})
+        nextTime({ el, abs: el.value })
     },
     incTime: (el) => {
-        nextTime({el, inc: 1});
+        nextTime({ el, inc: 1 });
     },
     decTime: (el) => {
-        nextTime({el, inc: -1});
+        nextTime({ el, inc: -1 });
     },
 }
 
@@ -250,6 +293,31 @@ const crudeDate = (offset) => {
     return x;
 }
 
+
+const easeOutBounce = x => {
+    const n1 = 7.5625;
+    const d1 = 2.75;
+
+    if (x < 1 / d1) {
+        return n1 * x * x;
+    } else if (x < 2 / d1) {
+        return n1 * (x -= 1.5 / d1) * x + 0.75;
+    } else if (x < 2.5 / d1) {
+        return n1 * (x -= 2.25 / d1) * x + 0.9375;
+    } else {
+        return n1 * (x -= 2.625 / d1) * x + 0.984375;
+    }
+}
+
 const easingFunctions = {
-    'linear' : x => x,
+    'linear': x => x,
+    'easeInOutBounce': x => {
+        return x < 0.5
+            ? (1 - easeOutBounce(1 - 2 * x)) / 2
+            : (1 + easeOutBounce(2 * x - 1)) / 2;
+    },
+    'easeInQuart' : x => {
+        return x * x * x * x;
+    },
+    easeOutBounce,
 }
