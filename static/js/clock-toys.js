@@ -2,7 +2,7 @@ let timeKeys = ['ms', 's', 'm', 'h', 'd']; // ascending order of size
 let timeVals = [];
 
 // help with conversion :)
-let tt = {
+let rangeFinder = {
     ms: { ms: 1, s: 1000, m: 60 * 1000, h: 60 * 60 * 1000, d: 24 * 60 * 60 * 1000 },
     s: { ms: 1 / 1000, s: 1, m: 60, h: 60 * 60, d: 24 * 60 * 60 },
     m: { ms: 1 / 60 / 1000, s: 1 / 60, m: 1, h: 60, d: 24 * 60 },
@@ -10,46 +10,35 @@ let tt = {
     d: { ms: 1 / 24 / 60 / 60 / 1000, s: 1 / 24 / 60 / 60, m: 1 / 24 / 60, h: 1 / 24, d: 1 },
 }
 
-
-/**
- * 
- * Why I'm an idiot
- * 
- * Basically the output for sweep time is alway 1 / time - i.e.
- * 
- * If I'm mapping 360º around a clock, say for a minute hand, the value I need back is a linear 
- * conversion of 60 / 360 = seconds per minute / degrees in circle
- * 
- * So, for any given degree on that circle I need a value between 0 - 1 , to multiply by 360 to 
- * get the posittion of tthe second hand
- * 
- * e.g. at 00m05 seconds, my hand has travelled 5/60ths of it's journey -  0.08333 = l
- * 
- * Multiply  360 * l = 30º (well 29.9998888 in JS, sigh)
- * 
- * This now makes it easy to convert with a bounce and easing functions, because the value of l is
- * always 0-1
- * 
- * 
- * 
- * So, when I'm doing a sweeptime calculation, I don't really _care_ what the dividend is, just the 
- * 
- *      timeObj (because I want to be able to arbitrarily define the time)
- *      parva   - the granularity of the calculation, from the 
- *      magna   - the _scope_ of the calculation
- *      easing  - the easing function (see easings.net)
- *      bounce  - whether or not it's a 'clock' function with a tickover from 1, to 0, or a reverse...
- * 
- * NOW, if I'm using the same params, I only have to do the function once...
- * 
- */
+const rangeBuilder = (is24hour) => {
+    const tfh = (is24hour) ? 24 : 12;
+    return {
+        ms: { ms: 1, s: 1000, m: 60 * 1000, h: 60 * 60 * 1000, d: tfh * 60 * 60 * 1000 },
+        s: { ms: 1 / 1000, s: 1, m: 60, h: 60 * 60, d: tfh * 60 * 60 },
+        m: { ms: 1 / 60 / 1000, s: 1 / 60, m: 1, h: 60, d: tfh * 60 },
+        h: { ms: 1 / 60 / 60 / 1000, s: 1 / 60 / 60, m: 1 / 60, h: 1, d: tfh },
+        d: { ms: 1 / tfh / 60 / 60 / 1000, s: 1 / tfh / 60 / 60, m: 1 / tfh / 60, h: 1 / tfh, d: 1 },
+    }
+}
+const zeroToElapsed = (timeObj, p, m) => {
+    const s = timeKeys.indexOf(p);
+    const f = timeKeys.indexOf(m);
+    // make an array of things to add
+    const parts = timeKeys.slice(s,f);
+    let elapsed = 0;
+    parts.forEach((cM) => {
+        elapsed = elapsed + (rangeFinder[p][cM] * timeObj[cM]);
+    })
+    return elapsed;
+};
 
 const nTime = (params) => {
 
     const {
-        p,
-        m,
-        r,
+        v,  // value
+        r,  // range
+        p,  // time value
+        m,  // time range
         easing,
         bounce,
     } = {
@@ -59,10 +48,24 @@ const nTime = (params) => {
         }, ...params
     };
 
+    /**
+     * 
+     * 'v' is the value
+     * 'r' is the range
+     * 
+     * if the p & m values are set, this means we use the current TIME, and then return the values based on
+     * 
+     * 'p' being the key for the time object i.e. p = time[seconds] = 30
+     * 'm' being the key for the tRange i.e. m = 'minute' = tt[seconds][minute] = 60
+     */
+
+
     const timeObj = getClockTime();
+
+
     
-    let rng = (r) ? r : tt[p][m]
-    let t = timeObj.milliseconds%rng;
+    let rng = (r) ? r : rangeFinder[p][m];
+    let t = (v) ? v : zeroToElapsed(timeObj, p, m);
 
     let n = t/rng;
     // before the output
@@ -70,11 +73,15 @@ const nTime = (params) => {
     // half bounce
     let bn = Math.abs((n)-0.5)*2; // offset and Abs to create a bounce
 
-    let bouncy = easingFunctions[easing](bn);
-    let out = easingFunctions[easing](n);
+    let bounced = easingFunctions[easing](bn);
+    let eased = easingFunctions[easing](n);
     return {
-        out, 
-        bouncy,
+        eased, 
+        bounced,
+        timeObj,
+        range: rng,
+        val : t,
+        linear : n
     };
 }
 
@@ -149,7 +156,7 @@ const dateTimeToTimeObj = (t) => {
         m: t.getMinutes(),
         h: cpState.is24hour ? t.getHours() : t.getHours() % 12,
     }
-    const milliseconds = (tt.ms.ms * tob.ms) + (tt.ms.s * tob.s) + (tt.ms.m * tob.m) + (tt.ms.h * tob.h);
+    const milliseconds = (rangeFinder.ms.ms * tob.ms) + (rangeFinder.ms.s * tob.s) + (rangeFinder.ms.m * tob.m) + (rangeFinder.ms.h * tob.h);
     const zeroHour = t.getTime() - milliseconds;
     return {
         ...tob,
@@ -159,7 +166,7 @@ const dateTimeToTimeObj = (t) => {
 }
 
 const timeObjToMilliseconds = (tob) => {
-    return (tt.ms.ms * tob.ms) + (tt.ms.s * tob.s) + (tt.ms.m * tob.m) + (tt.ms.h * tob.h);
+    return (rangeFinder.ms.ms * tob.ms) + (rangeFinder.ms.s * tob.s) + (rangeFinder.ms.m * tob.m) + (rangeFinder.ms.h * tob.h);
 }
 
 const timeObjToDate = (tob) => {
@@ -221,6 +228,7 @@ const cpInit = (overrides) => {
         panel: null,
     }
     cpState = { ...defaults, ...overrides };
+    rangeFinder = rangeBuilder(cpState.is24hour);
     controlPanel.initClockTime();
 
 
@@ -238,7 +246,7 @@ const nextTime = (params) => {
     let next = { ...controlPanel.getClockTime() };
     let nms;
     if (inc) {
-        nms = now.milliseconds + (tt.ms[k] * inc);
+        nms = now.milliseconds + (rangeFinder.ms[k] * inc);
     } else {
         next[k] = abs;
         nms = timeObjToMilliseconds(next);
@@ -246,6 +254,7 @@ const nextTime = (params) => {
     next.milliseconds = nms;
     let nt = timeObjToDate(next);
     controlPanel.setClockTime(nt);
+    cpState.callback();
 }
 
 const controlPanel = {
@@ -309,6 +318,9 @@ const easingFunctions = {
     },
     'easeInQuart' : x => {
         return x * x * x * x;
+    },
+    easeInOutCubic : (x) => {
+        return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
     },
     easeOutBounce,
 }
