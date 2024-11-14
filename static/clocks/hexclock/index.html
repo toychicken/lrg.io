@@ -97,11 +97,6 @@
             </span>
         </div>
         <span class="hex b"></span>
-        <p>
-            <input class="range" type="range" step="0.0001" min="" /><br/>
-            <input class="range" type="range" step="0.0001" min="" /><br/>
-            <input class="range" type="range" step="0.0001" min="" />
-        </p>
 
     </main>
     <script>
@@ -113,13 +108,6 @@
         const eltime = document.querySelector('.time');
         const elhours = document.querySelector('.hours');
         const elminutes = document.querySelector('.minutes');
-        const elrange0 = document.querySelectorAll('input[type=range]')[0];
-        const elrange1 = document.querySelectorAll('input[type=range]')[1];
-        const elrange2 = document.querySelectorAll('input[type=range]')[2];
-
-        console.log('0', elrange0, '1', elrange1);
-        let timer;
-        let running = true;
 
         let colors = {
             a: { H: '', S: '', L: '' },
@@ -138,32 +126,13 @@
         }
 
 
-        /**
-         * 
-         * I'm an idiot - this is excessively complex - I don't need to move the stops, I should fix them, and cycle the colors with an offset
-         * 
-         * Also - when the sat & lum values flip, it's quite jarring :( can we do a timing / easing function?
-         * NB - It's on the hour  that you see the big jump (at least I saw it at 0959 - 1000)
-         * 
-         * Also - build a clock controller panel to test out different times etc.
-         * 
-         * Also - change sweepTime to an object for the params, so it can be extended without breaking old clocks
-         * 
-         * Also - create functionality for timers, long clocks (millenium hand anyone?), alarms, sounds, generative noise etc
-         * 
-         * Also - the timeKeys and timeVals arrays should _really_ just be an object... don't know why I'm being weird about it... or maybe an object _And_ and array... :thinking:
-         * 
-         * Also - I'm nuts -- WHY don't I just convert to ms immediately, do all the changes, then convert back (if nesc) to clockTime?
-         */
-
-
-        const tick = (ts) => {
+        const clockTick = (ts) => {
 
             const clockTime = getClockTime();
 
-            colors.a.H = sweepTime({dividend: 360, timeObj: clockTime, p: 'ms', m: 'm'});
-            colors.a.S = sweepTime({dividend: 100, timeObj: clockTime, p: 'ms', m: 'h', bounce: true});
-            colors.a.L = sweepTime({dividend: 100, timeObj: clockTime, p: 'ms', m: 'd', bounce: true});
+            colors.a.H = 360 * nTime({p: 'ms', m: 'm'}).linear;
+            colors.a.S = 100 * nTime({p: 'ms', m: 'h'}).bounced;
+            colors.a.L = 100 * nTime({p: 'ms', m: 'd'}).bounced;
 
 
 
@@ -172,7 +141,7 @@
             colors.b.S = Math.abs(colors.a.S - 100);
             colors.b.L = Math.abs(colors.a.L - 100);
 
-            const pulse = sweepTime({dividend: 100, timeObj : clockTime, p: 'ms', m: 'm'});
+            const pulse = 100 * nTime({p: 'ms', m: 'm'}).linear;
 
             let rings = [];
             let ss = [];
@@ -189,25 +158,13 @@
             const bHex = hslToHex(colors.b.H, colors.b.S, colors.b.L).toUpperCase();
             elhexa.setAttribute('style', `color: ${aHex}`); //text-shadow: 0 0 0.2em ${bHex};`)
             let {H:ah, S:as, L:al} = {...colors.a}
-            // elhexa.innerHTML = `A: hsl(${parseInt(ah)}, ${parseInt(as)}, ${parseInt(al)})`;
+
             elhexa.innerHTML = aHex;
             elhexb.setAttribute('style', `color: ${bHex}`); //text-shadow: 0 0 0.2em ${aHex};`)
             let {H:bh, S:bs, L:bl} = {...colors.b}
 
-            // elhexb.innerHTML = `B: hsl(${parseInt(bh)}, ${parseInt(bs)}, ${parseInt(bl)})`;;
             elhexb.innerHTML = bHex;
 
-
-
-
-
-            
-            let range = nTime({p: 'ms', m: 's', easing: 'easeInQuart'});
-            let longRange = nTime({p: 'ms', r: 2000, easing: 'easeInQuart'});
-            elrange0.value=range.out * 100;
-            elrange1.value=range.bouncy * 100;
-            elrange2.value=longRange.bouncy * 100;
-        
 
             const clockface = `background: radial-gradient(circle, ${rings.join(', ')});`;
             elmain.setAttribute('style', clockface);
@@ -215,36 +172,22 @@
             eltime.setAttribute('style', `color: ${aHex}; text-shadow: 0 1rem 1vh ${bHex};`);
             elhours.innerText = String(clockTime.h).padStart(2, '0');
             elminutes.innerText = String(clockTime.m).padStart(2, '0');
-            timer = requestAnimationFrame(tick);
+
         }
-
-        timer = requestAnimationFrame(tick);
-
+ 
 
 
-
-        /// This is not ideal - should encapsulate :)
+        // This is not ideal - should encapsulate :)
         cpInit({
-            is24hour : true,
+            is24hour: true,
+            callback: clockTick
         });
 
-        elmain.addEventListener("dblclick", () => {
-            console.log('running', !controlPanel.isOpen());
-            if (!controlPanel.isOpen()) {
-
-
-                // probably don't (now) want to cancel the animation frame, just the time function.
-                // cancelAnimationFrame(timer);
-                toggleControlPanel(true);
-            } else {
-                // timer = requestAnimationFrame(tick);
-                toggleControlPanel(false);
-            }
-        });
+        elmain.addEventListener("dblclick", controlPanel.toggleOpen);
 
 
         
     </script>
 </body>
 
-</html>
+</html> 

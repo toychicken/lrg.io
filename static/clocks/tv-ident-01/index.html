@@ -74,15 +74,16 @@
         let running = true;
 
 
-        const tick = (ts) => {
+        const clockTick = (ts) => {
             const time = new Date();
 
             const clockTime = getClockTime();
-            const hourQuotient = sweepTime({ dividend: 360, timeObj: clockTime, p: 'ms', m: 'd'});
-            const minuteQuotient = sweepTime({ dividend: 360, timeObj: clockTime, p: 'ms', m: 'h'});
-            const secondQuotient = sweepTime({ dividend: 360, timeObj: clockTime, p: 'ms', m: 'm'});
-            const pulse = sweepTime({ dividend: 80, timeObj: clockTime, p: 'ms', m: 'm'});
-            const twitch = sweepTime({ dividend: 60, timeObj: clockTime, p: 'ms', m: 's'});
+            const twitch = 60 * nTime({ p: 'ms', m: 's'}).linear;
+            const hourQuotient = 360 * nTime({ p: 'ms', m: 'd'}).linear;
+            const minuteQuotient = 360 * nTime({ p: 'ms', m: 'h'}).linear;
+            const msPerMin = nTime({p:'ms', 'm': 'm'})
+            const secondQuotient = msPerMin.linear * 360;
+            const pulse = msPerMin.linear * 80;
 
             const clockface = `background: radial-gradient(circle, #00000000 ${pulse - 10}%, #2220 ${pulse - 8}%, #fffffff0 ${pulse}%, #00000000 ${pulse + 1}%),
             radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 58%),
@@ -95,27 +96,16 @@
             elminute.setAttribute('style', minutehand);
             elsecond.setAttribute('style', secondhand);
 
-            timer = requestAnimationFrame(tick);
+
         }
 
-        timer = requestAnimationFrame(tick);
-
-        /// This is not ideal - should encapsulate :)
-        cpInit();
-
-        elmain.addEventListener("dblclick", () => {
-            console.log('running', !controlPanel.isOpen());
-            if (!controlPanel.isOpen()) {
-
-
-                // probably don't (now) want to cancel the animation frame, just the time function.
-                // cancelAnimationFrame(timer);
-                toggleControlPanel(true);
-            } else {
-                // timer = requestAnimationFrame(tick);
-                toggleControlPanel(false);
-            }
+        // This is not ideal - should encapsulate :)
+        cpInit({
+            is24hour: false,
+            callback: clockTick
         });
+
+        elmain.addEventListener("dblclick", controlPanel.toggleOpen);
     </script>
 </body>
 

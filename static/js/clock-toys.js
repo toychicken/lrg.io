@@ -1,5 +1,6 @@
 let timeKeys = ['ms', 's', 'm', 'h', 'd']; // ascending order of size
 let timeVals = [];
+let ticker;
 
 // help with conversion :)
 let rangeFinder = {
@@ -85,67 +86,6 @@ const nTime = (params) => {
     };
 }
 
-
-
-
-
-const sweepTime = (params) => {
-
-    const {
-        dividend,
-        timeObj,
-        p,
-        m,
-        easing,
-        bounce,
-    } = {
-        ...{
-            easing: 'linear',
-            bounce: false,
-        }, ...params
-    };
-
-    // to calc ms in h, we do ms*s*m
-    const s = timeKeys.indexOf(p);
-    const f = timeKeys.indexOf(m);
-
-    const vArr = timeVals.slice(s, f);
-    const kArr = timeKeys.slice(s, f);
-    const pInM = vArr.reduce((c, n) => { return c * n }); // our total p in m
-
-    // get deg would be 360 / time
-
-    let currentP = 0;
-    kArr.forEach((k, ind) => {
-        // if the key is the same as p, we don't need to multiply it, it's already correct.
-        let timek = 0;
-        if (k === p) {
-            // just add this to currentP
-            timek = timeObj[k];
-        } else {
-            const sArr = vArr.slice(0, ind);
-            const sss = sArr.reduce((c, n) => {
-                return c * n
-            })
-            timek = sss * timeObj[k];
-        }
-        currentP = currentP + timek;
-        // console.log(`k = ${k}, p = ${p}, timek = ${timek} | currentP = ${currentP}`)
-    });
-    let out;
-    if (bounce) {
-        out = Math.abs(easingFunctions[easing]((dividend / pInM) * currentP) - (dividend / 2)) * 2;
-    } else {
-        out = easingFunctions[easing]((dividend / pInM) * currentP);
-    }
-
-    // console.log(`(dividend / pInM) = (${dividend} / ${pInM}) * ${currentP} = ${out}`, JSON.stringify(kArr), JSON.stringify(vArr), s, f, JSON.stringify(time))
-
-    return out;
-
-}
-
-
 let cpState = {};
 
 const dateTimeToTimeObj = (t) => {
@@ -208,14 +148,16 @@ const cpCreate = () => {
     drawCp();
 }
 
-const toggleControlPanel = (open) => {
+const toggleControlPanel = () => {
 
-    controlPanel.toggleOpen(open);
-    console.log(controlPanel.isOpen());
     if (cpState.open) {
         cpState.panel.classList.add('open');
+        controlPanel.toggleRunning(false);
+        cancelAnimationFrame(ticker);
     } else {
         cpState.panel.classList.remove('open');
+        controlPanel.toggleRunning(true);
+        tick();
     }
 }
 
@@ -224,8 +166,13 @@ const cpInit = (overrides) => {
 
     const defaults = {
         open: false,
+        running: true,
         time: null,
         panel: null,
+        callback: () => {
+            console.warn('cpInit without callback for tick');
+            setTimeout(()  => {}, 1000);
+        },
     }
     cpState = { ...defaults, ...overrides };
     rangeFinder = rangeBuilder(cpState.is24hour);
@@ -237,6 +184,9 @@ const cpInit = (overrides) => {
 
 
     cpCreate();
+
+    // start the first tick;
+    tick();
 }
 
 const nextTime = (params) => {
@@ -259,7 +209,17 @@ const nextTime = (params) => {
 
 const controlPanel = {
     isOpen: () => cpState.open,
-    toggleOpen: (open) => { cpState.open = (open) ? open : !cpState.open; return cpState.open; },
+    toggleOpen: (open) => {
+
+        if(typeof(open) == 'boolean') {
+            cpState.open = open ? open : !cpState.open;
+        } else {
+            cpState.open = !cpState.open;
+        }
+        toggleControlPanel(cpState.open);
+    },
+    isRunning : () => cpState.running,
+    toggleRunning: (running) => { running ? running : !cpState.running; return cpState.running; },
     setTime: (params) => { cpState.time = (params) ? params : getClockTime() },
     getClockTime: () => cpState.clockTime,
     initClockTime: () => { cpState.clockTime = getClockTime(); return cpState.clockTime; },
@@ -274,6 +234,17 @@ const controlPanel = {
         nextTime({ el, inc: -1 });
     },
 }
+
+const tick = (frameTime) => {
+    // console.log('tick', cpState.running);
+    cpState.callback(frameTime);
+    if(cpState.running) {
+        ticker = requestAnimationFrame(tick);
+    }
+};
+
+
+
 
 const hslToHex = (h, s, l) => {
     l /= 100;
@@ -311,6 +282,7 @@ const easeOutBounce = x => {
 
 const easingFunctions = {
     'linear': x => x,
+    'switch': x => ((x < 0.5) ? 0 : 1),
     'easeInOutBounce': x => {
         return x < 0.5
             ? (1 - easeOutBounce(1 - 2 * x)) / 2

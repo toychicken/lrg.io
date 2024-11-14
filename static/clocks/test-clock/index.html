@@ -101,7 +101,7 @@
             })
         });
 
-        console.log(clocks);
+
 
         const clockList = clocks.map((params, i) => {
             const clock = document.createElement('div');
@@ -167,42 +167,16 @@
             clock.progress[2].setAttribute('value', timeFunc.bounced);
         }
 
-        let ticker;
-        let running = true;
-
-        const tick = (frameTime) => {
-            clockList.forEach(clockTick);
-            if(running) {
-                ticker = requestAnimationFrame(tick);
-            }
-        }
-
-        ticker = requestAnimationFrame(tick);
-
-
-
 
         // This is not ideal - should encapsulate :)
         cpInit({
             is24hour: false,
-            callback: tick
-        });
-
-        main.addEventListener("dblclick", () => {
-            console.log('running', !controlPanel.isOpen());
-            if (!controlPanel.isOpen()) {
-
-
-                // probably don't (now) want to cancel the animation frame, just the time function.
-                // cancelAnimationFrame(timer);
-                running = false;
-                toggleControlPanel(true);
-            } else {
-                running = true;
-                toggleControlPanel(false);
-                ticker = requestAnimationFrame(tick);
+            callback: () => {
+                clockList.forEach(clockTick);
             }
         });
+
+        main.addEventListener("dblclick", controlPanel.toggleOpen);
 
 
 
