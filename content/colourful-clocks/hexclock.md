@@ -17,7 +17,9 @@ category:
 style: layout-classic experiments
 ---
 
-Another clock experiment, this time a direct successor to my original Hexclock from 10+ years ago. I wanted to update it a little, to use multiple gradients and improve the way that they were calculated. As with the [TV ident clock](../tv-ident-clock-01) I'm not using any libraries, frameworks or stuff like that, with the aim of keeping my JS & CSS up to date.
+Another clock experiment, this time a direct successor to my original Hexclock from 10+ years ago. I wanted to update it a little, to use multiple gradients and improve the way that they were calculated. As with the [TV ident clock](/colourful-clocks/tv-ident-clock-01) I'm not using any libraries, frameworks or stuff like that, with the aim of keeping my JS & CSS skills up to scratch.
+
+<!--more-->
 
 <iframe src="/clocks/hexclock/" width="100%
 " height="400px"></iframe>
@@ -49,4 +51,6 @@ Then, just as it's about to go out of range, I flip the order of the stops in th
 It's not strictly following the stops that are off-screen, as the gradient algorithm seems to treat out of band numbers with a ceiling of 100 or floor of 0. But it does give a pleasing pulsing effect, so I'm happy 😙
 
 I hope you like it!
+
+---
 
