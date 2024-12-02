@@ -32,3 +32,10 @@ It came with it's [own tool](https://grainy-gradients.vercel.app/) for generatin
 I really wish I'd found this earlier, https://cssgrid-generator.netlify.app/ 
 
 ![](css-grid-generator-screengrab.png)
+
+### Easing functions
+
+When I started building out my [colour clocks](/colourful-clocks/) this was [a REALLY helpful site](https://easings.net/) for doing some of the springier elements of the animation.
+
+![](useful-links-easings-preview.png.png)
+
