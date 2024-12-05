@@ -31,7 +31,7 @@ user353215089723 sent message to user2938470575
 user2938470575 received message from user353215089723
 ```
 
-Oh, don't forget the meta data. Let's look at the first sent message.
+Oh, don't forget the meta data. Let's look at the first log entry.
 
 ```
 user353215089723 sent message to user2938470575
@@ -120,8 +120,22 @@ As a message promoter, Meta can sell you a bunch of options to show content to:
 * Followers of this celebrity!
 * People that have liked this post about illegal immigrants.
 
-So far, you might be forgiven for thinking 'promoted content' was adverts. That our mythical Samung / Vodafone advert might look something like this:
+So far, you might be forgiven for thinking 'promoted content' was adverts. It certainly _includes_
+obvious adverts, but it also includes stuff that looks a lot more like 'regular' posts. Why is this  important?
 
+### Who promotes content?
+
+Ever joined a group on Facebook? A funny meme account, or local support / gossip group? A charity that organises drop-in sessions for drug addicts? If you're in that group, you can see an awful lot who every member is, and get their data. (Same with groups on other Meta channels). 
+
+Joining a group is something that's frequently promoted. So, I join a group called followers of "John Doe" - an outrageous standup comic that I like.
+
+Now, John Doe says something that upsets an ultra-conservative religious organisation, that decide they want to harass (or worse) John Doe's fans. It's _trivial_ to get details of the members of that group. 
+
+Apply this same level of ease of getting information about anyone on Facebook to any group that you might have beef with, whether it's a local busybody that doesn't like your opinions on a building project, or a government that doesn't like your views at all.
+
+Any person or organisation that seeks to control, suppress or otherwise antagonise others would simply need to promote a group that would make them a well-known target.
+
+In fact, it doesn't even need to be a group. It could simply be a promoted post. Everyone that likes, comments or makes an explicit interaction with that post is now known to the promoter.
 ## Footnotes
 
 [^tinfoil_hat]: You would have to be the kind of person that was both cautious and diligent about *not* storing phone numbers in your phone's contacts app. 
