@@ -15,12 +15,12 @@ pre code {
     scrollbar-color: var(--color-grey-lite) var(--code-back) ;
   }
 
-p > code {
-  background:var(--code-back);
-  color: var(--code-text);
+p code, li code {
+  background:var(--code-inline-bg);
   font-size: 1.2rem;
   line-height: 1em;
   padding:0 0.2em;
+  font-weight: normal;
 }
 
 .inline-app {
