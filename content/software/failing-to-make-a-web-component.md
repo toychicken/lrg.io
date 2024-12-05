@@ -237,4 +237,10 @@ OK - I'm still not 100% sure I see _how_ web components are going to revolutioni
 
 On reflection,  I bet Hugo (or any other static site generator) is probably a great companion to Web components. Using the [Hugo shortcode syntax](https://gohugo.io/content-management/shortcodes/) to throw in the most basic info, to generate neat, web-friendly, progressively enhanced components. I might give it a try.
 
-But not today.
+**But not today.**
+
+----
+
+### Postscript
+
+If you have any thoughts on this, please do put them in a comment here -[https://mastodon.social/@toychicken/113601422843650747]()
