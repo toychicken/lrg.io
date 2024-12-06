@@ -27,7 +27,7 @@
             display: grid;
             // define grid shape
             grid-template-columns: [left] 3.5rem [pic-small-left] 3.5rem [middle-start] 3.75rem [middle] 3.75rem [middle-end] 3.5rem [pic-small-right] 3.5rem [right];
-            grid-template-rows: [top] 2rem [bar-1] 4.5rem [bar-2] 3rem [pic-large-start] 3.5rem [pic-small-start] 7.25rem [pic-center] 7.25rem [pic-small-end] 3.5rem [pic-large-end] 2rem [bottom];
+            grid-template-rows: [top] 2rem [bar-1] 4.5rem [bar-2] 3rem [pic-large-start] 3.5rem [pic-small-start] 7.25rem [pic-center] 0.75rem [pic-top-offset] 6.5rem [pic-small-end] 3.5rem [pic-large-end] 2rem [bottom];
         }
 
         &.item-section {
@@ -37,12 +37,12 @@
 
             &::before {
                 content: "";
-                padding: 100px;
+                position:absolute;
                 width: var(--cover-w);
                 height: var(--cover-h);
                 display: block;
                 transform: matrix(1.00, -0.07, 0.07, 1.00, 3, 7);
-                z-index: -1;
+                z-index: -10;
                 border-radius: 0.4rem;
                 box-shadow: 4px 1px 2px 0px var(--theme-empty-bg), 3px 4px 9px 0px var(--color-shadow-99), inset 0px 0px 4px 0px #2226;
                 background: var(--official-background);

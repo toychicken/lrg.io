@@ -87,8 +87,8 @@
     --postmark-ink: var(--color-blood-ink);
     --cheap-ink: var(--color-biro-blue);
 
-    --font-title: 'Lexend', sans-serif;
-    --font-body: 'EB Garamond', serif;
+    --font-sans-serif: 'Lexend', sans-serif;
+    --font-serif: 'Cormorant Garamond', serif;
     --font-script: 'Caveat', handwriting;
 
     --logotype-fg: var(--color-white);
@@ -181,6 +181,7 @@
 @import "./cover-layout.scss";
 @import "./cover-layout-classic.scss";
 @import "./cover-layout-vintage.scss";
+@import "./cover-layout-modern.scss";
 @import "./spines.scss";
 @import "./postcards.scss";
 @import "./shortcode-shape.scss";
