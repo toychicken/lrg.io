@@ -46,4 +46,7 @@
     /* small fix to stop gradient bleeding through white area on default  (and is used for the pseudo covers on sections */
     --bg-main-panel: linear-gradient(0deg, transparent 0%, transparent 18%, var(--color-bone) 18%, var(--color-bone) 60%, transparent 60%, transparent 100%);
     --panel-inset-edge-gradient: linear-gradient(90deg, var(--color-shadow-33) 0%, transparent 1%, transparent 99%, var(--color-shadow-33) 100%);
+
+    --book-page-shadow: 4px 1px 2px 0px var(--color-buff), 3px 4px 9px 0px var(--color-shadow-99), inset 0px 0px 4px 0px var(--color-shadow-33);
+
 }

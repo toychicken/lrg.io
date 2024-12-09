@@ -6,7 +6,7 @@
         --official-modern-spine : var(--theme-main-prime);
         --offical-background: 
             linear-gradient(90deg, rgba(0,0,0,1) 0%, var(--theme-main-prime) 0%, var(--theme-main-prime) 1%, rgba(255,255,255,0) 1.2%),
-            linear-gradient(180deg, rgba(178, 178, 178, 1) 0%, rgba(0,0,0,0) 63%, rgba(255,255,255,1) 63%, rgba(255,255,255,1) 67%, rgba(0,0,0,0) 67%),
+            linear-gradient(180deg, rgba(178, 178, 178, 1) 0%, rgba(0,0,0,0) 63.4%, rgba(255,255,255,1) 63.4%, rgba(255,255,255,1) 66.6%, rgba(0,0,0,0) 66.6%),
             conic-gradient(from 15deg at 80% 90%, #161618, #434343, #1f1f25);
         &.item-section {
             background: var(--offical-background),
@@ -92,12 +92,14 @@
                 display: flex;
 
                 img {
-                    // filter: var(--img-desaturate-image);
+                    filter: var(--img-desaturate-image);
                     height: auto;
                     margin: 0;
 
                     // outline: 0.4rem solid white;
                     width: 100%;
+                    border-top-right-radius: 0.4rem;
+                    opacity: 80%;
                 }
 
                 img[src$='.svg'],

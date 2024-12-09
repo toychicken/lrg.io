@@ -11,9 +11,9 @@ tags:
   - time
 application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
 images:
-  - /images/tv-ident-clock-01_sq.jpg
+  - /images/hexclock-02.jpg
 category: widgets
-style: layout-classic experiments
+style: layout-modern experiments
 ---
 
 Just a fun bunch of experiments using JS, a timer, and some CSS gradient manipulation.
