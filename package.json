@@ -1,14 +1,13 @@
 {
   "name": "lrg-hugo",
   "private": true,
-  "version": "8.0.1",
+  "version": "8.0.2",
   "type": "module",
   "scripts": {
     "local": "hugo serve -D -E -F --disableFastRender",
     "deploy": "node scripts/gh-pages-deploy.js"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "execa": "^9.3.0"
   }
