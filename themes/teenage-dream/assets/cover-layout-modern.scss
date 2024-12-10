@@ -92,7 +92,7 @@
                 display: flex;
 
                 img {
-                    filter: var(--img-desaturate-image);
+                    filter: var(--img-desaturate-image) opacity(100%);
                     height: auto;
                     margin: 0;
 

@@ -110,11 +110,10 @@
                 display: flex;
 
                 img {
-                    filter: var(--img-desaturate-image);
+                    filter: saturate(0%) contrast(120%) brightness(70%) ;
                     height: auto;
                     margin: 0;
 
-                    outline: 0.4rem solid white;
                     width: 100%;
                 }
 
