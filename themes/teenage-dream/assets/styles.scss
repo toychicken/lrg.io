@@ -28,13 +28,13 @@
     --color-rgb-yellow: #ff0;
 
 
-    --color-book-orange-200: #8d4114;
-    --color-book-orange-100: #d66b2d;
-    --color-book-orange-80: #dc8d5f;
+    --color-book-orange-200: hsl(22, 75%, 32%);
+    --color-book-orange-100: hsl(22, 67%, 51%);
+    --color-book-orange-80: hsl(22, 64%, 62%);
 
     --color-book-lilac-200: hsl(294, 28%, 37%);
     --color-book-lilac-100: hsl(294, 36%, 58%);
-    --color-book-lilac-80: hsl(293, 44%, 75%);
+    --color-book-lilac-80: hsl(294, 44%, 75%);
 
     // misc
     --color-book-lemon-200: hsl(48, 63%, 42%);
@@ -45,6 +45,10 @@
     --color-book-cerise-200: hsl(338, 58%, 30%);
     --color-book-cerise-100: hsl(338, 58%, 45%);
     --color-book-cerise-80: hsl(338, 58%, 60%);
+
+    --color-book-royal-200: hsl(251, 58%, 42%);
+    --color-book-royal-100: hsl(251, 58%, 60%);
+    --color-book-royal-80: hsl(251, 58%, 70%);
 
 
     --color-grey-lite: #bbb;
