@@ -1,0 +1,17 @@
+{{ $src := .Get 0 }}
+{{ $alt := .Get 1 }}
+{{ $caption := .Get 2 }}
+{{ $pathArr := split $src "." }}
+{{ $pathLen := len $pathArr }}
+{{ $ext := index $pathArr (sub $pathLen 1) }}
+{{/* 
+    
+    Perhaps switch to the oEmbed method - might be more robust for 'just' passing in a Spotify URL, 
+    and it having a fallback to something useable if it doesn't work.
+    
+    https://developer.spotify.com/documentation/embeds/tutorials/using-the-oembed-api */}}
+
+<iframe style="border-radius:12px"
+    src="https://open.spotify.com/embed/track/{{ $src }}" width="100%"
+    height="152" frameBorder="0" allowfullscreen="allowfullscreen"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>

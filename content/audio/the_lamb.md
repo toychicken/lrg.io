@@ -24,7 +24,7 @@ We were at Ely Cathedral last night for Baby G's school held a "Nine lessons" se
 <!-- more -->
 
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6mJlwt6XPR6p3CD1JjaJq8?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+{{< spotify_embed "6mJlwt6XPR6p3CD1JjaJq8">}}
 
  When I was a moody teenager, I had a few CD's of choral and religious music that featured [Tavener](https://en.wikipedia.org/wiki/John_Tavener), [Arvo Pärt](https://en.wikipedia.org/wiki/Arvo_P%C3%A4rt) and various others. It acted as a bit of a gateway to my love of modernist music in general, and I slightly left it behind when I fell down the [Philip Glass](https://en.wikipedia.org/wiki/Philip_Glass) rabbit hole, falling for his drama and movie soundtracks. (I was a bit of a movie nerd at the time)
 
@@ -32,7 +32,7 @@ Particularly key for me is the feeling of silence and space in Tavener's music. 
 
 I'm no music scholar, but the opening bars remind me of 'Kaval Sviri' - a similar sense of opening, closing and releasing a harmonic space.
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6xemJUeG7BV9RA5eYUx8iH?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+{{< spotify_embed "6xemJUeG7BV9RA5eYUx8iH">}}
 
 To be honest, I didn't know anything about Tavener, other than there was another [composer of the same name](https://en.wikipedia.org/wiki/John_Taverner) from the 16th century (and I'm only aware of _him_ because of his connection with Tattershall, where we lived for a while). Confusingly, Tavener the later claimed to be a direct descendant and worked in a similar style and religious context. If you're interested in the earlier Tavener, check out [Missa Corona Spinea](https://open.spotify.com/album/0O8NCvg9lqn5Uj5muqvtDr?si=dlKEme9QRuGiMqCicetYFw) as performed by the Tallis Scholars.
 
@@ -40,7 +40,7 @@ The more recent Tavener's potted biography on Spotify is a wild ride, and the ex
 
 I'd love to check out Tavener's [Veil of the Temple](https://open.spotify.com/album/4WeG3arDFUCNNRgyqLZYLj?si=EgT4jbCWRXeGukRQxVEgbA) although at 7-odd hours long, it might prove to be quite the undertaking. I'm going to try something a little more bite-size, like 'Prayer of the Heart', the piece that he composed for Björk. 
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2bHYsOpeteHapUSiwgjaDG?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+{{< spotify_embed "2bHYsOpeteHapUSiwgjaDG">}}
 
 If you've read this and have comments or, even better, recommendations. Please do comment on the post below...
 
