@@ -14,7 +14,7 @@ tags:
   - festival
 application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
 images:
-  - /images/cassettes@600x600.jpg
+  - /images/cassette_hand_drawn.svg
 category: 
 style: layout-vintage music
 ---
