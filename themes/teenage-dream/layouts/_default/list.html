@@ -18,11 +18,13 @@
 
         {{ range first 1 .Pages }}
             <h2>{{ .LinkTitle }}</h2>
-            {{ .Summary }}<a href="{{ .RelPermalink }}">&hellip;Read more</a>
+            {{ .Summary }}
+            <a href="{{ .RelPermalink }}">&hellip;Read more</a>
         {{ end }}
 
 
     {{ end }}
+    {{ partial "partials/cover-attribution.html" . }}
 {{ end }}
 
 {{ define "aside" }}    

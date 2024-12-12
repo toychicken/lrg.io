@@ -1,0 +1,3 @@
+{{ if .Params.covermd }}
+    <p class="cover-attribution">Cover image: {{ .Params.covermd  | emojify | markdownify }}</p>
+{{ end }}
