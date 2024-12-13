@@ -181,7 +181,7 @@
 @import "./content-meta.scss";
 @import "./pictures.scss";
 @import "./code-format.scss";
-@import "./posts.scss";
+@import "./_posts.scss";
 @import "./cover-colour.scss";
 @import "./cover-layout.scss";
 @import "./cover-layout-classic.scss";
@@ -189,5 +189,6 @@
 @import "./cover-layout-modern.scss";
 @import "./cover-layout-graphic-60s.scss";
 @import "./spines.scss";
-@import "./postcards.scss";
+// @import "./postcards.scss";
+
 @import "./shortcode-shape.scss";
