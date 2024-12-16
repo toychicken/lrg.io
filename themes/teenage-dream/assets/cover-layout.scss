@@ -70,7 +70,7 @@
 
 
         .title {
-            background: var(--panel-inset-edge-gradient), var(--color-bone);
+            // background: var(--panel-inset-edge-gradient), var(--color-bone);
 
             text-wrap: balance;
             a {
@@ -109,7 +109,6 @@
                 grid-row: pic-center / span pic-small-end;
                 display: flex;
                 justify-content: center;
-                background: var(--panel-inset-edge-gradient), var(--color-bone);
 
                 span {
                     align-self: flex-start;
@@ -145,7 +144,9 @@
                 display: none;
             }
 
-
+            .tags {
+                display:none;
+            }
         }
 
         &.drafty {

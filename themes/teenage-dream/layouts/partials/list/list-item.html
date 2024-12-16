@@ -21,4 +21,11 @@
         {{ end }}
     </div>
     <div class="author">{{ if (.Params.Author) }}<span>{{ .Params.Author }}</span>{{ end }}</div>
+    {{ if .Params.tags }}
+    <div class="tags">
+        {{ range .Params.tags }}
+             <span>{{ . }}</span>
+        {{ end }}
+    </div>
+    {{ end }}
 </li>
