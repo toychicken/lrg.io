@@ -51,10 +51,23 @@
     --color-book-royal-80: hsl(251, 58%, 70%);
 
 
-    --color-grey-lite: #bbb;
+    --color-book-oxford-200: #222;
+    --color-book-oxford-100: #444;
+    --color-book-oxford-80: #666;
+    --color-book-oxford-red-200:hsl(0, 65%, 40%);
+    --color-book-oxford-red-100:hsl(0, 53%, 38%);
+    --color-book-oxford-red-80:hsl(0, 48%, 32%);
+    --color-book-oxford-red-20:hsl(0, 55%, 28%);
 
+
+    --color-grey-lite: #bbb;
     --color-shadow-33: #2223;
     --color-shadow-99: #2229;
+
+    --color-vibrant-yellow: hsl(62, 78%, 59%);
+    --color-vibrant-pink: hsl(343, 83%, 75%);
+    --color-vibrant-green: hsl(137, 78%, 59%);
+
 
     // Inks for handwriting and print
     --color-blood-ink: #69333333; // slightly translucent for that aged ink effect
@@ -64,6 +77,8 @@
     // effects
     --img-filter: saturate(0) sepia(30%) brightness(70%) opacity(90%) contrast(150%);
     --img-desaturate-image: saturate(40%) sepia(0) brightness(90%) opacity(100%) contrast(90%);
+
+
 
 }
 
@@ -123,7 +138,6 @@
     --bg-main-panel: linear-gradient(0deg, transparent 0%, transparent 18%, var(--color-bone) 18%, var(--color-bone) 60%, transparent 60%, transparent 100%);
     --panel-inset-edge-gradient: linear-gradient(90deg, var(--color-shadow-33) 0%, transparent 1%, transparent 99%, var(--color-shadow-33) 100%);
 
-    --shitty-test:red;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -188,6 +202,7 @@
 @import "./cover-layout-vintage.scss";
 @import "./cover-layout-modern.scss";
 @import "./cover-layout-graphic-60s.scss";
+@import "./cover-layout-notebook.scss";
 @import "./spines.scss";
 // @import "./postcards.scss";
 
