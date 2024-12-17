@@ -16,10 +16,14 @@
     {{ end }}
     {{ if .Page.IsSection }}
 
-        {{ range first 1 .Pages }}
-            <h2>{{ .LinkTitle }}</h2>
-            {{ .Summary }}
-            <a href="{{ .RelPermalink }}">&hellip;Read more</a>
+        {{ if .Params.noPreview}}
+           
+        {{ else }}
+            {{ range first 1 .Pages }}
+                <h2>{{ .LinkTitle }}</h2>
+                {{ .Summary }}
+                <a href="{{ .RelPermalink }}">&hellip;Read more</a>
+            {{ end }}
         {{ end }}
 
 
