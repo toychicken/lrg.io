@@ -1,0 +1,25 @@
+{{ $src := .Get 0 }}
+{{ $text := .Get 1 }}
+<generic-embed>{{ $u := urls.Parse $src }}
+    {{ $yourDomain := "localhost" }}
+    {{ $class := "internal" }}
+    {{ $target := "" }}
+    
+    {{ if not (strings.ContainsNonSpace $u.Hostname)}}
+        {{ $class = "relative" }}
+    {{ else }}
+        {{ if not (compare.Eq $u.Hostname $yourDomain) }}
+            {{ $class = "external" }}
+            {{ $target = "_blank" }}
+            {{ if (compare.Eq $u.String $text) }}
+                {{ $class = "external implied"}}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    
+    <a href="{{ $src | safeURL }}" 
+    {{/*{{ with $text }}title="{{ . }}"{{ end }} */}}
+    target="{{ $target }}"
+    class="{{ $class }}" 
+    data-domain="{{ $u.Hostname }}"><span class="link-text">{{ $text | safeHTML }}</span><span class="hostname-text">{{ $u.Hostname }}</span></a>
+</generic-embed>
