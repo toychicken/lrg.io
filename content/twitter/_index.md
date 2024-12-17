@@ -1,5 +1,6 @@
 ---
 title: Twitter, 2009-2023
+date: 2024-12-01T13:47:09
 description: All my old tweets
 images: 
  - "/images/twitter-is-dead.png"
