@@ -1,4 +1,5 @@
 {{ $src := .Get 0 }}
+{{ $text := .Get 1 }}
 {{ $data := dict }}
 {{ $body := printf `{"url" : "%s"}` $src}}
 {{ $opts := dict
@@ -17,9 +18,31 @@
 {{ end }}
 
 {{ if $data }}
-<pre>
-    {{ $data }}
-</pre>
+{{ $u := urls.Parse $src }}
+<div class="link-preview">
+
+        {{ if $data.img }}
+        <img src="{{ $data.img }}" />
+        {{ end }}
+        <p>{{ $data.description }}</p>
+        <a href="{{ $src | safeURL }}" 
+        {{/*{{ with $text }}title="{{ . }}"{{ end }} */}}
+        target="_blank"><span class="link-text">{{ $text | safeHTML }}</span><span class="hostname-text">{{ $u.Hostname }}</span></a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {{ else }}
 <pre>
     BORK!

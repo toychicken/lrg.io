@@ -18,12 +18,14 @@ app.get('/', (req, res) => {
     res.send(instructions);
 })
 
-app.post('/', (req, res) => {
+app.post('/', async (req, res) => {
 
     console.log('REQ', req.body);
     // Send back the result
     res.json({
-        data: "Hey there!",
+        title: "Hey there!",
+        description: "This is a hello world thing",
+        img : "/images/aggresive_lookin_cows.jpg"
       });
 })
 
