@@ -37,10 +37,11 @@
     }
 
     li.list-item.world-affairs {
-        --theme-main-prime: var(--color-book-lemon-100);
-        --theme-main-fade: var(--color-book-lemon-80);
-        --theme-spot-highlight: var(--color-book-lemon-100);
-        --theme-spot-contrast: var(--color-book-lemon-200);
+        // should be grey ish
+        --theme-main-prime: var(--color-book-narwhal-100);
+        --theme-main-fade: var(--color-book-narwhal-80);
+        --theme-spot-highlight: var(--color-book-narwhal-100);
+        --theme-spot-contrast: var(--color-book-narwhal-200);
     }
 
     li.list-item.music {
