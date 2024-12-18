@@ -7,7 +7,10 @@
     "local": "hugo serve -D -E -F --disableFastRender",
     "deploy": "node scripts/gh-pages-deploy.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  },
   "devDependencies": {
     "execa": "^9.3.0"
   }

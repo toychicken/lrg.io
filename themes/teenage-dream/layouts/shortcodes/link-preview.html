@@ -1,0 +1,27 @@
+{{ $src := .Get 0 }}
+{{ $data := dict }}
+{{ $body := printf `{"url" : "%s"}` $src}}
+{{ $opts := dict
+    "method" "post"
+    "body" $body
+    "headers" (dict  "Content-Type" "application/json")
+  }}
+{{ with resources.GetRemote "http://localhost:3000" $opts }}
+  {{ with .Err }}
+    {{ errorf "%s" . }}
+  {{ else }}
+    {{ $data = . | transform.Unmarshal }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get remote resource %q" $src }}
+{{ end }}
+
+{{ if $data }}
+<pre>
+    {{ $data }}
+</pre>
+{{ else }}
+<pre>
+    BORK!
+</pre>
+{{ end }}
