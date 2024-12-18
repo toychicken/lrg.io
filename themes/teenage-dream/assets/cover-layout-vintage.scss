@@ -109,8 +109,10 @@
 
                 display: flex;
 
+
                 img {
-                    filter: saturate(0%) contrast(120%) brightness(70%) ;
+                    filter: contrast(1) sepia(1) saturate(0);
+
                     height: auto;
                     margin: 0;
 
@@ -119,6 +121,7 @@
 
                 img[src$='.svg'],
                 img[src$='.png'] {
+                    mix-blend-mode: multiply;
                     width: auto;
                     max-height: 100%;
                     width: 100%;
