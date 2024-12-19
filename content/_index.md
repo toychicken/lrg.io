@@ -13,4 +13,4 @@ This is easily about the ~~7th~~ ~~8th~~ ~~9th~~ 10th personal website I've buil
 
 Let's see how this goes. Here's my latest contribution:
 
-{{< link-preview "https://lrg.io/?30" >}} 
+{{< link-preview "https://vmst.io/@jalefkowit/113680676762944493?6" >}} 

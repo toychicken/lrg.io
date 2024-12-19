@@ -29,7 +29,8 @@
           {{ end }}
           <strong>{{ $data.title }}</strong>
           <p>{{ $data.description }}</p>
-          <p><span class="link-text">{{ $text | safeHTML }}</span><span class="hostname-text">{{ $u.Hostname }}</span>
+          <p>
+            <span class="link-text">{{ $text | safeHTML }}</span><span class="hostname-text">{{ $u.Hostname }}</span>
           </p>
         </a>
 </div>

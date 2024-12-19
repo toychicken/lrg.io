@@ -22,16 +22,22 @@ export const sanitiseUrl = (urlString) => {
 
 
 import { parse } from "node-html-parser";
-export const buildPreviewData = (docString, url) => {
+export const buildPreviewData = (docString, urlObject) => {
     let data = {
-        src : url,
-        lastUpdate : new Date().getTime()
+        src : urlObject.href,
+        lastUpdate : new Date().getTime(),
+        urlData : urlObject
     }
     // https://andrejgajdos.com/how-to-create-a-link-preview/
     try {
 
         // console.log('buildPreviewData', docString);
         const document = parse(docString);
+
+
+
+
+        
 
         // shoot for the OG data first
         data.sitename = document.querySelector('head meta[property=og:site_name]').getAttribute('content');

@@ -4,7 +4,8 @@ import fs from 'fs-extra';
 // import urls from './link-preview-store/urls.json' with {type: 'json'};
 const app = express();
 const port = 3000;
-const urls = fs.readJSONSync('./link-preview-store/urls.json');
+const urlStorePath = './link-preview-store/urls.json';
+const urls = fs.readJSONSync(urlStorePath);
 
 console.log(JSON.stringify(urls, null, 2));
 
@@ -49,10 +50,16 @@ app.post('/', async (req, res) => {
             }
             const document = await resp.text();
 
-            const { data, error } = buildPreviewData(document, urlStoreKey);
+            const { data, error } = buildPreviewData(document, urlObject);
             if (error) {
                 throw new Error(`Preview failure: ${error}`)
             }
+
+            // write the data back into the urls store
+
+            console.log('write out to  urls', data);
+            urls[urlStoreKey] = {...data};
+            fs.writeJSONSync(urlStorePath, urls);
 
 
             // Send back the result
