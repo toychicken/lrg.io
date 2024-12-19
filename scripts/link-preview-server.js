@@ -26,7 +26,9 @@ app.post('/', async (req, res) => {
     // http://a.com?q=dog&s=cat === http://a.com?s=cat&q=dog
     
     // check the 'urls' data to see if it's already in here
+    console.log('body.url', url, urls);
     if (urls[url]) {
+        console.log('Got from cache');
         res.json(urls[url]);
     } else {
 

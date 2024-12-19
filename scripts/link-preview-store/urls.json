@@ -1,8 +1,7 @@
 {
-    "https://lrg.io" : {
-        "img" : "/images/aggresive-looking-cows@600x600.jpg",
+    "https://lrg.io/?15" : {
+        "image" : "/images/aggresive-looking-cows@600x600.jpg",
         "title" : "LRG",
         "description" : "This is quite the thing, isn't it?"
-
     }
 }

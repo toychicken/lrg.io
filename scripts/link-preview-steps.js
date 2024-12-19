@@ -1,17 +1,23 @@
 export const sanitiseUrl = (urlString) => {
     const url = new URL(urlString);
-    return url.href;
+
+
+    // NB simply returning the href var will add a trailing slash in the following case
+    // urlString = 'http://a.com?a=1'
+    // url.href = 'http://a.com/?a=1'
+    // which, for the purposes of string comparison or using as an object key is... not the same :)
+    return url.href.split('#')[0]; // lose the hash index
 }
 
-
+import { parse } from "node-html-parser";
 export const buildPreviewData = (document, url) => {
 
     // https://andrejgajdos.com/how-to-create-a-link-preview/
 
     let data = {
-            title : 'LEIGH',
-            description : 'CHICKEN FEED', 
-            image : '/images/balinese_mask@600x600',
+            title : '',
+            description : '', 
+            image : '',
             src : url,
             lastUpdate : new Date().getTime()
         }
