@@ -24,6 +24,7 @@
         {{ if $data.img }}
         <img src="{{ $data.img }}" />
         {{ end }}
+        <strong>{{ $data.title }}</strong>
         <p>{{ $data.description }}</p>
         <a href="{{ $src | safeURL }}" 
         {{/*{{ with $text }}title="{{ . }}"{{ end }} */}}
