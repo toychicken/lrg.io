@@ -6,8 +6,20 @@ export const sanitiseUrl = (urlString) => {
     // urlString = 'http://a.com?a=1'
     // url.href = 'http://a.com/?a=1'
     // which, for the purposes of string comparison or using as an object key is... not the same :)
-    return url.href.split('#')[0]; // lose the hash index
+    
+
+
+    let output = {};
+    for (let key in url) {
+        output[key] = url[key]
+    }
+
+    output.storeKey = output.href.split('#')[0];
+
+    return output;
+
 }
+
 
 import { parse } from "node-html-parser";
 export const buildPreviewData = (docString, url) => {
@@ -18,7 +30,7 @@ export const buildPreviewData = (docString, url) => {
     // https://andrejgajdos.com/how-to-create-a-link-preview/
     try {
 
-        console.log('buildPreviewData', docString);
+        // console.log('buildPreviewData', docString);
         const document = parse(docString);
 
         // shoot for the OG data first
