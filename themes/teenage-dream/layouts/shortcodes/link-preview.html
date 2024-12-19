@@ -21,8 +21,8 @@
 {{ $u := urls.Parse $src }}
 <div class="link-preview">
 
-        {{ if $data.img }}
-        <img src="{{ $data.img }}" />
+        {{ if $data.image }}
+        <img src="{{ $data.image | safeURL }}" />
         {{ end }}
         <strong>{{ $data.title }}</strong>
         <p>{{ $data.description }}</p>

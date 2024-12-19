@@ -13,4 +13,4 @@ This is easily about the ~~7th~~ ~~8th~~ ~~9th~~ 10th personal website I've buil
 
 Let's see how this goes. Here's my latest contribution:
 
-{{< link-preview "https://lrg.io/?15#23789" >}}
+{{< link-preview "https://mastodon.social/@mhoye/113680059817305362" >}}

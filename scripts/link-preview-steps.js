@@ -10,29 +10,41 @@ export const sanitiseUrl = (urlString) => {
 }
 
 import { parse } from "node-html-parser";
-export const buildPreviewData = (document, url) => {
-
-    // https://andrejgajdos.com/how-to-create-a-link-preview/
-
+export const buildPreviewData = (docString, url) => {
     let data = {
-            title : '',
-            description : '', 
-            image : '',
-            src : url,
-            lastUpdate : new Date().getTime()
-        }
+        src : url,
+        lastUpdate : new Date().getTime()
+    }
+    // https://andrejgajdos.com/how-to-create-a-link-preview/
+    try {
 
-    // is there OG data?
+        console.log('buildPreviewData', docString);
+        const document = parse(docString);
 
-    // is there a Favicon?
+        // shoot for the OG data first
+        data.sitename = document.querySelector('head meta[property=og:site_name]').getAttribute('content');
+        data.title = document.querySelector('head meta[property=og:title]').getAttribute('content');
+        data.description = document.querySelector('head meta[property=og:description]').getAttribute('content');
+        data.image = document.querySelector('head meta[property=og:image]').getAttribute('content');
+        
 
-    // is there a title tag?
-
-    // is there an image witha link rel=
-
-    // MAKE SURE ALL TEXT IS SANITISED!
-    
-    console.log('buildPreviewData', data);
+        // is there image meta data, if so get it and give us a clue for resolution / ratio etc.
+        
+        // is there OG data?
+        
+        // is there a Favicon?
+        
+        // is there a title tag?
+        
+        // is there an image witha link rel=
+        
+        // OH - if we need that image, we need to cache it somewhere :/
+        // MAKE SURE ALL TEXT IS SANITISED!
+        
+    } catch (err) {
+        console.error('FAILED', err);
+        // return { error : new Error(`Failed to build preview: ${err}`)}
+    }   
 
 
     return { data }
