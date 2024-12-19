@@ -1,6 +1,6 @@
 import express, { json } from 'express';
-import { buildPreviewData } from './link-preview-steps.js';
-// import urls from './link-preview-store/urls.json' assert { type: "json" };
+import { buildPreviewData, sanitiseUrl } from './link-preview-steps.js';
+import urls from './link-preview-store/urls.json' with {type: 'json'};
 const app = express();
 const port = 3000;
 
@@ -20,37 +20,48 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', async (req, res) => {
-
+    const url = sanitiseUrl(req.body.url);
+    // should probably sanitise the url, so that it's stripped of #indexes and
+    // the queryString is always in a consistent order - so our url key:
+    // http://a.com?q=dog&s=cat === http://a.com?s=cat&q=dog
+    
     // check the 'urls' data to see if it's already in here
+    if (urls[url]) {
+        res.json(urls[url]);
+    } else {
 
-    // if not, fetch the latest from the url
+        // if not, fetch the latest from the url
+        // send the response back
+        // add the data to the urls.json
 
-    // if fails send 400 & error, otherwise, it'll show the broken stuff
+        // if fails send 400 & error, otherwise, it'll show the broken stuff
 
-    console.log('REQ', req.body);
+        console.log('REQ', req.body);
 
-    try {
-        const resp = await fetch(req.body.url);
-        if(!resp.ok) {
-            throw new Error(`Response: ${resp.status}`)
+        try {
+            const resp = await fetch(url);
+            if (!resp.ok) {
+                throw new Error(`Response: ${resp.status}`)
+            }
+            const document = await resp.text();
+
+            const { data, error } = buildPreviewData(document, url);
+            if (error) {
+                throw new Error(`Preview failure: ${error}`)
+            }
+
+
+            // Send back the result
+            console.log(data);
+            res.json(data);
+
+        } catch (err) {
+            res.status(400);
+            res.json({
+                error: err
+            })
         }
-        const document = await resp.text();
 
-        const { data, error } = buildPreviewData(document, req.body.url);
-        if(error) {
-            throw new Error(`Preview failure: ${error}`)
-        }
-
-
-    // Send back the result
-    console.log(data);
-    res.json(data);
-
-    } catch (err) {
-        res.status(400);
-        res.json({
-            error: err
-        })
     }
 
 
@@ -61,4 +72,4 @@ app.post('/', async (req, res) => {
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
-  })
+})

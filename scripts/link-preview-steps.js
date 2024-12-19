@@ -1,3 +1,9 @@
+export const sanitiseUrl = (urlString) => {
+    const url = new URL(urlString);
+    return url.href;
+}
+
+
 export const buildPreviewData = (document, url) => {
 
     // https://andrejgajdos.com/how-to-create-a-link-preview/
