@@ -7,7 +7,7 @@ const port = 3000;
 const urlStorePath = './link-preview-store/urls.json';
 const urls = fs.readJSONSync(urlStorePath);
 
-console.log(JSON.stringify(urls, null, 2));
+// console.log(JSON.stringify(urls, null, 2));
 
 app.use(express.json());
 // on start, load up the urls, and check for freshness, anything old than N should be updated
@@ -29,7 +29,7 @@ app.post('/', async (req, res) => {
     // http://a.com?q=dog&s=cat === http://a.com?s=cat&q=dog
     
     // check the 'urls' data to see if it's already in here
-    console.log('body.url', urlStoreKey, urls);
+    // console.log('body.url', urlStoreKey, urls);
     if (urls[urlStoreKey]) {
         console.log('Got from cache');
         res.json(urls[urlStoreKey]);
@@ -51,13 +51,11 @@ app.post('/', async (req, res) => {
             const document = await resp.text();
 
             const { data, error } = buildPreviewData(document, urlObject);
-            if (error) {
+            if (!data || error) {
                 throw new Error(`Preview failure: ${error}`)
             }
 
             // write the data back into the urls store
-
-            console.log('write out to  urls', data);
             urls[urlStoreKey] = {...data};
             fs.writeJSONSync(urlStorePath, urls);
 
@@ -66,6 +64,7 @@ app.post('/', async (req, res) => {
             res.json(data);
 
         } catch (err) {
+            console.error(err);
             res.status(400);
             res.json({
                 error: err
