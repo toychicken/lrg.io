@@ -1,3 +1,9 @@
+// some defaults
+
+const defaultImage = '/images/globe.svg'
+
+
+
 export const sanitiseUrl = (urlString) => {
     const url = new URL(urlString);
 
@@ -35,18 +41,18 @@ const ogProperties = [
     "og:image:height",
     "og:image:alt",
 
-    "og:video",
-    "og:video:url",
-    "og:video:secure_url",
-    "og:video:type",
-    "og:video:width",
-    "og:video:height",
-    "og:video:alt",
+    // "og:video",
+    // "og:video:url",
+    // "og:video:secure_url",
+    // "og:video:type",
+    // "og:video:width",
+    // "og:video:height",
+    // "og:video:alt",
 
-    "og:audio",
-    "og:audio:url",
-    "og:audio:secure_url",
-    "og:audio:type",
+    // "og:audio",
+    // "og:audio:url",
+    // "og:audio:secure_url",
+    // "og:audio:type",
 ]
 
 import { parse } from "node-html-parser";
@@ -60,8 +66,9 @@ const getAcceptableUrlData = (urlObject) => {
     }
 }
 
-const getTitle = document => {
+const getTitle = (document, og) => {
     return (() => {
+        if(og.title) { return og.title }
 
         const twitterTitleEl = document.querySelector('meta[name="twitter:title"]');
         if (twitterTitleEl) {
@@ -94,17 +101,10 @@ const getTitle = document => {
         return null;
     })();
 }
-/*
-        const element = document.querySelector('selector');
-        if(element) {
-            const val = element.getAttribute('content');
-            if(val) {
-                return val;
-            }
-        }
-*/
-const getDescription = document => {
+const getDescription = (document, og) => {
     return (() => {
+
+        if(og.description) { return og.description }
 
         const twitterDescriptionEl = document.querySelector('meta[name="twitter:description"]');
         if(twitterDescriptionEl) {
@@ -133,7 +133,45 @@ const getDescription = document => {
     })();
 }
 
+/*
+        const element = document.querySelector('selector');
+        if(element) {
+            const val = element.getAttribute('content');
+            if(val) {
+                return val;
+            }
+        }
+*/
 
+const getImageData = (document, og) => {
+    return (() => {
+
+        let img = {}
+        // check og first - fall through for src
+        img.src = og.image_secure_url || og.image_url || og.image || null;
+
+        if(!img.src) {
+            // try annother option
+        }
+        
+
+
+
+
+
+        else {
+            if(og.image)
+        }
+    })()
+
+    return {
+        src : '',
+        width : '',
+        height: '',
+        orientation : '',
+        alt : ''
+    }
+}
 
 
 
@@ -152,27 +190,30 @@ export const buildPreviewData = (docString, urlObject) => {
         const document = parse(docString);
 
         // shoot for the OG data first
+        let og = {}
         for (const prop of ogProperties) {
             let el = document.querySelector(`head meta[property=${prop}]`);
             if (el) {
                 let val = el.getAttribute('content');
                 if (val) {
                     let key = prop.split('og:')[1].replace(':', '_');
-                    data[key] = val;
+                    og[key] = val;
                 }
             }
 
         }
 
-        if (!data.title) {
-            data.title = getTitle(document);
-        }
-        if (!data.description) {
-            data.description = getDescription(document);
-        }
-        // is there image meta data, if so get it and give us a clue for resolution / ratio etc.
 
-        // if we don't get title, desc or image so far, try:
+
+        /**
+         * THIS IS UNFINISHED IN FAVOUR OFF USING AN EXISTING PLUGIN :/
+         */
+
+        data.title = getTitle(document, og);
+        data.description = getDescription(document, og);
+        // data.image = getImageData(document, og);
+
+
 
         // is there a Favicon?
 
