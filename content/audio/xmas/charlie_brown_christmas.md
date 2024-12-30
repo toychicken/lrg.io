@@ -19,7 +19,7 @@ author: ExtraLRG
 style: layout-graphic-60s music
 covermd: "Ely Cathedral Choir, by Diliff, CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:Ely_Cathedral_Choir,_Cambridgeshire,_UK_-_Diliff.jpg"
 ---
-
+{{< shape "/images/woodstock.png" "right" />}}
 Often, but not always, my job over the festive period is to do the 'big shop' at our local supermarket, in preparation for Christmas dinner. It's hell. The noise, the relentless barrage of screaming adults, whining children, and tanoy messages. There's a constant crash of stock cages and drunk trolleys. Finally, layered over the top of this is the overly cheerful bauble-vomit that is the get-your-shopping-done-quickly music.
 
 <!--more-->
