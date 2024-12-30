@@ -82,33 +82,13 @@
 
 
             picture {
-                align-self: center;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-
-                align-content: center;
-
-                display: flex;
 
                 img {
                     filter: var(--img-desaturate-image) opacity(100%);
-                    height: auto;
-                    margin: 0;
-
-                    // outline: 0.4rem solid white;
-                    width: 100%;
                     border-top-right-radius: 0.4rem;
                     opacity: 80%;
                 }
 
-                img[src$='.svg'],
-                img[src$='.png'] {
-                    width: auto;
-                    max-height: 100%;
-                    width: 100%;
-                    outline: none;
-                }
             }
         }
 

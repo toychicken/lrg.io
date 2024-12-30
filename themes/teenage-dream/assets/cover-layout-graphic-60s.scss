@@ -129,28 +129,11 @@
 
             picture {
 
-                padding: 0;
-
-                height: 100%; //22em
-
-                overflow: hidden;
-
-                display: block;
-                // background:var(--theme-main-prime);
                     border-bottom-right-radius: 0.4rem;
 
                 img {
                     filter: contrast(1) sepia(1) saturate(0);
                     mix-blend-mode: multiply;
-
-                    // height: auto;
-                    margin: 0;
-
-                    // outline: 0.4rem solid var(--layout-modern-fg);
-                    // width: 100%;
-                    max-width:none;
-                    height: 100%;
-                    min-width: 100%;
                     border-bottom-right-radius: 0.4rem;
 
                 }

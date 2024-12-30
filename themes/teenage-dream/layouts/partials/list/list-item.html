@@ -6,21 +6,21 @@
         {{ end }}
 
 <li class="list-item item-{{ .Kind }} {{ $style}} {{ $draftClass }}">
+    {{ partial "list/cover-image.html" .}}
     <h2 class="title">
         <a href="{{ .Permalink }}">{{ .Title }}</a>
     </h2>
-    {{ partial "list/cover-image.html" .}}
     <div class="subtitle">
         {{ if (.Params.Subtitle) }}
         <span>{{ .Params.Subtitle }}</span>
         {{ end }}
     </div>
+    <div class="author">{{ if (.Params.Author) }}<span>{{ .Params.Author }}</span>{{ end }}</div>
     <div class="subheading">
         {{ if (.Params.Subheading) }}
         <span>{{ .Params.Subheading }}</span>
         {{ end }}
     </div>
-    <div class="author">{{ if (.Params.Author) }}<span>{{ .Params.Author }}</span>{{ end }}</div>
     {{ if .Params.tags }}
     <div class="tags">
         {{ range .Params.tags }}
