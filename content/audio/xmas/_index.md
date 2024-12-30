@@ -2,7 +2,7 @@
 title: Xmas music
 subtitle: Music to unwrap to
 subheading: An LRG Winterval service
-style: layout-modern music
+style: layout-graphic-60s music
 images:
  - /images/xmas_santa.jpg
 description:
