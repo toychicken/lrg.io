@@ -12,6 +12,8 @@ const nixThese = ['_old_content', 'archetypes', 'content', 'static', 'themes', '
     await execa("rm", ["-r", xfolder])
   }
 
+  const std = {stdout: 'inherit', stderr: 'inherit'};
+
   try {
     await execa("git", ["checkout", "--orphan", pagesBranch]);
     console.log("Building...");
@@ -24,7 +26,7 @@ const nixThese = ['_old_content', 'archetypes', 'content', 'static', 'themes', '
     await execa("git", ["--work-tree", folderName, "commit", "-m", pagesBranch]);
     // push, and wait for the magic
     console.log(`Pushing to ${pagesBranch}...`);
-    await execa("git", ["push", "origin", `HEAD:${pagesBranch}`, "--force"]);
+    await execa(std)`git push origin HEAD:${pagesBranch} -force`;
     console.log(`Removing that ${folderName} folder`);
     await execa("rm", ["-r", folderName]);
     await execa("git", ["checkout", "-f", "main"]);
