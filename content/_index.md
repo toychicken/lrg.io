@@ -13,4 +13,4 @@ This is easily about the ~~7th~~ ~~8th~~ ~~9th~~ 10th personal website I've buil
 
 Let's see how this goes. Here's my latest contribution:
 
-{{< link-preview "http://toychicken.co.uk?4" >}} 
+{{< link-preview "https://noyb.eu/en/meta-facebook-instagram-move-pay-your-rights-approach" >}} 

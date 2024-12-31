@@ -1,7 +1,8 @@
 import express, { json } from 'express';
 import { buildPreviewData, sanitiseUrl } from './link-preview-steps.js';
+import linkPreviewGenerator from 'link-preview-generator';
 import fs from 'fs-extra';
-import { getPreviewData } from './link-preview-puppeteer.js';
+// import { getPreviewData } from './link-preview-puppeteer.js';
 // import urls from './link-preview-store/urls.json' with {type: 'json'};
 const app = express();
 const port = 3000;
@@ -46,7 +47,7 @@ app.post('/', async (req, res) => {
 
         try {
             
-            let data = getPreviewData(urlStoreKey);
+            let data = await linkPreviewGenerator(urlStoreKey);
 
             // write the data back into the urls store
             urls[urlStoreKey] = {...data};

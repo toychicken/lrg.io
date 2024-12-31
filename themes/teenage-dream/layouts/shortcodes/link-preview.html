@@ -19,20 +19,23 @@
 
 {{ if $data }}
 {{ $u := urls.Parse $src }}
-<div class="link-preview">
-        <a href="{{ $src | safeURL }}" target="_blank">
-          {{ if $data.image }}
-          <picture style="background-image: url('{{ $data.image.src }}');">
-            <img src="{{ $data.image.src | safeURL }}" />
+
+        <a href="{{ $src | safeURL }}" target="_blank" class="link-preview">
+          {{ if $data.img }}
+          <picture style="background-image: url('{{ $data.img }}');">
+            <img src="{{ $data.img | safeURL }}" />
           </picture>
           {{ end }}
-          <strong>{{ $data.title }}</strong>
-          <p>{{ $data.description | safeHTML }}</p>
-          <p>
-            <span class="link-text">{{ $text | safeHTML }}</span><span class="hostname-text">{{ $u.Hostname }}</span>
-          </p>
+          <div class="preview-text">
+
+            <strong>{{ $data.title }}</strong>
+            <p>{{ $data.description | safeHTML }}</p>
+            <p>
+              <span class="link-text">{{ $text | safeHTML }}</span><span class="hostname-text">{{ $u.Hostname }}</span>
+            </p>
+          </div>
         </a>
-</div>
+
 
 
 

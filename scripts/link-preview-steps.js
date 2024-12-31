@@ -160,7 +160,7 @@ const getImageData = (document, og) => {
 
 
         else {
-            if(og.image)
+            // if(og.image)
         }
     })()
 

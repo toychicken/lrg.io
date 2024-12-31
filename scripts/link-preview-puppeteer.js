@@ -209,8 +209,8 @@ const getFavicon = async (page, uri) => {
 
 export const getPreviewData = async (url) => {
 
-  puppeteerArgs = [],
-  puppeteerAgent = "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)",
+  let puppeteerArgs = [];
+  let puppeteerAgent = "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)";
 
 
 //   puppeteer.use(pluginStealth());
