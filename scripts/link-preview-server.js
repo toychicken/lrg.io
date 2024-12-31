@@ -1,6 +1,7 @@
 import express, { json } from 'express';
 import { buildPreviewData, sanitiseUrl } from './link-preview-steps.js';
 import fs from 'fs-extra';
+import { getPreviewData } from './link-preview-puppeteer.js';
 // import urls from './link-preview-store/urls.json' with {type: 'json'};
 const app = express();
 const port = 3000;
@@ -44,16 +45,8 @@ app.post('/', async (req, res) => {
         console.log('REQ', req.body);
 
         try {
-            const resp = await fetch(urlStoreKey);
-            if (!resp.ok) {
-                throw new Error(`Response: ${resp.status}`)
-            }
-            const document = await resp.text();
-
-            const { data, error } = buildPreviewData(document, urlObject);
-            if (!data || error) {
-                throw new Error(`Preview failure: ${error}`)
-            }
+            
+            let data = getPreviewData(urlStoreKey);
 
             // write the data back into the urls store
             urls[urlStoreKey] = {...data};
