@@ -12,7 +12,11 @@ const nixThese = ['_old_content', 'archetypes', 'content', 'static', 'themes', '
     await execa("rm", ["-r", xfolder])
   }
 
+  const std = {stdout: 'inherit', stderr: 'inherit'};
+
   try {
+    // create orphan branch from whatever the current branch is - this is probably bad
+    await execa(std)`git stash save "Deploy attempt" -a` // safety stash
     await execa("git", ["checkout", "--orphan", pagesBranch]);
     console.log("Building...");
     // build into the dist folder (folderName)
@@ -24,12 +28,13 @@ const nixThese = ['_old_content', 'archetypes', 'content', 'static', 'themes', '
     await execa("git", ["--work-tree", folderName, "commit", "-m", pagesBranch]);
     // push, and wait for the magic
     console.log(`Pushing to ${pagesBranch}...`);
-    await execa("git", ["push", "origin", `HEAD:${pagesBranch}`, "--force"]);
+    await execa(std)`git push origin HEAD:${pagesBranch} --force`;
     console.log(`Removing that ${folderName} folder`);
     await execa("rm", ["-r", folderName]);
     await execa("git", ["checkout", "-f", "main"]);
     await execa("git", ["branch", "-D", pagesBranch]);
     console.log("Successfully deployed");
+    await execa(std)`git stash pop`;
   } catch (e) {
     console.log(e.message);
     process.exit(1);

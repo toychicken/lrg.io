@@ -32,7 +32,7 @@
             grid-template-columns: [left] 3.5rem [pic-small-left] 3.5rem [middle-start] 3.75rem [middle] 3.75rem [middle-end] 3.5rem [pic-small-right] 3.5rem [right];
             grid-template-rows: [top] 2rem [bar-1] 4.5rem [bar-2] 3rem [pic-large-start] 3.5rem [pic-small-start] 7.25rem [pic-center] 0.75rem [pic-top-offset] 6.5rem [pic-small-end] 3.5rem [pic-large-end] 2rem [bottom];
 
-        
+
         }
 
         &.item-section {
@@ -42,7 +42,7 @@
 
             &::before {
                 content: "";
-                position:absolute;
+                position: absolute;
                 width: var(--cover-w);
                 height: var(--cover-h);
                 display: block;
@@ -58,7 +58,7 @@
                 &::before {
                     transform: matrix(1.00, 0.03, -0.03, 1.00, 3, 7);
                 }
-            }         
+            }
         }
 
         &.item-page {
@@ -73,6 +73,7 @@
             // background: var(--panel-inset-edge-gradient), var(--color-bone);
 
             text-wrap: balance;
+
             a {
                 text-decoration: none;
                 color: inherit;
@@ -142,10 +143,36 @@
 
             .cover-image {
                 display: none;
+
+                picture {
+
+                    // display:flex;
+                    align-items: center;
+                    width:100%;
+                    height:100%;
+                    padding:0;
+                    overflow:hidden;
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        object-fit: cover;
+                        margin: 0;
+                        min-width: 100%;
+                        min-height:100%;
+                    }
+
+                    img[src$='.svg'] {
+                        object-fit: contain;
+                        padding:0.3rem;
+                        width: auto;
+                        max-height: 100%;
+                        width: 100%;
+                    }
+                }
             }
 
             .tags {
-                display:none;
+                display: none;
             }
         }
 
@@ -154,12 +181,12 @@
             &::after {
                 position: relative;
                 content: "DRAFT!";
-                left:2rem;
-                top:0rem;
-                font-size:3em;
-                color:#99000099;
+                left: 2rem;
+                top: 0rem;
+                font-size: 3em;
+                color: #99000099;
 
-                display:block;
+                display: block;
                 transform: rotate(20deg);
                 text-align: center;
             }

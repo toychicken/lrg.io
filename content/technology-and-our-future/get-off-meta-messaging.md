@@ -1,17 +1,21 @@
 ---
-title: Get off Meta Messaging
-subtitle: Rule 1, don't let Zuck know who you're sexting with
+title: Get off Meta
+subtitle: Don't let Zuck know who you're sexting with
 subheading: An LRG pragmatic resistance series
-description: This is where the description goes
 date: 2024-12-02T10:38:00
+description: You should really get off all privately owned social media if you can, but if you start with Meta today, it's a good start.
 tags:
-  - lrg
+  - meta
+  - resist
+  - big-tech
+  - fascism
+  - capitalism
 application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
 draft: true
 images:
-  - /images/social_image
+  - /images/basic_meta_6.png
 category: 
-style: classic
+style: layout-graphic-60s world-affairs
 ---
 Quick recap: Meta is Facebook, Messenger, Instagram, Threads, WhatsApp and [some others](https://en.wikipedia.org/wiki/List_of_mergers_and_acquisitions_by_Meta_Platforms#Acquisitions) that are less relevant.
 
@@ -26,14 +30,14 @@ When you and I have a conversation, Dear Reader, Meta learns a little bit about 
 
  Armed with a little bit of metadata, there's not much that Meta can tell about us. If you assume they're not lying about the security of the message contents. Here's what an imagined message log might look like for two people exchanging messages.
  
-```
+```txt
 user353215089723 sent message to user2938470575
 user2938470575 received message from user353215089723
 ```
 
 Oh, don't forget the meta data. Let's look at the first log entry.
 
-```
+```txt
 user353215089723 sent message to user2938470575
 	datetime:2024-11-07T11:20:01.002+000
 	phone: Samsung A10, android 9.4.12, Vodafone
@@ -143,4 +147,4 @@ In fact, it doesn't even need to be a group. It could simply be a promoted post.
 ### Further reading
 
 * [Facebook's data-sharing deals exposed](https://www.bbc.co.uk/news/technology-46618582) 
-* 
+* [Find Meta stories on NOYB](https://noyb.eu/en/search?search_api_fulltext=meta)
