@@ -9,6 +9,7 @@
     font-family: var(--font-sans-serif);
     position: relative;
     margin-bottom:1rem;
+    // container-type: inline-size;
     picture {
         align-items: center;
         width:24rem;
@@ -43,3 +44,17 @@
         margin-left:1rem;
     }
 }
+
+@container main (width < 40rem) {
+    .link-preview {
+         flex-direction: column;
+         picture {
+            height:24rem;
+            width:100%;
+            margin-bottom:1rem;
+         }
+    picture + .preview-text {
+        margin-left:0;
+    }
+    }
+} 

@@ -1,6 +1,17 @@
 /* Variables */
 
 :root {
+
+    /* Layout */
+
+    --edge-margin: 3vw;
+    --main-center-gutter: 4rem;
+    --readable-line-width: 50rem;
+    --shortish-line-width: 30rem;
+
+    --link-list-gutter: 4rem;
+
+
     /* palette */
     --color-black: hsl(0 0% 10%);
     --color-char: #222;
