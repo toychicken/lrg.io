@@ -4,6 +4,7 @@
   "version": "8.0.2",
   "type": "module",
   "scripts": {
+    "pgen" : "cd scripts; nodemon link-preview-server.js",
     "local": "hugo serve -D -E -F --disableFastRender",
     "deploy": "node scripts/gh-pages-deploy.js"
   },
