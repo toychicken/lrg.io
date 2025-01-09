@@ -39,3 +39,6 @@ When I started building out my [colour clocks](/colourful-clocks/) this was [a R
 
 ![](useful-links-easings-preview.png.png)
 
+### Making better link-preview cards
+
+This worked like magic for me! https://kittygiraudel.com/2022/04/02/accessible-cards/

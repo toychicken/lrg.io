@@ -9,4 +9,4 @@ subheading: LRG Torment Nexus
 noPreview: true
 ---
 
-Welcome to my personal Torment Nexus archive
+Welcome to my personal Torment Nexus archive. It was a good run, I enjoyed playing Twitter, but in the end the plot just got a bit weird for me.
