@@ -49,7 +49,8 @@
     .link-preview {
          flex-direction: column;
          picture {
-            height:24rem;
+            aspect-ratio: 2/1;
+            height:auto;
             width:100%;
             margin-bottom:1rem;
          }
