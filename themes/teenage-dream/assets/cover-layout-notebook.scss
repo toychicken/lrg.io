@@ -38,21 +38,25 @@
         .title {
             font-family: var(--font-script);
             text-transform: none;
-            grid-column: pic-small-left / span pic-small-right;
-            grid-row: pic-large-start / span pic-small-start;
+            grid-column: left / span right;
+            grid-row: top / span bottom;
+            // left: 1rem;
             transform: rotate(2deg);
             position: relative;
-            left: 1rem;
+            display: flex;
+            align-items: center;
 
             a {
                 background: linear-gradient(80deg, transparent 0%, transparent 6.8%, var(--washi-tape) 7%, var(--washi-tape) 40%, transparent 40.2%, transparent 100%),
                     linear-gradient(102deg, transparent 0%, transparent 39%, var(--washi-tape) 39%, var(--washi-tape) 96%, transparent 96.2%, transparent 100%);
                 border: none;
                 display: inline-block;
-                margin: 0;
+                margin: -8rem 0 0 0;
                 padding: 0 0.3rem;
                 text-wrap: nowrap;
-                width: 100%;
+                max-width: 90%;
+                min-width: 50%;
+                align-self: center;
             }
         }
 
@@ -141,9 +145,8 @@
                 background: linear-gradient(103deg, transparent 0%, transparent 6.8%, var(--washi-tape) 7%, var(--washi-tape) 50%, transparent 50.2%, transparent 100%),
                     linear-gradient(70deg, transparent 0%, transparent 47%, var(--washi-tape) 47.2%, var(--washi-tape) 96%, transparent 96.2%, transparent 100%);
                 border: none;
-                display: inline-block;
                 padding: 0 3rem 0 1.3rem;
-                width: auto;
+
             }
         }
 
