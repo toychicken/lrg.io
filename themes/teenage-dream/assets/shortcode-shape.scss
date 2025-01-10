@@ -16,10 +16,9 @@
   margin: 0 0 1rem 1rem;
 }
 
-@media (max-width: 30em) {
+@container main (max-width: 30rem) {
     .shape-left, 
     .shape-right {
-        max-width: none;
         float:none;
         margin:1em auto;
     }
