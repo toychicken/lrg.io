@@ -132,6 +132,9 @@
     --footer-bg: var(--color-char);
     --footer-fg: var(--color-bone);
 
+    --link-preview-bg: var(--color-bone);
+    --link-preview-fg: var(--color-char);
+
 
 
 
@@ -175,6 +178,9 @@
         --link-hover: var(--color-lipstick-10);
         --link-visited: rgb(214, 191, 195);
 
+
+    --link-preview-fg: var(--color-ivory);
+    --link-preview-bg: var(--color-char);
 
     }
 }

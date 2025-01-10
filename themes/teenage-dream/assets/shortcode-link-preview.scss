@@ -2,7 +2,8 @@
     display:flex;
     flex-direction: row;
     padding:1rem;
-    background:white;
+    background:var(--link-preview-bg);
+    color:var(--link-preview-fg);
     border-radius: 0.3rem;
     text-decoration: none;
     font-size:1.2rem;
