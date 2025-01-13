@@ -1,6 +1,6 @@
 ---
 title: Charlie Brown Christmas
-subtitle: Vince Guaraldi Trio
+subtitle: Keeping my chill
 subheading: It's cocktail jazz Charlie Brown
 description: It's a hell of a lot cooler than a kids animated Christmas special soundtrack has any right to be
 date: 2024-12-27T12:33:00
@@ -15,7 +15,7 @@ draft: false
 images:
   - /images/charlie_brown_christmas.jpg
 category: 
-author: ExtraLRG
+author: Vince Guaraldi Trio
 style: layout-graphic-60s music
 covermd: "Ely Cathedral Choir, by Diliff, CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:Ely_Cathedral_Choir,_Cambridgeshire,_UK_-_Diliff.jpg"
 ---
@@ -30,13 +30,14 @@ I have, over the years, developed a successful strategy to avoid joining in the 
 
 Growing up in the UK, the Charlie Brown Christmas special is not so embedded in the national psyche as it is in the US. But, as a child of the 70s, it _was_ something that came on TV occasionally, and I always sought it out when I could. As I grew a little older, the "A bit like a Charlie Brown soundtrack" was a byword to describe a kind of sexy cocktail jazz sound, for me and my friends. 
 
-{{< shape "/images/vince_guaraldi_trio.webp" "right" "Vince Guaraldi Trio" />}}
 
 In the late 80s and into the 90s, this kind of sound briefly had a resurgence with the Acid Jazz scene typified by James Taylor Quartet (who I loved) and many more. But, it was soon overwhelmed by a kind of "Yeah baby" pastiche, and eventually smothered by Austin Powers.
 
 
 
 Thirty-odd years later, and I find myself needing something Christmassy, but not saccharine. A shot of nostalgia, without a nylon xmas jumper. Who better than these guys? [^1]
+
+{{< shape "/images/vince_guaraldi_trio.webp" "" "Vince Guaraldi Trio" />}}
 
 I could not have chosen better. I must have let that album loop over about 3 times whilst I was shopping. Bliss. 
 
