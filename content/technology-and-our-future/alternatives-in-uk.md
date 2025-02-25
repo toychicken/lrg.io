@@ -9,7 +9,6 @@ tags:
   - UKalternatives
   - social-media
 application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
-draft: true
 images:
   - /images/alt-uk_logo.svg
 category: 
