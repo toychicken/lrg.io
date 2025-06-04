@@ -4,7 +4,9 @@ languageCode: en-gb
 title: LRG
 theme: teenage-dream
 publishDir: public
-paginate: 30
+pagination:
+  pagerSize: 30
+ignorefiles: content/_templates/.*
 markup:
   goldmark:
     typographer:
