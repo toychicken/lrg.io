@@ -14,7 +14,9 @@ images:
   - /images/hot_guy_as_a_baby.jpg
 category: 
 style: layout-graphic-60s world-affairs
-covermd: Me at a little over 1 year old. It looks like it's from the dawn of time...
+cover:
+  attribution: Me at a little over 1 year old. It looks like it's from the dawn of time...
+  alt: A bouncing baby LRG, held aloft by a pair of strong arms. Both are wearing heavy Arran sweaters. It was cold in the 70s.
 ---
 
 How to talk about myself... Hmm...

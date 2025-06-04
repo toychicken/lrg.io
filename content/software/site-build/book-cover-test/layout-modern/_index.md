@@ -10,6 +10,8 @@ images:
   - /images/spotify_profile@1600x1600_tight.jpg
 category: 
 style: layout-modern travel
-covermd:
+cover:
+  attribution: 
+  alt: My cool face, looking REAL cool
 noPreview: true
 ---

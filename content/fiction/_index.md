@@ -16,7 +16,9 @@ images:
 category: 
 style: layout-graphic-60s
 author: Leigh R Garland
-covermd: "Cover photo by [Yusuf Evli](https://unsplash.com/@yusufevli?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on https://unsplash.com/photos/turned-on-desk-lamp-near-calculator-m_x9ej4BeK4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+cover:
+  attribution:  "Cover photo by [Yusuf Evli](https://unsplash.com/@yusufevli?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on https://unsplash.com/photos/turned-on-desk-lamp-near-calculator-m_x9ej4BeK4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  alt:  "Cover photo by [Yusuf Evli](https://unsplash.com/@yusufevli?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on https://unsplash.com/photos/turned-on-desk-lamp-near-calculator-m_x9ej4BeK4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 

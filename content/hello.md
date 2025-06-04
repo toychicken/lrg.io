@@ -14,7 +14,9 @@ images:
   - /images/hot_guy_in_a_wizard_hat.jpg
 category: 
 style: layout-graphic-60s world-affairs
-covermd: Me at Latitude 2024, where I briefly became the [face of Popchips](https://www.instagram.com/popchipsuk/reel/C-STSyTSTB9/?api=1%2F)
+cover:
+  attribution:  Me at Latitude 2024, where I briefly became the [face of Popchips](https://www.instagram.com/popchipsuk/reel/C-STSyTSTB9/?api=1%2F)
+  alt:  Me at Latitude 2024, where I briefly became the [face of Popchips](https://www.instagram.com/popchipsuk/reel/C-STSyTSTB9/?api=1%2F)
 ---
 
 Oh, hello! Nice to see you. Have we met somewhere before? You look awfully familiar... perhaps you know me from:

@@ -15,10 +15,12 @@ images:
   - /images/tweet-as-postcard-stamp.png
 category: 
 style: layout-classic experiments
+cover:
+  alt: A CSS generated postage stamp with the twitter logo
 ---
 I did an experiment trying to make my old Tweet archive look like  postcards. It's a nice aesthetic if you're on a PC, but less easily readable on mobile. This really needs to be backed out. It will, eventually.
 
-![](tweet-as-postcard.png)
+![It's intended to look like the back of a postcard, with a cute postmarked 'twitter' stamp](tweet-as-postcard.png)
 
 I was particularly proud of the 'smudged' postmark on the stamp. All done with CSS :)
 
@@ -31,7 +33,7 @@ Just in case, here's how I did the stamp though, :)
 
 ## The Stamp
 
-![](tweet-as-postcard-stamp.png)
+![A CSS generated postage stamp with postmark, and a twitter logo](tweet-as-postcard-stamp.png)
 
 #### The HTML 
 

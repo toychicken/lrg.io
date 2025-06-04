@@ -13,11 +13,13 @@ images:
   - /images/alt-uk_logo.svg
 category: 
 style: layout-modern world-affairs
-covermd:
+cover:
+  attribution: 
+  alt: The alternatives in the UK logo
 ---
 If the UK is to become anything other than a digital vassal of the US, we have to have a nose-to-tail digital service infrastructure...
 
-{{< main_image "/images/alt-uk_share_preview.jpg" >}}
+{{< main_image "/images/alt-uk_share_preview.jpg" "The alternatives in the UK logo" >}}
 
 What I mean is... how many digital products, platforms and services are built on Big Tech foundations? It's incredibly hard to find UK owned _and_ run services. Many, many service-tier offerings (after all, we're a nation of digital greengrocers), but it's quite tricky to find replacements for things like Vercel, Digital Ocean or even Dropbox. 
 

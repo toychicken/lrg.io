@@ -18,7 +18,9 @@ images:
   - /images/futami-ga-ura_rocks_at_ise_land_of_dawn.jpg
 category: 
 style: layout-modern misc
-covermd: "[Futami-ga-ura Rocks at Ise, Land of Dawn](https://pdimagearchive.org/images/79617204-4896-433f-b760-897dd40b1fc7/). By Utagawa Kunisada, c1835"
+cover:
+  attribution:  "[Futami-ga-ura Rocks at Ise, Land of Dawn](https://pdimagearchive.org/images/79617204-4896-433f-b760-897dd40b1fc7/). By Utagawa Kunisada, c1835"
+  alt:  "[Futami-ga-ura Rocks at Ise, Land of Dawn](https://pdimagearchive.org/images/79617204-4896-433f-b760-897dd40b1fc7/). By Utagawa Kunisada, c1835"
 ---
 {{< main_image "/images/futami-ga-ura_rocks_at_ise_land_of_dawn.jpg" >}}
 

@@ -15,7 +15,9 @@ images:
   - /images/man_in_labcoat.svg
 category: 
 style: world-affairs
-covermd:
+cover:
+  attribution: 
+  alt: Illustration of a bearded person wearing a labcoat
 noPreview: true
 ---
 

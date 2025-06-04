@@ -15,7 +15,9 @@ images:
   - /images/dice.svg
 category: 
 style: layout-vintage misc
-covermd:
+cover:
+  attribution: 
+  alt: Illustration of two dice 
 noPreview: true
 ---
 

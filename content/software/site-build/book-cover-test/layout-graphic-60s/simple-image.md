@@ -11,7 +11,9 @@ subheading: Full bleed, slightly desaturated image
 images: 
     - /images/yusuf-evli-m_x9ej4BeK4-unsplash@600x757.jpg
 style: layout-graphic-60s travel
-covermd: Cover photo by [Yusuf Evli](https://unsplash.com/@yusufevli?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on https://unsplash.com/photos/turned-on-desk-lamp-near-calculator-m_x9ej4BeK4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+cover:
+  attribution:  Cover photo by [Yusuf Evli](https://unsplash.com/@yusufevli?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on https://unsplash.com/photos/turned-on-desk-lamp-near-calculator-m_x9ej4BeK4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  alt:  Cover photo by [Yusuf Evli](https://unsplash.com/@yusufevli?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on https://unsplash.com/photos/turned-on-desk-lamp-near-calculator-m_x9ej4BeK4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 ---
 
 **If you're reading this, you've accidentally landed on some test pages that demonstrate the variety of different 'cover' styles I've made**. Paleo prism farm-to-table mixtape, 90's aliqua brunch 3 wolf moon. Sartorial typewriter shaman bitters squid. Man bun gorpcore lo-fi non godard. Keytar mukbang gorpcore gatekeep shabby chic taiyaki. Pop-up paleo glossier, seitan lyft bruh plaid. Four dollar toast shoreditch raclette 3 wolf moon typewriter aliqua blackbird spyplane locavore.

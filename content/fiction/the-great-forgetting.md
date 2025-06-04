@@ -13,7 +13,9 @@ images:
 category: 
 style: layout-graphic-60s
 author: Leigh R Garland
-covermd: Demotic script on a replica of the rosetta stone on display in Magdeburg, by Chris 73, CC&#8209;by&#8209;SA&nbsp;3.0 - https://commons.wikimedia.org/wiki/File:DemoticScriptsRosettaStoneReplica.jpg
+cover:
+  attribution:  Demotic script on a replica of the rosetta stone on display in Magdeburg, by Chris 73, CC&#8209;by&#8209;SA&nbsp;3.0 - https://commons.wikimedia.org/wiki/File:DemoticScriptsRosettaStoneReplica.jpg
+  alt:  Demotic script on a replica of the rosetta stone on display in Magdeburg, by Chris 73, CC&#8209;by&#8209;SA&nbsp;3.0 - https://commons.wikimedia.org/wiki/File:DemoticScriptsRosettaStoneReplica.jpg
 ---
 
 > The end came when we had turned almost every surface, every structure, every material into a storage medium for the immortal mega-rich.

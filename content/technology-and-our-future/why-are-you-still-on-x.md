@@ -13,7 +13,9 @@ images:
   - /images/elon_salute@sq.jpg
 category: 
 style: layout-graphic-60s world-affairs
-covermd: Elon Musk gives a Nazi salute at Donald Trump's inauguration rally.
+cover:
+  attribution:  Elon Musk gives a Nazi salute at Donald Trump's inauguration rally.
+  alt:  Elon Musk gives a Nazi salute at Donald Trump's inauguration rally.
 ---
 {{< main_image "/images/elon_salute@1440x960.webp" "Elon Musk gives a Nazi salute at Donald Trump's inauguration rally." "Elon Musk gives a Nazi salute at Donald Trump's inauguration rally." >}}
 

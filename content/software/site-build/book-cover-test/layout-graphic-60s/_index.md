@@ -10,7 +10,9 @@ images:
   - /images/yusuf-evli-m_x9ej4BeK4-unsplash@600x757.jpg
 category: 
 style: layout-graphic-60s experiments
-covermd:
+cover:
+  attribution: 
+  alt: A vintage typewriter dramatically lit
 noPreview: true
 ---
 

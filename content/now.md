@@ -14,7 +14,9 @@ images:
   - /images/hot_guy_in_mario_world.jpg
 category: 
 style: layout-graphic-60s world-affairs
-covermd: Me at [SUPER NINTENDO World, Osaka](https://www.usj.co.jp/web/en/us/areas/super-nintendo-world)
+cover:
+  attribution:  Me at [SUPER NINTENDO World, Osaka](https://www.usj.co.jp/web/en/us/areas/super-nintendo-world)
+  alt:  Me at [SUPER NINTENDO World, Osaka](https://www.usj.co.jp/web/en/us/areas/super-nintendo-world)
 ---
 
 Oh _hey!_ It's been a while. What are you up to these days? 

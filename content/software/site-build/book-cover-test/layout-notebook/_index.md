@@ -15,6 +15,8 @@ images:
   - /images/spotify_profile@1600x1600_tight.jpg
 category: 
 style: layout-notebook music
-covermd:
+cover:
+  attribution: 
+  alt: My cool face, looking REAL cool
 noPreview: true
 ---

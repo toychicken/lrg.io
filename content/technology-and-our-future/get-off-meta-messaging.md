@@ -16,6 +16,8 @@ images:
   - /images/basic_meta_6.png
 category: 
 style: layout-graphic-60s world-affairs
+cover:
+  alt:
 ---
 Quick recap: Meta is Facebook, Messenger, Instagram, Threads, WhatsApp and [some others](https://en.wikipedia.org/wiki/List_of_mergers_and_acquisitions_by_Meta_Platforms#Acquisitions) that are less relevant.
 
@@ -23,7 +25,7 @@ Quick recap: Meta is Facebook, Messenger, Instagram, Threads, WhatsApp and [some
 
 It comes down to 2 things. One is technical, the other is societal. They're intertwined because the societal part is dependent on your feelings about the technical part and vice versa.
 
-![](zeoob.com_uazakp2r1t_photo.png)
+![A whatsapp thread between fictional friends: 1: "Wait, I thought all WhatsApp messages were secure"; 2: "The contents are secure, but that's not the whole story..."](zeoob.com_uazakp2r1t_photo.png)
 This is fundamental to how social media organisations work. They don't care as much about the _specifics_ of what we say to one another, but to _whom_ we say it. It's called the social graph.
 
 When you and I have a conversation, Dear Reader, Meta learns a little bit about us. Who we talk to, when we talk, where we are and how we communicate. This is called `metadata` and oh, how we laughed when Facebook rebranded to Meta, because they literally told us what they care about.
@@ -68,11 +70,11 @@ I think it's fair to say, that it's widely understood that Meta sells it's data 
 
 Not a great deal to go on, but an ad placement agency might decide to push a Vodafone / Samsung deal advert into an available Facebook slot for this user.
 
-![](zeoob.com_z03z8arr9n_photo.png)
+![Fictional thread: 1: "Hang on a second, I thought you were talking about WhatsApp, not Facebook..."; 2: "That's true. If WhatsApp is the only service you use, you might think there's nowhere to SHOW you an ad, right?"](zeoob.com_z03z8arr9n_photo.png)
 
 So, technically Meta can't show _you_ an ad, solely based on your WhatsApp data. Because if you don't use Facebook, they have nowhere to show you an ad. (Or do they?)
 
-![](zeoob.com_ysdl7jhriy_photo.png)
+![Fictional thread continued: 1: "I just checked - both WhatsApp and Facebook both say they DON'T SELL MY DATA"](zeoob.com_ysdl7jhriy_photo.png)
 
 This is true. This is what is important about Meta (and most big ad-revenue-driven tech corps). They don't care about you individually. They care about you as a demographic.
 
@@ -105,7 +107,7 @@ This changes the concept of demographics entirely. Even without looking at behav
 
 So, when Meta says they don't sell your information, they are technically telling the truth. What they do is sell data _about_ you in a sophisticated demographic grouping that might only contain you. So, when `Mum` next opens Facebook, she may well see a "Why not give your loved ones an upgrade to the Samsung A15 this Christmas? Love Vodafone. x (nearest store, High Street, Great Yarmouth)". In fact, they *could* even say "Why not buy Julia..." but they probably won't because it'd seem too creepy.
 
-![](zeoob.com_51egn3fovj_photo.png)
+![Fictional thread continued: 1: "TBH, if Meta sell details about me to send me targeted ads... I don't really have a problem with taht. I don't pay for Facebook, so they have to make money somehow, and I've got nothing to hide..."; 2: "Cool. You can probably stop reading no then"](zeoob.com_51egn3fovj_photo.png)
 
 ## If you're happy, I'm happy
 

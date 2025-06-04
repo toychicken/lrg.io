@@ -12,6 +12,9 @@ tags:
  - calculator
  - work
  - time
+cover:
+  attribution: 
+  alt: A crowded dystopian space, crammed with office drones, in front of a colossal clock
 ---
 
 Originally from one of my earlier instances of a personal website, I'm re-doing and re-posting it here, because my _God_ it's a perennially useful tool...

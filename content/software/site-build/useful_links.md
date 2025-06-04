@@ -25,19 +25,19 @@ I was trying to add a little grain to my gradients on the book covers. The aweso
 
 https://css-tricks.com/grainy-gradients/ 
 
-It came with it's [own tool](https://grainy-gradients.vercel.app/) for generating them. ![](grainy-gradient-playground.png)
+It came with it's [own tool](https://grainy-gradients.vercel.app/) for generating them. ![Screengrab of the grainy gradient tool](grainy-gradient-playground.png)
 
 ### CSS Grid Generator
 
 I really wish I'd found this earlier, https://cssgrid-generator.netlify.app/ 
 
-![](css-grid-generator-screengrab.png)
+![Screengrab of the css grid generator tool](css-grid-generator-screengrab.png)
 
 ### Easing functions
 
 When I started building out my [colour clocks](/colourful-clocks/) this was [a REALLY helpful site](https://easings.net/) for doing some of the springier elements of the animation.
 
-![](useful-links-easings-preview.png.png)
+![Visualisation of all the timing easing functions](useful-links-easings-preview.png.png)
 
 ### Making better link-preview cards
 

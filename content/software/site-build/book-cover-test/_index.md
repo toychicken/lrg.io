@@ -15,7 +15,9 @@ images:
 category: 
 style: layout-notebook experiments
 noPreview: true
-covermd:
+cover:
+  attribution: 
+  alt:
 ---
 A while back, I gave myself the task of [redesigning my website (again)](/software/site-build/). Originally my vision was to re-create a whole load of [vintage book covers](/software/site-build/design_process/) specifically inspired by vintage penguin paperbacks. 
 

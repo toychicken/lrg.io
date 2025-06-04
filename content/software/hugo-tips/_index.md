@@ -8,6 +8,8 @@ draft: false
 images:
   - /images/hugo-gopher-hero.svg
 style: layout-classic
+cover:
+  alt: The cute gopher logo of the Hugo organisation
 ---
 [Hugo](https://gohugo.io/) is a great way to build complex static sites. There is a bit of a learning curve, but once embraced, it's incredibly powerful. 
 
