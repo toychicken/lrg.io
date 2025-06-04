@@ -1,6 +1,6 @@
 All the stuff I have to do
 
-* [x] KPI session with Lee
+* [ ] MUST refactor the cover attributes, as Obsidian doesn't really like YAML objects
 
 And from other places in the site...
 ```dataview
