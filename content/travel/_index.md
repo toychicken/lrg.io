@@ -14,6 +14,8 @@ images:
   - /images/globe.svg
 category: travel
 style: layout-vintage travel
+cover:
+   alt: Simple illustration of a globe 
 ---
 
 Much like the Venga bus, the LRG family do like to keep on movin', and keep a record of places we've been.

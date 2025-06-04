@@ -12,6 +12,8 @@ tags:
  - Language
  - Heuristics
 style: "experiments"
+cover:
+  alt: Screenshot of the quickfox tool
 ---
 Ever wondered "What is the shortest sentence in english that uses all the letters of the alphabet"? Perhaps. 
 

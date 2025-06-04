@@ -7,6 +7,9 @@ author: Leigh R Garland
 subtitle: Everything defined
 images: 
     - /images/aggresive_lookin_cows@600x600.jpg
+cover:
+  attribution: 
+  alt: A bunch of aggressive looking cows
 tags: 
     - cover-max
     - style

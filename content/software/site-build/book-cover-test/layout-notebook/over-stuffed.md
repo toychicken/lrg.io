@@ -16,6 +16,8 @@ author: Leigh R Garland
 subtitle: Neutral milk hotel yes plz tote bag, lorem cupidatat forage banh mi hell of synthlorem cupidatat forage banh mi hell of synth
 images: 
     - /images/web-component-failure.svg
+cover:
+   alt: Simple line illustration of A woman angrily smashing a desk and computer with a baseball bat
 style: layout-notebook misc
 ---
 **If you're reading this, you've accidentally landed on some test pages that demonstrate the variety of different 'cover' styles I've made**. Paleo prism farm-to-table mixtape, 90's aliqua brunch 3 wolf moon. Sartorial typewriter shaman bitters squid. Man bun gorpcore lo-fi non godard. Keytar mukbang gorpcore gatekeep shabby chic taiyaki. Pop-up paleo glossier, seitan lyft bruh plaid. Four dollar toast shoreditch raclette 3 wolf moon typewriter aliqua blackbird spyplane locavore.

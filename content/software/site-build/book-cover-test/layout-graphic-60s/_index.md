@@ -11,8 +11,8 @@ images:
 category: 
 style: layout-graphic-60s experiments
 cover:
-  attribution: 
-  alt: A vintage typewriter dramatically lit
+  attribution:  Cover photo by [Yusuf Evli](https://unsplash.com/@yusufevli?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on https://unsplash.com/photos/turned-on-desk-lamp-near-calculator-m_x9ej4BeK4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  alt:  A dramatically lit vintage Mercedes typewriter
 noPreview: true
 ---
 

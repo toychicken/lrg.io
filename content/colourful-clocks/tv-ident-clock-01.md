@@ -15,6 +15,8 @@ images:
   - /images/tv-ident-clock-01_sq.jpg
 category: 
 style: layout-classic experiments
+cover:
+  alt: Screenshot of the TV ident clock
 ---
 
 

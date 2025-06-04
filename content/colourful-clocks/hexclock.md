@@ -15,6 +15,8 @@ images:
   - /images/hexclock-02.jpg
 category: 
 style: layout-classic experiments
+cover:
+  alt: "A screenshot of Hexclock v2.0 shows 20:35"
 ---
 
 Another clock experiment, this time a direct successor to my original Hexclock from 10+ years ago. I wanted to update it a little, to use multiple gradients and improve the way that they were calculated. As with the [TV ident clock](/colourful-clocks/tv-ident-clock-01) I'm not using any libraries, frameworks or stuff like that, with the aim of keeping my JS & CSS skills up to scratch.

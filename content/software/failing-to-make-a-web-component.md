@@ -16,6 +16,8 @@ images:
   - /images/web-component-failure.svg
 category: 
 style: layout-vintage experiments
+cover:
+  alt: "Illustration of someone violently destroying a desktop computer with some kind of bat. It probably deserved it."
 ---
 I think I should know about Web Components&trade; I have no idea how this is going to work, but I have used Vue & React components in the past. I personally feel like Web Components should be the way forward, but my lazy self has not spent any serious time trying to get to grips with them
 

@@ -1,10 +1,13 @@
 ---
-subheading: "Reticulating splines..."
-title: "Hello world*"
+subheading: Reticulating splines...
+title: Hello world*
 date: 2023-10-21
-subtitle: "Spinning around"
-description: "It's nothing I'd want to share in front of my mother"
-images: ["/images/aggresive_lookin_cows.jpg"]
+subtitle: Spinning around
+description: Bits and bobs from the brain and fingers of LRG.
+images:
+  - /images/share_bookshelf.png
+cover:
+  alt: Preview of my 'bookshelf' style site list
 ---
 
 It's me, Leigh :wave:
