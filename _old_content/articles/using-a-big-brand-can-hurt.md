@@ -8,8 +8,9 @@ mainImage:
   src: "/images/aggresive_lookin_cows.jpg"
   title: "Aggressive lookin' cows"
 images:
-- "/images/aggresive_lookin_cows@600x600.jpg"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
+  - "/images/aggresive_lookin_cows@600x600.jpg"
+cover:
+  alt: A herd of aggressive looking cows staring straight at the camera
 ---
 
 Too often, start-ups within large enterprises try to leverage existing brand-loyalty in order to get customers over the hump to purchase an early-stage product. Unless you provide some kind of _real_ value, your customers will smell something fishy about it.

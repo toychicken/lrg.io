@@ -8,9 +8,7 @@ mainImage:
   src: "/images/cassettes@600x600.jpg"
   title: "Playlists"
 images:
-##### Add 600x600 OG:image here
-- "/images/cassettes@600x600.jpg"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
+  - "/images/cassettes@600x600.jpg"
 ---
 
 # Playlists

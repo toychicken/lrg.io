@@ -13,9 +13,7 @@ mainImage:
   src: "/images/wrestlemania.jpg"
   title: "Kidulthood memories"
 images:
-##### Add 600x600 OG:image here
-- "/images/wrestlemania@600x600.jpg"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
+  - "/images/wrestlemania@600x600.jpg"
 ---
 
 {{< shape "/images/cassette_kidulthood.png" left >}}

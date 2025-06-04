@@ -4,7 +4,6 @@ date: 2019-03-04T11:22:24Z
 description: "As a 'lazy' developer, I'm always looking for efficient ways to automate stuff. As a product owner, there's great value in doing stuff by hand."
 draft: true
 author: "Leigh Garland"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
 Two important lessons I learned as a young man, temping my way through Art School and University. They are contrary, but I have found them to be helpful to consider.

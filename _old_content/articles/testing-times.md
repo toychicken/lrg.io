@@ -8,8 +8,7 @@ mainImage:
   src: "/images/pie1.jpeg"
   title: ""
 images:
-- "/assets/profile@600x600.gif"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
+  - "/assets/profile@600x600.gif"
 ---
 
 ## When was the last time you were tested?

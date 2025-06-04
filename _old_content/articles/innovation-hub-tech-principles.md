@@ -8,8 +8,7 @@ mainImage:
   src: "/images/profile.gif"
   title: "Innovation Hub Tech Principles"
 images:
-- "/assets/profile@600x600.gif"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
+  - "/assets/profile@600x600.gif"
 ---
 
 One problem for innovation labs is that of 'mixing' with corporate IT. For _very_ good reasons, most IT departments are risk-averse where it comes to security, stability and spending.

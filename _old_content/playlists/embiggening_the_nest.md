@@ -13,9 +13,7 @@ mainImage:
   src: "/images/embiggening_the_nest.jpg"
   title: "Hard backstop"
 images:
-##### Add 600x600 OG:image here
-- "/images/embiggening_the_nest@600x600.jpg"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
+  - "/images/embiggening_the_nest@600x600.jpg"
 ---
 
 {{< shape "/images/cassette_mini.png" right >}}

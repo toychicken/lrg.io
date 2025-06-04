@@ -7,7 +7,6 @@ author: "Leigh Garland"
 mainImage:
   src: "/images/pocs.jpg"
   title: ""
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
 Here I attempt to provide some clarity around what I consider the differences between Spikes, POCs, Prototypes and the MVP. Mainly so I never have to hear the phrase "Let’s just knock up a quick MVP to see if the client likes it" again…

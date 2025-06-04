@@ -8,9 +8,7 @@ mainImage:
   src: "/images/profile.gif"
   title: "Goodbye and Good Luck"
 images:
-##### Add 600x600 OG:image here
-- "/assets/profile@600x600.gif"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
+  - "/assets/profile@600x600.gif"
 ---
 
 I've been lucky enough to work for one of the most productive business innovation units I've ever seen at [John Lewis Partnership Ventures](http://www.jlpventures.co.uk/). Yet, I'm leaving. My contract has come to an end, but for the first time in many years, I'm genuinely sorry to be going.

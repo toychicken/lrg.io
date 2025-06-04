@@ -8,9 +8,7 @@ mainImage:
   src: "/images/pre-mortem_main.jpg"
   title: "The Cause of Death"
 images:
-##### Add 600x600 OG:image here
-- "/images/pre-mortem.jpg"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
+  - "/images/pre-mortem.jpg"
 ---
 
 In my current project, we just conducted a pre-mortem on our product. It can be a really valuable way of uncovering threats to the survival and success of your product or service. So, what did we discover?

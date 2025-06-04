@@ -13,9 +13,7 @@ mainImage:
   src: "/images/singapore_by_night@600x600.jpg"
   title: "Kidulthood memories"
 images:
-##### Add 600x600 OG:image here
-- "/images/singapore_by_night@600x600.jpg"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
+  - "/images/singapore_by_night@600x600.jpg"
 ---
 
 {{< shape "/images/cassette_soundtrack-to-a-movie.png" left />}}

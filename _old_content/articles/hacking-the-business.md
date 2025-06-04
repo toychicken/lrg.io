@@ -4,7 +4,6 @@ date: 2019-02-07T11:51:43Z
 description: "In digital transformation, it's tempting to drive innovation by 'hacking' what the business already does - but to serve a new market, or bypass an existing process that is seen as inefficient. Whilst it might drive some small incremental gains, does it actually work?"
 draft: true
 author: "Leigh Garland"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
 

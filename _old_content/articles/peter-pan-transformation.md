@@ -4,7 +4,6 @@ date: 2019-02-22T12:00:17Z
 description: ""
 draft: true
 author: "Leigh Garland"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
 Today I'd like to illustrate another common state of Innovation labs. One that I like to call 'Never-never land'. Where your strategies may have successes but, they'll never grow up.

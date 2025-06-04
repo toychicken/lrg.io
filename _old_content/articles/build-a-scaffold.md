@@ -8,9 +8,7 @@ mainImage:
   src: "/images/scaffold@900x600.jpg"
   title: "Build a Scaffold..."
 images:
-##### Add 600x600 OG:image here
-- "/images/scaffold@900x600.jpg"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
+  - "/images/scaffold@900x600.jpg"
 ---
 
 Back in March this year, I wrote about the tension between businesses that have [innovation labs and transformation units](/articles/innovation-vs-transformation/). I suggested that businesses could do more with transformation and rely less on innovation, by turning transformation into a process practice, rather than a single-hit 'transformation'. Evolution over revolution if you like.

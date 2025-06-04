@@ -8,9 +8,7 @@ mainImage:
   src: "/images/profile.gif"
   title: "Shiny New Mac"
 images:
-##### Add 600x600 OG:image here
-- "/assets/profile@600x600.gif"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
+  - "/assets/profile@600x600.gif"
 ---
 
 Well it's been a while, and wow has the world taken an unusual turn. We're in the 3rd month of lockdown here in the UK, and I've joined forces with another Lee, to create a new company.

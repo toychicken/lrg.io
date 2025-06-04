@@ -6,9 +6,7 @@ description: ""
 draft: true
 author: "Leigh Garland"
 images:
-##### Add 600x600 OG:image here
-- "/assets/profile@600x600.gif"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
+  - "/assets/profile@600x600.gif"
 ---
 {{< main_image "/images/pre-mortem_main.jpg" >}}
 ## First, why?

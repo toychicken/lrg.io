@@ -13,9 +13,7 @@ mainImage:
   src: "/images/hard-backstop.jpg"
   title: "Hard backstop"
 images:
-##### Add 600x600 OG:image here
-- "/images/hard-backstop@600x600.jpg"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
+  - "/images/hard-backstop@600x600.jpg"
 ---
 
 {{< shape "/images/cassette_mini@75deg.png" left >}}

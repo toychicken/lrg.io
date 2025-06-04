@@ -8,7 +8,6 @@ customAuthor:
   TwitterUser: "@shillbottle"
   profileImg: "/images/profile.png"
   description: "Martin 'Shorty' McShort is a drunk and a rascal, and should not be trusted"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
 Yet again, I find myself coming up against using the word ‘usable’ to describe an application.

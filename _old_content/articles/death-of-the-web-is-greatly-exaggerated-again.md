@@ -8,9 +8,7 @@ mainImage:
   src: "/images/funeral_for_the_web.jpg"
   title: "Death of the Web Is Greatly Exaggerated"
 images:
-##### Add 600x600 OG:image here
-- "/images/funeral_for_the_web@600x600.jpg"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
+  - "/images/funeral_for_the_web@600x600.jpg"
 ---
 
 I was reminded recently of an article ([The Sudden Death of the Website](https://techcrunch.com/2018/02/13/the-sudden-death-of-the-website/)) that was posted in 2018, by Rob LoCascio, CEO of LivePerson, predicting that "_In 2018, we will see the first major brand shut down its website._".

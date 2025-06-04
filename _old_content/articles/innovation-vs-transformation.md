@@ -8,9 +8,8 @@ mainImage:
   src: "/images/distracted_business_cover.jpg"
   title: "Innovation vs Transformation"
 images:
-- "/images/distracted_business_cover.jpg"
+  - "/images/distracted_business_cover.jpg"
 - "/assets/profile@600x600.gif"
-##### Note - The title in the Front matter above is replayed at the top of the rendered article
 ---
 
 Many large enterprises are struggling to reconcile social, economic and technological disruption. Disruptive businesses dominate entire sectors before the incumbents even know what's happening. As a response to this new world, they create "innovation labs" and "transformation units".
