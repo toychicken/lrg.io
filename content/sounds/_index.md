@@ -17,6 +17,10 @@ images:
   - /images/cassette_hand_drawn.svg
 category: 
 style: layout-vintage music
+cover:
+  alt: A hand-drawn cassette, like something from the 80s.
+aliases:
+  - /audio
 ---
 
 It feels a bit odd to say "I love music", because I find it hard to imagine a human that doesn't love music of some form or another. If you don't love music, this part of the site is probably not for you.

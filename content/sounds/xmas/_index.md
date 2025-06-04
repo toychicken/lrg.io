@@ -12,6 +12,11 @@ tags:
  - xmas
  - festive
 author: ExtraLRG
+aliases:
+  - /audio/xmas
+cover:
+  attribution:
+  alt: A visiting Santa with an abundant polyester beard, sitting in a fir-tree grotto with fairy lights.
 ---
 
 Every Christmas there's a considerable amount of low-key argument about what music to play. We have a number of playlists that get trotted out, with Dr G's "Christmas 2017" winning most of the battles. Mainly because it's been honed over a few years to meet Dr G's and Baby G's requirements exactly. It's a fairly bulletproof mix of festive hits, from [Mariah Carey](https://open.spotify.com/track/0bYg9bo50gSsH3LtXe2SQn?si=72575ad0f7cb4f65) to [Jona Lewie](https://open.spotify.com/track/517HDzHbAwuGM25wiU5r9J?si=2d009c04b2084a1d). Also over the years, we have instituted a "No Christmas music before December 1st" rule, which means we're not _too_ sick of it all by Christmas day. 

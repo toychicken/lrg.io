@@ -16,7 +16,11 @@ images:
   - /images/ely_cathedral_choir.jpg
 category: 
 style: layout-modern music
-covermd: "Ely Cathedral Choir, by Diliff, CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:Ely_Cathedral_Choir,_Cambridgeshire,_UK_-_Diliff.jpg"
+cover:
+  attribution:  "Ely Cathedral Choir, by Diliff, CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:Ely_Cathedral_Choir,_Cambridgeshire,_UK_-_Diliff.jpg"
+  alt:  "Ely Cathedral Choir, by Diliff, CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:Ely_Cathedral_Choir,_Cambridgeshire,_UK_-_Diliff.jpg"
+aliases:
+  - /audio/the_lamb
 ---
 We were at Ely Cathedral last night for Baby G's school held a "Nine lessons" service, where she was singing in the main choir. Generally an excellent evening. A particular standout for me was the school's chamber choir, and their performance of  'The Lamb' by John Tavener. This was somewhat of a Proustian moment for me.
 

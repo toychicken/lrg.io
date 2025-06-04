@@ -13,8 +13,12 @@ tags:
 application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
 category: christmas
 style: layout-graphic-60s music
-covermd: Bob Dylan (left) in the video for "Must be Santa"
+cover:
+  attribution:  Bob Dylan (left) in the video for "Must be Santa"
+  alt:  Bob Dylan (left) in the video for "Must be Santa"
 author: Bob Dylan
+aliases:
+  - /audio/xmas/bob_dylan_theme_time_xmas
 ---
 No arguments from LRG family at Christmas. Given the right opportunity, we must listen to the Bob Dylan Theme Time Radio Hour Christmas & New Year special.
 
