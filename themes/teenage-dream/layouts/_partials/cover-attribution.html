@@ -1,0 +1,3 @@
+{{ with .Params.cover.attribution }}
+    <p class="cover-attribution">Cover image: {{ . | emojify | markdownify }}</p>
+{{ end }}

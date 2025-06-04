@@ -7,8 +7,8 @@
 
     {{ if .Page.IsHome }}
 
-
-        {{ range first 1 .Site.RegularPages }}
+        {{ $homepages := where .Site.RegularPages "Section" "ne" "notes" }}
+        {{ range first 1 $homepages }}
             <h2>{{ .LinkTitle }}</h2>
             {{ .Summary }}<a href="{{ .RelPermalink }}">&hellip;Read more</a>
         {{ end }}
@@ -28,7 +28,7 @@
 
 
     {{ end }}
-    {{ partial "partials/cover-attribution.html" . }}
+    {{ partial "cover-attribution.html" . }}
 {{ end }}
 
 {{ define "aside" }}    

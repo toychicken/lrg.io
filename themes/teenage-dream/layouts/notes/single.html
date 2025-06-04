@@ -3,20 +3,13 @@
 {{ end }}
 
 {{ define "main" }}
-    {{ partial "single/post-content.html" . }}
+    {{ if .Content }}
 
-    <summary>
-        <details>
+        {{ .Content }}
 
-                <pre>
-                    <code>
-{{ .Params.source }}
-                    </code>
-                </pre>
-                
 
-        </details>
-    </summary>
+
+    {{ end }}
 {{ end }}
 
 {{ define "aside"}}

@@ -1,6 +1,7 @@
-<a href="{{ .Permalink }}" class="tweet-image">
+<div class="cover-image">
 
     {{ $src:= 0 }}
+    {{ $altText:= "" }}
 
     {{ if .Params.images }}
         {{ $src = (index .Params.images 0) }}
@@ -8,6 +9,10 @@
 
     {{ if .Params.thumb }}
         {{ $src =  .Params.thumb }}
+    {{ end }}
+
+    {{ if .Params.cover.alt }}
+        {{ $altText = .Params.cover.alt }}
     {{ end }}
 
     {{ $pathArr := split $src "." }}
@@ -18,7 +23,7 @@
 
     <picture>
         {{ if eq $ext "svg" }}
-            <img src="{{ $src }}" />
+            <img src="{{ $src }}" alt="{{ $altText }}"/>
         {{ else }}
 
         {{ $images := $.Site.GetPage "section" "images" }}
@@ -31,7 +36,7 @@
                 <source srcset="{{ $img1x.RelPermalink }}" media="(max-width: 767px)">
                 <!-- Shows inline -->
                 <source srcset="{{ $img2x.RelPermalink }}" media="(min-width: 768px)">
-                <img src="{{ $img2x.RelPermalink }}"  />
+                <img src="{{ $img2x.RelPermalink }}" alt="{{ $altText }}"/>
             {{ end }}
             {{ end }}
     </picture>
@@ -40,5 +45,5 @@
      <div class="background"></div>
     {{ end }}
 
-</a>
+</div>
 

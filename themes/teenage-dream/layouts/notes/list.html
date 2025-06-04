@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+{{ $pages := .RegularPages }}
+{{ range (.Paginate $pages 30).Pages }}
+
+<div>
+    <a href="{{ .RelPermalink }}">
+
+        <time class="dt-published" datetime="{{ .Date }}">
+            {{ .Title}}
+        </time>
+    </a>
+    {{ .Content }}</div>
+  <hr />
+{{ end }}
+{{ partial "pagination.html" . }}
+
+{{ end }}
