@@ -18,3 +18,8 @@ aside figure figcaption {
 aside picture.thumbnail-image {
     max-width: 50%;
 }
+
+img[alt=''] {
+    outline:28px dashed red;
+    border:28px dashed black;
+}
