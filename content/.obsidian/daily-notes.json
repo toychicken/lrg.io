@@ -1,0 +1,6 @@
+{
+  "format": "YYYY-MM-DD_HHmmss",
+  "folder": "notes",
+  "template": "_templates/note",
+  "autorun": true
+}
