@@ -6,7 +6,9 @@ theme: teenage-dream
 publishDir: public
 pagination:
   pagerSize: 30
-ignorefiles: content/_templates/.*
+ignorefiles: 
+  - content/_templates/.*
+  - content/_analysis/.*
 markup:
   goldmark:
     typographer:
