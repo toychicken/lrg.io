@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notebook on LRG</title>
+    <link>https://lrg.io/tags/notebook/</link>
+    <description>Recent content in Notebook on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <atom:link href="https://lrg.io/tags/notebook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Default</title>
+      <link>https://lrg.io/software/site-build/book-cover-test/layout-default/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lrg.io/software/site-build/book-cover-test/layout-default/</guid>
+      <description>&lt;p&gt;This layout style is inspired by really early penguin classics. It accepts all the theme colours, but doesn&amp;rsquo;t have a place to display an image.&lt;/p&gt;&#xA;&lt;p&gt;If the author is not defined, the layout will display the official Chicken logo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notebook</title>
+      <link>https://lrg.io/software/site-build/book-cover-test/layout-notebook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lrg.io/software/site-build/book-cover-test/layout-notebook/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vintage</title>
+      <link>https://lrg.io/software/site-build/book-cover-test/layout-vintage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lrg.io/software/site-build/book-cover-test/layout-vintage/</guid>
+      <description>&lt;p&gt;&lt;code&gt;style: layout-vintage&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Can take quite long headlines, and other text elements. Simple .svg images work really well - especially things like clip art or cartoonos, but bitmap images don&amp;rsquo;t really fit the style very well, and may look squashed if they&amp;rsquo;re not square to match the available space.&lt;/p&gt;&#xA;&lt;p&gt;The &lt;code&gt;author&lt;/code&gt; attribute will not show&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

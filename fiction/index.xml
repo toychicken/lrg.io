@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fiction on LRG</title>
+    <link>https://lrg.io/fiction/</link>
+    <description>Recent content in Fiction on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 11 Dec 2024 17:27:00 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/fiction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Great Forgetting</title>
+      <link>https://lrg.io/fiction/the-great-forgetting/</link>
+      <pubDate>Wed, 11 Dec 2024 17:27:00 +0000</pubDate>
+      <guid>https://lrg.io/fiction/the-great-forgetting/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;The end came when we had turned almost every surface, every structure, every material into a storage medium for the immortal mega-rich.&lt;/p&gt;&lt;/blockquote&gt;</description>
+    </item>
+  </channel>
+</rss>
