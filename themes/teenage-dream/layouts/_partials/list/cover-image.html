@@ -26,8 +26,8 @@
             <img src="{{ $src }}" alt="{{ $altText }}"/>
         {{ else }}
 
-        {{ $images := $.Site.GetPage "section" "images" }}
-        {{ $img := $images.Resources.GetMatch (strings.TrimPrefix "/images/" $src) }}
+
+        {{ $img := resources.GetMatch (strings.TrimPrefix "/" $src) }}
             {{ with $img }}
                 {{ $img1x := .Resize "600x"}}
                 {{ $img2x := .Resize "432x"}}

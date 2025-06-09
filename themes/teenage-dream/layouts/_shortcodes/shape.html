@@ -1,4 +1,8 @@
-<img class="shape-{{ .Get 1 }}" src="{{ .Get 0 }}" style="shape-outside: url('{{ .Get 0 }}')" alt="{{ .Get 2 }}" />
+{{ $img := resources.GetMatch (.Get 0) }}
+
+
+
+<img class="shape-{{ .Get 1 }}" src="{{ $img.RelPermalink }}" style="shape-outside: url('{{ $img.RelPermalink }}')" alt="{{ .Get 2 }}" />
 
 {{ .Inner | emojify | markdownify }}
 

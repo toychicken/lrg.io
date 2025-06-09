@@ -1,0 +1,62 @@
+{{/*  
+{{ $shareImages := partial "_funcs/get-page-images.html" . }}
+
+{{ $baseImg := resources.Get "images/share_frame1200x627-630x627.png" }}
+{{ range $shareImages }}
+
+  {{ $path := .RelPermalink | strings.TrimPrefix "/" }}
+  {{ $authorThumb := resources.GetMatch $path }}
+
+  {{ with $authorThumb }}
+    {{ if ne .MediaType.SubType "svg" }}
+
+        {{/*  WORKING NOW  */}}
+      {{/* $filters := slice
+        (images.Gamma 0.75)
+        (images.Sepia 60)
+        (images.Process "fill 630x627 bottom center")
+        (images.Saturation -85)
+
+      }}
+
+    {{ $authorImage := . | images.Filter $filters }}
+
+
+      {{ $overFilter := images.Overlay $authorImage 0 0 }}
+      
+      {{ with $baseImg | images.Filter $overFilter }}
+        {{ return $baseImg }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+{{ end }}  */}}
+
+
+{{ $basePath := .base }}
+{{ $page := .author }}
+
+{{ $shareImages := partial "_funcs/get-page-images.html" $page }}
+{{ $baseImg := resources.Get $basePath }}
+
+{{ range $shareImages }}
+  {{ $path := .RelPermalink | strings.TrimPrefix "/" }}
+  {{ $authorThumb := resources.GetMatch $path }}
+
+  {{ with $authorThumb }}
+    {{ if ne .MediaType.SubType "svg" }}
+
+      {{ $filters := slice
+          (images.Process "resize 630x")
+          (images.Saturation -100)
+      }}
+
+      {{ $authorImage := . | images.Filter $filters }}
+
+      {{ return $baseImg.Overlay $authorImage (dict "anchor" "left" "x" 0 "y" 0) }}
+
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $baseImg }} {{/* fallback if no overlay */}}
