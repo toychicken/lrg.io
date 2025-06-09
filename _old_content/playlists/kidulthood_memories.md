@@ -16,7 +16,7 @@ images:
   - "/images/wrestlemania@600x600.jpg"
 ---
 
-{{< shape "/images/cassette_kidulthood.png" left >}}
+{{< shape "/images/cassette_kidulthood.png" left "A pretty cassette" >}}
 
 
 This is a real mish-mash of a mixtape. It's a taster of the music that (for better or worse) influenced a young me mostly in the 80s. It'll keep growing as I remember stuff.

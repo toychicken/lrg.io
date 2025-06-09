@@ -16,7 +16,7 @@ images:
   - "/images/limoncello@600x600.jpg"
 ---
 
-{{< shape "/images/cassette_limoncello.png" left >}}
+{{< shape "/images/cassette_limoncello.png" left "A pretty cassette" >}}
 
 A fading starlet gives her last performance to a small crowd of well-wishers. She turns away from the microphone briefly, to cough bloody spittle into a silk hankerchief. Afterwards, she gets a car to the aerodrome, where her plane awaits to take her into the beyond...
 

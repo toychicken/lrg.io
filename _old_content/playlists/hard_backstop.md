@@ -16,7 +16,7 @@ images:
   - "/images/hard-backstop@600x600.jpg"
 ---
 
-{{< shape "/images/cassette_mini@75deg.png" left >}}
+{{< shape "/images/cassette_mini@75deg.png" left "A pretty cassette" >}}
 This one was compiled as a bit of personal response to Brexit. Although I'm angry about it on many levels, I really wanted some music that would help calm, rather than inflame.
 
 {{< /shape >}}
