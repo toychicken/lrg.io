@@ -6,10 +6,9 @@ content/*.canvas
 *.asc
 
 
-### Don't include generated files
+### Don't include generated files 
 
 public/
-resources/
 
 ### Node template
 # Logs
