@@ -7,6 +7,7 @@ date: 2024-10-04T12:15:00
 draft: false
 images:
   - /images/hugo-gopher-hero.svg
+  - /images/hugo-gopher-hero.png
 style: layout-classic
 cover:
   alt: The cute gopher logo of the Hugo organisation

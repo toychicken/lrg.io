@@ -18,7 +18,7 @@ cover:
 ---
 This all began with a post on my socials... 
 
-![CSS nerds, I need your help, please. I can style a link to an external site with the full URL path in text after it using a[href]=:not([href^=l'https://neilzone.co.uk'i]):after{content:'('attr(href)')';} I don't think that there is a CSS-only (i.e. no Javascript, no extra element/attribute in the html) way of limiting this to just the domain of the external link, rather than the full href link. Am I wrong?](neil-brown-css-nerd-callout.png)
+![CSS nerds, I need your help, please. I can style a link to an external site with the full URL path in text after it using a[href]=:not([href^=l'https://neilzone.co.uk'i]):after{content:'('attr(href)')';} I don't think that there is a CSS-only (i.e. no Javascript, no extra element/attribute in the html) way of limiting this to just the domain of the external link, rather than the full href link. Am I wrong?](/images/neil-brown-css-nerd-callout.png)
 
 [https://mastodon.neilzone.co.uk/@neil/113244632967157645](https://mastodon.neilzone.co.uk/@neil/113244632967157645 "Original post")
 
@@ -55,7 +55,7 @@ Here is a variety of links to test Hugo and/or CSS to show just the domain for e
 
 I wanted to account for all the ways you can present links in markdown, in Hugo. It looks something like this:
 
-![Example render of all the links rendered with no manipulation](hugo-bending-links-starting-point.png "Unchanged render")
+![Example render of all the links rendered with no manipulation](/images/hugo-bending-links-starting-point.png "Unchanged render")
 I think it's those pesky auto-generated deeplinks that Neil wants to make a little prettier.
 
 The rendered link looks like:
@@ -111,7 +111,7 @@ a[data-domain]::after {
 
 But, this was a bit messy, as the `data-domain` was missing for relative links, and rendered some odd dashes at the end of lines. Also, where the markdown had infered the link test from the url, it looked even messier. I couldn't find a neat way to reliably style out the _actual_ link text leaving only the shorter hostname.
 
-![Sample render of links only showing the top level domain](hugo-bending-links-data-domain-approach.png "data-domain approach")
+![Sample render of links only showing the top level domain](/images/hugo-bending-links-data-domain-approach.png "data-domain approach")
 
 Given I had the `urls.Parse` method, I now realised I could do something a little more fancy-schmancy, and build up some additional elements, easily styled by CSS. Something like this:
 
@@ -137,7 +137,7 @@ a[href]:not([href*="://localhost"]) .link-text {
 
 Thinking this would pretty much do the trick, but... it fails on relative links,  because they too don't match the `://localhost` domain. Looks like:
 
-![Sample render, links with relative paths don't show up at all](hugo-bending-links-weird-selector-hell.png)
+![Sample render, links with relative paths don't show up at all](/images/hugo-bending-links-weird-selector-hell.png)
 
 Oops 😦
 
@@ -179,7 +179,7 @@ a[href]:not([href*="://localhost"]):not(.relative) .link-text {
 
 And this renders like this:
 
-![Sample render, most things are working but the explicit text doesn't show up on the last four links.](hugo-bending-links-relatively-solved.png)
+![Sample render, most things are working but the explicit text doesn't show up on the last four links.](/images/hugo-bending-links-relatively-solved.png)
 
 Which is looking _loads_ better, but has nixed the explicit text on the last four of those links 😢 _and_  is still showing the domain for the absolute link too.
 
@@ -256,7 +256,7 @@ a.external.implied {
 
 And this renders like this. Pretty much nails it... 
 
-![Sample render, looks like it's working as expected](hugo-bending-link-almost-nailed-it.png)
+![Sample render, looks like it's working as expected](/images/hugo-bending-link-almost-nailed-it.png)
 
 ## Bingo!
 
@@ -307,7 +307,7 @@ a.external.implied {
 
 ...and bingo.
 
-![Sample render, working nicely](hugo-bending-links-bingo.png)
+![Sample render, working nicely](/images/hugo-bending-links-bingo.png)
 
 ## Over-engineering
 
@@ -370,7 +370,7 @@ a[title]::after {
 
 and we _get_ titles. Which you can style if you want. It also gives you the title on when the mouse hovers over the link. 
 
-![Sample render, with a little extra work, it now shows a title with the native on-hover](hugo-bending-links-adding-titles.png) 
+![Sample render, with a little extra work, it now shows a title with the native on-hover](/images/hugo-bending-links-adding-titles.png) 
 
 ## One more thing
 

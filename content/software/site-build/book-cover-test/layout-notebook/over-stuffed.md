@@ -15,7 +15,8 @@ subheading: Cred magna gentrify, in bitters activated charcoal health goth
 author: Leigh R Garland
 subtitle: Neutral milk hotel yes plz tote bag, lorem cupidatat forage banh mi hell of synthlorem cupidatat forage banh mi hell of synth
 images: 
-    - /images/web-component-failure.svg
+  - /images/web-component-failure.svg
+  - /images/web-component-failure.png
 cover:
    alt: Simple line illustration of A woman angrily smashing a desk and computer with a baseball bat
 style: layout-notebook misc

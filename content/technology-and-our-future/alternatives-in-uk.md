@@ -11,6 +11,7 @@ tags:
 application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
 images:
   - /images/alt-uk_logo.svg
+  - /images/alt-uk_logo.png
 category: 
 style: layout-modern world-affairs
 cover:

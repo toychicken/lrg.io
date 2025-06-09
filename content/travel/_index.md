@@ -12,6 +12,7 @@ application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
 draft: true
 images:
   - /images/globe.svg
+  - /images/globe.png
 category: travel
 style: layout-vintage travel
 cover:

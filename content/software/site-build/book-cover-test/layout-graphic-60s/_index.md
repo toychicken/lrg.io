@@ -32,7 +32,7 @@ subheading: Full bleed, slightly desaturated image
 author: Leigh R Garland
 subtitle: Everything defined
 images: 
-    - /images/yusuf-evli-m_x9ej4BeK4-unsplash@600x757.jpg
+  - /images/yusuf-evli-m_x9ej4BeK4-unsplash@600x757.jpg
 style: layout-graphic-60s world-affairs
 ---
 ```

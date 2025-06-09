@@ -17,7 +17,7 @@ cover:
 ---
 This showed up in my feed today, and I just felt like I needed to talk about it.
 
-![Tweet from Marc Andreessen: "A world in which human wages crash from AI - logically, necessarily -- is a world in which productivity growth goes through the roof, and prices for goods and services crash to near zero. Consumer cornucopia. Everything you need and want for pennies."](Pasted%20image%2020250127101958.png)
+![Tweet from Marc Andreessen: "A world in which human wages crash from AI - logically, necessarily -- is a world in which productivity growth goes through the roof, and prices for goods and services crash to near zero. Consumer cornucopia. Everything you need and want for pennies."](/images/Pasted%20image%2020250127101958.png)
 Just for your own sanity what you do do not log into Marc Andreessen Twitter account and look at it because it's absolutely stark raving bonkers there is so much cognitive dissonance in there. It should be locked in the anechoic chamber so that it sounds never escape.
 
  let's be clear about this crashes are never good. When was the last time you had a car crash and thought great this will really enable something good to happen in my life? When was the last time there was a financial crash and everybody said that's fantastic now there's all this opportunity lying around that we can just take?

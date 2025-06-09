@@ -13,6 +13,7 @@ tags:
 application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
 images:
   - /images/man_in_labcoat.svg
+  - /images/man_in_labcoat.png
 category: 
 style: world-affairs
 cover:

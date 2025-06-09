@@ -13,6 +13,7 @@ tags:
 application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
 images:
   - /images/dice.svg
+  - /images/dice.png
 category: 
 style: layout-vintage misc
 cover:

@@ -15,6 +15,7 @@ tags:
 application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
 images:
   - /images/cassette_hand_drawn.svg
+  - /images/cassette_hand_drawn.png
 category: 
 style: layout-vintage music
 cover:

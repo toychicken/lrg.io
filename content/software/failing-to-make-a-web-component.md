@@ -14,6 +14,7 @@ application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
 draft: false
 images:
   - /images/web-component-failure.svg
+  - /images/web-component-failure.png
 category: 
 style: layout-vintage experiments
 cover:
@@ -45,7 +46,7 @@ So, I guess the first thing is 'what' to build. Something that doesn't require a
 
 I'm going to try to replicate my [Quick Fox](/quick-fox) pangram tester as a web component. It's graphically pretty simple, but distinctive (so I'll know if I get weird style bleed-through) and can take values from the page queryString, to pre-populate form fields.
 
-![Quick Fox pangram checker](quickfox.png)
+![Quick Fox pangram checker](/images/quickfox.png)
 
 It _should_ look something like this ☝
 
