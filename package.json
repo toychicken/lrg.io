@@ -4,7 +4,7 @@
   "version": "8.0.2",
   "type": "module",
   "scripts": {
-    "pgen" : "cd scripts; nodemon link-preview-server.js",
+    "pgen": "cd scripts; nodemon link-preview-server.js",
     "local": "hugo serve -D -E -F --disableFastRender --templateMetrics",
     "deploy": "node scripts/gh-pages-deploy.js"
   },
@@ -16,7 +16,8 @@
     "nodemon": "^3.1.9",
     "puppeteer": "^23.11.1",
     "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2"
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "sharp": "^0.34.2"
   },
   "devDependencies": {
     "execa": "^9.3.0"
