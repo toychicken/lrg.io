@@ -1,4 +1,5 @@
 import { execa } from 'execa';
+const mainBranch = 'main';
 const folderName = 'docs';
 const buildFolder = 'public' // should be same as publishDir in /config.yaml 
 const pagesBranch =  'gh-pages';
@@ -20,9 +21,9 @@ const nixThese = ['_old_content', 'archetypes', 'content', 'static', 'themes', '
     await execa("git", ["checkout", "--orphan", pagesBranch]);
     console.log("Building...");
     // quick cleanup to get rid of redundant images
+    // and build into the dist folder (folderName)
     await execa("hugo" ["--gc"]);
-    // build into the dist folder (folderName)
-    await execa("hugo");
+
     await execa("mv", [`${buildFolder}`, `${folderName}`]);
     nixThese.forEach(nixy)
     console.log("Built and moved to 'docs'");
@@ -33,7 +34,7 @@ const nixThese = ['_old_content', 'archetypes', 'content', 'static', 'themes', '
     await execa(std)`git push origin HEAD:${pagesBranch} --force`;
     console.log(`Removing that ${folderName} folder`);
     await execa("rm", ["-r", folderName]);
-    await execa("git", ["checkout", "-f", "main"]);
+    await execa("git", ["checkout", "-f", mainBranch]);
     await execa("git", ["branch", "-D", pagesBranch]);
     console.log("Successfully deployed");
     await execa(std)`git stash pop`;
