@@ -2,7 +2,7 @@
 
 ## Obsidian stuff - hope they don't change it!
 content/*.canvas
-content/.obsidian/workspace.json
+.obsidian/workspace.json
 
 *.asc
 
