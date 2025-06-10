@@ -19,6 +19,8 @@ const nixThese = ['_old_content', 'archetypes', 'content', 'static', 'themes', '
     await execa(std)`git stash save "Deploy attempt" -a` // safety stash
     await execa("git", ["checkout", "--orphan", pagesBranch]);
     console.log("Building...");
+    // quick cleanup to get rid of redundant images
+    await execa("hugo --gc");
     // build into the dist folder (folderName)
     await execa("hugo");
     await execa("mv", [`${buildFolder}`, `${folderName}`]);
