@@ -2,13 +2,17 @@
 
 ## Obsidian stuff - hope they don't change it!
 content/*.canvas
+.obsidian/workspace.json
 
 *.asc
 
 
+## Hugo stuff
 ### Don't include generated files 
 
 public/
+.hugo_build.lock
+
 
 ### Node template
 # Logs
@@ -123,6 +127,3 @@ fabric.properties
 
 .DS_Store
 
-
-## Hugo stuff
-.hugo_build.lock
