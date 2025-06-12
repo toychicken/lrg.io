@@ -41,9 +41,9 @@
   --color-book-cerise-200: hsl(338, 58%, 30%);
   --color-book-cerise-100: hsl(338, 58%, 45%);
   --color-book-cerise-80: hsl(338, 58%, 60%);
-  --color-book-royal-200: hsl(251, 58%, 42%);
-  --color-book-royal-100: hsl(251, 58%, 60%);
-  --color-book-royal-80: hsl(251, 58%, 70%);
+  --color-book-royal-200: hsl(251, 45%, 56%);
+  --color-book-royal-100: hsl(251, 45%, 66%);
+  --color-book-royal-80: hsl(251, 45%, 76%);
   --color-book-oxford-200: #222;
   --color-book-oxford-100: #444;
   --color-book-oxford-80: #666;
@@ -211,6 +211,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-serif);
+  font-weight: 500;
   font-size: 1.8rem;
   display: flex;
   flex-direction: column;
@@ -861,11 +862,13 @@ p code, li code {
     grid-row: pic-small-start / span pic-small-end;
     display: flex;
     padding: 0rem; }
-    .related li.list-item.layout-vintage .cover-image picture img {
-      filter: contrast(1) sepia(1) saturate(0); }
-    .related li.list-item.layout-vintage .cover-image picture img[src$='.svg'],
-    .related li.list-item.layout-vintage .cover-image picture img[src$='.png'] {
-      mix-blend-mode: multiply; }
+    .related li.list-item.layout-vintage .cover-image picture {
+      border-radius: 0.6em; }
+      .related li.list-item.layout-vintage .cover-image picture img {
+        filter: contrast(1.2) saturate(0);
+        mix-blend-mode: multiply; }
+      .related li.list-item.layout-vintage .cover-image picture img[src$='.svg'] {
+        mix-blend-mode: multiply; }
 
 .related li.list-item.layout-modern {
   --layout-modern-panel: var(--color-black);
@@ -923,7 +926,7 @@ p code, li code {
     display: flex;
     padding-left: 0.2rem; }
     .related li.list-item.layout-modern .cover-image picture img {
-      filter: var(--img-desaturate-image) opacity(100%);
+      filter: saturate(70%) sepia(0) brightness(90%) opacity(100%);
       border-top-right-radius: 0.4rem;
       opacity: 80%; }
 
