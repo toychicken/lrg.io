@@ -4,6 +4,6 @@
   "attachmentFolderPath": "assets/images",
   "promptDelete": false,
   "useMarkdownLinks": true,
-  "showUnsupportedFiles": true,
+  "showUnsupportedFiles": false,
   "alwaysUpdateLinks": true
 }
