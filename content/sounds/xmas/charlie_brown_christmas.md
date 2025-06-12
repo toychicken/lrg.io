@@ -30,7 +30,7 @@ Often, but not always, my job over the festive period is to do the 'big shop' at
 
 I have, over the years, developed a successful strategy to avoid joining in the rampage. I adopt a policy of 'extreme calm and total cheerfulness'. I allow four hours to do a 1-hour shop, and put something chill in the headphones. I'm not usually one for Jazz, but there's something about the kind of smooth cocktail jazz of the Vince Guaraldi trio.
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7DuJYWu66RPdcekF5TuZ7w?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7DuJYWu66RPdcekF5TuZ7w?utm_source=generator" width="100%" height="600" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 Growing up in the UK, the Charlie Brown Christmas special is not so embedded in the national psyche as it is in the US. But, as a child of the 70s, it _was_ something that came on TV occasionally, and I always sought it out when I could. As I grew a little older, the "A bit like a Charlie Brown soundtrack" was a byword to describe a kind of sexy cocktail jazz sound, for me and my friends. 
 

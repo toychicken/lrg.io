@@ -23,7 +23,7 @@ cover:
 ---
 I made a playlist with a mix of old and new tracks in a sort of slightly melancholy, chill vibe. Though I had high hopes for the new Stereolab album, it all feels a bit samey. Aerial Troubles is the stand-out track.
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5uSFVrUR4J69F2Kax6Pvh7?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5uSFVrUR4J69F2Kax6Pvh7?utm_source=generator" width="100%" height="600" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
 
 This acts as a bit of a diary entry too - we went to stay at a nice campsite, near Banham Zoo. (All the G family love a zoo). On the Saturday was a little bring-your-own-dog dog show, and our Jack Russell Terrorist won the scurry race! So proud.
 
