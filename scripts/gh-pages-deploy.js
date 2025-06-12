@@ -22,7 +22,7 @@ const nixThese = ['_old_content', 'archetypes', 'content', 'static', 'themes', '
     console.log("Building...");
     // quick cleanup to get rid of redundant images
     // and build into the dist folder (folderName)
-    await execa("hugo" ["--gc"]);
+    await execa("hugo");
 
     await execa("mv", [`${buildFolder}`, `${folderName}`]);
     nixThese.forEach(nixy)
