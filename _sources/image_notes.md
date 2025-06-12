@@ -7,3 +7,5 @@ Book cover images should be optimised for the shape they're in... so the questio
 
 Max resolution for the OG image is 1200x627, with a 790x627 'safe zone' in the middle. So the main image _should_ live inside that space (almost 2/3 of the width)
 
+* [ ] Fix the SVG->PNG script so that it moves the .svg file to the /static/images folder, because .svg's don't get processed
+

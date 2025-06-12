@@ -4,7 +4,7 @@ Hopefully the table below is empty!
 
 ```dataview
 TABLE images
-FROM ""
+FROM "content"
 WHERE images AND length(images) > 0 AND !cover
 ```
 
