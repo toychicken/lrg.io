@@ -101,18 +101,21 @@
 
             picture {
 
+                    border-radius:0.6em;
+
 
 
 
                 img {
-                    filter: contrast(1) sepia(1) saturate(0);
+                    filter: contrast(1.2) saturate(0);
 
-
+                    mix-blend-mode: multiply;
                 }
 
-                img[src$='.svg'],
-                img[src$='.png'] {
+                img[src$='.svg'] {
                     mix-blend-mode: multiply;
+                }
+                img[src$='.png'] {
                 }
             }
         }

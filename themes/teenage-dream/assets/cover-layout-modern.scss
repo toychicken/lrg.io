@@ -84,7 +84,7 @@
             picture {
 
                 img {
-                    filter: var(--img-desaturate-image) opacity(100%);
+                    filter: saturate(70%) sepia(0) brightness(90%) opacity(100%) ;
                     border-top-right-radius: 0.4rem;
                     opacity: 80%;
                 }
