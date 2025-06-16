@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on LRG</title>
+    <link>https://lrg.io/tags/hugo/</link>
+    <description>Recent content in Hugo on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 04 Oct 2024 12:28:00 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bend links to your will</title>
+      <link>https://lrg.io/software/hugo-tips/bending_links/</link>
+      <pubDate>Fri, 04 Oct 2024 12:28:00 +0000</pubDate>
+      <guid>https://lrg.io/software/hugo-tips/bending_links/</guid>
+      <description>&lt;p&gt;This all began with a post on my socials&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://lrg.io/images/neil-brown-css-nerd-callout.png&#34; alt=&#34;CSS nerds, I need your help, please. I can style a link to an external site with the full URL path in text after it using a[href]=:not([href^=l’https://neilzone.co.uk’i]):after{content:’(‘attr(href)’)’;} I don’t think that there is a CSS-only (i.e. no Javascript, no extra element/attribute in the html) way of limiting this to just the domain of the external link, rather than the full href link. Am I wrong?&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;    &#xA;&#x9;&#x9;&#xA;&#x9;&#xA;&lt;a href=&#34;https://mastodon.neilzone.co.uk/@neil/113244632967157645&#34; &#xA;title=&#34;Original post&#34; &#xA;target=&#34;_blank&#34;&#xA;class=&#34;external implied&#34; &#xA;data-domain=&#34;mastodon.neilzone.co.uk&#34;&gt;&lt;span class=&#34;link-text&#34;&gt;https://mastodon.neilzone.co.uk/@neil/113244632967157645&lt;/span&gt;&lt;span class=&#34;hostname-text&#34;&gt;mastodon.neilzone.co.uk&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The consensus certainly seemed to be that it&amp;rsquo;s not possible to do this solely with CSS (which is a shame), but Neil did mention that they were investigating using Hugo to solve this.&lt;/p&gt;&#xA;&lt;p&gt;My advice was to use Render Hooks, but I couldn&amp;rsquo;t stop thinking about how  &lt;em&gt;I&lt;/em&gt; might do this, as it seemed like a neat way to present those long external links&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
