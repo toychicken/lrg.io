@@ -1,8 +1,18 @@
 
 {{ if .Date }}
-    <p class="content-meta"><span>
-        <time class="dt-published" datetime="{{ .Date }}">
-            {{ .Date.Format "2" | humanize }} {{ .Date.Format "January, 2006"}}</time>
-    </span>
-    </p>
+<div class="content-meta">
+        <p><span>
+            <time class="dt-published" datetime="{{ .Date }}">
+                {{ .Date.Format "2" | humanize }} {{ .Date.Format "January, 2006"}}</time>
+        </span>
+        </p>
+        
+        {{ with .GetTerms "tags" }}
+        <ul class="taglist" >
+            {{ range .}}
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </div>
     {{ end }}

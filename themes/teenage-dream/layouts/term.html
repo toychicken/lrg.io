@@ -1,0 +1,35 @@
+{{ define "main" }}
+    {{ $term := .Title }}
+    {{ if .Title }}
+        {{ partial "term-index-content.html" . }}
+
+    {{ end }}
+
+        {{ if .Params.noPreview}}
+           
+        {{ else }}
+        {{ range first 4 .Pages }}
+
+        <h2>{{ .LinkTitle }}</h2>
+                {{ .Summary }}
+
+                <a href="{{ .RelPermalink }}#:~:text=%23{{ $term }}">Read "{{ .LinkTitle }}"</a>
+            {{ end }}
+        {{ end }}
+
+
+    {{ partial "cover-attribution.html" . }}
+{{ end }}
+
+{{ define "aside" }}  
+        <ul role="list" class="related spines">
+            {{ range .Pages }}
+                {{ partial "list/term-item.html" .}}
+            {{ end }}
+        </ul>
+
+{{ end }}
+
+{{ define "title" }}
+    {{ .Title }} - {{ .Site.Title}}
+{{ end }}
