@@ -426,11 +426,6 @@ footer a {
   margin-block-end: 0;
   padding-top: 0; }
 
-#content h1 + h5 {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding-top: 0; }
-
 main .content-meta {
   color: var(--bg-primary);
   text-align: right;
