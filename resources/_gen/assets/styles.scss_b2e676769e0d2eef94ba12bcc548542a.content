@@ -306,7 +306,7 @@ body a {
 
 main blockquote,
 aside blockquote {
-  padding: 1em;
+  padding: 0 1em;
   font-style: italic;
   font-size: 110%; }
 
@@ -422,19 +422,46 @@ footer a {
   font-size: 80%; }
 
 #content h1 + h5 {
-  margin-block-start: 0; }
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-top: 0; }
+
+#content h1 + h5 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-top: 0; }
 
 main .content-meta {
   color: var(--bg-primary);
   text-align: right;
   margin-bottom: 2rem;
-  display: flex;
   justify-content: space-between; }
   main .content-meta time {
     color: var(--fg-primary); }
   main .content-meta a {
     text-decoration: none;
     border-bottom: 1px solid var(--fg-primary); }
+
+.taglist {
+  list-style: none;
+  padding: 0;
+  font-family: var(--font-sans-serif);
+  font-weight: 300; }
+  .taglist li {
+    display: inline-block; }
+    .taglist li a {
+      background: var(--fg-primary);
+      border-radius: 0.3em;
+      padding: 0.1em 0.4em;
+      font-size: 0.6em;
+      color: var(--bg-primary);
+      text-decoration: none; }
+      .taglist li a::before {
+        content: "#"; }
+      .taglist li a:focus, .taglist li a:active, .taglist li a:hover {
+        background: var(--bg-primary);
+        color: var(--fg-primary);
+        outline: 0.2em solid var(--fg-primary); }
 
 main img {
   max-width: 100%; }
