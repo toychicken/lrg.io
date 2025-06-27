@@ -5,16 +5,35 @@
 
     {{ end }}
 
-        {{ if .Params.noPreview}}
-           
+                {{ if eq .Params.itemPreview "none" }}
+
+            {{/*  Don't do anything here  */}}
         {{ else }}
-        {{ range first 4 .Pages }}
+             <ul role="list" class="terms">
 
-        <h2>{{ .LinkTitle }}</h2>
-                {{ .Summary }}
+                {{ range first 4 .Pages }}
+                <li>
 
-                <a href="{{ .RelPermalink }}#:~:text=%23{{ $term }}">Read "{{ .LinkTitle }}"</a>
-            {{ end }}
+                    {{ if or (eq .Section "notes") (eq .Section "twitter") }}
+                        {{ .Store.Set "DisplayDate" false }}
+                        {{ partial "content-meta.html" . }}
+                        {{ .Content }}
+
+                    {{ else }}
+                        {{ .Store.Set "DisplayDate" true }}
+                        {{ partial "content-meta.html" . }}
+                        <h2>{{ .LinkTitle }}</h2>
+
+
+                        {{ .Summary }}
+                        <a href="{{ .RelPermalink }}#:~:text=%23{{ $term }}">Read "{{ .LinkTitle }}"</a>
+
+                    {{ end }}
+                    
+                    
+                </li>   
+                {{ end }}
+            </ul>
         {{ end }}
 
 

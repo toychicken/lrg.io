@@ -1,18 +1,26 @@
+{{ $displayDate := .Store.Get "DisplayDate" }}
 
-{{ if .Date }}
+
 <div class="content-meta">
-        <p><span>
-            <time class="dt-published" datetime="{{ .Date }}">
-                {{ .Date.Format "2" | humanize }} {{ .Date.Format "January, 2006"}}</time>
-        </span>
-        </p>
-        
-        {{ with .GetTerms "tags" }}
-        <ul class="taglist" >
-            {{ range .}}
-            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-            {{ end }}
-        </ul>
+
+
+        {{ if $displayDate }}
+            <p>
+                <a href="{{ .RelPermalink }}">
+                    
+                    <time class="dt-published" datetime="{{ .Date }}">
+                        {{ .Date.Format "2" | humanize }} {{ .Date.Format "January, 2006"}}</time>
+                </a>
+            </p>
         {{ end }}
-    </div>
+
+{{/*  Always include the tags  */}}
+{{ with .GetTerms "tags" }}
+<ul class="taglist">
+    {{ range .}}
+    <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
     {{ end }}
+</ul>
+{{ end }}
+
+</div>

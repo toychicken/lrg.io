@@ -3,6 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
+    {{ .Store.Set "DisplayDate" true }}
     {{ partial "single/content.html" . }}
     {{ if .Page.Store.Get "hasMermaid" }}
     <script type="module">
@@ -20,7 +21,7 @@
           {{ if (compare.Eq .Params.style "tweet")}}
               {{ partial "list/tweet-item.html" .}}
           {{ else }}            
-              {{ partial "list/list-item.html" .}}
+              {{ partial "list/cover-item.html" .}}
           {{ end }}
 
       {{ end }}

@@ -1,19 +1,19 @@
 {{ define "main" }}
 
 {{ $pages := .RegularPages }}
-{{ range (.Paginate $pages 30).Pages }}
+{{ $paginator := .Paginate $pages 30 }}
+{{ $section := .IsSection }}
+<ul role="list" class="notes">
+  {{ range $paginator.Pages }}
+    {{ .Store.Set "DisplayDate" $section }}
+    <li>
+      {{ partial "content-meta.html" . }}
+      {{ .Summary }}
+    </li>
+  {{ end }}
+</ul>
 
-<div>
-    <a href="{{ .RelPermalink }}">
-
-        <time class="dt-published" datetime="{{ .Date }}">
-            {{ .Title}}
-        </time>
-    </a>
-    {{ .Content }}</div>
-  <hr />
-{{ end }}
 {{ partial "pagination.html" . }}
-    {{ partial "cover-attribution.html" . }}
+{{ partial "cover-attribution.html" . }}
 
 {{ end }}

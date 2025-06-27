@@ -3,13 +3,12 @@
 {{ end }}
 
 {{ define "main" }}
-    {{ if .Content }}
+        {{ .Store.Set "DisplayDate" false }}
+        {{ partial "content-meta.html" . }}
 
         {{ .Content }}
 
 
-
-    {{ end }}
 {{ end }}
 
 {{ define "aside"}}
@@ -18,11 +17,7 @@
         <ul role="list" class="related">
         {{ range . }}
 
-        {{ if (compare.Eq .Params.style "tweet")}}
-                {{ partial "list/tweet-item.html" .}}
-            {{ else }}            
-                {{ partial "list/list-item.html" .}}
-            {{ end }}
+            {{ partial "list/cover-item.html" .}}
         {{ end }}
         </ul>
 

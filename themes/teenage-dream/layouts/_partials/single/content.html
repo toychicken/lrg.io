@@ -1,10 +1,10 @@
 
+{{- partial "content-meta.html" . -}}
 <h1>{{ .Title }}</h1>
 
 {{ if .Params.Subtitle }}<h5 class="subtitle">{{ .Params.Subtitle }}</h5>{{ end }}
 
 {{- if .Content -}}
-    {{- partial "content-meta.html" . -}}
+    {{- end -}}
+    
     {{ .Content }}
-{{- end -}}
-

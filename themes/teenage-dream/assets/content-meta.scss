@@ -6,25 +6,36 @@
 
 main .content-meta {
     color: var(--bg-primary);
-    text-align: right;
+
     margin-bottom: 2rem;
 
+        display:flex;
 
     justify-content: space-between;
+        flex-direction: row-reverse;
+        margin-bottom:1em;
+        gap:2rem;
 
     time {
         color: var(--fg-primary);
+        text-wrap: nowrap;
     }
 
     a {
         text-decoration: none;
         border-bottom: 1px solid var(--fg-primary);
     }
+
+
+        
+
 }
+
 
 .taglist {
     list-style: none;
     padding: 0;
+    margin-block-start: 0;
     font-family: var(--font-sans-serif);
     font-weight: 300;
 
