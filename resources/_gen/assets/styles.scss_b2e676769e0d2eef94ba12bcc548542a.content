@@ -248,7 +248,12 @@ header .heading,
 header .subheading {
   padding: 0 var(--edge-margin); }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2em;
   padding: 0.4em 0;
   font-family: var(--font-sans-serif); }
@@ -262,13 +267,27 @@ hr {
 main {
   margin-bottom: 2rem;
   max-width: var(--readable-line-width);
-  container: main / inline-size; }
+  container: main / inline-size;
+  padding-top: 2rem; }
+  main h1:first-child {
+    padding-top: 0; }
+  main .notes > li,
+  main .terms > li,
+  main .items > li {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 2rem; }
+    main .notes > li:last-child,
+    main .terms > li:last-child,
+    main .items > li:last-child {
+      border: none; }
 
 aside {
   margin-top: 2rem;
   margin-bottom: 2rem; }
 
-header .subheading, footer {
+header .subheading,
+footer {
   padding-top: 1rem;
   padding-bottom: 1rem; }
 
@@ -289,9 +308,19 @@ header.drafty::after {
 main p {
   margin-bottom: 1rem; }
 
-body p::selection, body li::selection, body em::selection, body strong::selection,
-body h1::selection, body h2::selection, body h3::selection, body h4::selection, body h5::selection, body h6::selection,
-body figcaption::selection, body time::selection, body a::selection {
+body p::selection,
+body li::selection,
+body em::selection,
+body strong::selection,
+body h1::selection,
+body h2::selection,
+body h3::selection,
+body h4::selection,
+body h5::selection,
+body h6::selection,
+body figcaption::selection,
+body time::selection,
+body a::selection {
   background: var(--fg-primary);
   color: var(--bg-primary); }
 
@@ -418,6 +447,7 @@ footer a {
 
 .cover-attribution {
   margin-top: 1em;
+  padding-top: 0.6em;
   border-top: 1px solid var(--border-subtle);
   font-size: 80%; }
 
@@ -428,11 +458,15 @@ footer a {
 
 main .content-meta {
   color: var(--bg-primary);
-  text-align: right;
   margin-bottom: 2rem;
-  justify-content: space-between; }
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin-bottom: 1em;
+  gap: 2rem; }
   main .content-meta time {
-    color: var(--fg-primary); }
+    color: var(--fg-primary);
+    text-wrap: nowrap; }
   main .content-meta a {
     text-decoration: none;
     border-bottom: 1px solid var(--fg-primary); }
@@ -440,6 +474,7 @@ main .content-meta {
 .taglist {
   list-style: none;
   padding: 0;
+  margin-block-start: 0;
   font-family: var(--font-sans-serif);
   font-weight: 300; }
   .taglist li {
