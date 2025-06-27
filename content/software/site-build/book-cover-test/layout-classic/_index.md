@@ -13,7 +13,7 @@ style: layout-classic
 cover:
   attribution: 
   alt: A bunch of aggressive looking cows
-noPreview: true
+itemPreview: none
 ---
 
 Similar to the [Default layout](../layout-default/), this style is inspired by vintage Penguin paperbacks. Unlike Default, it has a place for an image, and will accept bitmap (.jpg & .png) images, as well as .svg formats.

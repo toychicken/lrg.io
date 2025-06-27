@@ -14,7 +14,7 @@ images:
   - /images/social_image
 category: 
 style: layout-notebook experiments
-noPreview: true
+itemPreview: none
 cover:
   attribution: 
   alt:

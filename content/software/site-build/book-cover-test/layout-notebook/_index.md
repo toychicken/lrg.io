@@ -18,5 +18,5 @@ style: layout-notebook music
 cover:
   attribution: 
   alt: My cool face, looking REAL cool
-noPreview: true
+itemPreview: none
 ---

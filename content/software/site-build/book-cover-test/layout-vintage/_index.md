@@ -19,7 +19,7 @@ style: layout-vintage misc
 cover:
   attribution: 
   alt: Illustration of two dice 
-noPreview: true
+itemPreview: none
 ---
 
 `style: layout-vintage` 

@@ -13,5 +13,5 @@ style: layout-modern travel
 cover:
   attribution: 
   alt: My cool face, looking REAL cool
-noPreview: true
+itemPreview: none
 ---

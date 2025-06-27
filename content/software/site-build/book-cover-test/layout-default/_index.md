@@ -19,7 +19,7 @@ style: world-affairs
 cover:
   attribution: 
   alt: Illustration of a bearded person wearing a labcoat
-noPreview: true
+itemPreview: none
 ---
 
 This layout style is inspired by really early penguin classics. It accepts all the theme colours, but doesn't have a place to display an image.

@@ -13,7 +13,7 @@ style: layout-graphic-60s experiments
 cover:
   attribution:  Cover photo by [Yusuf Evli](https://unsplash.com/@yusufevli?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on https://unsplash.com/photos/turned-on-desk-lamp-near-calculator-m_x9ej4BeK4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
   alt:  A dramatically lit vintage Mercedes typewriter
-noPreview: true
+itemPreview: none
 ---
 
 This style is strongly inspired by paperbacks of the 1960s and 70s, with a strong graphic image and a modern sans-serif typeface.
