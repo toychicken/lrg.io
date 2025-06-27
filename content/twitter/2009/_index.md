@@ -6,6 +6,6 @@ description: It was the year 2009...
 
 date: '2009-12-31T23:59:59'
 style: layout-notebook posts
-noPreview: true
+itemPreview: short
 ---
 It was the year 2009...

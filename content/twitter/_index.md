@@ -6,7 +6,7 @@ images:
   - /images/twitter-is-dead.png
 style: layout-notebook posts
 subheading: LRG Torment Nexus
-noPreview: true
+itemPreview: none
 cover:
   alt: Dead Twitter bird
 ---
