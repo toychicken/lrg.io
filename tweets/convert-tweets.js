@@ -145,7 +145,7 @@ for (const [kY, yr] of Object.entries(sortedByDate)) {
     images: ["/images/twitter-is-dead.png"],
     date: `${yr.title}-12-31T23:59:59`,
     style: "layout-notebook posts",
-    noPreview : true
+    itemPreview: 'none'
   }
 
 
@@ -167,7 +167,7 @@ for (const [kY, yr] of Object.entries(sortedByDate)) {
       date: DateTime.fromObject({ year: kY, month: kM }).endOf('month').toISO(),
       style: "layout-notebook posts",
       author: "@toychicken",
-      noPreview: true
+      itemPreview: none
     }
 
 
