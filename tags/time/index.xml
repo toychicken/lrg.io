@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Time on LRG</title>
+    <link>https://lrg.io/tags/time/</link>
+    <description>Recent content in Time on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 11 Nov 2024 12:22:00 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/time/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HexClock 2.0</title>
+      <link>https://lrg.io/colourful-clocks/hexclock/</link>
+      <pubDate>Mon, 11 Nov 2024 12:22:00 +0000</pubDate>
+      <guid>https://lrg.io/colourful-clocks/hexclock/</guid>
+      <description>&lt;p&gt;Another clock experiment, this time a direct successor to my original Hexclock from 10+ years ago. I wanted to update it a little, to use multiple gradients and improve the way that they were calculated. As with the &#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;&#xA;&lt;a href=&#34;https://lrg.io/colourful-clocks/tv-ident-clock-01&#34; &#xA; &#xA;target=&#34;&#34;&#xA;class=&#34;relative&#34; &#xA;data-domain=&#34;&#34;&gt;&lt;span class=&#34;link-text&#34;&gt;TV ident clock&lt;/span&gt;&lt;span class=&#34;hostname-text&#34;&gt;&lt;/span&gt;&lt;/a&gt; I&amp;rsquo;m not using any libraries, frameworks or stuff like that, with the aim of keeping my JS &amp;amp; CSS skills up to scratch.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TV Ident Clock 1</title>
+      <link>https://lrg.io/colourful-clocks/tv-ident-clock-01/</link>
+      <pubDate>Tue, 05 Nov 2024 16:38:00 +0000</pubDate>
+      <guid>https://lrg.io/colourful-clocks/tv-ident-clock-01/</guid>
+      <description>&lt;p&gt;This is the first of my re-visits of a project I did a while ago, the &amp;lsquo;Hex clock&amp;rsquo; (which was itself a CSS copy of a thing called the colourclock, which I  think is now defunct)&lt;/p&gt;&#xA;&lt;p&gt;This is inspired by those clocks that used to run before educational programming on BBC2 in the 70s and 80s.&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://lrg.io/clocks/tv-ident-01&#34; width=&#34;100%&#xA;&#34; height=&#34;400px&#34;&gt;&lt;/iframe&gt;&#xA;&lt;p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;&#xA;&lt;a href=&#34;https://lrg.io/clocks/tv-ident-01/&#34; &#xA; &#xA;target=&#34;&#34;&#xA;class=&#34;relative&#34; &#xA;data-domain=&#34;&#34;&gt;&lt;span class=&#34;link-text&#34;&gt;View in full page&lt;/span&gt;&lt;span class=&#34;hostname-text&#34;&gt;&lt;/span&gt;&lt;/a&gt; - It just runs in the browser, and if you want to install it as an &amp;lsquo;app&amp;rsquo; you can use Chrome&amp;rsquo;s &amp;ldquo;cast, save &amp;amp; share&amp;rdquo; tool.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Colourful Clocks</title>
+      <link>https://lrg.io/colourful-clocks/</link>
+      <pubDate>Tue, 05 Nov 2024 14:22:00 +0000</pubDate>
+      <guid>https://lrg.io/colourful-clocks/</guid>
+      <description>&lt;p&gt;Just a fun bunch of experiments using JS, a timer, and some CSS gradient manipulation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Minute Minder</title>
+      <link>https://lrg.io/minute-minder/</link>
+      <pubDate>Wed, 22 Aug 2012 00:00:00 +0000</pubDate>
+      <guid>https://lrg.io/minute-minder/</guid>
+      <description>&lt;p&gt;Originally from one of my earlier instances of a personal website, I&amp;rsquo;m re-doing and re-posting it here, because my &lt;em&gt;God&lt;/em&gt; it&amp;rsquo;s a perennially useful tool&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;The idea is that small inconveniences can end up costing a significant chunk of money, and this calculator helps surface those costs. Perhaps it&amp;rsquo;s a slow laptop, and you need to justify buying a new one. Perhaps it&amp;rsquo;s rationalising how much time is being wasted in a regular, pointless meeting.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

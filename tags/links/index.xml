@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Links on LRG</title>
+    <link>https://lrg.io/tags/links/</link>
+    <description>Recent content in Links on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 02 Sep 2024 15:48:00 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/links/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Useful links</title>
+      <link>https://lrg.io/software/site-build/useful_links/</link>
+      <pubDate>Mon, 02 Sep 2024 15:48:00 +0000</pubDate>
+      <guid>https://lrg.io/software/site-build/useful_links/</guid>
+      <description>&lt;h3 id=&#34;matrix-transforms&#34;&gt;Matrix transforms&lt;/h3&gt;&#xA;&lt;p&gt;Found this useful &#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#xA;&lt;a href=&#34;https://angrytools.com/css-generator/transform/&#34; &#xA; &#xA;target=&#34;_blank&#34;&#xA;class=&#34;external&#34; &#xA;data-domain=&#34;angrytools.com&#34;&gt;&lt;span class=&#34;link-text&#34;&gt;matrix transform tool&lt;/span&gt;&lt;span class=&#34;hostname-text&#34;&gt;angrytools.com&lt;/span&gt;&lt;/a&gt;, handly for getting the transforms right on my &amp;lsquo;covers&amp;rsquo; on the index page. Each book is ever-so-slightly on the wonk.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://lrg.io/images/angry_tools-matrix-generator.png&#34; alt=&#34;Screenshot of the Angry Tools Matrix Generator&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;grainy-gradients&#34;&gt;Grainy gradients&lt;/h3&gt;&#xA;&lt;p&gt;I was trying to add a little grain to my gradients on the book covers. The awesome folks at CSS-TRICKS had my back, even if I decided not to use it in the end.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
