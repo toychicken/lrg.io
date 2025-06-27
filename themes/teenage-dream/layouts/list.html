@@ -18,9 +18,9 @@
 
         {{ $displayDate := true }}
         {{/*  Sections where you don't want to display the date alongside the item preview  */}}
-        {{/*  {{ if eq .Section "twitter" }}
+        {{ if eq .Section "twitter" }}
             {{ $displayDate = false}}
-            {{ end }}  */}}
+            {{ end }}
 
         <ul role="list" class="items">
 
@@ -29,8 +29,8 @@
 
                 {{ .Store.Set "DisplayDate" $displayDate }}
                 {{ partial "content-meta.html" . }}
-                {{ if eq $itemPreview "full" }}
                 <h2>{{ .LinkTitle }}</h2>
+                {{ if eq $itemPreview "full" }}
                     {{ .Content }}
                     <a href="{{ .RelPermalink }}">Permalink</a>
                 {{ else }}
