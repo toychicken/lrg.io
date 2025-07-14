@@ -28,7 +28,7 @@
         .title {
             grid-column: pic-small-left / span pic-small-right;
             grid-row: bar-2 / span pic-small-start;
-            font-size: 1.4rem;
+            font-size: 1.4em;
             letter-spacing: 0.3em;
             background: none;
             display: flex;
@@ -58,10 +58,10 @@
 
             span {
                 flex: 0 1 auto;
-                // font-size: 1.1rem;
+                // font-size: 1.1em;
                 padding: 0;
                 margin: 0;
-                line-height: 1.3rem;
+                line-height: 1.3em;
                 text-align: center;
                 align-self: center;
                 // text-wrap: balance;
@@ -75,18 +75,18 @@
         .subheading {
             grid-column: left / span right;
             grid-row: top / span bar-1;
-            font-size: 1rem;
+            font-size: 1em;
             text-align: center;
-            height: 4rem;
+            height: 4em;
             border-bottom-style: solid;
-            border-bottom-width: 0.3rem;
+            border-bottom-width: 0.3em;
             border-bottom-color: var(--theme-default-text);
 
 
             span {
                 grid-column: pic-small-left / span pic-small-right;
                 grid-row: top / span bar-1;
-                line-height: 4rem;
+                line-height: 4em;
                 color: var(--theme-spot-contrast);
                 text-transform: uppercase;
             }
@@ -97,7 +97,7 @@
             grid-column: pic-small-left / span pic-small-right;
             grid-row: pic-small-start / span pic-small-end;
             display: flex;
-            padding: 0rem;
+            padding: 0em;
 
             picture {
 

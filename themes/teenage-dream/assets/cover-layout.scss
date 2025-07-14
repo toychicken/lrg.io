@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2em;
 
     // --book-page-shadow: 4px 1px 2px 0px #e9ddc9, 3px 4px 9px 0px #222C, inset 0px 0px 4px 0px #2226;
     // --book-page-shadow: 4px 1px 2px 0px var(--theme-empty-bg), 3px 4px 9px 0px var(--color-shadow-99), inset 0px 0px 4px 0px #2226;
@@ -24,13 +24,13 @@
             width: var(--cover-w);
             height: var(--cover-h);
 
-            border-radius: 0.1rem 0.4rem 0.4rem 0.1rem;
+            border-radius: 0.1em 0.4em 0.4em 0.1em;
             box-shadow: var(--book-page-shadow);
 
             display: grid;
             // define grid shape
-            grid-template-columns: [left] 3.5rem [pic-small-left] 3.5rem [middle-start] 3.75rem [middle] 3.75rem [middle-end] 3.5rem [pic-small-right] 3.5rem [right];
-            grid-template-rows: [top] 2rem [bar-1] 4.5rem [bar-2] 3rem [pic-large-start] 3.5rem [pic-small-start] 7.25rem [pic-center] 0.75rem [pic-top-offset] 6.5rem [pic-small-end] 3.5rem [pic-large-end] 2rem [bottom];
+            grid-template-columns: [left] 3.5em [pic-small-left] 3.5em [middle-start] 3.75em [middle] 3.75em [middle-end] 3.5em [pic-small-right] 3.5em [right];
+            grid-template-rows: [top] 2em [bar-1] 4.5em [bar-2] 3em [pic-large-start] 3.5em [pic-small-start] 7.25em [pic-center] 0.75em [pic-top-offset] 6.5em [pic-small-end] 3.5em [pic-large-end] 2em [bottom];
 
 
         }
@@ -59,7 +59,7 @@
                 display: block;
                 transform: matrix(1.00, -0.07, 0.07, 1.00, 3, 7);
                 z-index: -10;
-                border-radius: 0.4rem;
+                border-radius: 0.4em;
                 box-shadow: var(--book-page-shadow);
 
                 background: var(--official-background);
@@ -102,15 +102,15 @@
                 display: flex;
                 justify-content: center;
                 text-transform: uppercase;
-                font-size: 1.8rem;
+                font-size: 1.8em;
                 align-self: end;
                 padding: 0;
 
                 a {
                     align-self: flex-end;
-                    padding: 1rem 0;
-                    margin: 0 1rem;
-                    border-bottom: 0.20rem solid var(--theme-spot-highlight);
+                    padding: 1em 0;
+                    margin: 0 1em;
+                    border-bottom: 0.20em solid var(--theme-spot-highlight);
                     text-align: center;
                 }
 
@@ -124,8 +124,8 @@
 
                 span {
                     align-self: flex-start;
-                    padding: 1rem;
-                    font-size: 1.4rem;
+                    padding: 1em;
+                    font-size: 1.4em;
                     text-align: center;
                 }
             }
@@ -144,11 +144,11 @@
             .subheading {
                 grid-column: pic-small-left / span pic-small-right;
                 grid-row: pic-small-end / span pic-large-end;
-                font-size: 1rem;
+                font-size: 1em;
                 text-align: center;
 
                 span {
-                    line-height: 4rem;
+                    line-height: 4em;
                 }
             }
 
@@ -175,7 +175,7 @@
 
                     img[src$='.svg'] {
                         object-fit: contain;
-                        padding: 0.3rem;
+                        padding: 0.3em;
                         width: auto;
                         max-height: 100%;
                         width: 100%;
@@ -193,8 +193,8 @@
             &::after {
                 position: relative;
                 content: "DRAFT!";
-                left: 2rem;
-                top: 0rem;
+                left: 2em;
+                top: 0em;
                 font-size: 3em;
                 color: #99000099;
 

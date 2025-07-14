@@ -24,7 +24,7 @@
         .title {
             grid-column: middle-start / span right;
             grid-row: bar-1 / span bar-2;
-            font-size: 1.8rem;
+            font-size: 1.8em;
             align-self: end;
             background: none;
             display:flex;
@@ -49,10 +49,10 @@
             justify-content: left;
             background:none;
             span {
-                font-size: 1.1rem;
-                padding:0 0.6rem 0 0;
+                font-size: 1.1em;
+                padding:0 0.6em 0 0;
                 margin:0;
-                line-height: 1.3rem;
+                line-height: 1.3em;
                 text-align: left;
                 text-wrap:balance;
             }
@@ -64,11 +64,11 @@
         .subheading {
             grid-column:pic-small-left / span pic-small-right;
             grid-row: pic-large-end / span bottom;
-            font-size: 1rem;
+            font-size: 1em;
             text-align: center;
 
             span {
-                line-height: 2rem;
+                line-height: 2em;
             }
         }
 
@@ -77,7 +77,7 @@
             grid-column: left / span right;
             grid-row: pic-large-start / span pic-large-end;
             display: flex;
-            padding: 0rem;
+            padding: 0;
             overflow: hidden;
 
             picture {
