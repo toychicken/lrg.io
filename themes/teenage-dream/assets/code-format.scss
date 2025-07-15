@@ -15,7 +15,7 @@ pre code {
     scrollbar-color: var(--color-grey-lite) var(--code-back) ;
   }
 
-p code, li code {
+p > code, li > code {
   background:var(--code-inline-bg);
   font-size: 1.2rem;
   line-height: 1em;
