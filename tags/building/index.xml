@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Building on LRG</title>
+    <link>https://lrg.io/tags/building/</link>
+    <description>Recent content in Building on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 04 Jan 2019 23:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/building/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Embiggening the nest</title>
+      <link>https://lrg.io/sounds/embiggening_the_nest/</link>
+      <pubDate>Fri, 04 Jan 2019 23:00:00 +0000</pubDate>
+      <guid>https://lrg.io/sounds/embiggening_the_nest/</guid>
+      <description>&lt;img class=&#34;shape-right&#34; src=&#34;https://lrg.io/images/cassette_mini.png&#34; style=&#34;shape-outside: url(&#39;/images/cassette_mini.png&#39;)&#34; alt=&#34;a pretty cassette&#34; /&gt;&#xA;&#xA;In short, this is some of the music that got me through 6 long months of building work. Amongst the dust, the noise and general upheaval these tunes kept me sane.&#xA;&#xA;&#xA;&lt;iframe style=&#34;border-radius:12px&#34; src=&#34;https://open.spotify.com/embed/playlist/5nhKItOhFwnPO6fefs0aRh?utm_source=generator&amp;theme=0&#34; width=&#34;100%&#34; height=&#34;600&#34; frameBorder=&#34;0&#34; allowfullscreen=&#34;&#34; allow=&#34;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&#34; loading=&#34;lazy&#34;&gt;&lt;/iframe&gt;</description>
+    </item>
+  </channel>
+</rss>
