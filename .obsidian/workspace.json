@@ -11,10 +11,14 @@
             "id": "8cb9e1b3caceb408",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "content/notes/2025-07-23_125120.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2025-07-23_125120"
             }
           }
         ]
@@ -167,6 +171,12 @@
   },
   "active": "8cb9e1b3caceb408",
   "lastOpenFiles": [
+    "public/tags/july2025/index.xml",
+    "public/tags/july2025/index.html",
+    "public/tags/july2025",
+    "public/notes/2025-07-23_125120/index.html",
+    "public/notes/2025-07-23_125120",
+    "content/notes/2025-07-23_125120.md",
     "content/notes/2025-06-30_084343.md",
     "content/notes/2025-06-27_094036.md",
     "content/notes/2025-06-30_082218.md",
@@ -176,10 +186,6 @@
     "public/software/site-build/book-cover-test/layout-vintage/back-to-basics/index.html",
     "public/software/site-build/book-cover-test/layout-notebook/well-described/index.html",
     "public/software/site-build/book-cover-test/layout-notebook/simple-image/index.html",
-    "public/software/site-build/book-cover-test/layout-notebook/over-stuffed/index.html",
-    "public/software/site-build/book-cover-test/layout-notebook/back-to-basics/index.html",
-    "public/software/site-build/book-cover-test/layout-modern/well-described/index.html",
-    "public/software/site-build/book-cover-test/layout-modern/simple-image/index.html",
     "public/favicon/safari-pinned-tab.svg",
     "public/favicon/mstile-150x150.png",
     "public/favicon/favicon-32x32.png",
@@ -210,8 +216,6 @@
     "node_modules/webidl-conversions/LICENSE.md",
     "node_modules/verror/README.md",
     "node_modules/verror/CONTRIBUTING.md",
-    "node_modules/verror/CHANGES.md",
-    "node_modules/vary/README.md",
-    "node_modules/vary/HISTORY.md"
+    "node_modules/verror/CHANGES.md"
   ]
 }
