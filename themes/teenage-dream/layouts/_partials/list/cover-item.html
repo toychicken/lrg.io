@@ -5,7 +5,7 @@
         {{ $draftClass = "drafty"}}
         {{ end }}
 
-<li class="list-item item-{{ .Kind }} {{ $style}} {{ $draftClass }}">
+<li class="book-cover item-{{ .Kind }} {{ $style}} {{ $draftClass }}">
     {{ partial "list/cover-image.html" .}}
     <h3 class="title">
         <a href="{{ .Permalink }}">{{ .Title }}</a>

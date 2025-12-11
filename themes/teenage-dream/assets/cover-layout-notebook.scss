@@ -1,160 +1,159 @@
-.related {
-    .list-item.layout-notebook {
-        font-family: var(--font-script);
+.book-cover.layout-notebook {
+    font-family: var(--font-script);
 
-        --tab1: var(--color-vibrant-yellow);
-        --tab2: var(--color-vibrant-pink);
-        --tab3: var(--color-vibrant-green);
+    --tab1: var(--color-vibrant-yellow);
+    --tab2: var(--color-vibrant-pink);
+    --tab3: var(--color-vibrant-green);
 
-        --washi-tape: var(--theme-main-fade);
+    --washi-tape: var(--theme-main-fade);
 
-        --official-modern-spine: var(--theme-main-prime);
-        --official-background: linear-gradient(90deg, var(--color-book-oxford-red-100) 0%,
-                var(--color-book-oxford-red-100) 2%, var(--color-book-oxford-red-80) 2.2%,
-                var(--color-book-oxford-red-200) 2.4%, var(--color-book-oxford-red-100) 2.6%,
-                var(--color-book-oxford-red-80) 10%, transparent 10.2%, transparent 100%),
-            linear-gradient(28deg, var(--color-book-oxford-200) 0%, var(--color-book-oxford-100) 100%);
-        // --official-background: var(--theme-main-prime);
-        --layout-modern-panel: var(--color-black);
-        --layout-modern-fg: var(--color-bone);
-        --layout-margin-left: 20%;
+    --official-modern-spine: var(--theme-main-prime);
+    --official-background: linear-gradient(90deg, var(--color-book-oxford-red-100) 0%,
+            var(--color-book-oxford-red-100) 2%, var(--color-book-oxford-red-80) 2.2%,
+            var(--color-book-oxford-red-200) 2.4%, var(--color-book-oxford-red-100) 2.6%,
+            var(--color-book-oxford-red-80) 10%, transparent 10.2%, transparent 100%),
+        linear-gradient(28deg, var(--color-book-oxford-200) 0%, var(--color-book-oxford-100) 100%);
+    // --official-background: var(--theme-main-prime);
+    --layout-modern-panel: var(--color-black);
+    --layout-modern-fg: var(--color-bone);
+    --layout-margin-left: 20%;
 
-        &.item-section {
-            background: var(--official-background),
-                url("data:image/svg+xml,%3Csvg viewBox='0 0 215 215' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.53' numOctaves='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-
-
-            &::before {
-                background: var(--official-background);
-            }
-        }
-
-        &.item-page {
-            background: var(--official-background),
-                url("data:image/svg+xml,%3Csvg viewBox='0 0 215 215' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.53' numOctaves='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-
-        }
-
-        .title {
-            font-family: var(--font-script);
-            text-transform: none;
-            grid-column: left / span right;
-            grid-row: top / span bottom;
-            // left: 1em;
-            transform: rotate(2deg);
-            position: relative;
-            display: flex;
-            align-items: center;
-
-            a {
-                background: linear-gradient(80deg, transparent 0%, transparent 6.8%, var(--washi-tape) 7%, var(--washi-tape) 40%, transparent 40.2%, transparent 100%),
-                    linear-gradient(102deg, transparent 0%, transparent 39%, var(--washi-tape) 39%, var(--washi-tape) 96%, transparent 96.2%, transparent 100%);
-                border: none;
-                display: inline-block;
-                margin: -8em 0 0 0;
-                padding: 0 0.3em;
-                text-wrap: nowrap;
-                max-width: 90%;
-                min-width: 50%;
-                align-self: center;
-            }
-        }
-
-        .subtitle {
-            display: none;
-
-            span {}
-        }
-
-        .author {
-            display: none;
+    &.item-section {
+        background: var(--official-background),
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 215 215' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.53' numOctaves='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 
 
-            span {}
-        }
-
-        .author:empty {
-            display: none;
-
-            &::before {}
-        }
-
-        .subheading {
-            grid-column: middle-start / span right;
-            grid-row: pic-large-end / span bottom;
-            font-family: var(--font-serif);
-            padding: 0 1em;
-            text-align: right;
-
-            span {
-                color: var(--color-book-oxford-red-100);
-                line-height: 1;
-            }
-        }
-
-        .cover-image {
-            display: none;
-        }
-
-        .tags {
-            display: block;
-            grid-column: left / span right;
-            grid-row: top / span bottom;
-            transform: rotate(90deg);
-            transform-origin: top left;
-            position: absolute;
-            overflow: hidden;
-            left: 23.1em;
-            top: 1em;
-            height: 1.4em;
-            padding: 0;
-            width: 32em;
-
-            span {
-                display: inline-block;
-                padding: 0 0.3em;
-                font-size: 1.6em;
-                line-height: 1;
-                background: var(--tab1);
-                box-shadow: 0.1em 0.1em 0.2em 0.1em var(--color-shadow-33);
-
-                &:nth-child(even) {
-                    transform: rotate(5deg);
-                    background: var(--tab2);
-                    line-height: 1.1em;
-                }
-
-                &:nth-child(3n) {
-                    background: var(--tab3);
-                }
-            }
+        &::before {
+            background: var(--official-background);
         }
     }
 
-    :nth-child(even of .list-item.layout-notebook) {
+    &.item-page {
+        background: var(--official-background),
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 215 215' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.53' numOctaves='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 
-        --tab1: var(--color-vibrant-pink);
-        --tab2: var(--color-vibrant-yellow);
-        --tab3: var(--color-vibrant-green);
+    }
 
-        .title {
-            transform: rotate(-2deg);
-            left: 0.6em;
+    .title {
+        font-family: var(--font-script);
+        text-transform: none;
+        grid-column: left / span right;
+        grid-row: top / span bottom;
+        // left: 1em;
+        transform: rotate(2deg);
+        position: relative;
+        display: flex;
+        align-items: center;
 
-            a {
-                background: linear-gradient(103deg, transparent 0%, transparent 6.8%, var(--washi-tape) 7%, var(--washi-tape) 50%, transparent 50.2%, transparent 100%),
-                    linear-gradient(70deg, transparent 0%, transparent 47%, var(--washi-tape) 47.2%, var(--washi-tape) 96%, transparent 96.2%, transparent 100%);
-                border: none;
-                padding: 0 3em 0 1.3em;
+        a {
+            background: linear-gradient(80deg, transparent 0%, transparent 6.8%, var(--washi-tape) 7%, var(--washi-tape) 40%, transparent 40.2%, transparent 100%),
+                linear-gradient(102deg, transparent 0%, transparent 39%, var(--washi-tape) 39%, var(--washi-tape) 96%, transparent 96.2%, transparent 100%);
+            border: none;
+            display: inline-block;
+            margin: -8em 0 0 0;
+            padding: 0 0.3em;
+            text-wrap: nowrap;
+            max-width: 90%;
+            min-width: 50%;
+            align-self: center;
+        }
+    }
 
+    .subtitle {
+        display: none;
+
+        span {}
+    }
+
+    .author {
+        display: none;
+
+
+        span {}
+    }
+
+    .author:empty {
+        display: none;
+
+        &::before {}
+    }
+
+    .subheading {
+        grid-column: middle-start / span right;
+        grid-row: pic-large-end / span bottom;
+        font-family: var(--font-serif);
+        padding: 0 1em;
+        text-align: right;
+
+        span {
+            color: var(--color-book-oxford-red-100);
+            line-height: 1;
+        }
+    }
+
+    .cover-image {
+        display: none;
+    }
+
+    .tags {
+        display: block;
+        grid-column: left / span right;
+        grid-row: top / span bottom;
+        transform: rotate(90deg);
+        transform-origin: top left;
+        position: absolute;
+        overflow: hidden;
+        left: 23.1em;
+        top: 1em;
+        height: 1.4em;
+        padding: 0;
+        width: 32em;
+
+        span {
+            display: inline-block;
+            padding: 0 0.3em;
+            font-size: 1.6em;
+            line-height: 1;
+            background: var(--tab1);
+            box-shadow: 0.1em 0.1em 0.2em 0.1em var(--color-shadow-33);
+
+            &:nth-child(even) {
+                transform: rotate(5deg);
+                background: var(--tab2);
+                line-height: 1.1em;
+            }
+
+            &:nth-child(3n) {
+                background: var(--tab3);
             }
         }
+    }
+}
 
-        .tags {
-            span {
-                &:nth-child(even) {
-                    transform: rotate(-5deg);
-                }
+
+:nth-child(even of .book-cover.layout-notebook) {
+
+    --tab1: var(--color-vibrant-pink);
+    --tab2: var(--color-vibrant-yellow);
+    --tab3: var(--color-vibrant-green);
+
+    .title {
+        transform: rotate(-2deg);
+        left: 0.6em;
+
+        a {
+            background: linear-gradient(103deg, transparent 0%, transparent 6.8%, var(--washi-tape) 7%, var(--washi-tape) 50%, transparent 50.2%, transparent 100%),
+                linear-gradient(70deg, transparent 0%, transparent 47%, var(--washi-tape) 47.2%, var(--washi-tape) 96%, transparent 96.2%, transparent 100%);
+            border: none;
+            padding: 0 3em 0 1.3em;
+
+        }
+    }
+
+    .tags {
+        span {
+            &:nth-child(even) {
+                transform: rotate(-5deg);
             }
         }
     }

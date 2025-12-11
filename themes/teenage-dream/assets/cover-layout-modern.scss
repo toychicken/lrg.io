@@ -1,95 +1,101 @@
+.book-cover.layout-modern {
 
-    .list-item.layout-modern {
+    --layout-modern-panel: var(--color-black);
+    --layout-modern-fg: var(--color-bone);
+    --official-modern-spine: var(--theme-main-prime);
+    --official-background:
+        linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, var(--theme-main-prime) 0%, var(--theme-main-prime) 1%, rgba(255, 255, 255, 0) 1.2%),
+        linear-gradient(180deg, rgba(178, 178, 178, 1) 0%, rgba(0, 0, 0, 0) 63.4%, rgba(255, 255, 255, 1) 63.4%, rgba(255, 255, 255, 1) 66.6%, rgba(0, 0, 0, 0) 66.6%),
+        conic-gradient(from 15deg at 80% 90%, #161618, #434343, #1f1f25);
 
-        --layout-modern-panel: var(--color-black);
-        --layout-modern-fg: var(--color-bone);
-        --official-modern-spine : var(--theme-main-prime);
-        --official-background: 
-            linear-gradient(90deg, rgba(0,0,0,1) 0%, var(--theme-main-prime) 0%, var(--theme-main-prime) 1%, rgba(255,255,255,0) 1.2%),
-            linear-gradient(180deg, rgba(178, 178, 178, 1) 0%, rgba(0,0,0,0) 63.4%, rgba(255,255,255,1) 63.4%, rgba(255,255,255,1) 66.6%, rgba(0,0,0,0) 66.6%),
-            conic-gradient(from 15deg at 80% 90%, #161618, #434343, #1f1f25);
-        &.item-section {
-            background: var(--official-background),
-                url("data:image/svg+xml,%3Csvg viewBox='0 0 215 215' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.53' numOctaves='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    &.item-section {
+        background: var(--official-background),
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 215 215' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.53' numOctaves='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 
 
-            &::before {
-                background: var(--official-background);
-            }
+        &::before {
+            background: var(--official-background);
         }
+    }
 
-        &.item-page {
-            background: var(--official-background),
-                url("data:image/svg+xml,%3Csvg viewBox='0 0 215 215' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.53' numOctaves='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-
-
-
-        }
-
-        .title {
-            background:none;
-            color:var(--layout-modern-fg);
-            grid-column: left / span right;
-            grid-row: pic-top-offset / span bottom;
-            font-family: var(--font-serif) ;
-            font-weight:300;
-            font-style: italic;
-            font-size:2.2em;
-            text-transform: capitalize;
-            display:flex;
-            a {
-                border:none;
-                display:block;
-                flex:2 1 auto;
-                align-self: center;
-            }
-        }
-        .subtitle {
-
-            grid-row: pic-large-end / span bottom;
-            background:none;
-            color: var(--layout-modern-fg);
-            font-size:0.8em;
-            font-weight: 200;
-            font-family: var(--font-sans-serif);
-
-            span {
-                font-size:0.8em;
-                letter-spacing: 0.1em;
-                padding:0;
-            }
-        }
-        .author {
-            display:none;
-        }
-        .subheading {
-            grid-row: pic-center / span pic-top-offset;
-            font-size:0.8em;
-            padding:0.9em 0 0 0;
-            span {
-
-                line-height:1;
-                padding:0;
-
-            }
-        }
-        .cover-image {
-            grid-row: top / span pic-top-offset;
-            grid-column: left / span right;
-            display: flex;
-            padding-left: 0.2em;
+    &.item-page {
+        background: var(--official-background),
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 215 215' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.53' numOctaves='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 
 
-
-            picture {
-
-                img {
-                    filter: saturate(70%) sepia(0) brightness(90%) opacity(100%) ;
-                    border-top-right-radius: 0.4em;
-                    opacity: 80%;
-                }
-
-            }
-        }
 
     }
+
+    .title {
+        background: none;
+        color: var(--layout-modern-fg);
+        grid-column: left / span right;
+        grid-row: pic-top-offset / span bottom;
+        font-family: var(--font-serif);
+        font-weight: 300;
+        font-style: italic;
+        font-size: 2.2em;
+        text-transform: capitalize;
+        display: flex;
+
+        a {
+            border: none;
+            display: block;
+            flex: 2 1 auto;
+            align-self: center;
+        }
+    }
+
+    .subtitle {
+
+        grid-row: pic-large-end / span bottom;
+        background: none;
+        color: var(--layout-modern-fg);
+        font-size: 0.8em;
+        font-weight: 200;
+        font-family: var(--font-sans-serif);
+
+        span {
+            font-size: 0.8em;
+            letter-spacing: 0.1em;
+            padding: 0;
+        }
+    }
+
+    .author {
+        display: none;
+    }
+
+    .subheading {
+        grid-row: pic-center / span pic-top-offset;
+        font-size: 0.8em;
+        padding: 0.9em 0 0 0;
+
+        span {
+
+            line-height: 1;
+            padding: 0;
+
+        }
+    }
+
+    .cover-image {
+        grid-row: top / span pic-top-offset;
+        grid-column: left / span right;
+        display: flex;
+        padding-left: 0.2em;
+
+
+
+        picture {
+
+            img {
+                filter: saturate(70%) sepia(0) brightness(90%) opacity(100%);
+                border-top-right-radius: 0.4em;
+                opacity: 80%;
+            }
+
+        }
+    }
+
+}

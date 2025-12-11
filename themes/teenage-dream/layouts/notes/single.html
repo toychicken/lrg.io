@@ -14,12 +14,7 @@
 {{ define "aside"}}
 
     {{ with .Site.RegularPages.Related . | first 5 }}
-        <ul role="list" class="related">
-        {{ range . }}
-
-            {{ partial "list/cover-item.html" .}}
-        {{ end }}
-        </ul>
+        
 
 
     

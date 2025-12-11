@@ -13,44 +13,45 @@
     --theme-logo-src: url("/assets/chicken_logo_original.svg");
 }
 
-    
-    .list-item.travel {
-        --theme-main-prime: var(--color-book-cerise-100);
-        --theme-main-fade: var(--color-book-cerise-80);
-        --theme-spot-highlight: var(--color-book-cerise-100);
-        --theme-spot-contrast: var(--color-book-cerise-200);
-    }
+
+.book-cover.travel {
+    --theme-main-prime: var(--color-book-cerise-100);
+    --theme-main-fade: var(--color-book-cerise-80);
+    --theme-spot-highlight: var(--color-book-cerise-100);
+    --theme-spot-contrast: var(--color-book-cerise-200);
+}
 
 
-    .list-item.experiments {
-        --theme-main-prime: var(--color-book-lilac-100);
-        --theme-main-fade: var(--color-book-lilac-80);
-        --theme-spot-highlight: var(--color-book-lilac-100);
-        --theme-spot-contrast: var(--color-book-lilac-200);
-    }
+.book-cover.experiments {
+    --theme-main-prime: var(--color-book-lilac-100);
+    --theme-main-fade: var(--color-book-lilac-80);
+    --theme-spot-highlight: var(--color-book-lilac-100);
+    --theme-spot-contrast: var(--color-book-lilac-200);
+}
 
 
-    .list-item.misc {
-        --theme-main-prime: var(--color-book-lemon-100);
-        --theme-main-fade: var(--color-book-lemon-80);
-        --theme-spot-highlight: var(--color-book-lemon-100);
-        --theme-spot-contrast: var(--color-book-lemon-200);
-    }
+.book-cover.misc {
+    --theme-main-prime: var(--color-book-lemon-100);
+    --theme-main-fade: var(--color-book-lemon-80);
+    --theme-spot-highlight: var(--color-book-lemon-100);
+    --theme-spot-contrast: var(--color-book-lemon-200);
+}
 
-    .list-item.world-affairs {
-        // should be grey ish
-        --theme-main-prime: var(--color-book-narwhal-100);
-        --theme-main-fade: var(--color-book-narwhal-80);
-        --theme-spot-highlight: var(--color-book-narwhal-100);
-        --theme-spot-contrast: var(--color-book-narwhal-200);
-    }
+.book-cover.world-affairs {
+    // should be grey ish
+    --theme-main-prime: var(--color-book-narwhal-100);
+    --theme-main-fade: var(--color-book-narwhal-80);
+    --theme-spot-highlight: var(--color-book-narwhal-100);
+    --theme-spot-contrast: var(--color-book-narwhal-200);
+}
 
-    .list-item.music {
-        --theme-main-prime: var(--color-book-royal-100);
-        --theme-main-fade: var(--color-book-royal-80);
-        --theme-spot-highlight: var(--color-book-royal-100);
-        --theme-spot-contrast: var(--color-book-royal-200);
-    }
+.book-cover.music {
+    --theme-main-prime: var(--color-book-royal-100);
+    --theme-main-fade: var(--color-book-royal-80);
+    --theme-spot-highlight: var(--color-book-royal-100);
+    --theme-spot-contrast: var(--color-book-royal-200);
+}
+
 .related {
     /* small fix to stop gradient bleeding through white area on default  (and is used for the pseudo covers on sections */
     --bg-main-panel: linear-gradient(0deg, transparent 0%, transparent 18%, var(--color-bone) 18%, var(--color-bone) 60%, transparent 60%, transparent 100%);

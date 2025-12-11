@@ -1,8 +1,8 @@
     // inherits cover-layout
-    .list-item.layout-classic {
+    .book-cover.layout-classic {
 
         --official-background: linear-gradient(0deg, transparent 0%, transparent 18%, var(--theme-empty-bg) 18%, var(--theme-empty-bg) 60%, transparent 60%, transparent 100%),
-        radial-gradient(circle farthest-corner at center center, var(--theme-main-prime) 0%, var(--theme-main-fade) 90%);
+            radial-gradient(circle farthest-corner at center center, var(--theme-main-prime) 0%, var(--theme-main-fade) 90%);
 
         &.item-section {
             background: var(--official-background),
@@ -17,6 +17,7 @@
             background: var(--official-background),
                 url("data:image/svg+xml,%3Csvg viewBox='0 0 215 215' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.53' numOctaves='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
+
         color: var(--theme-default-text);
 
         .title {
@@ -25,15 +26,15 @@
             font-size: 1.8em;
             align-self: end;
             background: none;
-            display:flex;
+            display: flex;
             justify-content: start;
 
             padding: 0;
-            
+
             a {
-                border:none;
-                padding:0;
-                margin:0;
+                border: none;
+                padding: 0;
+                margin: 0;
                 text-align: left;
                 color: inherit;
                 border-bottom-color: var(--theme-spot-highlight);
@@ -45,22 +46,24 @@
             grid-row: bar-2 / span pic-large-start;
             padding: 0;
             justify-content: left;
-            background:none;
+            background: none;
+
             span {
                 font-size: 1.1em;
-                padding:0 0.6em 0 0;
-                margin:0;
+                padding: 0 0.6em 0 0;
+                margin: 0;
                 line-height: 1.3em;
                 text-align: left;
-                text-wrap:balance;
+                text-wrap: balance;
             }
         }
+
         .author {
-            display:none;
+            display: none;
         }
 
         .subheading {
-            grid-column:pic-small-left / span pic-small-right;
+            grid-column: pic-small-left / span pic-small-right;
             grid-row: pic-large-end / span bottom;
             font-size: 1em;
             text-align: center;
@@ -80,15 +83,14 @@
 
             picture {
 
-                padding: 0 ;
+                padding: 0;
 
                 // display:flex;
                 img {
                     filter: var(--img-desaturate-image);
                 }
 
-                img[src$='.svg'] {
-                }
+                img[src$='.svg'] {}
             }
         }
 
