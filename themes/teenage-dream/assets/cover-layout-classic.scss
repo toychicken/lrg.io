@@ -1,7 +1,5 @@
-.related {
-
     // inherits cover-layout
-    li.list-item.layout-classic {
+    .list-item.layout-classic {
 
         --official-background: linear-gradient(0deg, transparent 0%, transparent 18%, var(--theme-empty-bg) 18%, var(--theme-empty-bg) 60%, transparent 60%, transparent 100%),
         radial-gradient(circle farthest-corner at center center, var(--theme-main-prime) 0%, var(--theme-main-fade) 90%);
@@ -95,4 +93,3 @@
         }
 
     }
-}

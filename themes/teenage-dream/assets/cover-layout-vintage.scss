@@ -1,5 +1,4 @@
-.related {
-    li.list-item.layout-vintage {
+    .list-item.layout-vintage {
 
         --official-background: linear-gradient(90deg, rgba(0, 0, 0, 0) 22%, var(--theme-empty-bg) 23%, var(--theme-empty-bg) 76%, rgba(0, 0, 0, 0) 77%),
             radial-gradient(circle farthest-corner at center center, var(--theme-main-prime) 0%, var(--theme-main-fade) 90%);
@@ -121,4 +120,3 @@
         }
 
     }
-}

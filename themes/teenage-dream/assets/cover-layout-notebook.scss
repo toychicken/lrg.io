@@ -1,5 +1,5 @@
 .related {
-    li.list-item.layout-notebook {
+    .list-item.layout-notebook {
         font-family: var(--font-script);
 
         --tab1: var(--color-vibrant-yellow);
@@ -131,7 +131,7 @@
         }
     }
 
-    :nth-child(even of li.list-item.layout-notebook) {
+    :nth-child(even of .list-item.layout-notebook) {
 
         --tab1: var(--color-vibrant-pink);
         --tab2: var(--color-vibrant-yellow);

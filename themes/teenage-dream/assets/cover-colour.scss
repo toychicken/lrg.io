@@ -11,9 +11,10 @@
     --theme-spot-highlight: var(--color-book-orange-100);
     --theme-spot-contrast: var(--color-book-orange-200);
     --theme-logo-src: url("/assets/chicken_logo_original.svg");
+}
 
     
-    li.list-item.travel {
+    .list-item.travel {
         --theme-main-prime: var(--color-book-cerise-100);
         --theme-main-fade: var(--color-book-cerise-80);
         --theme-spot-highlight: var(--color-book-cerise-100);
@@ -21,7 +22,7 @@
     }
 
 
-    li.list-item.experiments {
+    .list-item.experiments {
         --theme-main-prime: var(--color-book-lilac-100);
         --theme-main-fade: var(--color-book-lilac-80);
         --theme-spot-highlight: var(--color-book-lilac-100);
@@ -29,14 +30,14 @@
     }
 
 
-    li.list-item.misc {
+    .list-item.misc {
         --theme-main-prime: var(--color-book-lemon-100);
         --theme-main-fade: var(--color-book-lemon-80);
         --theme-spot-highlight: var(--color-book-lemon-100);
         --theme-spot-contrast: var(--color-book-lemon-200);
     }
 
-    li.list-item.world-affairs {
+    .list-item.world-affairs {
         // should be grey ish
         --theme-main-prime: var(--color-book-narwhal-100);
         --theme-main-fade: var(--color-book-narwhal-80);
@@ -44,13 +45,13 @@
         --theme-spot-contrast: var(--color-book-narwhal-200);
     }
 
-    li.list-item.music {
+    .list-item.music {
         --theme-main-prime: var(--color-book-royal-100);
         --theme-main-fade: var(--color-book-royal-80);
         --theme-spot-highlight: var(--color-book-royal-100);
         --theme-spot-contrast: var(--color-book-royal-200);
     }
-
+.related {
     /* small fix to stop gradient bleeding through white area on default  (and is used for the pseudo covers on sections */
     --bg-main-panel: linear-gradient(0deg, transparent 0%, transparent 18%, var(--color-bone) 18%, var(--color-bone) 60%, transparent 60%, transparent 100%);
     --panel-inset-edge-gradient: linear-gradient(90deg, var(--color-shadow-33) 0%, transparent 1%, transparent 99%, var(--color-shadow-33) 100%);
