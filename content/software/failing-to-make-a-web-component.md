@@ -246,4 +246,4 @@ On reflection,  I bet Hugo (or any other static site generator) is probably a gr
 
 ### Postscript
 
-If you have any thoughts on this, please do put them in a comment here -[https://mastodon.social/@toychicken/113601422843650747]()
+If you have any thoughts on this, please do put them in a comment here -[https://mastodon.social/@toychicken/113601422843650747](https://mastodon.social/@toychicken/113601422843650747)
