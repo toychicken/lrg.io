@@ -3,4 +3,14 @@
     padding-top: 0.6em;
     border-top: 1px solid var(--border-subtle);
     font-size: 80%;
+    display: flex;
+    gap:1rem;
+
+    div {
+        flex:0 0 auto;
+        font-size: 0.4rem;
+    }
+    p {
+
+    }
 }

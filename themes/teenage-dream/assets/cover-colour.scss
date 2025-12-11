@@ -1,4 +1,4 @@
-.related {
+:root {
     // default areas for layouts (and their colours)
 
     // no layout, no theme
@@ -52,7 +52,7 @@
     --theme-spot-contrast: var(--color-book-royal-200);
 }
 
-.related {
+:root {
     /* small fix to stop gradient bleeding through white area on default  (and is used for the pseudo covers on sections */
     --bg-main-panel: linear-gradient(0deg, transparent 0%, transparent 18%, var(--color-bone) 18%, var(--color-bone) 60%, transparent 60%, transparent 100%);
     --panel-inset-edge-gradient: linear-gradient(90deg, var(--color-shadow-33) 0%, transparent 1%, transparent 99%, var(--color-shadow-33) 100%);

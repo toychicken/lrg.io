@@ -1,3 +1,31 @@
-{{ with .Params.cover.attribution }}
-    <p class="cover-attribution">Cover image: {{ . | emojify | markdownify }}</p>
-{{ end }}
+
+
+<div class="cover-attribution">
+    
+<div class="book-cover item-page {{ .Params.style }} ">
+    {{ partial "list/cover-image.html" .}}
+    <h3 class="title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h2>
+    <div class="subtitle">
+        {{ if (.Params.Subtitle) }}
+        <span>{{ .Params.Subtitle }}</span>
+        {{ end }}
+    </div>
+    <div class="author">{{ if (.Params.Author) }}<span>{{ .Params.Author }}</span>{{ end }}</div>
+    <div class="subheading">
+        {{ if (.Params.Subheading) }}
+        <span>{{ .Params.Subheading }}</span>
+        {{ end }}
+    </div>
+    {{ if .Params.tags }}
+    <div class="tags">
+        {{ range .Params.tags }}
+             <span>{{ . }}</span>
+        {{ end }}
+    </div>
+    {{ end }}
+</div>
+    <p>Cover image: {{ .Params.cover.attribution  | emojify | markdownify }}</p>
+
+    </div>
