@@ -1,0 +1,193 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=chivo-mono:700" rel="stylesheet" />
+    <style>
+        :root {
+
+            font-size:10px;
+            --hex-font-size:5rem;
+        }
+        body {
+            font-family: 'Chivo Mono', monospace;
+            background: #000;
+            color: hsl(0, 100%, 77%);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+
+        }
+
+
+        main {
+            width: 100vw;
+            height: 100vh;
+
+            display: grid;
+            grid-template-columns: 1rem 8fr 1rem;
+            grid-template-rows: var(--hex-font-size) var(--hex-font-size) 1fr var(--hex-font-size) var(--hex-font-size);
+            grid-column-gap: 0px;
+            grid-row-gap: 1vh;
+        }
+
+        .time-container {
+
+            grid-area: 3 / 2 / 4 / 3;
+            container-name: time-container;
+            container-type: size;
+            text-align: center;
+        }
+
+        @container time-container (orientation: landscape) {
+
+            .time {
+
+                font-size:clamp(1rem, 41cqw, 80cqh);
+                line-height: 100cqh;
+
+            }
+        }
+        
+        @container time-container (orientation: portrait) {
+            .time {
+                font-size:clamp(8rem, 48cqh, 70cqw);
+                line-height: 50cqh;
+
+                span {
+                    display:block;
+                }
+            }
+        }
+
+        .hex {
+            font-size: var(--hex-font-size);
+            line-height: 1;
+            display: inline-block;
+        }
+
+        .a {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        .b {
+            grid-area: 4 / 2 / 5 / 3;
+        }
+        .range {
+            width:60vw;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/clock-toys.css" />
+    <script type="text/javascript" src="/js/clock-toys.js"></script>
+</head>
+
+<body>
+    <main>
+
+        <span class="hex a"></span>
+        <div class="time-container">
+            <span class="time">
+                <span class="hours">12</span><span class="minutes">40</span>
+            </span>
+        </div>
+        <span class="hex b"></span>
+
+    </main>
+    <script>
+
+        // const elTime = document.querySelector('time');
+        const elmain = document.querySelector('main');
+        const elhexa = document.querySelector('.hex.a');
+        const elhexb = document.querySelector('.hex.b');
+        const eltime = document.querySelector('.time');
+        const elhours = document.querySelector('.hours');
+        const elminutes = document.querySelector('.minutes');
+
+        let colors = {
+            a: { H: '', S: '', L: '' },
+            b: { H: '', S: '', L: '' }
+        }
+
+        const setA = ['a', 'b', 'a', 'b'];
+        const setB = ['b', 'a', 'b', 'a'];
+        const offsets = [
+            -50, 0, 50, 100
+        ]
+
+        const popUnshift = () => {
+            // pops it off the end 'n shifts it to the start
+            stops.unshift(stops.pop());
+        }
+
+
+        const clockTick = (ts) => {
+
+            const clockTime = getClockTime();
+
+            colors.a.H = 360 * nTime({p: 'ms', m: 'm'}).linear;
+            colors.a.S = 100 * nTime({p: 'ms', m: 'h'}).bounced;
+            colors.a.L = 100 * nTime({p: 'ms', m: 'd'}).bounced;
+
+
+
+            // colors.b.H = (colors.a.H + (360 / 2)) % 360;
+            colors.b.H = Math.abs(colors.a.H - 360);
+            colors.b.S = Math.abs(colors.a.S - 100);
+            colors.b.L = Math.abs(colors.a.L - 100);
+
+            const pulse = 100 * nTime({p: 'ms', m: 'm'}).linear;
+
+            let rings = [];
+            let ss = [];
+
+            let stops = pulse >= 50 ? setB : setA;
+
+            stops.forEach((v, i) => {
+                let stop = (pulse % 50) + offsets[i];
+                rings.push(`hsl(${colors[v].H}, ${colors[v].S}%, ${colors[v].L}%) ${stop}%`);
+                ss.push(parseInt(stop));
+            })
+
+            const aHex = hslToHex(colors.a.H, colors.a.S, colors.a.L).toUpperCase();
+            const bHex = hslToHex(colors.b.H, colors.b.S, colors.b.L).toUpperCase();
+            elhexa.setAttribute('style', `color: ${aHex}`); //text-shadow: 0 0 0.2em ${bHex};`)
+            let {H:ah, S:as, L:al} = {...colors.a}
+
+            elhexa.innerHTML = aHex;
+            elhexb.setAttribute('style', `color: ${bHex}`); //text-shadow: 0 0 0.2em ${aHex};`)
+            let {H:bh, S:bs, L:bl} = {...colors.b}
+
+            elhexb.innerHTML = bHex;
+
+
+            const clockface = `background: radial-gradient(circle, ${rings.join(', ')});`;
+            elmain.setAttribute('style', clockface);
+            
+            eltime.setAttribute('style', `color: ${aHex}; text-shadow: 0 1rem 1vh ${bHex};`);
+            elhours.innerText = String(clockTime.h).padStart(2, '0');
+            elminutes.innerText = String(clockTime.m).padStart(2, '0');
+
+        }
+ 
+
+
+        // This is not ideal - should encapsulate :)
+        cpInit({
+            is24hour: true,
+            callback: clockTick
+        });
+
+        elmain.addEventListener("dblclick", controlPanel.toggleOpen);
+
+
+        
+    </script>
+</body>
+
+</html> 

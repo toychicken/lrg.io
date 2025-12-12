@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta name="description" content="Tried to do an experiment with my tweet archive, but it didn&#39;t pan out" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta property="og:url" content="https://lrg.io/software/site-build/tweets-as-postcards/">
+  <meta property="og:site_name" content="LRG">
+  <meta property="og:title" content="Tweets as postcards">
+  <meta property="og:description" content="Tried to do an experiment with my tweet archive, but it didn&#39;t pan out">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="software">
+    <meta property="article:published_time" content="2024-10-09T11:55:00+00:00">
+    <meta property="article:modified_time" content="2024-10-09T11:55:00+00:00">
+    <meta property="article:tag" content="Postage-Stamp">
+    <meta property="article:tag" content="Postmark">
+    <meta property="article:tag" content="Html">
+    <meta property="article:tag" content="Css">
+
+
+
+
+
+
+
+  
+  
+
+  
+    
+
+        
+      
+
+    
+
+
+      
+      
+      
+        <meta property="og:image" content="https://lrg.io/images/share_frame1200x627-630x627_hu_560968ee85860dce.png">
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <title>
+    Tweets as postcards - LRG
+</title>
+  
+<link rel="icon" type="image/png" href="/favicon/favicon.ico" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#4d3d38">
+<meta name="msapplication-TileColor" content="#4d3d38">
+<meta name="theme-color" content="#4d3d38">
+
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=caveat:400|cormorant-garamond:300i,500,500i,700|lexend:200,400,700" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/css/styles.min.8ac64722e6200bdb808520054bed1bb80046965de54a6283093f0539ab9eb70a.css" integrity="sha256-isZHIuYgC9uAhSAFS&#43;0buABGll3lSmKDCT8FOauetwo=">
+
+</head>
+
+
+
+
+
+
+<body>
+
+
+  <header class="">
+
+    <div class="heading">
+      <h1><a href="/">LRG</a></h1>
+    </div>
+    
+    <div class="subheading">
+      <p>an LRG Sisyphean task</p>
+    </div>
+    
+
+  </header>
+
+  
+  <nav class="breadcrumb" aria-label="breadcrumb">
+  <ul role="list">
+    
+      <li>
+        <a href="https://lrg.io/">Hello world*</a>
+      </li>
+    
+      <li>
+        <a href="https://lrg.io/software/">Software</a>
+      </li>
+    
+      <li>
+        <a href="https://lrg.io/software/site-build/">Another site rebuild</a>
+      </li>
+    
+    <li class="active">
+      <a aria-current="page" href="https://lrg.io/software/site-build/tweets-as-postcards/">Tweets as postcards</a>
+    </li>
+  </ul>
+</nav>
+  
+
+
+
+
+  <div id="content">
+    <main>
+
+      
+    
+    
+
+
+<div class="content-meta">
+
+
+        
+            <p>
+                <a href="/software/site-build/tweets-as-postcards/">
+                    
+                    <time class="dt-published" datetime="2024-10-09 11:55:00 &#43;0000 UTC">
+                        9th October, 2024</time>
+                </a>
+            </p>
+        
+
+
+
+<ul class="taglist">
+    
+    <li><a href="/tags/postage-stamp/">Postage-Stamp</a></li>
+    
+    <li><a href="/tags/postmark/">Postmark</a></li>
+    
+    <li><a href="/tags/html/">Html</a></li>
+    
+    <li><a href="/tags/css/">Css</a></li>
+    
+</ul>
+
+
+</div>
+<h1>Tweets as postcards</h1>
+
+<h5 class="subtitle">Nice things that don&#39;t really work</h5><p>I did an experiment trying to make my old Tweet archive look like  postcards. It&rsquo;s a nice aesthetic if you&rsquo;re on a PC, but less easily readable on mobile. This really needs to be backed out. It will, eventually.</p>
+<p><img src="/images/tweet-as-postcard.png" alt="It’s intended to look like the back of a postcard, with a cute postmarked ’twitter’ stamp"></p>
+<p>I was particularly proud of the &lsquo;smudged&rsquo; postmark on the stamp. All done with CSS :)</p>
+<h3 id="problems">Problems</h3>
+<p>I&rsquo;d kept the postcards so that the text scaled with the postcard back. The problem with that, is that in tall/narrow aspect ratios - like most mobile phones, the text gets very small.</p>
+<p>Just in case, here&rsquo;s how I did the stamp though, :)</p>
+<h2 id="the-stamp">The Stamp</h2>
+<p><img src="/images/tweet-as-postcard-stamp.png" alt="A CSS generated postage stamp with postmark, and a twitter logo"></p>
+<h4 id="the-html">The HTML</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stamp&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stamp-bg&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#ff79c6">svg</span> <span style="color:#50fa7b">aria-hidden</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;true&#34;</span> <span style="color:#50fa7b">focusable</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;false&#34;</span> <span style="color:#50fa7b">data-prefix</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;fab&#34;</span> <span style="color:#50fa7b">data-icon</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;twitter&#34;</span> <span style="color:#50fa7b">role</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;img&#34;</span> <span style="color:#50fa7b">xmlns</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;http://www.w3.org/2000/svg&#34;</span> <span style="color:#50fa7b">viewBox</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;0 0 512 512&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">path</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;bird&#34;</span> <span style="color:#50fa7b">d</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z&#34;</span>&gt;&lt;/<span style="color:#ff79c6">path</span>&gt;&lt;/<span style="color:#ff79c6">svg</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;postmark&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">time</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;dt-published&#34;</span> <span style="color:#50fa7b">datetime</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;2019-04-12 22:04:19 +0100 BST&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            12th April, 2019
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">time</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span></code></pre></div><p>I&rsquo;ve got a containing <code>&lt;div&gt;</code> (not shown above) which has two children, the <code>.stamp</code> and <code>.postmark</code> divs. There&rsquo;s really not much <em>in</em> the content here, expect some elements to hang things from. <em>(Yes, I know I could probably have done this much more concisely, with less HTML, but I&rsquo;ve already decided to back this out, so I can code-golf it later if I want to restore it).</em></p>
+<h4 id="the-css">The CSS</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#50fa7b">postmark</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#8be9fd;font-style:italic">--postmark-ink</span>: <span style="color:#bd93f9">#693333</span><span style="color:#bd93f9">33</span>;  <span style="color:#6272a4">/* use a partly-opaque colour */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">grid-area</span>: <span style="color:#bd93f9">1</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">4</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">8</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">position</span>: <span style="color:#ff79c6">relative</span>; 
+</span></span><span style="display:flex;"><span>	time {
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">0.6</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">font-family</span>:<span style="color:#f1fa8c">&#39;Courier New&#39;</span>, Courier, <span style="color:#ff79c6">monospace</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">rotate</span>(<span style="color:#bd93f9">3</span><span style="color:#8be9fd">deg</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">position</span>:<span style="color:#ff79c6">absolute</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">top</span>:<span style="color:#bd93f9">0.7</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">right</span>:<span style="color:#bd93f9">1</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">padding</span>:<span style="color:#bd93f9">0.3</span><span style="color:#8be9fd">em</span> <span style="color:#bd93f9">0</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">font-weight</span>:<span style="color:#bd93f9">700</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">color</span>:<span style="color:#50fa7b">var</span>(<span style="color:#ff79c6">--</span>postmark<span style="color:#ff79c6">-</span><span style="color:#ff79c6">ink</span>);
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">border-top</span>: <span style="color:#ff79c6">dashed</span> <span style="color:#bd93f9">0.15</span><span style="color:#8be9fd">em</span> <span style="color:#50fa7b">var</span>(<span style="color:#ff79c6">--</span>postmark<span style="color:#ff79c6">-</span><span style="color:#ff79c6">ink</span>);
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">border-bottom</span>: <span style="color:#ff79c6">dashed</span> <span style="color:#bd93f9">0.15</span><span style="color:#8be9fd">em</span> <span style="color:#50fa7b">var</span>(<span style="color:#ff79c6">--</span>postmark<span style="color:#ff79c6">-</span><span style="color:#ff79c6">ink</span>);
+</span></span><span style="display:flex;"><span>		<span style="color:#6272a4">/* make the text look &#39;smudged&#39; */</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">text-shadow</span>: <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#50fa7b">var</span>(<span style="color:#ff79c6">--</span>postmark<span style="color:#ff79c6">-</span><span style="color:#ff79c6">ink</span>);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">stamp</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">rotate</span>(<span style="color:#bd93f9">1</span><span style="color:#8be9fd">deg</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">1</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">4</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">height</span>: <span style="color:#bd93f9">5</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">grid-area</span>: <span style="color:#bd93f9">1</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">7</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">8</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">aspect-ratio</span>: <span style="color:#bd93f9">4</span><span style="color:#ff79c6">/</span><span style="color:#bd93f9">5</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">position</span>: <span style="color:#ff79c6">relative</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">right</span>: <span style="color:#bd93f9">.3</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">top</span>: <span style="color:#bd93f9">0.3</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">background-image</span>: <span style="color:#8be9fd;font-style:italic">radial-gradient</span>(<span style="color:#ff79c6">transparent</span> <span style="color:#bd93f9">0</span><span style="color:#8be9fd">px</span>,
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">transparent</span> <span style="color:#bd93f9">0.2</span><span style="color:#8be9fd">em</span>,
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">white</span> <span style="color:#bd93f9">0.2</span><span style="color:#8be9fd">em</span>,
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">white</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#6272a4">/*reducing the gradient size*/</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">background-size</span>: <span style="color:#bd93f9">0.5</span><span style="color:#8be9fd">em</span> <span style="color:#bd93f9">0.5</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#6272a4">/*Offset to move the holes to the edge*/</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">background-position</span>: <span style="color:#bd93f9">0.75</span><span style="color:#8be9fd">em</span> <span style="color:#bd93f9">0.24</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">flex</span>;
+</span></span><span style="display:flex;"><span>	.stamp-bg {
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">background</span>:<span style="color:#8be9fd;font-style:italic">linear-gradient</span>(<span style="color:#bd93f9">90</span><span style="color:#8be9fd">deg</span>, <span style="color:#8be9fd;font-style:italic">rgb</span>(<span style="color:#bd93f9">170</span>, <span style="color:#bd93f9">64</span>, <span style="color:#bd93f9">96</span>) <span style="color:#bd93f9">0</span><span style="color:#8be9fd">%</span>, <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">198</span>,<span style="color:#bd93f9">193</span>,<span style="color:#bd93f9">223</span>,<span style="color:#bd93f9">1</span>) <span style="color:#bd93f9">100</span><span style="color:#8be9fd">%</span>);
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">flex</span>:<span style="color:#ff79c6">auto</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">margin</span>:<span style="color:#bd93f9">0.3</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">position</span>: <span style="color:#ff79c6">relative</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		svg {
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">height</span>: <span style="color:#bd93f9">1</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">1</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">position</span>: <span style="color:#ff79c6">absolute</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">bottom</span>: <span style="color:#bd93f9">0.1</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">left</span>: <span style="color:#bd93f9">0.1</span><span style="color:#8be9fd">em</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			.bird {
+</span></span><span style="display:flex;"><span>				<span style="color:#ff79c6">fill</span>: <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">0.954</span>);
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>I&rsquo;ve also made a 
+
+
+
+
+
+	
+		
+		
+		
+	
+<a href="https://codepen.io/toychicken_1470672943/pen/zygoybj" 
+ 
+target="_blank"
+class="external" 
+data-domain="codepen.io"><span class="link-text">Codepen</span><span class="hostname-text">codepen.io</span></a> if you want to see a live version and mess about with it.</p>
+<h2 id="things-you-could-do">Things you could do</h2>
+<p>Put another background image in the stamp, like a commemorative thing. Try some different aspect ratios.</p>
+
+    
+    
+
+<div class="cover-attribution">
+    
+<div class="book-cover item-page layout-classic experiments ">
+    <div class="cover-image"><picture><img src="/images/tweet-as-postcard-stamp_hu_aad85e08a7b38b95.png" alt="A CSS generated postage stamp with the twitter logo" width="298px" height="auto"/></picture></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/software/site-build/tweets-as-postcards/">Tweets as postcards</a>
+    </h2>
+    <div class="subtitle">
+        
+        <span>Nice things that don&#39;t really work</span>
+        
+    </div>
+    <div class="author"></div>
+    <div class="subheading">
+        
+        <span>an LRG Sisyphean task</span>
+        
+    </div>
+    
+    <div class="tags">
+        
+             <span>postage-stamp</span>
+        
+             <span>postmark</span>
+        
+             <span>html</span>
+        
+             <span>css</span>
+        
+    </div>
+    
+</div>
+    <p>Cover image: </p>
+
+    </div>
+
+
+
+
+    </main>
+    <aside>
+      
+  
+    <ul role="list" class="related">
+      
+                      
+              
+
+    
+    
+
+<li class="book-cover item-page layout-notebook posts ">
+    <div class="cover-image">
+     <div class="background"></div></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/twitter/2011/12/">December, 2011</a>
+    </h2>
+    <div class="subtitle">
+        
+    </div>
+    <div class="author"><span>@toychicken</span></div>
+    <div class="subheading">
+        
+        <span>Tweets</span>
+        
+    </div>
+    
+    <div class="tags">
+        
+             <span>tetrashed</span>
+        
+             <span>css</span>
+        
+             <span>lazyweb</span>
+        
+             <span>tweetLikeASmallAd</span>
+        
+             <span>blackMirror</span>
+        
+             <span>notQuiteAwakeYet</span>
+        
+             <span>dontKnowWhereToStart</span>
+        
+             <span>masterchef</span>
+        
+             <span>amazonStudios</span>
+        
+             <span>sopa</span>
+        
+             <span>PortasReview</span>
+        
+             <span>notReallyScottish</span>
+        
+             <span>fail</span>
+        
+             <span>SOPA</span>
+        
+             <span>PIPA</span>
+        
+             <span>uksnow</span>
+        
+             <span>awesome</span>
+        
+             <span>fb</span>
+        
+             <span>creativejs</span>
+        
+             <span>StewartBinns</span>
+        
+             <span>Meettheauthor</span>
+        
+             <span>Santa</span>
+        
+             <span>Christmas</span>
+        
+             <span>NHS</span>
+        
+             <span>outOfMyComfortZone</span>
+        
+    </div>
+    
+</li>
+          
+
+      
+                      
+              
+
+    
+    
+
+<li class="book-cover item-page layout-classic misc ">
+    <div class="cover-image"><picture><img src="/images/web-component-failure.svg" alt="Simple line illustration of A woman angrily smashing a desk and computer with a baseball bat"/></picture></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/software/site-build/book-cover-test/layout-classic/over-stuffed/">All meta is somewhat too big for its space</a>
+    </h2>
+    <div class="subtitle">
+        
+        <span>Neutral milk hotel yes plz tote bag, lorem cupidatat forage banh mi hell of synthlorem cupidatat forage banh mi hell of synth</span>
+        
+    </div>
+    <div class="author"><span>Leigh R Garland</span></div>
+    <div class="subheading">
+        
+        <span>Cred magna gentrify, in bitters activated charcoal health goth</span>
+        
+    </div>
+    
+    <div class="tags">
+        
+             <span>cover-stuffed</span>
+        
+             <span>css</span>
+        
+             <span>style</span>
+        
+             <span>books</span>
+        
+             <span>walrus</span>
+        
+             <span>baristasunited</span>
+        
+             <span>conservatives</span>
+        
+             <span>breakupbigtech</span>
+        
+             <span>gettingold</span>
+        
+    </div>
+    
+</li>
+          
+
+      
+                      
+              
+
+    
+    
+
+<li class="book-cover item-page layout-notebook misc ">
+    <div class="cover-image"><picture><img src="/images/web-component-failure.svg" alt="Simple line illustration of A woman angrily smashing a desk and computer with a baseball bat"/></picture></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/software/site-build/book-cover-test/layout-notebook/over-stuffed/">All meta is somewhat too big for its space</a>
+    </h2>
+    <div class="subtitle">
+        
+        <span>Neutral milk hotel yes plz tote bag, lorem cupidatat forage banh mi hell of synthlorem cupidatat forage banh mi hell of synth</span>
+        
+    </div>
+    <div class="author"><span>Leigh R Garland</span></div>
+    <div class="subheading">
+        
+        <span>Cred magna gentrify, in bitters activated charcoal health goth</span>
+        
+    </div>
+    
+    <div class="tags">
+        
+             <span>cover-stuffed</span>
+        
+             <span>css</span>
+        
+             <span>style</span>
+        
+             <span>books</span>
+        
+             <span>walrus</span>
+        
+             <span>baristasunited</span>
+        
+             <span>conservatives</span>
+        
+             <span>breakupbigtech</span>
+        
+             <span>gettingold</span>
+        
+    </div>
+    
+</li>
+          
+
+      
+                      
+              
+
+    
+    
+
+<li class="book-cover item-page layout-vintage misc ">
+    <div class="cover-image"><picture><img src="/images/web-component-failure.svg" alt="Simple line illustration of A woman angrily smashing a desk and computer with a baseball bat"/></picture></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/software/site-build/book-cover-test/layout-vintage/over-stuffed/">All meta is somewhat too big for its space</a>
+    </h2>
+    <div class="subtitle">
+        
+        <span>Neutral milk hotel yes plz tote bag, lorem cupidatat forage banh mi hell of synthlorem cupidatat forage banh mi hell of synth</span>
+        
+    </div>
+    <div class="author"><span>Leigh R Garland</span></div>
+    <div class="subheading">
+        
+        <span>Cred magna gentrify, in bitters activated charcoal health goth</span>
+        
+    </div>
+    
+    <div class="tags">
+        
+             <span>cover-stuffed</span>
+        
+             <span>css</span>
+        
+             <span>style</span>
+        
+             <span>books</span>
+        
+             <span>walrus</span>
+        
+             <span>baristasunited</span>
+        
+             <span>conservatives</span>
+        
+             <span>breakupbigtech</span>
+        
+             <span>gettingold</span>
+        
+    </div>
+    
+</li>
+          
+
+      
+                      
+              
+
+    
+    
+
+<li class="book-cover item-page layout-graphic-60s misc ">
+    <div class="cover-image"><picture><img src="/images/web-component-failure.svg" alt="Simple line illustration of A woman angrily smashing a desk and computer with a baseball bat"/></picture></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/software/site-build/book-cover-test/layout-graphic-60s/over-stuffed/">All meta is somewhat too big for its space</a>
+    </h2>
+    <div class="subtitle">
+        
+        <span>Neutral milk hotel yes plz tote bag, lorem cupidatat forage banh mi hell of synthlorem cupidatat forage banh mi hell of synth</span>
+        
+    </div>
+    <div class="author"><span>Leigh R Garland</span></div>
+    <div class="subheading">
+        
+        <span>Cred magna gentrify, in bitters activated charcoal health goth</span>
+        
+    </div>
+    
+    <div class="tags">
+        
+             <span>cover-stuffed</span>
+        
+             <span>css</span>
+        
+             <span>style</span>
+        
+             <span>books</span>
+        
+             <span>walrus</span>
+        
+             <span>baristasunited</span>
+        
+             <span>conservatives</span>
+        
+             <span>breakupbigtech</span>
+        
+             <span>gettingold</span>
+        
+    </div>
+    
+</li>
+          
+
+      
+    </ul>
+
+
+      
+  
+
+    </aside>
+  </div>
+
+
+  <footer>
+  <div class="link-lists">
+
+      <ul role="list">
+          <li>Links!</li>
+      </ul>
+      <ul role="list">
+          <li><a href="/tags/">Tags!</a></li>
+
+      </ul>
+      <ul role="list">
+          <li>So many links!</li>
+      </ul>
+      <ul role="list">
+          <li>Extra links</li>
+      </ul>
+  </div>
+</footer>
+
+  </div>
+
+</body>
+
+</html>

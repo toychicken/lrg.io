@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta name="description" content="Using Hugo&#39;s Render hooks to make links appear how you want them to." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta property="og:url" content="https://lrg.io/software/hugo-tips/bending_links/">
+  <meta property="og:site_name" content="LRG">
+  <meta property="og:title" content="Bend links to your will">
+  <meta property="og:description" content="Using Hugo&#39;s Render hooks to make links appear how you want them to.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="software">
+    <meta property="article:published_time" content="2024-10-04T12:28:00+00:00">
+    <meta property="article:modified_time" content="2024-10-04T12:28:00+00:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="Coding">
+
+
+
+
+
+
+
+  
+  
+
+  
+    
+
+        
+      
+
+    
+
+
+      
+      
+      
+        <meta property="og:image" content="https://lrg.io/images/share_frame1200x627-630x627_hu_f4dbb008832c94b8.png">
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <title>
+    Bend links to your will - LRG
+</title>
+  
+<link rel="icon" type="image/png" href="/favicon/favicon.ico" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#4d3d38">
+<meta name="msapplication-TileColor" content="#4d3d38">
+<meta name="theme-color" content="#4d3d38">
+
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=caveat:400|cormorant-garamond:300i,500,500i,700|lexend:200,400,700" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/css/styles.min.8ac64722e6200bdb808520054bed1bb80046965de54a6283093f0539ab9eb70a.css" integrity="sha256-isZHIuYgC9uAhSAFS&#43;0buABGll3lSmKDCT8FOauetwo=">
+
+</head>
+
+
+
+
+
+
+<body>
+
+
+  <header class="">
+
+    <div class="heading">
+      <h1><a href="/">LRG</a></h1>
+    </div>
+    
+    <div class="subheading">
+      <p>Wiggle it, just a little bit</p>
+    </div>
+    
+
+  </header>
+
+  
+  <nav class="breadcrumb" aria-label="breadcrumb">
+  <ul role="list">
+    
+      <li>
+        <a href="https://lrg.io/">Hello world*</a>
+      </li>
+    
+      <li>
+        <a href="https://lrg.io/software/">Software</a>
+      </li>
+    
+      <li>
+        <a href="https://lrg.io/software/hugo-tips/">Hugo notes</a>
+      </li>
+    
+    <li class="active">
+      <a aria-current="page" href="https://lrg.io/software/hugo-tips/bending_links/">Bend links to your will</a>
+    </li>
+  </ul>
+</nav>
+  
+
+
+
+
+  <div id="content">
+    <main>
+
+      
+    
+    
+
+
+<div class="content-meta">
+
+
+        
+            <p>
+                <a href="/software/hugo-tips/bending_links/">
+                    
+                    <time class="dt-published" datetime="2024-10-04 12:28:00 &#43;0000 UTC">
+                        4th October, 2024</time>
+                </a>
+            </p>
+        
+
+
+
+<ul class="taglist">
+    
+    <li><a href="/tags/hugo/">Hugo</a></li>
+    
+    <li><a href="/tags/coding/">Coding</a></li>
+    
+</ul>
+
+
+</div>
+<h1>Bend links to your will</h1>
+
+<h5 class="subtitle">Using render hooks to make links more flexible</h5><p>This all began with a post on my socials&hellip;</p>
+<p><img src="/images/neil-brown-css-nerd-callout.png" alt="CSS nerds, I need your help, please. I can style a link to an external site with the full URL path in text after it using a[href]=:not([href^=l’https://neilzone.co.uk’i]):after{content:’(‘attr(href)’)’;} I don’t think that there is a CSS-only (i.e. no Javascript, no extra element/attribute in the html) way of limiting this to just the domain of the external link, rather than the full href link. Am I wrong?"></p>
+<p>
+
+
+
+
+
+	
+		
+		
+		
+		    
+		
+	
+<a href="https://mastodon.neilzone.co.uk/@neil/113244632967157645" 
+title="Original post" 
+target="_blank"
+class="external implied" 
+data-domain="mastodon.neilzone.co.uk"><span class="link-text">https://mastodon.neilzone.co.uk/@neil/113244632967157645</span><span class="hostname-text">mastodon.neilzone.co.uk</span></a></p>
+<p>The consensus certainly seemed to be that it&rsquo;s not possible to do this solely with CSS (which is a shame), but Neil did mention that they were investigating using Hugo to solve this.</p>
+<p>My advice was to use Render Hooks, but I couldn&rsquo;t stop thinking about how  <em>I</em> might do this, as it seemed like a neat way to present those long external links&hellip;</p>
+<h2 id="this-is-where-i-started">This is where I started</h2>
+<p>You can jump straight to the 
+
+
+
+
+
+	
+<a href="#solution" 
+ 
+target=""
+class="relative" 
+data-domain=""><span class="link-text">solution</span><span class="hostname-text"></span></a>  if you want. Otherwise, read on.</p>
+<p>I spun up a standard Hugo quickstart project, and added some links to my site index page:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Here is a variety of links to test Hugo and/or CSS to show just the domain for external links...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>**Internal links**
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">*</span> [<span style="color:#ff79c6">Custom text</span>](<span style="color:#50fa7b">/i_love_cats</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">*</span> [<span style="color:#ff79c6">Custom text, with title</span>](<span style="color:#50fa7b">/i_love_cats &#34;I love cats&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">*</span> [<span style="color:#ff79c6">Custom text, absolute path</span>](<span style="color:#50fa7b">http://localhost:1313/i_love_cats</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>**External links**
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">*</span> Top-level domain, auto-generated text https://cats.org
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">*</span> Deep link, auto-generated text https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">*</span> [<span style="color:#ff79c6">Custom text, Top-level domain</span>](<span style="color:#50fa7b">https://cats.org</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">*</span> [<span style="color:#ff79c6">Custom text, Top-level domain, with title </span>](<span style="color:#50fa7b">https://cats.org &#34;I love rescue cats&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">*</span> [<span style="color:#ff79c6">Custom text, deep link</span>](<span style="color:#50fa7b">https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">*</span> [<span style="color:#ff79c6">Custom text, deep link, with title</span>](<span style="color:#50fa7b">https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats &#34;Lost &amp; found cats&#34;</span>)
+</span></span></code></pre></div><p>I wanted to account for all the ways you can present links in markdown, in Hugo. It looks something like this:</p>
+<p><img src="/images/hugo-bending-links-starting-point.png" alt="Example render of all the links rendered with no manipulation" title="Unchanged render">
+I think it&rsquo;s those pesky auto-generated deeplinks that Neil wants to make a little prettier.</p>
+<p>The rendered link looks like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats
+</span></span><span style="display:flex;"><span>	&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span></code></pre></div><p>Which doesn&rsquo;t give you much to hook into with CSS.</p>
+<p>This is where Hugo&rsquo;s render hooks come in. For a certain selection of commonly used html elements, Hugo gives you the chance to override the default rendering, and define how you want it to render yourself using the Hugo template system. Hugo provides you with 3 variables for a link.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[<span style="color:#ff79c6">Post 1</span>](<span style="color:#50fa7b">/posts/post-1 &#34;My first post&#34;</span>)
+</span></span><span style="display:flex;"><span> ------  -------------  ------------- 
+</span></span><span style="display:flex;"><span>  text    destination      title
+</span></span></code></pre></div><p>My first step was to add a <code>data-domain</code> attribute to see if I could use it to replace the content. I created a <code>render-link.html</code> file in</p>
+<pre tabindex="0"><code>layouts/
+	_default/
+		_markup/
+			render-link.html
+</code></pre><p>This now overrides the default markdown rendering for links. I started with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $u <span style="color:#ff79c6">:=</span> urls<span style="color:#50fa7b">.Parse</span> <span style="color:#50fa7b">.Destination</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.Destination</span> <span style="color:#ff79c6">|</span> safeURL <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">data-domain</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> $u<span style="color:#50fa7b">.Hostname</span> <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span>&gt;<span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.Text</span> <span style="color:#ff79c6">|</span> safeHTML <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span></code></pre></div><p>It uses Hugo&rsquo;s 
+
+
+
+
+
+	
+		
+		
+		
+	
+<a href="https://gohugo.io/functions/urls/parse/" 
+ 
+target="_blank"
+class="external" 
+data-domain="gohugo.io"><span class="link-text">urls.Parse</span><span class="hostname-text">gohugo.io</span></a> function to take the destination and convert to an object of the various parts of a url. In our case, we just need the <code>Hostname</code> . I added it to the <code>data-domain</code> attribute, and our deep link now looks like</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats&#34;</span> <span style="color:#50fa7b">data-domain</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;www.cats.org.uk&#34;</span>&gt;https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span></code></pre></div><p>Then I added a bit to the CSS for links, to show the data-domain attribute as extended content for the link, like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">a</span><span style="color:#ff79c6">[</span><span style="color:#ff79c6">data-domain</span><span style="color:#ff79c6">]</span>::after {
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">content</span>: <span style="color:#f1fa8c">&#39; - &#39;</span> <span style="color:#8be9fd;font-style:italic">attr</span>(data<span style="color:#ff79c6">-</span>domain);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>But, this was a bit messy, as the <code>data-domain</code> was missing for relative links, and rendered some odd dashes at the end of lines. Also, where the markdown had infered the link test from the url, it looked even messier. I couldn&rsquo;t find a neat way to reliably style out the <em>actual</em> link text leaving only the shorter hostname.</p>
+<p><img src="/images/hugo-bending-links-data-domain-approach.png" alt="Sample render of links only showing the top level domain" title="data-domain approach"></p>
+<p>Given I had the <code>urls.Parse</code> method, I now realised I could do something a little more fancy-schmancy, and build up some additional elements, easily styled by CSS. Something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $u <span style="color:#ff79c6">:=</span> urls<span style="color:#50fa7b">.Parse</span> <span style="color:#50fa7b">.Destination</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.Destination</span> <span style="color:#ff79c6">|</span> safeURL <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">data-domain</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> $u<span style="color:#50fa7b">.Hostname</span> <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;link-text&#34;</span>&gt;<span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.Text</span> <span style="color:#ff79c6">|</span> safeHTML <span style="color:#ff79c6">}}</span>&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;hostname-text&#34;</span>&gt;<span style="color:#ff79c6">{{</span> $u<span style="color:#50fa7b">.Hostname</span> <span style="color:#ff79c6">}}</span>&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span></code></pre></div><p>Which didn&rsquo;t really change the output, but now I had some CSS selectors to work with.</p>
+<p>I created this monstrosity (you would swap out <code>localhost</code> for your site&rsquo;s domain)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">a</span><span style="color:#ff79c6">[</span><span style="color:#ff79c6">href</span><span style="color:#ff79c6">]</span>:not<span style="color:#ff79c6">([</span><span style="color:#ff79c6">href</span><span style="color:#ff79c6">*=</span><span style="color:#f1fa8c">&#34;://localhost&#34;</span><span style="color:#ff79c6">])</span> .<span style="color:#50fa7b">link-text</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">none</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Thinking this would pretty much do the trick, but&hellip; it fails on relative links,  because they too don&rsquo;t match the <code>://localhost</code> domain. Looks like:</p>
+<p><img src="/images/hugo-bending-links-weird-selector-hell.png" alt="Sample render, links with relative paths don’t show up at all"></p>
+<p>Oops 😦</p>
+<p>I needed to provide a few more class names for the CSS to be able to hook into.</p>
+<p>First up - is this a relative link? For this I need to check if the hostname is empty.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> <span style="color:#ff79c6">(</span>strings<span style="color:#50fa7b">.ContainsNonSpace</span> $u<span style="color:#50fa7b">.Hostname</span> <span style="color:#ff79c6">)</span><span style="color:#ff79c6">}}</span>
+</span></span></code></pre></div><p>Basically this checks if the hostname is empty using the 
+
+
+
+
+
+	
+		
+		
+		
+	
+<a href="https://gohugo.io/functions/strings/containsnonspace/" 
+ 
+target="_blank"
+class="external" 
+data-domain="gohugo.io"><span class="link-text">strings.ContainsNonSpace</span><span class="hostname-text">gohugo.io</span></a> functionality.</p>
+<p>So I added a <code>$class</code> variable to store some output, and our template looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $u <span style="color:#ff79c6">:=</span> urls<span style="color:#50fa7b">.Parse</span> <span style="color:#50fa7b">.Destination</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> <span style="color:#ff79c6">(</span>strings<span style="color:#50fa7b">.ContainsNonSpace</span> $u<span style="color:#50fa7b">.Hostname</span><span style="color:#ff79c6">)</span><span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;relative&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.Destination</span> <span style="color:#ff79c6">|</span> safeURL <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">data-domain</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> $u<span style="color:#50fa7b">.Hostname</span> <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;link-text&#34;</span>&gt;<span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.Text</span> <span style="color:#ff79c6">|</span> safeHTML <span style="color:#ff79c6">}}</span>&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;hostname-text&#34;</span>&gt;<span style="color:#ff79c6">{{</span> $u<span style="color:#50fa7b">.Hostname</span> <span style="color:#ff79c6">}}</span>&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span></code></pre></div><p>the monster css selector looks like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">a</span><span style="color:#ff79c6">[</span><span style="color:#ff79c6">href</span><span style="color:#ff79c6">]</span>:not<span style="color:#ff79c6">([</span><span style="color:#ff79c6">href</span><span style="color:#ff79c6">*=</span><span style="color:#f1fa8c">&#34;://localhost&#34;</span><span style="color:#ff79c6">])</span>:not<span style="color:#ff79c6">(</span>.<span style="color:#50fa7b">relative</span><span style="color:#ff79c6">)</span> .<span style="color:#50fa7b">link-text</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">none</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>And this renders like this:</p>
+<p><img src="/images/hugo-bending-links-relatively-solved.png" alt="Sample render, most things are working but the explicit text doesn’t show up on the last four links."></p>
+<p>Which is looking <em>loads</em> better, but has nixed the explicit text on the last four of those links 😢 <em>and</em>  is still showing the domain for the absolute link too.</p>
+<p>I tried a few variations with the CSS, but this is the best it got.</p>
+<p>I needed to make sure I could also explicitly detect an external link AND / OR one with explicit text.</p>
+<p>For this, I needed some more template magic.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $u <span style="color:#ff79c6">:=</span> urls<span style="color:#50fa7b">.Parse</span> <span style="color:#50fa7b">.Destination</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $yourDomain <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;localhost&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> <span style="color:#ff79c6">(</span>strings<span style="color:#50fa7b">.ContainsNonSpace</span> $u<span style="color:#50fa7b">.Hostname</span><span style="color:#ff79c6">)</span><span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;relative&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> <span style="color:#ff79c6">(</span>compare<span style="color:#50fa7b">.Eq</span> $u<span style="color:#50fa7b">.Hostname</span> $yourDomain<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;external&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>compare<span style="color:#50fa7b">.Eq</span> $u<span style="color:#50fa7b">.String</span> <span style="color:#50fa7b">.Text</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		    <span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;external implied&#34;</span><span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.Destination</span> <span style="color:#ff79c6">|</span> safeURL <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">data-domain</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> $u<span style="color:#50fa7b">.Hostname</span> <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;link-text&#34;</span>&gt;<span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.Text</span> <span style="color:#ff79c6">|</span> safeHTML <span style="color:#ff79c6">}}</span>&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;hostname-text&#34;</span>&gt;<span style="color:#ff79c6">{{</span> $u<span style="color:#50fa7b">.Hostname</span> <span style="color:#ff79c6">}}</span>&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span></code></pre></div><p>Now we have a way, by comparing the <code>$u.Hostname</code> to a <code>$yourDomain</code> variable, to see if it explicitly external</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> <span style="color:#ff79c6">(</span>compare<span style="color:#50fa7b">.Eq</span> $u<span style="color:#50fa7b">.Hostname</span> $yourDomain<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">}}</span>
+</span></span></code></pre></div><p>AND we subsequently check to see if the url is the same as the <code>.Text</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>compare<span style="color:#50fa7b">.Eq</span> $u<span style="color:#50fa7b">.String</span> <span style="color:#50fa7b">.Text</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">}}</span>
+</span></span></code></pre></div><p>And change the class appropriately. Now we&rsquo;re getting closer! Our rendered deeplink looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats&#34;</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;external implied&#34;</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#50fa7b">data-domain</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;www.cats.org.uk&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;link-text&#34;</span>&gt;https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;hostname-text&#34;</span>&gt;www.cats.org.uk&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span></code></pre></div><p>We can update our CSS now, to be a little more readable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">a</span>.<span style="color:#50fa7b">relative</span> {
+</span></span><span style="display:flex;"><span>  .hostname-text {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">none</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>.<span style="color:#50fa7b">external</span>:not<span style="color:#ff79c6">(</span>.<span style="color:#50fa7b">implied</span><span style="color:#ff79c6">)</span> {
+</span></span><span style="display:flex;"><span>  .hostname-text { <span style="color:#ff79c6">display</span>:<span style="color:#ff79c6">none</span> }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>.<span style="color:#50fa7b">external</span>.<span style="color:#50fa7b">implied</span> {
+</span></span><span style="display:flex;"><span>  .link-text { <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">none</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>And this renders like this. Pretty much nails it&hellip;</p>
+<p><img src="/images/hugo-bending-link-almost-nailed-it.png" alt="Sample render, looks like it’s working as expected"></p>
+<h2 id="bingo">Bingo!</h2>
+<p>Grr, then I noticed the absolute link is not accounted for. A simple default on the <code>$class</code> variable, and an additional definition in the CSS, and it&rsquo;s fixed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $u <span style="color:#ff79c6">:=</span> urls<span style="color:#50fa7b">.Parse</span> <span style="color:#50fa7b">.Destination</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $yourDomain <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;localhost&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;internal&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> <span style="color:#ff79c6">(</span>strings<span style="color:#50fa7b">.ContainsNonSpace</span> $u<span style="color:#50fa7b">.Hostname</span><span style="color:#ff79c6">)</span><span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;relative&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> <span style="color:#ff79c6">(</span>compare<span style="color:#50fa7b">.Eq</span> $u<span style="color:#50fa7b">.Hostname</span> $yourDomain<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;external&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>compare<span style="color:#50fa7b">.Eq</span> $u<span style="color:#50fa7b">.String</span> <span style="color:#50fa7b">.Text</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		    <span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;external implied&#34;</span><span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.Destination</span> <span style="color:#ff79c6">|</span> safeURL <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">data-domain</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> $u<span style="color:#50fa7b">.Hostname</span> <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;link-text&#34;</span>&gt;<span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.Text</span> <span style="color:#ff79c6">|</span> safeHTML <span style="color:#ff79c6">}}</span>&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;hostname-text&#34;</span>&gt;<span style="color:#ff79c6">{{</span> $u<span style="color:#50fa7b">.Hostname</span> <span style="color:#ff79c6">}}</span>&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span></code></pre></div><p>And the CSS&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">a</span>.<span style="color:#50fa7b">internal</span><span style="color:#ff79c6">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>.<span style="color:#50fa7b">relative</span> {
+</span></span><span style="display:flex;"><span>  .hostname-text {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">none</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>.<span style="color:#50fa7b">external</span>:not<span style="color:#ff79c6">(</span>.<span style="color:#50fa7b">implied</span><span style="color:#ff79c6">)</span> {
+</span></span><span style="display:flex;"><span>  .hostname-text { <span style="color:#ff79c6">display</span>:<span style="color:#ff79c6">none</span> }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>.<span style="color:#50fa7b">external</span>.<span style="color:#50fa7b">implied</span> {
+</span></span><span style="display:flex;"><span>  .link-text { <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">none</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>&hellip;and bingo.</p>
+<p><img src="/images/hugo-bending-links-bingo.png" alt="Sample render, working nicely"></p>
+<h2 id="over-engineering">Over-engineering</h2>
+<p>Yep, that&rsquo;s it. I think this meets the needs of what we wanted in the first place. Namely that it only shows the top-level domain for those implied-text, deeplink urls, and everything else looks as expected&hellip;</p>
+<p>But there&rsquo;s a little more&hellip;</p>
+<p>Don&rsquo;t forget, Hugo allows us to pass in a &rsquo;title&rsquo; into our markdown, like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[<span style="color:#ff79c6">Custom text, deep link, with title</span>](<span style="color:#50fa7b">https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats &#34;Lost &amp; found cats&#34;</span>)
+</span></span></code></pre></div><p>But that title attribute is <em>not</em> currently rendered by our customer render hook. Let&rsquo;s fix that:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $u <span style="color:#ff79c6">:=</span> urls<span style="color:#50fa7b">.Parse</span> <span style="color:#50fa7b">.Destination</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $yourDomain <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;localhost&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;internal&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> <span style="color:#ff79c6">(</span>strings<span style="color:#50fa7b">.ContainsNonSpace</span> $u<span style="color:#50fa7b">.Hostname</span><span style="color:#ff79c6">)</span><span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;relative&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> <span style="color:#ff79c6">(</span>compare<span style="color:#50fa7b">.Eq</span> $u<span style="color:#50fa7b">.Hostname</span> $yourDomain<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;external&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>compare<span style="color:#50fa7b">.Eq</span> $u<span style="color:#50fa7b">.String</span> <span style="color:#50fa7b">.Text</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		    <span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;external implied&#34;</span><span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.Destination</span> <span style="color:#ff79c6">|</span> safeURL <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">with</span> <span style="color:#50fa7b">.Title</span><span style="color:#ff79c6">}}</span><span style="color:#50fa7b">title</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.</span> <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">}}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">data-domain</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> $u<span style="color:#50fa7b">.Hostname</span> <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;link-text&#34;</span>&gt;<span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.Text</span> <span style="color:#ff79c6">|</span> safeHTML <span style="color:#ff79c6">}}</span>&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;hostname-text&#34;</span>&gt;<span style="color:#ff79c6">{{</span> $u<span style="color:#50fa7b">.Hostname</span> <span style="color:#ff79c6">}}</span>&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span></code></pre></div><p>We&rsquo;ve simply tested to see if the <code>.Title</code> variable exists, and if it does, add the title attribute. Our link now renders like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://www.cats.org.uk/help-and-advice/lost-found-and-feral-cats/lost-found-and-feral-cats&#34;</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#50fa7b">title</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Lost &amp;amp; found cats&#34;</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;external&#34;</span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#50fa7b">data-domain</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;www.cats.org.uk&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;link-text&#34;</span>&gt;Custom text, deep link, with title&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;hostname-text&#34;</span>&gt;www.cats.org.uk&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span></code></pre></div><p>Not a big deal, but what&rsquo;s nice is that you can use the existence of the title attribute to give some of those deeplinks a bit more context, without showing the whole URL. We add this to the end of our CSS:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">a</span><span style="color:#ff79c6">[</span><span style="color:#ff79c6">title</span><span style="color:#ff79c6">]</span>::after {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">content</span>: <span style="color:#f1fa8c">&#39;(&#39;</span> <span style="color:#8be9fd;font-style:italic">attr</span>(title) <span style="color:#f1fa8c">&#39;)&#39;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>and we <em>get</em> titles. Which you can style if you want. It also gives you the title on when the mouse hovers over the link.</p>
+<p><img src="/images/hugo-bending-links-adding-titles.png" alt="Sample render, with a little extra work, it now shows a title with the native on-hover"></p>
+<h2 id="one-more-thing">One more thing</h2>
+<p>Last of all, I want my external links to always open in a new tab, so we can add a <code>target</code> attribute to our link. And that is the solution!</p>
+<h2 id="solution">Solution</h2>
+<p><code>/layouts/_default/_markup/render-link.html</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $u <span style="color:#ff79c6">:=</span> urls<span style="color:#50fa7b">.Parse</span> <span style="color:#50fa7b">.Destination</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $yourDomain <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;localhost&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;internal&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> $target <span style="color:#ff79c6">:=</span> <span style="color:#f1fa8c">&#34;&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> <span style="color:#ff79c6">(</span>strings<span style="color:#50fa7b">.ContainsNonSpace</span> $u<span style="color:#50fa7b">.Hostname</span><span style="color:#ff79c6">)</span><span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;relative&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">not</span> <span style="color:#ff79c6">(</span>compare<span style="color:#50fa7b">.Eq</span> $u<span style="color:#50fa7b">.Hostname</span> $yourDomain<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;external&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">{{</span> $target <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;_blank&#34;</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>compare<span style="color:#50fa7b">.Eq</span> $u<span style="color:#50fa7b">.String</span> <span style="color:#50fa7b">.Text</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		    <span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;external implied&#34;</span><span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.Destination</span> <span style="color:#ff79c6">|</span> safeURL <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">with</span> <span style="color:#50fa7b">.Title</span><span style="color:#ff79c6">}}</span><span style="color:#50fa7b">title</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.</span> <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> <span style="color:#ff79c6">end</span> <span style="color:#ff79c6">}}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">target</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> $target <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> $class <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b">data-domain</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;</span><span style="color:#ff79c6">{{</span> $u<span style="color:#50fa7b">.Hostname</span> <span style="color:#ff79c6">}}</span><span style="color:#f1fa8c">&#34;</span>&gt;&lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;link-text&#34;</span>&gt;<span style="color:#ff79c6">{{</span> <span style="color:#50fa7b">.Text</span> <span style="color:#ff79c6">|</span> safeHTML <span style="color:#ff79c6">}}</span>&lt;/<span style="color:#ff79c6">span</span>&gt; &lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;hostname-text&#34;</span>&gt;<span style="color:#ff79c6">{{</span> $u<span style="color:#50fa7b">.Hostname</span> <span style="color:#ff79c6">}}</span>&lt;/<span style="color:#ff79c6">span</span>&gt;&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span></code></pre></div><p>And the final CSS&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>.<span style="color:#50fa7b">internal</span><span style="color:#ff79c6">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>.<span style="color:#50fa7b">relative</span> {
+</span></span><span style="display:flex;"><span>  .hostname-text {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">none</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>.<span style="color:#50fa7b">external</span>:not<span style="color:#ff79c6">(</span>.<span style="color:#50fa7b">implied</span><span style="color:#ff79c6">)</span> {
+</span></span><span style="display:flex;"><span>  .hostname-text { <span style="color:#ff79c6">display</span>:<span style="color:#ff79c6">none</span> }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span>.<span style="color:#50fa7b">external</span>.<span style="color:#50fa7b">implied</span> {
+</span></span><span style="display:flex;"><span>  .link-text { <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">none</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">a</span><span style="color:#ff79c6">[</span><span style="color:#ff79c6">title</span><span style="color:#ff79c6">]</span>::after {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">content</span>: <span style="color:#f1fa8c">&#39;(&#39;</span> <span style="color:#8be9fd;font-style:italic">attr</span>(title) <span style="color:#f1fa8c">&#39;)&#39;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Obviously, this is a little over-engineered, but it gives you a lot of flexibility to display links however you like.</p>
+<p>Enjoy!</p>
+<p>If you found this useful, or have feedback please drop me a line 
+
+
+
+
+
+	
+		
+		
+		
+	
+<a href="https://mastodon.social/@toychicken/113249975233953921" 
+ 
+target="_blank"
+class="external" 
+data-domain="mastodon.social"><span class="link-text">@toychicken</span><span class="hostname-text">mastodon.social</span></a></p>
+<p>Finally, if you too love cats, make a donation to the 
+
+
+
+
+
+	
+		
+		
+		
+	
+<a href="https://www.cats.org.uk/donate" 
+ 
+target="_blank"
+class="external" 
+data-domain="www.cats.org.uk"><span class="link-text">Cats protection league</span><span class="hostname-text">www.cats.org.uk</span></a> today. 🐈‍⬛</p>
+
+    
+    
+
+<div class="cover-attribution">
+    
+<div class="book-cover item-page layout-classic experiments ">
+    <div class="cover-image"><picture><img src="/images/bender-as-pimp_hu_36d5835b46f0062a.jpg" alt="Bender in his pimp era, pointing aggressively." width="298px" height="auto"/></picture></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/software/hugo-tips/bending_links/">Bend links to your will</a>
+    </h2>
+    <div class="subtitle">
+        
+        <span>Using render hooks to make links more flexible</span>
+        
+    </div>
+    <div class="author"></div>
+    <div class="subheading">
+        
+        <span>Wiggle it, just a little bit</span>
+        
+    </div>
+    
+    <div class="tags">
+        
+             <span>hugo</span>
+        
+             <span>coding</span>
+        
+    </div>
+    
+</div>
+    <p>Cover image: </p>
+
+    </div>
+
+
+
+
+    </main>
+    <aside>
+      
+  
+
+    </aside>
+  </div>
+
+
+  <footer>
+  <div class="link-lists">
+
+      <ul role="list">
+          <li>Links!</li>
+      </ul>
+      <ul role="list">
+          <li><a href="/tags/">Tags!</a></li>
+
+      </ul>
+      <ul role="list">
+          <li>So many links!</li>
+      </ul>
+      <ul role="list">
+          <li>Extra links</li>
+      </ul>
+  </div>
+</footer>
+
+  </div>
+
+</body>
+
+</html>

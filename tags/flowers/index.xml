@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flowers on LRG</title>
+    <link>https://lrg.io/tags/flowers/</link>
+    <description>Recent content in Flowers on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 29 Mar 2019 23:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/flowers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hard backstop</title>
+      <link>https://lrg.io/sounds/hard_backstop/</link>
+      <pubDate>Fri, 29 Mar 2019 23:00:00 +0000</pubDate>
+      <guid>https://lrg.io/sounds/hard_backstop/</guid>
+      <description>&lt;img class=&#34;shape-left&#34; src=&#34;https://lrg.io/images/cassette_mini@75deg.png&#34; style=&#34;shape-outside: url(&#39;/images/cassette_mini@75deg.png&#39;)&#34; alt=&#34;A pretty cassette&#34; /&gt;&#xA;&#xA;This one was compiled as a bit of personal response to Brexit. Although I&amp;rsquo;m angry about it on many levels, I really wanted some music that would help calm, rather than inflame.&#xA;&#xA;&#xA;&lt;iframe style=&#34;border-radius:12px&#34; src=&#34;https://open.spotify.com/embed/playlist/1hqdex9NFlzi7JWUJS7Taa?utm_source=generator&#34; width=&#34;100%&#34; height=&#34;600&#34; frameBorder=&#34;0&#34; allowfullscreen=&#34;&#34; allow=&#34;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&#34; loading=&#34;lazy&#34;&gt;&lt;/iframe&gt;</description>
+    </item>
+  </channel>
+</rss>

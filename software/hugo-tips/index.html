@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta name="description" content="Tips &amp; tricks for building sites in Hugo" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta property="og:url" content="https://lrg.io/software/hugo-tips/">
+  <meta property="og:site_name" content="LRG">
+  <meta property="og:title" content="Hugo notes">
+  <meta property="og:description" content="Tips &amp; tricks for building sites in Hugo">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="website">
+
+
+
+
+
+
+
+  
+  
+
+  
+
+
+
+  
+  
+
+  
+    
+
+        
+      
+
+    
+
+
+      
+      
+      
+        <meta property="og:image" content="https://lrg.io/images/share_frame1200x627-630x627_hu_6e4bdb02445260ea.png">
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <link rel="alternate" type="application/rss+xml" href="https://lrg.io/software/hugo-tips/index.xml" title="LRG">
+  
+  <title>
+    Hugo notes - LRG
+</title>
+  
+<link rel="icon" type="image/png" href="/favicon/favicon.ico" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#4d3d38">
+<meta name="msapplication-TileColor" content="#4d3d38">
+<meta name="theme-color" content="#4d3d38">
+
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=caveat:400|cormorant-garamond:300i,500,500i,700|lexend:200,400,700" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/css/styles.min.8ac64722e6200bdb808520054bed1bb80046965de54a6283093f0539ab9eb70a.css" integrity="sha256-isZHIuYgC9uAhSAFS&#43;0buABGll3lSmKDCT8FOauetwo=">
+
+</head>
+
+
+
+
+
+
+<body>
+
+
+  <header class="">
+
+    <div class="heading">
+      <h1><a href="/">LRG</a></h1>
+    </div>
+    
+    <div class="subheading">
+      <p>Hugo your way, I&#39;ll go mine</p>
+    </div>
+    
+
+  </header>
+
+  
+  <nav class="breadcrumb" aria-label="breadcrumb">
+  <ul role="list">
+    
+      <li>
+        <a href="https://lrg.io/">Hello world*</a>
+      </li>
+    
+      <li>
+        <a href="https://lrg.io/software/">Software</a>
+      </li>
+    
+    <li class="active">
+      <a aria-current="page" href="https://lrg.io/software/hugo-tips/">Hugo notes</a>
+    </li>
+  </ul>
+</nav>
+  
+
+
+
+
+  <div id="content">
+    <main>
+
+      
+
+    
+            <h1>Hugo notes</h1>
+
+
+
+
+    <p>
+
+
+
+
+
+	
+		
+		
+		
+	
+<a href="https://gohugo.io/" 
+ 
+target="_blank"
+class="external" 
+data-domain="gohugo.io"><span class="link-text">Hugo</span><span class="hostname-text">gohugo.io</span></a> is a great way to build complex static sites. There is a bit of a learning curve, but once embraced, it&rsquo;s incredibly powerful.</p>
+<p>Anyhoo, this part of the site is as much an aide-memoire for me as anything else. If you find it useful, that&rsquo;s great.</p>
+
+
+
+
+
+    
+
+        
+
+    
+
+    
+
+
+        
+
+        
+        
+        
+
+        <ul role="list" class="items">
+
+            
+            <li>
+
+                
+                
+
+
+<div class="content-meta">
+
+
+        
+            <p>
+                <a href="/software/hugo-tips/bending_links/">
+                    
+                    <time class="dt-published" datetime="2024-10-04 12:28:00 &#43;0000 UTC">
+                        4th October, 2024</time>
+                </a>
+            </p>
+        
+
+
+
+<ul class="taglist">
+    
+    <li><a href="/tags/hugo/">Hugo</a></li>
+    
+    <li><a href="/tags/coding/">Coding</a></li>
+    
+</ul>
+
+
+</div>
+
+                <h2>Bend links to your will</h2>
+                
+                    <p>This all began with a post on my socials&hellip;</p>
+<p><img src="/images/neil-brown-css-nerd-callout.png" alt="CSS nerds, I need your help, please. I can style a link to an external site with the full URL path in text after it using a[href]=:not([href^=l’https://neilzone.co.uk’i]):after{content:’(‘attr(href)’)’;} I don’t think that there is a CSS-only (i.e. no Javascript, no extra element/attribute in the html) way of limiting this to just the domain of the external link, rather than the full href link. Am I wrong?"></p>
+<p>
+
+
+
+
+
+	
+		
+		
+		
+		    
+		
+	
+<a href="https://mastodon.neilzone.co.uk/@neil/113244632967157645" 
+title="Original post" 
+target="_blank"
+class="external implied" 
+data-domain="mastodon.neilzone.co.uk"><span class="link-text">https://mastodon.neilzone.co.uk/@neil/113244632967157645</span><span class="hostname-text">mastodon.neilzone.co.uk</span></a></p>
+<p>The consensus certainly seemed to be that it&rsquo;s not possible to do this solely with CSS (which is a shame), but Neil did mention that they were investigating using Hugo to solve this.</p>
+<p>My advice was to use Render Hooks, but I couldn&rsquo;t stop thinking about how  <em>I</em> might do this, as it seemed like a neat way to present those long external links&hellip;</p>
+                    <a href="/software/hugo-tips/bending_links/">&hellip;Read more</a>
+                
+                
+            </li>
+                
+        </ul>
+        
+
+
+
+    
+
+<div class="cover-attribution">
+    
+<div class="book-cover item-page layout-classic ">
+    <div class="cover-image"><picture><img src="/images/hugo-gopher-hero.svg" alt="The cute gopher logo of the Hugo organisation"/></picture></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/software/hugo-tips/">Hugo notes</a>
+    </h2>
+    <div class="subtitle">
+        
+        <span>Building static sites with Hugo</span>
+        
+    </div>
+    <div class="author"></div>
+    <div class="subheading">
+        
+        <span>Hugo your way, I&#39;ll go mine</span>
+        
+    </div>
+    
+</div>
+    <p>Cover image: </p>
+
+    </div>
+
+
+
+
+    </main>
+    <aside>
+          
+        <ul role="list" class="related">
+            
+            
+                        
+                
+
+    
+    
+
+<li class="book-cover item-page layout-classic experiments ">
+    <div class="cover-image"><picture><img src="/images/bender-as-pimp_hu_36d5835b46f0062a.jpg" alt="Bender in his pimp era, pointing aggressively." width="298px" height="auto"/></picture></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/software/hugo-tips/bending_links/">Bend links to your will</a>
+    </h2>
+    <div class="subtitle">
+        
+        <span>Using render hooks to make links more flexible</span>
+        
+    </div>
+    <div class="author"></div>
+    <div class="subheading">
+        
+        <span>Wiggle it, just a little bit</span>
+        
+    </div>
+    
+    <div class="tags">
+        
+             <span>hugo</span>
+        
+             <span>coding</span>
+        
+    </div>
+    
+</li>
+            
+            
+        </ul>
+
+
+    </aside>
+  </div>
+
+
+  <footer>
+  <div class="link-lists">
+
+      <ul role="list">
+          <li>Links!</li>
+      </ul>
+      <ul role="list">
+          <li><a href="/tags/">Tags!</a></li>
+
+      </ul>
+      <ul role="list">
+          <li>So many links!</li>
+      </ul>
+      <ul role="list">
+          <li>Extra links</li>
+      </ul>
+  </div>
+</footer>
+
+  </div>
+
+</body>
+
+</html>

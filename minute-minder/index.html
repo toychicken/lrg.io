@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta name="description" content="Ever wondered how much it costs your business for you to wait for your crappy laptop to load, or have you attend that pointless meeting? Well, now you can work it out!" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta property="og:url" content="https://lrg.io/minute-minder/">
+  <meta property="og:site_name" content="LRG">
+  <meta property="og:title" content="The Minute Minder">
+  <meta property="og:description" content="Ever wondered how much it costs your business for you to wait for your crappy laptop to load, or have you attend that pointless meeting? Well, now you can work it out!">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2012-08-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2012-08-22T00:00:00+00:00">
+    <meta property="article:tag" content="App">
+    <meta property="article:tag" content="Calculator">
+    <meta property="article:tag" content="Work">
+    <meta property="article:tag" content="Time">
+
+
+
+
+
+
+
+  
+  
+
+  
+    
+
+        
+      
+
+    
+
+
+      
+      
+      
+        <meta property="og:image" content="https://lrg.io/images/share_frame1200x627-630x627_hu_fe3f929df57c3f47.png">
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <title>
+    The Minute Minder - LRG
+</title>
+  
+<link rel="icon" type="image/png" href="/favicon/favicon.ico" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#4d3d38">
+<meta name="msapplication-TileColor" content="#4d3d38">
+<meta name="theme-color" content="#4d3d38">
+
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=caveat:400|cormorant-garamond:300i,500,500i,700|lexend:200,400,700" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/css/styles.min.8ac64722e6200bdb808520054bed1bb80046965de54a6283093f0539ab9eb70a.css" integrity="sha256-isZHIuYgC9uAhSAFS&#43;0buABGll3lSmKDCT8FOauetwo=">
+
+</head>
+
+
+
+
+
+
+<body>
+
+
+  <header class="">
+
+    <div class="heading">
+      <h1><a href="/">LRG</a></h1>
+    </div>
+    
+    <div class="subheading">
+      <p>An LRG experimental tool</p>
+    </div>
+    
+
+  </header>
+
+  
+  <nav class="breadcrumb" aria-label="breadcrumb">
+  <ul role="list">
+    
+      <li>
+        <a href="https://lrg.io/">Hello world*</a>
+      </li>
+    
+    <li class="active">
+      <a aria-current="page" href="https://lrg.io/minute-minder/">The Minute Minder</a>
+    </li>
+  </ul>
+</nav>
+  
+
+
+
+
+  <div id="content">
+    <main>
+
+      
+    
+    
+
+
+<div class="content-meta">
+
+
+        
+            <p>
+                <a href="/minute-minder/">
+                    
+                    <time class="dt-published" datetime="2012-08-22 00:00:00 &#43;0000 UTC">
+                        22nd August, 2012</time>
+                </a>
+            </p>
+        
+
+
+
+<ul class="taglist">
+    
+    <li><a href="/tags/app/">App</a></li>
+    
+    <li><a href="/tags/calculator/">Calculator</a></li>
+    
+    <li><a href="/tags/work/">Work</a></li>
+    
+    <li><a href="/tags/time/">Time</a></li>
+    
+</ul>
+
+
+</div>
+<h1>The Minute Minder</h1>
+
+<h5 class="subtitle">Time keeps on ticking</h5><p>Originally from one of my earlier instances of a personal website, I&rsquo;m re-doing and re-posting it here, because my <em>God</em> it&rsquo;s a perennially useful tool&hellip;</p>
+<p>The idea is that small inconveniences can end up costing a significant chunk of money, and this calculator helps surface those costs. Perhaps it&rsquo;s a slow laptop, and you need to justify buying a new one. Perhaps it&rsquo;s rationalising how much time is being wasted in a regular, pointless meeting.</p>
+<p>&#x26a0;&#xfe0f; But, be warned! With great power comes great responsibility. If you spend time making and drinking a cup of tea, just think about how much <em>that</em> costs&hellip; and do you want it thrown in your face? (The cost, not the tea).</p>
+<p>Use it how you will. All the calculations are performed in the page, and no data is sent anywhere, or otherwise captured for any reason. If you want to see the code, just view the source of this page.</p>
+
+<form id="mm-form" class="inline-app formica">
+		<span class="loosey-goosey">
+			<label for="workingYear">Typical working days per year:</label>
+			<input id="workingYear" name="workingYear" type="number" value="220" />
+		</span>
+		<span>
+			<label for="rate">Your rate:</label>
+			<input id="rate" name="rate" type="number" value="300" />
+			<label for="rateMeasure">per</label>
+			<select id="rateMeasure" name="rateMeasure" >
+				<option>Hour</option>
+				<option selected>Day</option>
+			</select>
+		</span>
+		<span>
+			<label for="consumed">I spend</label>
+			<input id="consumed" name="consumed" type="number" value="8" />
+			<label for="consumedRate">of</label>
+			<select id="consumedRate" name="consumedRate">
+				<option selected>Minutes</option>
+				<option >Hours</option>
+			</select>
+			<label for="frequency">Every</label>
+			<select id="frequency" name="frequency">
+				<option selected>Day</option>
+				<option>Week</option>
+				<option>Fortnight</option>
+			</select>
+		</span>
+			<label for="task">Wasting time by</label>
+			<input id="task" name="task" type="text" value="waiting for my laptop to boot" />
+    <blockquote><output class="main-output success"></output></blockquote>
+       </form>
+    <script>
+        const form = document.querySelector("#mm-form");
+        const out = document.querySelector("#mm-form output");
+        const frequencyMap = {
+            Day: 8,
+            Week: 40,
+            Fortnight: 80
+        };
+        const consumedRateMap = {
+            Minutes : 0.0166667,
+            Hours : 1
+        }
+        const rateMeasureMap = {
+            Hour : 1,
+            Day : 0.125
+        }
+        const write = ({frequency, consumed, consumedRate, task, workingYear, rate, rateMeasure, cost}) => {
+            return `Every ${frequency.toLowerCase()}, I spend around 
+            ${consumed} ${consumedRate.toLowerCase()} ${task}. 
+            Given that I typically work ${workingYear} days a year, 
+            and my rate is £${rate}&nbsp;per&nbsp;${rateMeasure.toLowerCase()}, 
+            I estimate that this is costing 
+            <strong>£${cost}&nbsp;a&nbsp;year</strong>.
+            `;
+        }
+        const costimate =  ({frequency, consumed, consumedRate, task, workingYear, rate, rateMeasure}) => {
+            let perHour = (consumed * consumedRateMap[consumedRate]) / frequencyMap[frequency];
+            let workingHours = workingYear * 8; // it's always an 8 hour day
+            let taskTime = workingHours * perHour;
+            let hourlyRate = rate * rateMeasureMap[rateMeasure];
+            return hourlyRate * taskTime;
+        }
+        const calculate = () => {
+            let formData = new FormData(form); 
+            let o = Object.fromEntries(formData.entries());
+            o.cost = costimate(o).toFixed(2);
+            out.innerHTML = write(o);
+        }
+        form.addEventListener('change', (e) => {calculate()});
+        calculate();
+    </script>
+
+<p>The Minute Minder is 
+
+
+
+
+
+	
+		
+		
+		
+	
+<a href="https://creativecommons.org/publicdomain/zero/1.0/" 
+ 
+target="_blank"
+class="external" 
+data-domain="creativecommons.org"><span class="link-text">completely free for you to use</span><span class="hostname-text">creativecommons.org</span></a> - any way you like. It is certainly improvable &#x1f604;</p>
+
+
+    
+    
+
+<div class="cover-attribution">
+    
+<div class="book-cover item-page layout-classic experiments ">
+    <div class="cover-image"><picture><img src="/images/minute-minder_hu_43a5fcaaa3b2d8c1.jpg" alt="A crowded dystopian space, crammed with office drones, in front of a colossal clock" width="298px" height="auto"/></picture></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/minute-minder/">The Minute Minder</a>
+    </h2>
+    <div class="subtitle">
+        
+        <span>Time keeps on ticking</span>
+        
+    </div>
+    <div class="author"></div>
+    <div class="subheading">
+        
+        <span>An LRG experimental tool</span>
+        
+    </div>
+    
+    <div class="tags">
+        
+             <span>app</span>
+        
+             <span>calculator</span>
+        
+             <span>work</span>
+        
+             <span>time</span>
+        
+    </div>
+    
+</div>
+    <p>Cover image: </p>
+
+    </div>
+
+
+
+
+    </main>
+    <aside>
+      
+  
+
+    </aside>
+  </div>
+
+
+  <footer>
+  <div class="link-lists">
+
+      <ul role="list">
+          <li>Links!</li>
+      </ul>
+      <ul role="list">
+          <li><a href="/tags/">Tags!</a></li>
+
+      </ul>
+      <ul role="list">
+          <li>So many links!</li>
+      </ul>
+      <ul role="list">
+          <li>Extra links</li>
+      </ul>
+  </div>
+</footer>
+
+  </div>
+
+</body>
+
+</html>

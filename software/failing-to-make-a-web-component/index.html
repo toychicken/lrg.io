@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta name="description" content="What happened when I tried to learn a new thing" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta property="og:url" content="https://lrg.io/software/failing-to-make-a-web-component/">
+  <meta property="og:site_name" content="LRG">
+  <meta property="og:title" content="Failing at web components">
+  <meta property="og:description" content="What happened when I tried to learn a new thing">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="software">
+    <meta property="article:published_time" content="2024-12-04T11:39:00+00:00">
+    <meta property="article:modified_time" content="2024-12-04T11:39:00+00:00">
+    <meta property="article:tag" content="Web-Components">
+    <meta property="article:tag" content="Html">
+    <meta property="article:tag" content="Css">
+    <meta property="article:tag" content="JavaScript">
+    <meta property="article:tag" content="Skills">
+
+
+
+
+
+
+
+  
+  
+
+  
+
+
+
+  
+  
+
+  
+    
+
+        
+      
+
+    
+
+
+      
+      
+      
+        <meta property="og:image" content="https://lrg.io/images/share_frame1200x627-630x627_hu_99cb662ac7e98203.png">
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <title>
+    Failing at web components - LRG
+</title>
+  
+<link rel="icon" type="image/png" href="/favicon/favicon.ico" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#4d3d38">
+<meta name="msapplication-TileColor" content="#4d3d38">
+<meta name="theme-color" content="#4d3d38">
+
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=caveat:400|cormorant-garamond:300i,500,500i,700|lexend:200,400,700" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/css/styles.min.8ac64722e6200bdb808520054bed1bb80046965de54a6283093f0539ab9eb70a.css" integrity="sha256-isZHIuYgC9uAhSAFS&#43;0buABGll3lSmKDCT8FOauetwo=">
+
+</head>
+
+
+
+
+
+
+<body>
+
+
+  <header class="">
+
+    <div class="heading">
+      <h1><a href="/">LRG</a></h1>
+    </div>
+    
+    <div class="subheading">
+      <p>An LRG keeping his eye in project</p>
+    </div>
+    
+
+  </header>
+
+  
+  <nav class="breadcrumb" aria-label="breadcrumb">
+  <ul role="list">
+    
+      <li>
+        <a href="https://lrg.io/">Hello world*</a>
+      </li>
+    
+      <li>
+        <a href="https://lrg.io/software/">Software</a>
+      </li>
+    
+    <li class="active">
+      <a aria-current="page" href="https://lrg.io/software/failing-to-make-a-web-component/">Failing at web components</a>
+    </li>
+  </ul>
+</nav>
+  
+
+
+
+
+  <div id="content">
+    <main>
+
+      
+    
+    
+
+
+<div class="content-meta">
+
+
+        
+            <p>
+                <a href="/software/failing-to-make-a-web-component/">
+                    
+                    <time class="dt-published" datetime="2024-12-04 11:39:00 &#43;0000 UTC">
+                        4th December, 2024</time>
+                </a>
+            </p>
+        
+
+
+
+<ul class="taglist">
+    
+    <li><a href="/tags/web-components/">Web-Components</a></li>
+    
+    <li><a href="/tags/html/">Html</a></li>
+    
+    <li><a href="/tags/css/">Css</a></li>
+    
+    <li><a href="/tags/javascript/">JavaScript</a></li>
+    
+    <li><a href="/tags/skills/">Skills</a></li>
+    
+</ul>
+
+
+</div>
+<h1>Failing at web components</h1>
+
+<h5 class="subtitle">What even is web component?</h5><p>I think I should know about Web Components™ I have no idea how this is going to work, but I have used Vue &amp; React components in the past. I personally feel like Web Components should be the way forward, but my lazy self has not spent any serious time trying to get to grips with them</p>
+<p>but here&rsquo;s what I imagine a web component might look like. Absolute pseudo-code. I know nothing.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">script</span>&gt;
+</span></span><span style="display:flex;"><span>	<span style="color:#6272a4">// some JS goes in here to make things work
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>&lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">template</span>&gt;
+</span></span><span style="display:flex;"><span>	<span style="color:#6272a4">&lt;!-- some HTML goes in here --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">template</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>	<span style="color:#6272a4">/* some scoped CSS go in here */</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span></code></pre></div><p>This is probably a reflection of how much time I&rsquo;ve spent in Vue.js recently, but it&rsquo;s <em>conceptually</em> what I&rsquo;m imagining is required to build something as a Web Component.</p>
+<h3 id="quick-aside">Quick aside</h3>
+<p>So, I guess the first thing is &lsquo;what&rsquo; to build. Something that doesn&rsquo;t require a dynamic backend (at the moment) as I can&rsquo;t be bothered to set something up. Perhaps something that can take &lsquo;properties&rsquo; from the parent page, or from the url?</p>
+<p>I&rsquo;m going to try to replicate my 
+
+
+
+
+
+	
+<a href="/quick-fox" 
+ 
+target=""
+class="relative" 
+data-domain=""><span class="link-text">Quick Fox</span><span class="hostname-text"></span></a> pangram tester as a web component. It&rsquo;s graphically pretty simple, but distinctive (so I&rsquo;ll know if I get weird style bleed-through) and can take values from the page queryString, to pre-populate form fields.</p>
+<p><img src="/images/quickfox.png" alt="Quick Fox pangram checker"></p>
+<p>It <em>should</em> look something like this ☝</p>
+<hr>
+<h3 id="step-one---what-is-a-web-component">Step one - what is a Web Component?</h3>
+<p>I shall start with my usual searches&hellip; MDN, CSS-tricks and Google</p>
+<p>MDN, as ever has a pretty 
+
+
+
+
+
+	
+		
+		
+		
+	
+<a href="https://developer.mozilla.org/en-us/docs/web/api/web_components" 
+ 
+target="_blank"
+class="external" 
+data-domain="developer.mozilla.org"><span class="link-text">comprehensive set of docs</span><span class="hostname-text">developer.mozilla.org</span></a> but&hellip; perhaps a little overwhelming for a first step.</p>
+<p>CSS-tricks.com has an 
+
+
+
+
+
+	
+		
+		
+		
+	
+<a href="https://css-tricks.com/an-introduction-to-web-components/" 
+ 
+target="_blank"
+class="external" 
+data-domain="css-tricks.com"><span class="link-text">introduction from 2019</span><span class="hostname-text">css-tricks.com</span></a>, which looks handy, but immediately looks like it&rsquo;s missing stuff that&rsquo;s extended the API in the last 5 years. Oh, but there&rsquo;s this likely looking article from 2024 that talks about 
+
+
+
+
+
+	
+		
+		
+		
+	
+<a href="https://css-tricks.com/html-web-components-make-progressive-enhancement-and-css-encapsulation-easier/" 
+ 
+target="_blank"
+class="external" 
+data-domain="css-tricks.com"><span class="link-text">progressive enhancement with web components</span><span class="hostname-text">css-tricks.com</span></a> and that sounds like someone that is coming from the same place as me. Bonus points for linking to a 
+
+
+
+
+
+	
+		
+		
+		
+	
+<a href="https://adactio.com/journal/20618" 
+ 
+target="_blank"
+class="external" 
+data-domain="adactio.com"><span class="link-text">Jeremy Keith article</span><span class="hostname-text">adactio.com</span></a> that actually gives me a  lot  of inspiration to continue this quest.</p>
+<p>I suppose, given Adactio&rsquo;s advice, QuickFox is not an ideal candidate for Web Componentification, but it&rsquo;s only my first pass. So, let&rsquo;s go. I&rsquo;m actually going to use Dave Rupert&rsquo;s 
+
+
+
+
+
+	
+		
+		
+		
+	
+<a href="https://daverupert.com/2021/10/html-with-superpowers/" 
+ 
+target="_blank"
+class="external" 
+data-domain="daverupert.com"><span class="link-text">&lsquo;html with superpowers&rsquo;</span><span class="hostname-text">daverupert.com</span></a> article as a starting point, as it seems very easy to follow.</p>
+<p>Let&rsquo;s see if I can embed his sample <code>&lt;two-up&gt;</code> component here&hellip;</p>
+<p>Here&rsquo;s what it looks like in the body of this page:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">two-up</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">div</span>&gt;&lt;<span style="color:#ff79c6">img</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;/images/wrestlemania@600x600.jpg&#34;</span> <span style="color:#50fa7b">alt</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;before&#34;</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">div</span>&gt;&lt;<span style="color:#ff79c6">img</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;/images/embiggening_the_nest@600x600.jpg&#34;</span> <span style="color:#50fa7b">alt</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;after&#34;</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">two-up</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;/js/two-up.js&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span></code></pre></div><p>And here&rsquo;s how it shows up&hellip;</p>
+<two-up>
+  <div><img src="/images/wrestlemania@600x600.jpg" alt="before"></div>
+  <div><img src="/images/embiggening_the_nest@600x600.jpg" alt="after"></div>
+</two-up>
+<script src="/js/two-up.js"></script>
+<p>Well, okay, that&rsquo;s surprisingly easy, although quite some way from how I&rsquo;d expected to incorporate it into my page&hellip; I think  I&rsquo;d imagined a more &lsquo;React-y&rsquo; way of doing things. Like importing a js module, e.g. <code>&lt;script type=&quot;module&quot; src=&quot;/js/two-up.js&quot;&gt;&lt;/script&gt;</code> and then putting the <code>&lt;two-up /&gt;</code> element in, perhaps passing in some values.</p>
+<p>OK, so first expectations  were wrong. I defer to Jeremy Keith</p>
+<blockquote>
+<p>&ldquo;I have a suggestion for you if you find yourself in this position. Try not to bring React’s mindset with you.&rdquo;</p></blockquote>
+<p>Ahhh, got it.</p>
+<p>So let&rsquo;s try my first pass at a web component&hellip; <code>&lt;quick-fox/&gt;</code></p>
+<p>Oh wait, I&rsquo;m still thinking like a React dev, back in the 2010&rsquo;s&hellip; It should be:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">quick-fox</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">form</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;quickfox&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;inline-app c64&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">label</span> <span style="color:#50fa7b">for</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-options&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-options-label&#34;</span>&gt;26 characters to check&lt;/<span style="color:#ff79c6">label</span>&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-options&#34;</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;text&#34;</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;abcdefghijklmnopqrstuvwxyz&#34;</span> <span style="color:#50fa7b">spellcheck</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;false&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">label</span> <span style="color:#50fa7b">for</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-output&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-output-label&#34;</span>&gt;Remaining characters&lt;/<span style="color:#ff79c6">label</span>&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">output</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-test-output&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;main-output failure&#34;</span>&gt;&lt;/<span style="color:#ff79c6">output</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">br</span>/&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">label</span> <span style="color:#50fa7b">for</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-input&#34;</span>&gt;Enter string to check&lt;/<span style="color:#ff79c6">label</span>&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">textarea</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-input&#34;</span> <span style="color:#50fa7b">spellcheck</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;false&#34;</span>&gt;The quick grown fox, jumps over the lazy doe&lt;/<span style="color:#ff79c6">textarea</span>&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">output</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-user-char-count&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;labelish&#34;</span>&gt;&lt;/<span style="color:#ff79c6">output</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;/<span style="color:#ff79c6">form</span>&gt;
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-sharelink&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	You can &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;?charset=abcdefghijklmnopqrstuvwxyz&amp;userstring=pack+my+box+with+five+dozen+liquor+jugs&#34;</span>&gt;share your shortest sentence&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">quick-fox</span>&gt;
+</span></span></code></pre></div><p>&hellip; but this is literally what I did with the actual quick-fox page - just HTML in the page. It&rsquo;s not portable, at least as I expect it.</p>
+<quick-fox>
+	<form id="quickfox" class="inline-app c64">
+		<label for="qf-options" id="qf-options-label">26 characters to check</label>
+		<input id="qf-options" type="text" value="abcdefghijklmnopqrstuvwxyz" spellcheck="false" />
+		<label for="qf-output" id="qf-output-label">Remaining characters</label>
+		<output id="qf-test-output" class="main-output failure"></output>
+	<br/>
+		<label for="qf-input">Enter string to check</label>
+		<textarea id="qf-input" spellcheck="false">The quick grown fox, jumps over the lazy doe</textarea>
+		<output id="qf-user-char-count" class="labelish"></output>
+	</form>
+	<p id="qf-sharelink">
+	You can <a href="?charset=abcdefghijklmnopqrstuvwxyz&userstring=pack+my+box+with+five+dozen+liquor+jugs">share your shortest sentence</a>
+	</p>
+</quick-fox>
+<p>Ohhh, it inherits style from the parent page&hellip; I think I&rsquo;d  assumed it somehow wouldn&rsquo;t&hellip;</p>
+<p>No  JS is executing though, because <em>that&rsquo;s</em> inline on the original page.</p>
+<hr>
+<h3 id="step-two---frustration">Step two - frustration</h3>
+<p>Dave Rupert&rsquo;s article drops the ball at &ldquo;styling&rdquo;, so I&rsquo;m heading back to CSS-tricks to see if I can learn what to do here&hellip; Feels like I should be able to encapsulate the style <em>somehow</em> but is it really just like this?:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">quick-fox</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#6272a4">/* styles go here */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In which case, again, I&rsquo;m wondering how this is different from just writing the CSS and including inline, or in the <code>head</code> element as normal?</p>
+<p>Let&rsquo;s try&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">quick-fox</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;n2-try&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">form</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;quickfox&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;inline-app wc-test&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">label</span> <span style="color:#50fa7b">for</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-options&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-options-label&#34;</span>&gt;26 characters to check&lt;/<span style="color:#ff79c6">label</span>&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-options&#34;</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;text&#34;</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;abcdefghijklmnopqrstuvwxyz&#34;</span> <span style="color:#50fa7b">spellcheck</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;false&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">label</span> <span style="color:#50fa7b">for</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-output&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-output-label&#34;</span>&gt;Remaining characters&lt;/<span style="color:#ff79c6">label</span>&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">output</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-test-output&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;main-output failure&#34;</span>&gt;&lt;/<span style="color:#ff79c6">output</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">br</span>/&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">label</span> <span style="color:#50fa7b">for</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-input&#34;</span>&gt;Enter string to check&lt;/<span style="color:#ff79c6">label</span>&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">textarea</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-input&#34;</span> <span style="color:#50fa7b">spellcheck</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;false&#34;</span>&gt;The quick grown fox, jumps over the lazy doe&lt;/<span style="color:#ff79c6">textarea</span>&gt;
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">output</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-user-char-count&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;labelish&#34;</span>&gt;&lt;/<span style="color:#ff79c6">output</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;/<span style="color:#ff79c6">form</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;qf-sharelink&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	You can &lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;?charset=abcdefghijklmnopqrstuvwxyz&amp;userstring=pack+my+box+with+five+dozen+liquor+jugs&#34;</span>&gt;share your shortest sentence&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">quick-fox</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">font-family</span>:<span style="color:#ff79c6">monospace</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">display</span>:<span style="color:#ff79c6">block</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">width</span>:<span style="color:#ff79c6">auto</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">box-shadow</span>:<span style="color:#bd93f9">0</span> <span style="color:#bd93f9">.2</span><span style="color:#8be9fd">em</span> <span style="color:#bd93f9">1</span><span style="color:#8be9fd">em</span> <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">#333</span>;
+</span></span><span style="display:flex;"><span>		form.wc-test {
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">background</span>:<span style="color:#ff79c6">pink</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">quick-fox</span>&gt;
+</span></span></code></pre></div><quick-fox id="n2-try">
+	<form id="quickfox" class="inline-app wc-test">
+		<label for="qf-options" id="qf-options-label">26 characters to check</label>
+		<input id="qf-options" type="text" value="abcdefghijklmnopqrstuvwxyz" spellcheck="false" />
+		<label for="qf-output" id="qf-output-label">Remaining characters</label>
+		<output id="qf-test-output" class="main-output failure"></output>
+	<br/>
+		<label for="qf-input">Enter string to check</label>
+		<textarea id="qf-input" spellcheck="false">The quick grown fox, jumps over the lazy doe</textarea>
+		<output id="qf-user-char-count" class="labelish"></output>
+	</form>
+	<p id="qf-sharelink">
+	You can <a href="?charset=abcdefghijklmnopqrstuvwxyz&userstring=pack+my+box+with+five+dozen+liquor+jugs">share your shortest sentence</a>
+	</p>
+	<style>
+	quick-fox#n2-try {
+			font-family:monospace;
+				display:block;
+				width:auto;
+			box-shadow:0 .2em 1em 0 #333;
+		form.wc-test {
+			background:pink;
+		}
+	}
+	</style>
+</quick-fox>
+<p>OK - so no panicking about the dreaded &ldquo;Shadow DOM&rdquo;&hellip; but also no advantage <em>yet</em> over doing this inline. It literally <em>is</em> inline.  (Note to self, it looks like you have to explicitly give the outer element a display property and width to get it to render some styles)</p>
+<p>Lol CSS-tricks led me back to Dave Rupert again - this time, it&rsquo;s 
+
+
+
+
+
+	
+		
+		
+		
+	
+<a href="https://htmlwithsuperpowers.netlify.app/get-started/" 
+ 
+target="_blank"
+class="external" 
+data-domain="htmlwithsuperpowers.netlify.app"><span class="link-text">HTML with Superpowers</span><span class="hostname-text">htmlwithsuperpowers.netlify.app</span></a> this is what I needed. Not least because Dave actually makes some attempt to describe WHY you would want to use Web Components.</p>
+<hr>
+<h3 id="step-three---realisation">Step three - realisation</h3>
+<p>I think I&rsquo;ve jumped too soon. I&rsquo;m guessing Quick Fox  isn&rsquo;t <em>really</em> the ideal candidate for a web component. I&rsquo;ll read a bit of HTML with Superpowers, and get back to you&hellip;</p>
+<p>[Frantic reading ensues&hellip;]</p>
+<p>Yep&hellip;</p>
+<p>[More reading]</p>
+<p>&hellip; Ohhhhhhhhh&hellip;</p>
+<p>[banging head on desk]</p>
+<p>OK - I&rsquo;m still not 100% sure I see <em>how</em> web components are going to revolutionise what I do, but it seems perhaps I have got a bit of direction for further exploration.</p>
+<ul>
+<li><strong>Focus on progressive enhancement</strong>. The best use cases have a &rsquo;naked&rsquo; html application. For instance Jake Archibald&rsquo;s <code>&lt;two-up&gt;</code> component will, at worst, show a pair of images if the web-componenty bits fail for some reason. This is way better than the &lsquo;This app fails if Javascript is turned off&rsquo; option that most frameworks have as default.</li>
+<li><strong>Do things that make use of <code>&lt;template&gt;</code> and <code>&lt;slot&gt;</code> elements</strong>, as this is how you &lsquo;mix&rsquo; your component into the static parts of the page.</li>
+<li><strong>Don&rsquo;t try to be like [FRAMEWORK]</strong> - Web components are their own thing, with a specific use case. It doesn&rsquo;t feel (to me) that you&rsquo;d use Web components to build a monolithic SPA, more like augmenting static sites like this with pockets of useful interactive bits, or swapping out parts of your existing SPA to use more web-friendly parts (until, like Trigger&rsquo;s broom, it&rsquo;s all just web-friendly).</li>
+<li><strong>Don&rsquo;t fear the shadow DOM</strong>. It&rsquo;s just &rsquo;the bit that is entirely under the control of the component&rsquo;. Sits side-by-side with the light DOM - which inherits stuff from the parent like normal HTML.</li>
+</ul>
+<p>Perhaps, rather than try to recreate an entire tiny applet inside a single component, pick a utility function that does something&hellip; like pulling in a bunch of replies from Mastodon, or making a progressively enhanced audio player&hellip;</p>
+<p>On reflection,  I bet Hugo (or any other static site generator) is probably a great companion to Web components. Using the 
+
+
+
+
+
+	
+		
+		
+		
+	
+<a href="https://gohugo.io/content-management/shortcodes/" 
+ 
+target="_blank"
+class="external" 
+data-domain="gohugo.io"><span class="link-text">Hugo shortcode syntax</span><span class="hostname-text">gohugo.io</span></a> to throw in the most basic info, to generate neat, web-friendly, progressively enhanced components. I might give it a try.</p>
+<p><strong>But not today.</strong></p>
+<hr>
+<h3 id="postscript">Postscript</h3>
+<p>If you have any thoughts on this, please do put them in a comment here -
+
+
+
+
+
+	
+		
+		
+		
+		    
+		
+	
+<a href="https://mastodon.social/@toychicken/113601422843650747" 
+ 
+target="_blank"
+class="external implied" 
+data-domain="mastodon.social"><span class="link-text">https://mastodon.social/@toychicken/113601422843650747</span><span class="hostname-text">mastodon.social</span></a></p>
+
+    
+    
+
+<div class="cover-attribution">
+    
+<div class="book-cover item-page layout-vintage experiments ">
+    <div class="cover-image"><picture><img src="/images/web-component-failure.svg" alt="Illustration of someone violently destroying a desktop computer with some kind of bat. It probably deserved it."/></picture></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/software/failing-to-make-a-web-component/">Failing at web components</a>
+    </h2>
+    <div class="subtitle">
+        
+        <span>What even is web component?</span>
+        
+    </div>
+    <div class="author"></div>
+    <div class="subheading">
+        
+        <span>An LRG keeping his eye in project</span>
+        
+    </div>
+    
+    <div class="tags">
+        
+             <span>web-components</span>
+        
+             <span>html</span>
+        
+             <span>css</span>
+        
+             <span>javascript</span>
+        
+             <span>skills</span>
+        
+    </div>
+    
+</div>
+    <p>Cover image: </p>
+
+    </div>
+
+
+
+
+    </main>
+    <aside>
+      
+  
+    <ul role="list" class="related">
+      
+                      
+              
+
+    
+    
+
+<li class="book-cover item-page layout-classic experiments ">
+    <div class="cover-image"><picture><img src="/images/tweet-as-postcard-stamp_hu_aad85e08a7b38b95.png" alt="A CSS generated postage stamp with the twitter logo" width="298px" height="auto"/></picture></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/software/site-build/tweets-as-postcards/">Tweets as postcards</a>
+    </h2>
+    <div class="subtitle">
+        
+        <span>Nice things that don&#39;t really work</span>
+        
+    </div>
+    <div class="author"></div>
+    <div class="subheading">
+        
+        <span>an LRG Sisyphean task</span>
+        
+    </div>
+    
+    <div class="tags">
+        
+             <span>postage-stamp</span>
+        
+             <span>postmark</span>
+        
+             <span>html</span>
+        
+             <span>css</span>
+        
+    </div>
+    
+</li>
+          
+
+      
+                      
+              
+
+    
+    
+
+<li class="book-cover item-page layout-classic experiments ">
+    <div class="cover-image"><picture><img src="/images/hexclock-02_hu_e6c09c33eb4295e6.jpg" alt="A screenshot of Hexclock v2.0 shows 20:35" width="298px" height="auto"/></picture></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/colourful-clocks/hexclock/">HexClock 2.0</a>
+    </h2>
+    <div class="subtitle">
+        
+        <span>A colour-change clock</span>
+        
+    </div>
+    <div class="author"></div>
+    <div class="subheading">
+        
+        <span>An LRG waste timing project</span>
+        
+    </div>
+    
+    <div class="tags">
+        
+             <span>clocks</span>
+        
+             <span>time</span>
+        
+             <span>css</span>
+        
+             <span>gradients</span>
+        
+    </div>
+    
+</li>
+          
+
+      
+                      
+              
+
+    
+    
+
+<li class="book-cover item-page layout-classic experiments ">
+    <div class="cover-image"><picture><img src="/images/tv-ident-clock-01_sq_hu_985b5a00d41fe417.jpg" alt="Screenshot of the TV ident clock" width="298px" height="auto"/></picture></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/colourful-clocks/tv-ident-clock-01/">TV Ident Clock 1</a>
+    </h2>
+    <div class="subtitle">
+        
+        <span>A Sweeping &#39;Radar&#39; clock</span>
+        
+    </div>
+    <div class="author"></div>
+    <div class="subheading">
+        
+        <span>An LRG waste timing project</span>
+        
+    </div>
+    
+    <div class="tags">
+        
+             <span>clocks</span>
+        
+             <span>time</span>
+        
+             <span>css</span>
+        
+             <span>gradients</span>
+        
+    </div>
+    
+</li>
+          
+
+      
+                      
+              
+
+    
+    
+
+<li class="book-cover item-page layout-notebook posts ">
+    <div class="cover-image">
+     <div class="background"></div></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/twitter/2015/05/">May, 2015</a>
+    </h2>
+    <div class="subtitle">
+        
+    </div>
+    <div class="author"><span>@toychicken</span></div>
+    <div class="subheading">
+        
+        <span>Tweets</span>
+        
+    </div>
+    
+    <div class="tags">
+        
+             <span>javascript</span>
+        
+             <span>remote</span>
+        
+             <span>debugging</span>
+        
+             <span>framework</span>
+        
+             <span>mit</span>
+        
+             <span>opensource</span>
+        
+             <span>npm</span>
+        
+    </div>
+    
+</li>
+          
+
+      
+                      
+              
+
+    
+    
+
+<li class="book-cover item-page layout-notebook posts ">
+    <div class="cover-image">
+     <div class="background"></div></div>
+
+
+    <h3 class="title">
+        <a href="https://lrg.io/twitter/2012/04/">April, 2012</a>
+    </h2>
+    <div class="subtitle">
+        
+    </div>
+    <div class="author"><span>@toychicken</span></div>
+    <div class="subheading">
+        
+        <span>Tweets</span>
+        
+    </div>
+    
+    <div class="tags">
+        
+             <span>spooning</span>
+        
+             <span>bitbucket</span>
+        
+             <span>Apache</span>
+        
+             <span>Sqoop</span>
+        
+             <span>BigData</span>
+        
+             <span>Hadoop</span>
+        
+             <span>javascript</span>
+        
+             <span>node</span>
+        
+             <span>mobileweb</span>
+        
+             <span>earworm</span>
+        
+             <span>kinda</span>
+        
+             <span>apps</span>
+        
+             <span>CambridgeTrain</span>
+        
+             <span>OurWeb</span>
+        
+             <span>erlang</span>
+        
+             <span>embedded</span>
+        
+             <span>London</span>
+        
+             <span>html5</span>
+        
+             <span>raspi</span>
+        
+             <span>TheApacheWay</span>
+        
+             <span>macports</span>
+        
+             <span>walk</span>
+        
+             <span>dailymail</span>
+        
+    </div>
+    
+</li>
+          
+
+      
+    </ul>
+
+
+      
+  
+
+    </aside>
+  </div>
+
+
+  <footer>
+  <div class="link-lists">
+
+      <ul role="list">
+          <li>Links!</li>
+      </ul>
+      <ul role="list">
+          <li><a href="/tags/">Tags!</a></li>
+
+      </ul>
+      <ul role="list">
+          <li>So many links!</li>
+      </ul>
+      <ul role="list">
+          <li>Extra links</li>
+      </ul>
+  </div>
+</footer>
+
+  </div>
+
+</body>
+
+</html>

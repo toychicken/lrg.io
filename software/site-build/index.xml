@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Another site rebuild on LRG</title>
+    <link>https://lrg.io/software/site-build/</link>
+    <description>Recent content in Another site rebuild on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 09 Oct 2024 11:55:00 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/software/site-build/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tweets as postcards</title>
+      <link>https://lrg.io/software/site-build/tweets-as-postcards/</link>
+      <pubDate>Wed, 09 Oct 2024 11:55:00 +0000</pubDate>
+      <guid>https://lrg.io/software/site-build/tweets-as-postcards/</guid>
+      <description>&lt;p&gt;I did an experiment trying to make my old Tweet archive look like  postcards. It&amp;rsquo;s a nice aesthetic if you&amp;rsquo;re on a PC, but less easily readable on mobile. This really needs to be backed out. It will, eventually.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://lrg.io/images/tweet-as-postcard.png&#34; alt=&#34;It’s intended to look like the back of a postcard, with a cute postmarked ’twitter’ stamp&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I was particularly proud of the &amp;lsquo;smudged&amp;rsquo; postmark on the stamp. All done with CSS :)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Skeumorphic, Moi?</title>
+      <link>https://lrg.io/software/site-build/design_process/</link>
+      <pubDate>Mon, 02 Sep 2024 16:22:00 +0000</pubDate>
+      <guid>https://lrg.io/software/site-build/design_process/</guid>
+      <description>&lt;h2 id=&#34;best-wwwebsite-ever-&#34;&gt;Best wwwebsite ever! ✊&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://lrg.io/images/penguin_covers.png&#34; alt=&#34;A bookshelf of vintage penguin paperbacks&#34;&gt;&#xA;It&amp;rsquo;s going to look like the coolest fucking shelf of penguin books you&amp;rsquo;ve ever seen.  At least, it will eventually&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;From the home page, every folder or article, or experiment page will present as cool 70s penguin book cover. Once inside&amp;hellip; something a bit more like a typed page&amp;hellip; but, I&amp;rsquo;m  not too worried about that.&lt;/p&gt;&#xA;&lt;h2 id=&#34;structure&#34;&gt;Structure&lt;/h2&gt;&#xA;&lt;h3 id=&#34;cover-grid&#34;&gt;Cover grid&lt;/h3&gt;&#xA;&lt;p&gt;There&amp;rsquo;s an underlying grid to the typical penguin layout&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Useful links</title>
+      <link>https://lrg.io/software/site-build/useful_links/</link>
+      <pubDate>Mon, 02 Sep 2024 15:48:00 +0000</pubDate>
+      <guid>https://lrg.io/software/site-build/useful_links/</guid>
+      <description>&lt;h3 id=&#34;matrix-transforms&#34;&gt;Matrix transforms&lt;/h3&gt;&#xA;&lt;p&gt;Found this useful &#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#xA;&lt;a href=&#34;https://angrytools.com/css-generator/transform/&#34; &#xA; &#xA;target=&#34;_blank&#34;&#xA;class=&#34;external&#34; &#xA;data-domain=&#34;angrytools.com&#34;&gt;&lt;span class=&#34;link-text&#34;&gt;matrix transform tool&lt;/span&gt;&lt;span class=&#34;hostname-text&#34;&gt;angrytools.com&lt;/span&gt;&lt;/a&gt;, handly for getting the transforms right on my &amp;lsquo;covers&amp;rsquo; on the index page. Each book is ever-so-slightly on the wonk.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://lrg.io/images/angry_tools-matrix-generator.png&#34; alt=&#34;Screenshot of the Angry Tools Matrix Generator&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;grainy-gradients&#34;&gt;Grainy gradients&lt;/h3&gt;&#xA;&lt;p&gt;I was trying to add a little grain to my gradients on the book covers. The awesome folks at CSS-TRICKS had my back, even if I decided not to use it in the end.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

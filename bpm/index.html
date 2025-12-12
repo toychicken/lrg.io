@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.bunny.net/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link href="bpm.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="bpm">
+
+        <form id="menu">
+            <span class="gloss">
+
+                <span class="sys-wrap lcd">
+                    <label for="sys">Sys:</label>
+                    <input name="sys" id="sys" type="number" value="120" min="0" max="400" />
+                </span>
+                <span class="dia-wrap lcd">
+                    <label for="dia">Dia:</label>
+                    <input name="dia" id="dia" type="number" value="80" min="0" max="400" />
+                </span>
+
+            </span>
+
+            <span class="gloss">
+                <span class="bpm-wrap lcd">
+                    <label for="bpm">Bpm:</label>
+                    <input name="bpm" id="bpm" type="number" min="0" max="400" value="68" />
+                    
+                </span>
+                <button onclick="submit" class="but-wrap">
+                    
+                    <span>
+                    Add
+                </span>
+            </button>
+
+            </span>
+        </form>
+        <ul id="log"></ul>
+
+    </div>
+
+    <script src="manage-log.js"></script>
+
+</html>

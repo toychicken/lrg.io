@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Postage-Stamp on LRG</title>
+    <link>https://lrg.io/tags/postage-stamp/</link>
+    <description>Recent content in Postage-Stamp on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 09 Oct 2024 11:55:00 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/postage-stamp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tweets as postcards</title>
+      <link>https://lrg.io/software/site-build/tweets-as-postcards/</link>
+      <pubDate>Wed, 09 Oct 2024 11:55:00 +0000</pubDate>
+      <guid>https://lrg.io/software/site-build/tweets-as-postcards/</guid>
+      <description>&lt;p&gt;I did an experiment trying to make my old Tweet archive look like  postcards. It&amp;rsquo;s a nice aesthetic if you&amp;rsquo;re on a PC, but less easily readable on mobile. This really needs to be backed out. It will, eventually.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://lrg.io/images/tweet-as-postcard.png&#34; alt=&#34;It’s intended to look like the back of a postcard, with a cute postmarked ’twitter’ stamp&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I was particularly proud of the &amp;lsquo;smudged&amp;rsquo; postmark on the stamp. All done with CSS :)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

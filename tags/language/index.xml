@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Language on LRG</title>
+    <link>https://lrg.io/tags/language/</link>
+    <description>Recent content in Language on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/language/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quick Fox</title>
+      <link>https://lrg.io/quick-fox/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://lrg.io/quick-fox/</guid>
+      <description>&lt;p&gt;Ever wondered &amp;ldquo;What is the shortest sentence in english that uses all the letters of the alphabet&amp;rdquo;? Perhaps.&lt;/p&gt;&#xA;&lt;p&gt;Did you know that &amp;ldquo;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;&#xA;&lt;a href=&#34;?userstring=a&amp;#43;quick&amp;#43;brown&amp;#43;fox&amp;#43;jumps&amp;#43;over&amp;#43;the&amp;#43;lazy&amp;#43;dog#quickfox&#34; &#xA; &#xA;target=&#34;&#34;&#xA;class=&#34;relative&#34; &#xA;data-domain=&#34;&#34;&gt;&lt;span class=&#34;link-text&#34;&gt;A Quick brown fox jumps over the lazy dog&lt;/span&gt;&lt;span class=&#34;hostname-text&#34;&gt;&lt;/span&gt;&lt;/a&gt;&amp;rdquo;, although often cited, is &lt;em&gt;not&lt;/em&gt; &#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;&#xA;&lt;a href=&#34;?charset=abcdefghijklmnopqrstuvwxyz&amp;amp;userstring=cwm%20fjord%20bank%20glyphs%20vext%20quiz#quickfox&#34; &#xA; &#xA;target=&#34;&#34;&#xA;class=&#34;relative&#34; &#xA;data-domain=&#34;&#34;&gt;&lt;span class=&#34;link-text&#34;&gt;the shortest&lt;/span&gt;&lt;span class=&#34;hostname-text&#34;&gt;&lt;/span&gt;&lt;/a&gt;?&lt;/p&gt;&#xA;&lt;p&gt;Could you train an AI to find a shorter sentence? Would anyone care? Pangram adventurers, start here!&lt;/p&gt;&#xA;&lt;p&gt;I wrote a quick way to check what characters you&amp;rsquo;ve used in a sentence or other kind of string. It does seem to work with most european languages, but doesn&amp;rsquo;t appear to like emoji. &lt;em&gt;Sorry&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

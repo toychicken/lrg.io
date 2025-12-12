@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software on LRG</title>
+    <link>https://lrg.io/software/</link>
+    <description>Recent content in Software on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 04 Dec 2024 11:39:00 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Failing at web components</title>
+      <link>https://lrg.io/software/failing-to-make-a-web-component/</link>
+      <pubDate>Wed, 04 Dec 2024 11:39:00 +0000</pubDate>
+      <guid>https://lrg.io/software/failing-to-make-a-web-component/</guid>
+      <description>&lt;p&gt;I think I should know about Web Components™ I have no idea how this is going to work, but I have used Vue &amp;amp; React components in the past. I personally feel like Web Components should be the way forward, but my lazy self has not spent any serious time trying to get to grips with them&lt;/p&gt;&#xA;&lt;p&gt;but here&amp;rsquo;s what I imagine a web component might look like. Absolute pseudo-code. I know nothing.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#ff79c6&#34;&gt;script&lt;/span&gt;&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#x9;&lt;span style=&#34;color:#6272a4&#34;&gt;// some JS goes in here to make things work&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&amp;lt;/&lt;span style=&#34;color:#ff79c6&#34;&gt;script&lt;/span&gt;&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#ff79c6&#34;&gt;template&lt;/span&gt;&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#x9;&lt;span style=&#34;color:#6272a4&#34;&gt;&amp;lt;!-- some HTML goes in here --&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#ff79c6&#34;&gt;template&lt;/span&gt;&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#ff79c6&#34;&gt;style&lt;/span&gt;&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#x9;&lt;span style=&#34;color:#6272a4&#34;&gt;/* some scoped CSS go in here */&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#ff79c6&#34;&gt;style&lt;/span&gt;&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is probably a reflection of how much time I&amp;rsquo;ve spent in Vue.js recently, but it&amp;rsquo;s &lt;em&gt;conceptually&lt;/em&gt; what I&amp;rsquo;m imagining is required to build something as a Web Component.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://lrg.io/software/messing-with-animated-svgs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lrg.io/software/messing-with-animated-svgs/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been out of the animating things game for a lonnnnnnnnng time. So, I thought I&amp;rsquo;d have a crack at animating a line around an SVG, and here&amp;rsquo;s my notes.&lt;/p&gt;&#xA;&lt;p&gt;First up - a simple circle:&lt;/p&gt;&#xA;&lt;svg id=&#34;loop&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 200 200&#34;&gt;&#xA;&lt;defs&gt;&#xA;&#x9;&#x9;&lt;style&gt;&#xA;&#x9;&#x9;&#x9;circle {&#xA;&#x9;&#x9;&#x9;stroke:black;&#xA;&#x9;&#x9;&#x9;stroke-width: 10px;&#xA;&#x9;&#x9;&#x9;fill:#fff0;&#xA;&#x9;&#x9;&#x9;&#x9;stroke-dash-array:10 40;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&lt;/style&gt;&#xA;&lt;/defs&gt;&#xA;&lt;circle cx=&#34;100&#34; cy=&#34;100&#34; r=&#34;95&#34;&gt;&lt;/circle&gt;&#xA;&lt;/svg&gt;</description>
+    </item>
+  </channel>
+</rss>

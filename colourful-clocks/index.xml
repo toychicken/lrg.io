@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Colourful Clocks on LRG</title>
+    <link>https://lrg.io/colourful-clocks/</link>
+    <description>Recent content in Colourful Clocks on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 11 Nov 2024 12:22:00 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/colourful-clocks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HexClock 2.0</title>
+      <link>https://lrg.io/colourful-clocks/hexclock/</link>
+      <pubDate>Mon, 11 Nov 2024 12:22:00 +0000</pubDate>
+      <guid>https://lrg.io/colourful-clocks/hexclock/</guid>
+      <description>&lt;p&gt;Another clock experiment, this time a direct successor to my original Hexclock from 10+ years ago. I wanted to update it a little, to use multiple gradients and improve the way that they were calculated. As with the &#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;&#xA;&lt;a href=&#34;https://lrg.io/colourful-clocks/tv-ident-clock-01&#34; &#xA; &#xA;target=&#34;&#34;&#xA;class=&#34;relative&#34; &#xA;data-domain=&#34;&#34;&gt;&lt;span class=&#34;link-text&#34;&gt;TV ident clock&lt;/span&gt;&lt;span class=&#34;hostname-text&#34;&gt;&lt;/span&gt;&lt;/a&gt; I&amp;rsquo;m not using any libraries, frameworks or stuff like that, with the aim of keeping my JS &amp;amp; CSS skills up to scratch.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TV Ident Clock 1</title>
+      <link>https://lrg.io/colourful-clocks/tv-ident-clock-01/</link>
+      <pubDate>Tue, 05 Nov 2024 16:38:00 +0000</pubDate>
+      <guid>https://lrg.io/colourful-clocks/tv-ident-clock-01/</guid>
+      <description>&lt;p&gt;This is the first of my re-visits of a project I did a while ago, the &amp;lsquo;Hex clock&amp;rsquo; (which was itself a CSS copy of a thing called the colourclock, which I  think is now defunct)&lt;/p&gt;&#xA;&lt;p&gt;This is inspired by those clocks that used to run before educational programming on BBC2 in the 70s and 80s.&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://lrg.io/clocks/tv-ident-01&#34; width=&#34;100%&#xA;&#34; height=&#34;400px&#34;&gt;&lt;/iframe&gt;&#xA;&lt;p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;&#xA;&lt;a href=&#34;https://lrg.io/clocks/tv-ident-01/&#34; &#xA; &#xA;target=&#34;&#34;&#xA;class=&#34;relative&#34; &#xA;data-domain=&#34;&#34;&gt;&lt;span class=&#34;link-text&#34;&gt;View in full page&lt;/span&gt;&lt;span class=&#34;hostname-text&#34;&gt;&lt;/span&gt;&lt;/a&gt; - It just runs in the browser, and if you want to install it as an &amp;lsquo;app&amp;rsquo; you can use Chrome&amp;rsquo;s &amp;ldquo;cast, save &amp;amp; share&amp;rdquo; tool.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

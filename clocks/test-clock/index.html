@@ -1,0 +1,186 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=chivo-mono:700" rel="stylesheet" />
+    <style>
+        :root {
+            font-size: 10px;
+            --face-width:36rem;
+            --face-height:18rem;
+            --clock-back: #0000;
+            --clock-hand-eased: #00ff37;
+            --clock-hand-bounced: #ff3700;
+        }
+
+        body {
+            background: #ccc;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 0;
+            margin: 0;
+        }
+
+        main {
+            margin: 1em;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap:1rem;
+        }
+
+        .clock {
+
+            width: var(--face-width);
+            background: #fff;
+            font-size: 1.6rem;
+            display: flex;
+            flex-direction: column;
+            
+            >* {
+                margin-bottom: 0.6rem;
+            }
+            .face {
+                background: blue;
+                width: var(--face-width);
+                height: var(--face-height);
+                display:flex;
+
+            }
+            output {
+                aspect-ratio: 1 / 1;
+                height:100%;
+                display:inline-block;
+                margin:auto;
+                color:yellow;
+            }
+
+            progress {
+                width: 100%;
+            }
+
+            time {
+                padding: 0 0 0 1rem;
+            }
+
+            details {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            summary {
+                cursor: pointer;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="/css/clock-toys.css" />
+    <script type="text/javascript" src="/js/clock-toys.js"></script>
+</head>
+<main>
+    
+</main>
+
+<body>
+    <script>
+        const eases = Object.entries(easingFunctions);
+        const clocks = [];
+        const main = document.querySelector('main');
+
+        timeKeys.forEach(p => {
+            return timeKeys.forEach(m => {
+
+                const s = timeKeys.indexOf(p);
+                const f = timeKeys.indexOf(m);
+                if (f > s) {
+                    return eases.forEach(e => {
+                        clocks.push({
+                            p, m, easing: e[0]
+                        });
+                    })
+                }
+            })
+        });
+
+
+
+        const clockList = clocks.map((params, i) => {
+            const clock = document.createElement('div');
+            clock.classList.add('clock');
+            clock.innerHTML = `
+            <div class="clock">
+                <div class="face">
+                    <output></output>
+                    <output></output>
+                </div>
+                <span>LINEAR<progress class="linear" value="0.5">LINEAR</progress></span>
+                <span>EASED<progress class="eased" value="0.2">EASED</progress></span>
+                <span>BOUNCED<progress class="bounced" value="0.8">BOUNCED</progress></span>
+                <time></time>
+                <details>
+                    <summary></summary>
+<pre><code></code></pre>
+                </details>
+            </div>`
+            const output = clock.getElementsByTagName('output');
+            const time = clock.getElementsByTagName('time')[0];
+            const progress = clock.getElementsByTagName('progress');
+            const code = clock.getElementsByTagName('code')[0];
+            const summary = clock.getElementsByTagName('summary')[0];
+
+            code.innerHTML = JSON.stringify(params, null, 2);
+            summary.innerText = `${params.easing} : ${params.p}/${params.m}`;
+            main.appendChild(clock);
+
+            return {
+                clock,
+                output,
+                time,
+                progress,
+                code,
+                params,
+            }
+        })
+
+        const clockTick = (clock) => {
+            const timeFunc = nTime(clock.params);
+            const positionDeg = 360 * timeFunc.eased;
+            const bouncedDeg = 360 * timeFunc.bounced;
+            const pendulumDeg = 90 * timeFunc.bounced;
+            clock.time.innerHTML = timeObjToDate(timeFunc.timeObj).toJSON().split('T')[1] +
+                ' = ' +
+                `${timeFunc.val}/${timeFunc.range}`;
+
+            const hand = `background-color:#000; 
+            background-image: conic-gradient(from ${positionDeg}deg at 50% 50%, var(--clock-back) 95%, var(--clock-hand-eased) 100%),
+            radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 58%),
+                repeating-conic-gradient(white 0deg 1deg, transparent 2deg 28deg, white 29deg 30deg)
+                `;
+            const pendulum = `background-color:#fc0; 
+            background-image: conic-gradient(from ${pendulumDeg + 135}deg at 50% 50%, var(--clock-back) 98%, var(--clock-hand-bounced) 100%),
+            radial-gradient(circle, #fc0f 55%, #fc00 58%),
+                repeating-conic-gradient(white 45deg 46deg, transparent 47deg 133deg, white 134deg 135deg)
+                `;
+            clock.output[0].setAttribute('style', hand);
+            clock.output[1].setAttribute('style', pendulum);
+            clock.progress[0].setAttribute('value', timeFunc.linear);
+            clock.progress[1].setAttribute('value', timeFunc.eased);
+            clock.progress[2].setAttribute('value', timeFunc.bounced);
+        }
+
+
+        // This is not ideal - should encapsulate :)
+        cpInit({
+            is24hour: false,
+            callback: () => {
+                clockList.forEach(clockTick);
+            }
+        });
+
+        main.addEventListener("dblclick", controlPanel.toggleOpen);
+
+
+
+    </script>
+</body>
+
+</html>
