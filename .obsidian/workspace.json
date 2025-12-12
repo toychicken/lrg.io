@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1282c84b814b3f6b",
+        "id": "3648f0604e37cc18",
         "type": "tabs",
         "children": [
           {
-            "id": "8e192776dfc96a73",
+            "id": "9b7c32edfcc537ec",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -166,8 +166,10 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "8e192776dfc96a73",
+  "active": "9b7c32edfcc537ec",
   "lastOpenFiles": [
+    "_templates/post.md",
+    "_templates/note.md",
     "public/images/tees/ecdc_black.png",
     "public/images/tees",
     "content/sounds/xmas/songs_for_christmas.md",
@@ -207,12 +209,10 @@
     "content/notes/2025-06-27_094036.md",
     "content/notes/2025-11-12_144856.md",
     "content/notes/2025-11-10_134446.md",
-    "content/notes/2025-11-06_091209.md",
     "public/software/animated.svg",
     "public/favicon/safari-pinned-tab.svg",
     "public/favicon/mstile-150x150.png",
     "public/favicon/favicon-32x32.png",
-    "public/favicon/favicon-16x16.png",
-    "public/favicon/android-chrome-512x512.png"
+    "public/favicon/favicon-16x16.png"
   ]
 }
