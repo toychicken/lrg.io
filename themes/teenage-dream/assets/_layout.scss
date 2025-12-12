@@ -5,9 +5,6 @@ html {
 }
 
 body {
-
-
-
     /* kill those default margins & padding */
     padding: 0;
     margin: 0;
@@ -26,21 +23,57 @@ body {
 #content {
     flex: auto;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    flex-direction: row;
     gap: var(--main-center-gutter);
-    max-width: calc(2.4 * var(--readable-line-width));
+    // max-width: calc(50 * var(--readable-line-width));
 
+    // display: grid;
+    // grid-template-columns: var(--readable-line-width) 1fr;
+    // grid-template-rows: 1fr;
+    // grid-column-gap: var(--main-center-gutter);
+    // grid-row-gap: 10px;
 }
 
-#content> :last-child {
-    flex-basis: var(--readable-line-width);
-    flex-grow: 1;
+#content> main {
+    flex:3 0 var(--readable-line-width);
+    max-width: var(--readable-line-width);
+    // grid-area: 1 / 1 / 2 / 3;
+}
+#content> aside {
+    // flex-basis: var(--readable-line-width);
+    // flex-grow: 1;
+
+    // grid-area: 1 / 2 / 2 / 3;
+    font-size: clamp(0.6rem, 0.6vw, 0.9rem);
+    flex:3 3 auto; 
 }
 
-#content> :first-child {
-    flex-basis: 0;
-    flex-grow: 999;
-    min-inline-size: 50%;
+@media (max-width: 100rem) {
+
+   #content> aside {
+        font-size:0.7rem;
+   } 
+}
+
+
+@media (max-width: 85rem) {
+    #content {
+        flex-direction: column;
+    }
+    #content> aside {
+        font-size: clamp(0.7rem, 1vw, 0.9rem);
+    }
+}
+
+@media (max-width: 32rem) {
+    :root {
+        font-size:12px;
+        
+    }
+    #content> aside {
+        font-size: 3vw;
+    }
 }
 
 /* Colours */
@@ -102,7 +135,6 @@ main {
 aside {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    font-size:14px;
 }
 
 header .subheading,
