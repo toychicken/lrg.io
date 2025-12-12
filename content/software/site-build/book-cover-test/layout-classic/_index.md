@@ -10,6 +10,7 @@ images:
   - /images/aggresive_lookin_cows@600x600.jpg
 category: 
 style: layout-classic
+baseColour: "pink"
 cover:
   attribution: 
   alt: A bunch of aggressive looking cows

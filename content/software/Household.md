@@ -78,3 +78,32 @@ Now, in contrast to this. Imagine "buying life insurance for the first time". Ho
 
 ---
 Not the end of the story, but perhaps this chapter
+
+
+----
+Update: 6/11/2025
+
+I had a thought today about this in general, and specifically about the way that the kids homework gets assigned. I have a permanent bee in my bonnet about the desperately poor way that schools communicate - and particularly about homework. I now have to have 6 different apps installed on my phone just to see what is coming up. Teams tells me about assignments (because apparently we're American now), but doesn't make a distinction between in-class or home-based work. The other apps are class specific. One each for maths, english, spanish, tech and geography. Each with an 'inbox', each with a parade of sales-pitchy notifications that are not about work to be done.
+
+(Don't get me started about how school holidays are not even calendar events - and are focussed on when term time is, rather than when holidays are)
+
+How would I solve this? Off the top of my head - a dedicated 'school' app / service. It'd handle the external stuff of schools interactions with parents. e.g. Payments, school dinner selections, homework management, school trip coordination etc etc. App providers would have to syndicatte / federate with the app. The aim being LESS THINKING REQUIRED for parents.
+
+This isn't a productivity app (though I guess you could allow folks to build motivational mechanisms on top? Plugins?) - just a one-stop shop for info. Calendar items can appear in - shock horror - your calendar. Payment requests can be paid via a trusted mechanism, not some shonky-looking, b-team Worldpay subdomain. Thoughtful notifications about important things, sent via appropriate mechanisms. 
+
+The ability to give certain tasks to one carer. Does Dad make lunches - then he needs to know about things that affect that. Does Grandma pick up on Thursdays - she needs to know about timetabling updates. Does Mum occasionally need to just-drop-everything-and-handover-to-Dad because she has an important meeting? There should be a button for that.
+
+I guess this is an extension of my thoughts about the household app - much of the work of a household with children is managing school stuff. It's hard enough with one child, with conventional office hours. What must it be like if you're a single parent, on split shifts, with 3 kids at 3 different schools? 
+
+There's also things like EHCPs, handling behavioural difficulties, separated parents, SEND support, emergency contact details, GDPR... stuff that is serious  for schools as well as parents. The traditional 'document' format isn't up to this. Also  - what about parents with very limited access to the internet / apps. I know it sounds implausible, but many households with young children _only_ have Mum's phone to get access; or the browser on the TV; or an old iPad from 2013. I guess some households may not have ANY access at all, or sporadic access. How is that handled?
+
+
+---
+
+Update 24/11/2025
+
+Oh wow. Another thing that needs to go into the mix here. Health. Managing health is, by itself, not necessarily complex... but it's never by itself. It's mixed in with your life. Taking time to go to hospital, follow up on scans & tests (and try to understand the results), attend regular appointments, manage side effects of drugs, manage the drugs, handle prescriptions etc etc. It's mind boggling.
+
+(I can't imagine how stressful this must be if you're also trying to find ways to _pay_ for it as well - looking at you USA 😠)
+
+
