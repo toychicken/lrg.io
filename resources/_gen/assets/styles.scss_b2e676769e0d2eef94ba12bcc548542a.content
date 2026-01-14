@@ -655,6 +655,21 @@ p > code, li > code {
       background: var(--bg-primary);
       color: var(--fg-primary); }
 
+main > .items > li {
+  position: relative; }
+  main > .items > li::after {
+    content: "Read more..."; }
+  main > .items > li:hover::after {
+    content: "Read more...";
+    text-decoration: underline; }
+  main > .items > li a.ghost-link {
+    position: absolute;
+    top: 9rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-decoration: none; }
+
 :root {
   --theme-main-prime: var(--color-book-orange-100);
   --theme-main-fade: var(--color-book-orange-80);

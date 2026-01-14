@@ -12,7 +12,6 @@ tags:
   - Fediverse
   - mastodon
   - activity-pub
-  - tryingtobepositive
 application: <a href="https://obsidian.md" rel="nofollow">Obsidian.md</a>
 images:
   - /images/futami-ga-ura_rocks_at_ise_land_of_dawn.jpg
@@ -22,7 +21,7 @@ cover:
   attribution:  "[Futami-ga-ura Rocks at Ise, Land of Dawn](https://pdimagearchive.org/images/79617204-4896-433f-b760-897dd40b1fc7/). By Utagawa Kunisada, c1835"
   alt:  "[Futami-ga-ura Rocks at Ise, Land of Dawn](https://pdimagearchive.org/images/79617204-4896-433f-b760-897dd40b1fc7/). By Utagawa Kunisada, c1835"
 ---
-{{< main_image "/images/futami-ga-ura_rocks_at_ise_land_of_dawn.jpg" >}}
+{{< main_image "/images/futami-ga-ura_rocks_at_ise_land_of_dawn.jpg" "Futami-ga-ura Rocks at Ise, Land of Dawn" >}}
 
 OK, so you've read my [plea to leave X](/technology-and-our-future/why-are-you-still-on-x/) , and you're thinking... ok, they have a point, but...
 
