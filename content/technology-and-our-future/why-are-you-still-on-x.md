@@ -17,7 +17,7 @@ cover:
   attribution:  Elon Musk gives a Nazi salute at Donald Trump's inauguration rally.
   alt:  Elon Musk gives a Nazi salute at Donald Trump's inauguration rally.
 ---
-{{< main_image "/images/elon_salute@1440x960.webp" "Elon Musk gives a Nazi salute at Donald Trump's inauguration rally." "Elon Musk gives a Nazi salute at Donald Trump's inauguration rally." >}}
+{{< main_image "/images/elon_salutes1440x960.jpg" "Elon Musk gives a Nazi salute at Donald Trump's inauguration rally." "Elon Musk gives a Nazi salute at Donald Trump's inauguration rally." >}}
 
 Now that Elon Musk has made his allegiances and motivations pretty clear, I have to ask a question. Why are you still on X?
 
