@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/technology-and-our-future/alternatives-to-x.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "alternatives-to-x"
-            }
-          },
-          {
-            "id": "874ed23f21141948",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "content/technology-and-our-future/EDM-2650_letter_to_my_MP.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
               "title": "EDM-2650_letter_to_my_MP"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -185,53 +170,53 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "874ed23f21141948",
+  "active": "09695261a567664a",
   "lastOpenFiles": [
-    "public/images/technology_1907_hu_478ce7dffd82b9b1.jpg",
-    "public/images/technology_1907_hu_9c034d88a4d364c1.jpg",
-    "resources/_gen/images/images/technology_1907_hu_478ce7dffd82b9b1.jpg",
-    "resources/_gen/images/images/technology_1907_hu_9c034d88a4d364c1.jpg",
-    "public/images/share_frame1200x627-630x627_hu_5d6eae07a1642acb.png",
-    "public/images/technology_1907_hu_19d77f0a527cffc0.jpg",
-    "resources/_gen/images/images/technology_1907_hu_19d77f0a527cffc0.jpg",
-    "resources/_gen/images/images/share_frame1200x627-630x627_hu_5d6eae07a1642acb.png",
-    "resources/_gen/images/images/technology_1907_hu_13f0b451ca607883.jpg",
-    "resources/_gen/images/images/technology_1907_hu_f602ae1794c17fd0.jpg",
-    "content/technology-and-our-future/alternatives-to-x.md",
-    "content/notes/2026-01-27_084258.md",
-    "content/technology-and-our-future/EDM-2650_letter_to_my_MP.md",
-    "assets/images/technology_1907.jpg",
-    "public/tags/digitalsovereignty/index.xml",
-    "public/tags/digitalsovereignty/index.html",
-    "public/tags/digitalsovereignty",
-    "public/technology-and-our-future/edm-2650_letter_to_my_mp/index.html",
-    "public/technology-and-our-future/edm-2650_letter_to_my_mp",
-    "public/edm-2650_letter_to_my_mp/index.html",
-    "public/edm-2650_letter_to_my_mp",
-    "public/notes/edm-2650_letter_to_my_mp/index.html",
-    "public/notes/edm-2650_letter_to_my_mp",
-    "public/notes/2026-01-27_084258/index.html",
-    "node_modules/tar/node_modules/fs-minipass/node_modules/minipass/README.md",
-    "node_modules/socks/docs/examples/typescript/connectExample.md",
-    "node_modules/socks/docs/examples/typescript/bindExample.md",
-    "node_modules/socks/docs/examples/typescript/associateExample.md",
-    "node_modules/socks/docs/examples/javascript/connectExample.md",
-    "node_modules/socks/docs/examples/javascript/bindExample.md",
-    "node_modules/socks/docs/examples/javascript/associateExample.md",
-    "node_modules/re2/vendor/abseil-cpp/CMake/README.md",
-    "node_modules/puppeteer-core/src/bidi/core/README.md",
-    "node_modules/@puppeteer/browsers/node_modules/ms/readme.md",
-    "node_modules/@puppeteer/browsers/node_modules/ms/license.md",
-    "node_modules/@puppeteer/browsers/node_modules/debug/README.md",
-    "node_modules/@isaacs/cliui/node_modules/string-width/readme.md",
-    "node_modules/@isaacs/cliui/node_modules/ansi-styles/readme.md",
-    "node_modules/@isaacs/cliui/node_modules/wrap-ansi/readme.md",
-    "node_modules/@isaacs/cliui/node_modules/strip-ansi/readme.md",
-    "node_modules/@isaacs/cliui/node_modules/emoji-regex/README.md",
-    "node_modules/@isaacs/cliui/node_modules/ansi-regex/readme.md",
-    "node_modules/@npmcli/agent/node_modules/lru-cache/README.md",
-    "node_modules/tar/node_modules/minipass/README.md",
-    "node_modules/tar/node_modules/fs-minipass/README.md",
-    "node_modules/sshpk/node_modules/jsbn/README.md"
+    "public/images/share_frame1200x627-630x627_hu_e68ed61815dc6a69.png",
+    "public/software/site-build/book-cover-test/layout-vintage/well-described/index.html",
+    "public/software/site-build/book-cover-test/layout-vintage/simple-image/index.html",
+    "public/software/site-build/book-cover-test/layout-vintage/over-stuffed/index.html",
+    "public/software/site-build/book-cover-test/layout-vintage/back-to-basics/index.html",
+    "public/software/site-build/book-cover-test/layout-notebook/well-described/index.html",
+    "public/software/site-build/book-cover-test/layout-notebook/simple-image/index.html",
+    "public/software/site-build/book-cover-test/layout-notebook/over-stuffed/index.html",
+    "public/software/site-build/book-cover-test/layout-notebook/back-to-basics/index.html",
+    "public/software/site-build/book-cover-test/layout-modern/well-described/index.html",
+    "public/software/site-build/book-cover-test/layout-modern/simple-image/index.html",
+    "public/images/tweets_media/999916255007002626-DeBqd4AV4AE7Asl_hu_f329aa5dae5fea9f.jpg",
+    "public/images/tweets_media/999916255007002626-DeBqd4AV4AE7Asl_hu_ef8666b9b7589bc3.jpg",
+    "public/images/tweets_media/999544506948210688-Dd7h-5qVwAErs9T_hu_f139a34587fa4dd0.jpg",
+    "public/images/tweets_media/999544506948210688-Dd7h-5qVwAErs9T_hu_63a5f4a19c939096.jpg",
+    "public/images/tweets_media/998810037018615808-Ddx8acOU0AADvWw_hu_c9c791f87187d012.jpg",
+    "public/images/tweets_media/998810037018615808-Ddx8acOU0AADvWw_hu_a7656bd6e4e8e88.jpg",
+    "public/images/tweets_media/997540449538793472-Ddf5vBtUwAARvks_hu_f2716139da9db1e3.jpg",
+    "public/images/tweets_media/997540449538793472-Ddf5vBtUwAARvks_hu_84f061022582ba25.jpg",
+    "public/images/tweets_media/997448967356067840-Ddemh1uV0AA787P_hu_94c14c09797e5c20.jpg",
+    "public/images/tweets_media/997448967356067840-Ddemh1uV0AA787P_hu_41fe070164f96745.jpg",
+    "node_modules/zod/README.md",
+    "node_modules/yoctocolors/readme.md",
+    "node_modules/yauzl/README.md",
+    "node_modules/yargs/README.md",
+    "node_modules/yargs-parser/README.md",
+    "node_modules/yargs-parser/CHANGELOG.md",
+    "node_modules/yallist/README.md",
+    "node_modules/y18n/README.md",
+    "node_modules/y18n/CHANGELOG.md",
+    "node_modules/ws/README.md",
+    "node_modules/wrappy/README.md",
+    "node_modules/wrap-ansi/readme.md",
+    "node_modules/wrap-ansi-cjs/readme.md",
+    "node_modules/which/README.md",
+    "node_modules/which/CHANGELOG.md",
+    "node_modules/whatwg-url/README.md",
+    "node_modules/webidl-conversions/README.md",
+    "node_modules/webidl-conversions/LICENSE.md",
+    "node_modules/verror/README.md",
+    "node_modules/verror/CONTRIBUTING.md",
+    "node_modules/verror/CHANGES.md",
+    "node_modules/vary/README.md",
+    "node_modules/vary/HISTORY.md",
+    "node_modules/uuid/README.md",
+    "node_modules/uuid/LICENSE.md"
   ]
 }

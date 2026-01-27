@@ -43,3 +43,9 @@ This is why I ask you to support EDM 2650. I find it hard to believe that the pr
 Yours sincerely
 
 LRG
+
+---
+
+Agree with me? You should write a letter to your MP too. It's really easy, thanks   to:
+
+{{< link-preview "https://action.openrightsgroup.org/protect-britain%E2%80%99s-digital-backbone-%E2%80%94-ask-your-mp-act" >}}
