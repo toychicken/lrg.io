@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" >
+    <channel>
+        <atom:link href="https://lrg.io/music/feed.rss" rel="self" type="application/rss+xml"/>
+        <description>&lt;p&gt;Some of my work released 1973 - 2026&lt;/p&gt;
+&lt;p&gt;For more information, checkout &lt;a href="https://lrg.io/sounds/like_lrg" target="_blank"&gt;lrg.io&lt;/a&gt;&lt;/p&gt;
+</description>
+        <generator>Faircamp 1.7.0 (unknown revision)</generator>
+        
+        <language>en</language>
+        <lastBuildDate>Fri, 10 Jul 2026 17:51:02 +0000</lastBuildDate>
+        <link>https://lrg.io/music/</link>
+        <title>LRG Music</title>
+        
+        <item>
+    <description>&lt;p&gt;Experimental forms using the language of modern electronic dance music, but rooted in something else&lt;/p&gt;
+</description>
+    <guid>https://lrg.io/music/howzat/</guid>
+    <link>https://lrg.io/music/howzat/</link>
+    <title>Long Red Groove – Howzat EP (2026)</title>
+    
+</item>
+
+    </channel>
+</rss>

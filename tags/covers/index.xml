@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Covers on LRG</title>
+    <link>https://lrg.io/tags/covers/</link>
+    <description>Recent content in Covers on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <atom:link href="https://lrg.io/tags/covers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Book covers</title>
+      <link>https://lrg.io/software/site-build/book-cover-test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lrg.io/software/site-build/book-cover-test/</guid>
+      <description>&lt;p&gt;A while back, I gave myself the task of &#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;&#xA;&lt;a href=&#34;https://lrg.io/software/site-build/&#34; &#xA; &#xA;target=&#34;&#34;&#xA;class=&#34;relative&#34; &#xA;data-domain=&#34;&#34;&gt;&lt;span class=&#34;link-text&#34;&gt;redesigning my website (again)&lt;/span&gt;&lt;span class=&#34;hostname-text&#34;&gt;&lt;/span&gt;&lt;/a&gt;. Originally my vision was to re-create a whole load of &#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;&#xA;&lt;a href=&#34;https://lrg.io/software/site-build/design_process/&#34; &#xA; &#xA;target=&#34;&#34;&#xA;class=&#34;relative&#34; &#xA;data-domain=&#34;&#34;&gt;&lt;span class=&#34;link-text&#34;&gt;vintage book covers&lt;/span&gt;&lt;span class=&#34;hostname-text&#34;&gt;&lt;/span&gt;&lt;/a&gt; specifically inspired by vintage penguin paperbacks.&lt;/p&gt;&#xA;&lt;p&gt;Now I&amp;rsquo;m at the stage of feeling pretty pleased with what I&amp;rsquo;ve done so far, but before I go any further I need to start testing what I&amp;rsquo;ve built already. As ever, it&amp;rsquo;s only when you start to test that you begin to realise how many variations you&amp;rsquo;ve built into what feels like a relatively simple design system.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

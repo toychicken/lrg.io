@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gig on LRG</title>
+    <link>https://lrg.io/tags/gig/</link>
+    <description>Recent content in Gig on LRG</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 10 Dec 2024 09:03:00 +0000</lastBuildDate>
+    <atom:link href="https://lrg.io/tags/gig/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sounds</title>
+      <link>https://lrg.io/sounds/</link>
+      <pubDate>Tue, 10 Dec 2024 09:03:00 +0000</pubDate>
+      <guid>https://lrg.io/sounds/</guid>
+      <description>&lt;p&gt;It feels a bit odd to say &amp;ldquo;I love music&amp;rdquo;, because I find it hard to imagine a human that doesn&amp;rsquo;t love music of some form or another. If you don&amp;rsquo;t love music, this part of the site is probably not for you.&lt;/p&gt;&#xA;&lt;p&gt;My aim here is to write about music and other sonic experiences. I sometimes curate playlists, write about gigs &amp;amp; festivals, and might even share some stuff I&amp;rsquo;ve made. Enjoy at a sensible volume…&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

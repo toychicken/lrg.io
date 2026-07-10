@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    
+    <generator uri="https://simonrepp.com/faircamp" version="1.7.0">
+        Faircamp 1.7.0 (unknown revision)
+    </generator>
+    <id>https://lrg.io/music/</id>
+    <link href="https://lrg.io/music/feed.atom" rel="self"/>
+    
+    
+    <title>LRG Music</title>
+    <updated>2026-07-10T17:51:02.064381+00:00</updated>
+    <entry>
+    <author>
+    <name>Long Red Groove</name>
+    <uri>https://lrg.io/music/long-red-groove/</uri>
+</author>
+
+    <id>https://lrg.io/music/howzat/</id>
+    <link href="https://lrg.io/music/howzat/" rel="alternate"/>
+    <title>Long Red Groove – Howzat EP (2026)</title>
+    <summary type="html">&lt;p&gt;Experimental forms using the language of modern electronic dance music, but rooted in something else&lt;/p&gt;
+</summary>
+    <updated>2026-07-10T17:51:02.064381+00:00</updated>
+</entry>
+
+</feed>
